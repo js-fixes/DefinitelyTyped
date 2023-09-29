@@ -6,10 +6,11 @@
 
 /// <reference types="angular" />
 
-import * as angular from "angular";
+import * as angular from 'angular';
 
-declare module "angular" {
+declare module 'angular' {
     export namespace growl {
+
         /**
          * Global Time-To-Leave configuration.
          */
@@ -34,7 +35,7 @@ declare module "angular" {
             position?: string | undefined;
             referenceId?: number | undefined;
             translateMessage?: boolean | undefined;
-            variables?: { [variable: string]: any } | undefined;
+            variables?: { [variable: string]: any; } | undefined;
         }
 
         /**
@@ -257,6 +258,7 @@ declare module "angular" {
              * Delete a message
              */
             deleteMessage(message: IGrowlMessage): void;
+
         }
     }
 }

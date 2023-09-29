@@ -1,2 +1,2 @@
-import { xprod } from "../index.js";
+import { xprod } from '../index';
 export default xprod;

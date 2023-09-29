@@ -2,9 +2,7 @@
 // Project: https://github.com/mister-ben/videojs-seek-buttons#readme
 // Definitions by: Piotr Błażejewicz <https://github.com/peterblazejewicz>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
-// eslint-disable-next-line @definitelytyped/no-import-default-of-export-equals
-import videojs from "video.js";
+import videojs from 'video.js';
 
 /**
  * A video.js plugin.
@@ -22,7 +20,7 @@ declare function seekButtons(options?: seekButtons.Options): void;
 declare namespace seekButtons {
     const VERSION: typeof videojs.VERSION;
     interface SeekButtonOptions {
-        direction: "forward" | "back";
+        direction: 'forward' | 'back';
         seconds: number;
     }
 
@@ -70,7 +68,7 @@ declare namespace seekButtons {
 
 export = seekButtons;
 
-declare module "video.js" {
+declare module 'video.js' {
     interface VideoJsPlayer {
         seekButtons: typeof seekButtons;
     }

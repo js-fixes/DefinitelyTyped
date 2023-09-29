@@ -1,2 +1,2 @@
-import { unary } from "../index.js";
+import { unary } from '../index';
 export default unary;

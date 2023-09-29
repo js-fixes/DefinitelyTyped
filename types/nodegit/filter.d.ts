@@ -1,8 +1,8 @@
-import { WriteStream } from "fs";
+import { WriteStream } from 'fs';
 
-import { Blob } from "./blob";
-import { Buf } from "./buf";
-import { Repository } from "./repository";
+import { Repository } from './repository';
+import { Blob } from './blob';
+import { Buf } from './buf';
 
 export namespace Filter {
     const enum FLAG {

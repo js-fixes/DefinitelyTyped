@@ -8,6 +8,7 @@
 /// <reference types="jquery"/>
 
 interface JQuery {
+
     /**
      * inits the jSignature widget
      */
@@ -24,6 +25,7 @@ interface JQuery {
      *
      * @param command the command used to perform an action on the jSignature canvas
      * @see http://willowsystems.github.io/jSignature/#/about/
+     *
      */
     jSignature(command: string): any;
 
@@ -39,6 +41,7 @@ interface JQuery {
      * @param command the command used to perform an action on the jSignature canvas
      * @param arg the argument used with the specified command
      * @see http://willowsystems.github.io/jSignature/#/about/
+     *
      */
     jSignature(command: string, ...arg: string[]): any;
 }

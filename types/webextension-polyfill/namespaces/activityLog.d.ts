@@ -8,8 +8,8 @@
  * Monitor extension activity
  * Permissions: "activityLog"
  */
-import { Events } from "./events";
 import { ExtensionTypes } from "./extensionTypes";
+import { Events } from "./events";
 
 export namespace ActivityLog {
     interface OnExtensionActivityDetailsType {

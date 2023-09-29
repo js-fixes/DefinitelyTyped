@@ -8,6 +8,7 @@
         "no-unnecessary-class": false,
         "no-unnecessary-qualifier": false,
         "no-unnecessary-type-assertion": false,
-        "no-var-keyword": false
+        "no-var-keyword": false,
+        "strict-export-declare-modifiers": false
     }
 }

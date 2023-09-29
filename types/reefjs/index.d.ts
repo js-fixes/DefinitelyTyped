@@ -144,6 +144,7 @@ declare namespace Reef {
          * @param DataStore - Single object containing data, setters, and getters.
          *
          * {@link https://reefjs.com/advanced/#shared-state-with-data-stores}
+         *
          */
         constructor(DataStore: DataStore);
 
@@ -154,6 +155,7 @@ declare namespace Reef {
          * @param args - Any required arguments.
          *
          * {@link https://reefjs.com/advanced/#setters}
+         *
          */
         do(name: string, ...args: any[]): void;
 
@@ -163,6 +165,7 @@ declare namespace Reef {
          * @param name - Name of getter.
          *
          * {@link https://reefjs.com/advanced/#getters}
+         *
          */
         get(name: string): any;
     }

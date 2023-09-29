@@ -1,13 +1,11 @@
-import ES2016Operations = require("./2016");
-import ES2017 = require("../es2017");
+import ES2016Operations = require('./2016');
+import ES2017 = require('../es2017');
 
 interface ES2017Operations
-    extends
-        Record<keyof ES2017, string>,
-        Omit<ES2016Operations, "EnumerableOwnNames" | "IterableToArrayLike" | "NextJob">
-{
+    extends Record<keyof ES2017, string>,
+        Omit<ES2016Operations, 'EnumerableOwnNames' | 'IterableToArrayLike' | 'NextJob'> {
     AddWaiter: string;
-    "agent-order": string;
+    'agent-order': string;
     AgentCanSuspend: string;
     AgentSignifier: string;
     AllocateSharedArrayBuffer: string;
@@ -24,9 +22,9 @@ interface ES2017Operations
     GetModifySetValueInBuffer: string;
     GetReferencedName: string;
     GetWaiterList: string;
-    "happens-before": string;
+    'happens-before': string;
     HasPrimitiveBase: string;
-    "host-synchronizes-with": string;
+    'host-synchronizes-with': string;
     HostEnsureCanCompileStrings: string;
     HostEventSet: string;
     IsPropertyReference: string;
@@ -35,12 +33,12 @@ interface ES2017Operations
     IsSuperReference: string;
     IsUnresolvableReference: string;
     LeaveCriticalSection: string;
-    "memory-order": string;
+    'memory-order': string;
     NumberToRawBytes: string;
     OrdinaryToPrimitive: string;
     RawBytesToNumber: string;
-    "reads-bytes-from": string;
-    "reads-from": string;
+    'reads-bytes-from': string;
+    'reads-from': string;
     RemoveWaiter: string;
     RemoveWaiters: string;
     RunJobs: string;
@@ -48,7 +46,7 @@ interface ES2017Operations
     SharedDataBlockEventSet: string;
     StringGetOwnProperty: string;
     Suspend: string;
-    "synchronizes-with": string;
+    'synchronizes-with': string;
     ValidateAtomicAccess: string;
     ValidateSharedIntegerTypedArray: string;
     ValueOfReadEvent: string;

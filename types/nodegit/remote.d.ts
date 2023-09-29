@@ -1,12 +1,12 @@
-import { Buf } from "./buf";
-import { Enums } from "./enums";
-import { FetchOptions } from "./fetch-options";
-import { PushOptions } from "./push-options";
-import { Refspec } from "./ref-spec";
-import { RemoteCallbacks } from "./remote-callbacks";
-import { Repository } from "./repository";
-import { Strarray } from "./str-array";
-import { TransferProgress } from "./transfer-progress";
+import { Repository } from './repository';
+import { RemoteCallbacks } from './remote-callbacks';
+import { Strarray } from './str-array';
+import { FetchOptions } from './fetch-options';
+import { Buf } from './buf';
+import { Enums } from './enums';
+import { TransferProgress } from './transfer-progress';
+import { PushOptions } from './push-options';
+import { Refspec } from './ref-spec';
 
 export namespace Remote {
     const enum AUTOTAG_OPTION {
@@ -49,6 +49,7 @@ export class Remote {
     dup(): Promise<Remote>;
     fetch(refSpecs: any[], opts: FetchOptions, message: string, callback?: Function): Promise<number>;
 
+    free(): void;
     getFetchRefspecs(): Promise<any[]>;
     getPushRefspecs(): Promise<any[]>;
     getRefspec(n: number): Refspec;

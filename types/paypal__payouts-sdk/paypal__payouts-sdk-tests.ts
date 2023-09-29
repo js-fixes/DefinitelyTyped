@@ -1,12 +1,10 @@
 import {
     core,
-    CreateBatchPayoutResponse,
-    CreatePayoutRequestBody,
+    payouts,
+    // type imports are successful
+    RecipientType,
+    RecipientWallet,
     Currency,
-    GetBatchPayoutResponse,
-    GetPayoutsItemResponse,
-    HttpRequest,
-    HttpResponse,
     LinkDescription,
     PayoutBatchHeader,
     PayoutBatchItems,
@@ -14,14 +12,16 @@ import {
     PayoutHeader,
     PayoutItem,
     PayoutItemDetail,
-    payouts,
     PayoutSenderBatchHeader,
-    PaypalHeader,
-    // type imports are successful
-    RecipientType,
-    RecipientWallet,
     SenderBatchHeader,
-} from "@paypal/payouts-sdk";
+    PaypalHeader,
+    CreatePayoutRequestBody,
+    CreateBatchPayoutResponse,
+    GetBatchPayoutResponse,
+    GetPayoutsItemResponse,
+    HttpRequest,
+    HttpResponse,
+} from '@paypal/payouts-sdk';
 
 declare const id: string;
 declare const secret: string;
@@ -49,7 +49,7 @@ client
     })
     .then(res => {
         const batchStatus = res?.result?.batch_header?.batch_status;
-        if (batchStatus === "SUCCESS") {
+        if (batchStatus === 'SUCCESS') {
             // payout is successful
         }
         const batchItems = res?.result?.items;
@@ -62,7 +62,7 @@ client
     })
     .then(res => {
         const txStatus = res?.result?.transaction_status;
-        if (txStatus !== "SUCCESS") {
+        if (txStatus !== 'SUCCESS') {
             const itemId = res?.result?.payout_item_id;
             if (itemId) {
                 const reqCancel = new payouts.PayoutsItemCancelRequest(itemId);

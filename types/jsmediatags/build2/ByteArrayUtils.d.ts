@@ -1,4 +1,6 @@
-import { ByteArray } from "../types";
+import {
+    ByteArray
+} from '../types';
 
 export function bin(string: string): ByteArray;
 

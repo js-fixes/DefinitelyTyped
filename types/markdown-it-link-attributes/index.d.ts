@@ -16,12 +16,10 @@ declare namespace markdownItLinkAttributes {
 /**
  * Link attributes plugin for markdown-it markdown parser
  */
-declare const markdownItLinkAttributes:
-    & PluginWithOptions<
-        markdownItLinkAttributes.Config | markdownItLinkAttributes.Config[]
-    >
-    & {
-        readonly defaultRender: RenderRule;
-    };
+declare const markdownItLinkAttributes: PluginWithOptions<
+    markdownItLinkAttributes.Config | markdownItLinkAttributes.Config[]
+> & {
+    readonly defaultRender: RenderRule;
+};
 
 export = markdownItLinkAttributes;

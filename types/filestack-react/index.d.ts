@@ -3,10 +3,10 @@
 // Definitions by: DefinitelyTyped <https://github.com/DefinitelyTyped>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { ClientOptions, PickerFileMetadata, PickerOptions } from "filestack-js";
-import * as React from "react";
+import * as React from 'react';
+import { ClientOptions, PickerFileMetadata, PickerOptions } from 'filestack-js';
 
-export * as client from "filestack-js";
+export * as client from 'filestack-js';
 
 interface PickerBaseProps {
     /**

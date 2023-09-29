@@ -1,7 +1,7 @@
-import { AnnotatedCommit } from "./annotated-commit";
-import { Commit } from "./commit";
-import { Reference } from "./reference";
-import { Repository } from "./repository";
+import { Repository } from './repository';
+import { Reference } from './reference';
+import { Commit } from './commit';
+import { AnnotatedCommit } from './annotated-commit';
 
 export namespace Branch {
     const enum BRANCH {

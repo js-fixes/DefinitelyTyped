@@ -1,4 +1,4 @@
-import { Component, CSSProperties, ReactNode } from "react";
+import { Component, ReactNode, CSSProperties } from "react";
 
 export interface LineContentProps {
     data: Array<{ text: string }>;

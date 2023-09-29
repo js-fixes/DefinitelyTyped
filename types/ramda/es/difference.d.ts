@@ -1,2 +1,2 @@
-import { difference } from "../index.js";
+import { difference } from '../index';
 export default difference;

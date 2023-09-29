@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 3.8
 
-import { TextFieldProps } from "@material-ui/core";
 import * as React from "react";
+import { TextFieldProps } from "@material-ui/core";
 
 export interface MaterialUiPhoneNumberProps extends Omit<TextFieldProps, "onChange"> {
     ref?: any;

@@ -3,6 +3,7 @@
 // Definitions by: Jared Klopper <https://github.com/optical>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 declare namespace mkpath {
     function sync(path: string, mode?: number): void;
 }

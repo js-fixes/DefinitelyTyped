@@ -1,4 +1,4 @@
-import Tweezer = require("tweezer.js");
+import Tweezer = require('tweezer.js');
 
 const tweezer = new Tweezer({
     start: 100,
@@ -6,10 +6,8 @@ const tweezer = new Tweezer({
 });
 
 tweezer
-    .on("tick", (foo) => {
-        foo.toFixed();
-    })
-    .on("done", () => {})
+    .on('tick', (foo) => { foo.toFixed(); })
+    .on('done', () => {})
     .begin()
     .stop();
 
@@ -20,11 +18,11 @@ function testEaser(currentTime: number, beginningTime: number, changeInValue: nu
 const tweezer2 = new Tweezer({
     start: 100,
     end: 200,
-    easing: testEaser,
+    easing: testEaser
 });
 
 const tweezer3 = new Tweezer({
     start: 100,
     end: 200,
-    duration: 42,
+    duration: 42
 });

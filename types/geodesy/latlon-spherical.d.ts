@@ -2,8 +2,8 @@
  * @format
  */
 
-import { Dp, Format, GeoJSON, Polygon } from ".";
-import Dms from "./dms";
+import { Polygon, GeoJSON, Format, Dp } from '.';
+import Dms from './dms';
 
 declare class LatLonSpherical {
     constructor(lat: number, lon: number);
@@ -49,4 +49,4 @@ declare class LatLonSpherical {
     toString(format?: Format, dp?: Dp): string;
 }
 
-export { Dms, LatLonSpherical as default };
+export { LatLonSpherical as default, Dms };

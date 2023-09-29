@@ -33,10 +33,7 @@ export function dynamoDriver(dynamoDB: AWS.DynamoDB): AWS.DynamoDB;
 export function reset(): void;
 export function define(modelName: string, config: ModelConfiguration): Model;
 export function createTables(callback: (err: string) => void): void;
-export function createTables(
-    options: { [key: string]: CreateTablesOptions } | DynogelsGlobalOptions,
-    callback: (err: string) => void,
-): void;
+export function createTables(options: { [key: string]: CreateTablesOptions } | DynogelsGlobalOptions, callback: (err: string) => void): void;
 export function Set(...args: any[]): any;
 
 export interface DynogelsGlobalOptions {
@@ -78,24 +75,10 @@ export interface Model {
     scan(): Scan;
     parallelScan(totalSegments: number): Scan;
     getItems(items: string[] | Array<{ [key: string]: string }>, callback: (err: Error, items: any[]) => void): void;
-    getItems(
-        items: string[] | Array<{ [key: string]: string }>,
-        options: GetItemOptions,
-        callback: (err: Error, items: any[]) => void,
-    ): void;
-    batchGetItems(
-        items: string[] | Array<{ [key: string]: string }>,
-        callback: (err: Error, items: any[]) => void,
-    ): void;
-    batchGetItems(
-        items: string[] | Array<{ [key: string]: string }>,
-        options: GetItemOptions,
-        callback: (err: Error, items: any[]) => void,
-    ): void;
-    createTable(
-        options: CreateTablesOptions,
-        callback: (err: Error, data: AWS.DynamoDB.CreateTableOutput) => void,
-    ): void;
+    getItems(items: string[] | Array<{ [key: string]: string }>, options: GetItemOptions, callback: (err: Error, items: any[]) => void): void;
+    batchGetItems(items: string[] | Array<{ [key: string]: string }>, callback: (err: Error, items: any[]) => void): void;
+    batchGetItems(items: string[] | Array<{ [key: string]: string }>, options: GetItemOptions, callback: (err: Error, items: any[]) => void): void;
+    createTable(options: CreateTablesOptions, callback: (err: Error, data: AWS.DynamoDB.CreateTableOutput) => void): void;
     createTable(callback: (err: Error, data: AWS.DynamoDB.CreateTableOutput) => void): void;
     updateTable(throughput: Throughput, callback: (err: Error, data: AWS.DynamoDB.UpdateTableOutput) => void): void;
     updateTable(callback: (err: Error, data: AWS.DynamoDB.UpdateTableOutput) => void): void;

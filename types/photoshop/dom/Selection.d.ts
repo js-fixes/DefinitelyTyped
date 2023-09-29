@@ -1,15 +1,16 @@
-import { Channel } from "./Channel";
-import * as Constants from "./Constants";
 import { Document } from "./Document";
-import { Layer } from "./Layer";
 import { Bounds } from "./objects/Bounds";
-import { PathItem } from "./PathItem";
+import * as Constants from "./Constants";
 import { Bounds as SelectionBounds } from "./types/SharedTypes";
+import { Channel } from "./Channel";
+import { Layer } from "./Layer";
+import { PathItem } from "./PathItem";
 /**
  * Represents a selected area or areas in the document.  If there is no active selection,
  * the `bounds` will return `null`.  The selection is pixel-based, though 8-bit transparency is possible.
  *
  * Pixel selection targets where pixel filters are applied, or from where the histogram measurement is sourced.
+ *
  *
  * ```javascript
  * const { app, constants } = require("photoshop");
@@ -218,12 +219,7 @@ export declare class Selection {
      * @async
      * @minVersion 25.0
      */
-    selectRectangle(
-        bounds: SelectionBounds,
-        mode?: Constants.SelectionType,
-        feather?: number,
-        antiAlias?: boolean,
-    ): Promise<void>;
+    selectRectangle(bounds: SelectionBounds, mode?: Constants.SelectionType, feather?: number, antiAlias?: boolean): Promise<void>;
     /**
      * Make an elliptical selection.
      *
@@ -241,12 +237,7 @@ export declare class Selection {
      * @async
      * @minVersion 25.0
      */
-    selectEllipse(
-        bounds: SelectionBounds,
-        mode?: Constants.SelectionType,
-        feather?: number,
-        antiAlias?: boolean,
-    ): Promise<void>;
+    selectEllipse(bounds: SelectionBounds, mode?: Constants.SelectionType, feather?: number, antiAlias?: boolean): Promise<void>;
     /**
      * Make a polygonal selection.
      *
@@ -267,15 +258,10 @@ export declare class Selection {
      * @async
      * @minVersion 25.0
      */
-    selectPolygon(
-        points: Array<{
-            x: number;
-            y: number;
-        }>,
-        mode?: Constants.SelectionType,
-        feather?: number,
-        antiAlias?: boolean,
-    ): Promise<void>;
+    selectPolygon(points: Array<{
+        x: number;
+        y: number;
+    }>, mode?: Constants.SelectionType, feather?: number, antiAlias?: boolean): Promise<void>;
     /**
      * Select a single row of pixels.
      *
@@ -325,7 +311,7 @@ export declare class Selection {
     /**
      * Save the selection in an existing Alpha Channel (Component Channels are not supported targets).
      *
-     * ```javascript
+     *```javascript
      * // Stores the current selection into an existing alpha channel
      * doc.selection.saveTo(doc.channels[3]);
      *
@@ -392,12 +378,7 @@ export declare class Selection {
      * @minVersion 25.0
      * @async
      */
-    resizeBoundary(
-        horizontal?: number,
-        vertical?: number,
-        anchor?: Constants.AnchorPosition,
-        interpolation?: Constants.InterpolationMethod,
-    ): Promise<void>;
+    resizeBoundary(horizontal?: number, vertical?: number, anchor?: Constants.AnchorPosition, interpolation?: Constants.InterpolationMethod): Promise<void>;
     /**
      * Rotate the selection itself clockwise around the given anchor position. Does not affect the active layer.
      *
@@ -410,9 +391,5 @@ export declare class Selection {
      * @minVersion 25.0
      * @async
      */
-    rotateBoundary(
-        angle: number,
-        anchor?: Constants.AnchorPosition,
-        interpolation?: Constants.InterpolationMethod,
-    ): Promise<void>;
+    rotateBoundary(angle: number, anchor?: Constants.AnchorPosition, interpolation?: Constants.InterpolationMethod): Promise<void>;
 }

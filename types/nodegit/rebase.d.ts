@@ -1,10 +1,10 @@
-import { AnnotatedCommit } from "./annotated-commit";
-import { CheckoutOptions } from "./checkout-options";
-import { Index, MergeOptions, Tree } from "./index";
-import { Oid } from "./oid";
-import { RebaseOperation } from "./rebase-operation";
-import { Repository } from "./repository";
-import { Signature } from "./signature";
+import { CheckoutOptions } from './checkout-options';
+import { AnnotatedCommit } from './annotated-commit';
+import { Repository } from './repository';
+import { Signature } from './signature';
+import { Oid } from './oid';
+import { RebaseOperation } from './rebase-operation';
+import { Index, MergeOptions, Tree } from './index';
 
 export interface RebaseOptions<PayloadType = any> {
     version?: number | null;
@@ -13,18 +13,16 @@ export interface RebaseOptions<PayloadType = any> {
     rewriteNotesRef?: string | null;
     mergeOptions?: MergeOptions | null;
     checkoutOptions?: CheckoutOptions | null;
-    commitCreateCb?:
-        | ((
-            author: Signature,
-            committer: Signature,
-            message_encoding: string,
-            message: string,
-            tree: Tree,
-            parent_count: number,
-            parents: Oid[],
-            payload?: PayloadType,
-        ) => Oid)
-        | null;
+    commitCreateCb?: ((
+        author: Signature,
+        committer: Signature,
+        message_encoding: string,
+        message: string,
+        tree: Tree,
+        parent_count: number,
+        parents: Oid[],
+        payload?: PayloadType
+    ) => Oid) | null;
     payload?: PayloadType | null;
 }
 

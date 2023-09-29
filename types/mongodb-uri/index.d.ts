@@ -39,6 +39,7 @@ export class MongodbUriParser {
      * Takes a URI object and returns a URI string of the form:
      *
      *   mongodb://[username[:password]@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database]][?options]
+     *
      */
     format(uriObject?: UriObject): string;
 
@@ -50,6 +51,7 @@ export class MongodbUriParser {
      * Useful in environments where a MongoDB URI environment variable is provided, but needs to be programmatically
      * transformed into a string digestible by mongoose.connect()--for example, when deploying to a PaaS like Heroku
      * using a MongoDB add-on like MongoLab.
+     *
      */
     formatMongoose(uri: UriObject | string): string;
 }
@@ -72,6 +74,7 @@ export class MongodbUriParser {
  *
  * scheme and hosts will always be present. Other fields will only be present in the result if they were
  * present in the input.
+ *
  */
 export function parse(uri: string): UriObject;
 

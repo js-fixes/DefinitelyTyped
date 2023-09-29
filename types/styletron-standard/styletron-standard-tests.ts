@@ -1,23 +1,23 @@
 import {
     driver,
-    FontFace,
     getInitialStyle,
-    KeyframesObject,
     renderDeclarativeRules,
-    StandardEngine,
     StyleObject,
-} from "styletron-standard";
+    StandardEngine,
+    KeyframesObject,
+    FontFace,
+} from 'styletron-standard';
 
 const validStyleObject: StyleObject = {
-    display: "block",
-    ":after": {
-        content: "\" \"",
+    display: 'block',
+    ':after': {
+        content: '" "',
     },
 };
 
-const renderStyle = (style: StyleObject) => "style";
-const renderKeyframes = (keyframes: KeyframesObject) => "keyframes";
-const renderFontFace = (fontFace: FontFace) => "font-face";
+const renderStyle = (style: StyleObject) => 'style';
+const renderKeyframes = (keyframes: KeyframesObject) => 'keyframes';
+const renderFontFace = (fontFace: FontFace) => 'font-face';
 
 const engine: StandardEngine = {
     renderStyle,

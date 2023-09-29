@@ -1,12 +1,11 @@
 import * as React from "react";
+import { render } from "react-dom";
 import {
     AlphaPicker,
     BlockPicker,
     ChromePicker,
     CirclePicker,
     CompactPicker,
-    CustomPicker,
-    CustomPickerInjectedProps,
     GithubPicker,
     HuePicker,
     MaterialPicker,
@@ -15,13 +14,20 @@ import {
     SliderPicker,
     SwatchesPicker,
     TwitterPicker,
+    CustomPicker,
+    CustomPickerInjectedProps
 } from "react-color";
-import { Alpha, Checkboard, EditableInput, Hue, Saturation } from "react-color/lib/components/common";
+import {
+    Alpha,
+    Checkboard,
+    EditableInput,
+    Hue,
+    Saturation
+} from "react-color/lib/components/common";
 import { AlphaColorResult } from "react-color/lib/components/common/Alpha";
-import { EditableInputColorResult } from "react-color/lib/components/common/EditableInput";
 import { HueColorResult } from "react-color/lib/components/common/Hue";
 import { SaturationColorResult } from "react-color/lib/components/common/Saturation";
-import { render } from "react-dom";
+import { EditableInputColorResult } from "react-color/lib/components/common/EditableInput";
 
 interface CustomProps extends CustomPickerInjectedProps {
     customProp: string;
@@ -54,7 +60,7 @@ const CustomComponent: React.ComponentType<CustomProps> = (props: CustomProps) =
         color.v; // $ExpectType number
         color.source; // $ExpectType "hsv"
     }
-    function onChangeInput(color: EditableInputColorResult<"test">) {
+    function onChangeInput(color: EditableInputColorResult<'test'>) {
         console.log(color);
         color.test; // $ExpectType string
     }
@@ -120,7 +126,7 @@ const CustomComponent: React.ComponentType<CustomProps> = (props: CustomProps) =
 };
 const Custom = CustomPicker(CustomComponent);
 
-const stringColor = "#000000";
+const stringColor = '#000000';
 const color = { hex: "#000000" };
 const colors = ["#000", "#333"];
 
@@ -137,7 +143,7 @@ render(
         onChangeComplete={() => {}}
         renderers={{ canvas: {} }}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -152,7 +158,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -166,7 +172,7 @@ render(
         onChangeComplete={() => {}}
         renderers={{ canvas: {} }}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -182,7 +188,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -195,7 +201,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -210,7 +216,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -225,7 +231,7 @@ render(
         onChange={() => {}}
         onChangeComplete={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -235,7 +241,7 @@ render(
         onChange={() => {}}
         onChangeComplete={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -249,7 +255,7 @@ render(
         onAccept={() => {}}
         onCancel={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -265,7 +271,7 @@ render(
         renderers={{ canvas: {} }}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -277,7 +283,7 @@ render(
         onChange={() => {}}
         onChangeComplete={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -292,7 +298,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -307,7 +313,7 @@ render(
         onChangeComplete={() => {}}
         onSwatchHover={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
 render(
@@ -317,7 +323,7 @@ render(
         onChange={() => {}}
         onChangeComplete={() => {}}
     />,
-    document.getElementById("main"),
+    document.getElementById("main")
 );
 
-render(<GithubPicker color={stringColor} />, document.getElementById("main"));
+render(<GithubPicker color={stringColor} />, document.getElementById('main'));

@@ -1,4 +1,6 @@
-import { util } from "..";
+import {
+    util,
+} from "..";
 
 declare const u: util;
 

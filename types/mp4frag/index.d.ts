@@ -4,7 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// <reference types="node" />
 
-import { Transform } from "stream";
+import { Transform } from 'stream';
+import 'node/buffer';
 
 declare namespace Mp4Frag {
     /**

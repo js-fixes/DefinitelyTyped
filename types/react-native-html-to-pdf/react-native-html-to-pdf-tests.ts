@@ -1,4 +1,4 @@
-import { convert, Options, Pdf } from "react-native-html-to-pdf";
+import { Options, convert, Pdf } from 'react-native-html-to-pdf';
 
 const options: Options = {
     html: `<h1>Hello world!</h1>`,

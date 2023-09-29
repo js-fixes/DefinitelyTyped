@@ -265,15 +265,7 @@ export type numericLiteral = INTEGER | DECIMAL | DOUBLE;
  * Union of numeric types that may appear in a value set.
  * @see {@link NodeConstraint#values}.
  */
-export type valueSetValue =
-    | objectValue
-    | IriStem
-    | IriStemRange
-    | LiteralStem
-    | LiteralStemRange
-    | Language
-    | LanguageStem
-    | LanguageStemRange;
+export type valueSetValue = objectValue | IriStem | IriStemRange | LiteralStem | LiteralStemRange | Language | LanguageStem | LanguageStemRange;
 
 /**
  * JSON-LD representation of a URL or a Literal.

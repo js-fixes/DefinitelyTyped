@@ -1,7 +1,7 @@
-import { Three } from "../../src/core/three";
-import Particle from "../core/Particle";
-import { DEFAULT_MATERIAL_PROPERTIES } from "./constants";
-import Initializer from "./Initializer";
+import { Three } from '../../src/core/three';
+import Particle from '../core/Particle';
+import Initializer from './Initializer';
+import { DEFAULT_MATERIAL_PROPERTIES } from './constants';
 
 export interface MaterialProperties {
     [key: string]: string | number | boolean;
@@ -14,6 +14,7 @@ export type MaterialPropertiesDefaults = typeof DEFAULT_MATERIAL_PROPERTIES | Ma
  * Sets the body property to be a THREE.Sprite with a texture map on initialized particles.
  *
  * Constructs an Texture initializer.
+ *
  */
 export default class Texture extends Initializer {
     constructor(
@@ -41,10 +42,12 @@ export default class Texture extends Initializer {
     sprite: THREE.Sprite;
     /**
      * Sets the particle body to the sprite.
+     *
      */
     initialize(particle: Particle): void;
     /**
      * Creates a Texture initializer from JSON.
+     *
      */
     static fromJSON(
         json: {

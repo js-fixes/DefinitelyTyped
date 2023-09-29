@@ -1,6 +1,10 @@
-import { ByteRange, LoadCallbackType, TagType } from "../types";
-import MediaFileReader from "./MediaFileReader";
-import MediaTagReader from "./MediaTagReader";
+import {
+    LoadCallbackType,
+    ByteRange,
+    TagType
+} from '../types';
+import MediaFileReader from './MediaFileReader';
+import MediaTagReader from './MediaTagReader';
 
 export default class FLACTagReader extends MediaTagReader {
     _commentOffset: number;
@@ -15,7 +19,7 @@ export default class FLACTagReader extends MediaTagReader {
     _loadBlock(
         mediaFileReader: MediaFileReader,
         offset: number,
-        callbacks: LoadCallbackType,
+        callbacks: LoadCallbackType
     ): void;
 
     _nextBlock(
@@ -23,7 +27,7 @@ export default class FLACTagReader extends MediaTagReader {
         offset: number,
         blockHeader: number,
         blockSize: number,
-        callbacks: LoadCallbackType,
+        callbacks: LoadCallbackType
     ): void;
 
     _parseData(data: MediaFileReader, tags?: string[]): TagType;

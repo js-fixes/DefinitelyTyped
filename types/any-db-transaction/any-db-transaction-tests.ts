@@ -5,6 +5,7 @@ import begin = require("any-db-transaction");
 
 var conn: anyDB.Connection = anyDB.createConnection("mysql://user:password@localhost/testdb");
 
+
 var transaction = begin(conn);
 var transaction2 = begin(transaction);
 
@@ -21,3 +22,4 @@ transaction.commit((error: Error): void => {
 transaction.rollback();
 transaction.rollback((error: Error): void => {
 });
+

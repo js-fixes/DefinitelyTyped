@@ -1,4 +1,4 @@
-import { Callback, packageid } from "../index";
+import { packageid, Callback } from '../index';
 
 export interface Help {
     /**

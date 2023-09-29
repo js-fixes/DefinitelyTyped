@@ -1,5 +1,5 @@
-import { StreamType } from "../StreamsClient";
 import { User } from "../UsersClient";
+import { StreamType } from "../StreamsClient";
 
 export interface Image {
     id: string;
@@ -32,13 +32,7 @@ export interface Stream {
     streamType: StreamType;
 }
 
-export function sendMessage(
-    conversationId: string,
-    message: string,
-    data: any,
-    format: string,
-    sessionToken: string,
-): Promise<Message>;
+export function sendMessage(conversationId: string, message: string, data: any, format: string, sessionToken: string): Promise<Message>;
 
 export function sendMessageWithAttachment(
     conversationId: string,

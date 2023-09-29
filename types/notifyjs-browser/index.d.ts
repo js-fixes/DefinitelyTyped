@@ -122,6 +122,7 @@ interface JQueryNotify {
      * @param options notification iptions
      */
     defaults(options: NotificationOptions): any;
+
 }
 
 interface JQuery {

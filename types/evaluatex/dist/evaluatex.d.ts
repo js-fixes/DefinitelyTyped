@@ -1,4 +1,4 @@
-import type { Constants, EvaluatexResult, Options } from "./../";
+import type { EvaluatexResult, Constants, Options } from './../';
 
 declare function evaluatex(
     /** an ASCII or LaTeX expression to be parsed and evaluated. */

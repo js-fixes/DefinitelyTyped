@@ -1,2 +1,2 @@
-import { uniqBy } from "../index.js";
+import { uniqBy } from '../index';
 export default uniqBy;

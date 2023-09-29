@@ -5,10 +5,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 interface HTMLCanvasElement extends HTMLElement {
-    getContext(
-        contextId: "webgl2" | "experimental-webgl2",
-        contextAttributes?: WebGLContextAttributes,
-    ): WebGL2RenderingContext | null;
+    getContext(contextId: "webgl2" | "experimental-webgl2", contextAttributes?: WebGLContextAttributes): WebGL2RenderingContext | null;
 }
 
 interface ImageBitmap {
@@ -22,7 +19,7 @@ interface WebGLQuery {
 
 declare var WebGLQuery: {
     prototype: WebGLQuery;
-    new(): WebGLQuery;
+    new (): WebGLQuery;
 };
 
 interface WebGLSampler {
@@ -30,7 +27,7 @@ interface WebGLSampler {
 
 declare var WebGLSampler: {
     prototype: WebGLSampler;
-    new(): WebGLSampler;
+    new (): WebGLSampler;
 };
 
 interface WebGLSync {
@@ -38,7 +35,7 @@ interface WebGLSync {
 
 declare var WebGLSync: {
     prototype: WebGLSync;
-    new(): WebGLSync;
+    new (): WebGLSync;
 };
 
 interface WebGLTransformFeedback {
@@ -46,7 +43,7 @@ interface WebGLTransformFeedback {
 
 declare var WebGLTransformFeedback: {
     prototype: WebGLTransformFeedback;
-    new(): WebGLTransformFeedback;
+    new (): WebGLTransformFeedback;
 };
 
 interface WebGLVertexArrayObject {
@@ -54,5 +51,5 @@ interface WebGLVertexArrayObject {
 
 declare var WebGLVertexArrayObject: {
     prototype: WebGLVertexArrayObject;
-    new(): WebGLVertexArrayObject;
+    new (): WebGLVertexArrayObject;
 };

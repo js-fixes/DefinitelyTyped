@@ -1,2 +1,2 @@
-import { includes } from "../index.js";
+import { includes } from '../index';
 export default includes;

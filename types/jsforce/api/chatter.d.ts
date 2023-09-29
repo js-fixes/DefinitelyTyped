@@ -1,6 +1,6 @@
-import { Stream } from "stream";
-import { Callback, Connection } from "../connection";
-import { Query } from "../query";
+import { Connection, Callback } from '../connection';
+import { Query } from '../query';
+import { Stream } from 'stream';
 
 interface BatchRequestParams extends RequestParams {
     method: string;

@@ -3,7 +3,7 @@
 // Definitions by: Steven Snoeijen <https://github.com/stevensnoeijen>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { AxiosError, AxiosProxyConfig, AxiosRequestConfig, AxiosResponse } from "axios";
+import { AxiosProxyConfig, AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 
 interface Options {
     /**

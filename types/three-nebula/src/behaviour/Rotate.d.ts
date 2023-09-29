@@ -1,8 +1,8 @@
-import Particle from "../core/Particle";
-import { EasingFunction } from "../ease";
-import { JSONObject } from "../initializer/Rate";
-import { Vector3D } from "../math";
-import Behaviour from "./Behaviour";
+import Particle from '../core/Particle';
+import { EasingFunction } from '../ease';
+import { JSONObject } from '../initializer/Rate';
+import { Vector3D } from '../math';
+import Behaviour from './Behaviour';
 
 /**
  * Behaviour that rotates particles.
@@ -10,6 +10,7 @@ import Behaviour from "./Behaviour";
 export default class Rotate extends Behaviour {
     /**
      * Constructs a Rotate behaviour instance.
+     *
      */
     constructor(
         x?: number | Random,
@@ -21,6 +22,7 @@ export default class Rotate extends Behaviour {
     );
     /**
      * Gets the rotation type.
+     *
      */
     get rotationType(): string;
 
@@ -32,12 +34,14 @@ export default class Rotate extends Behaviour {
 
     /**
      * Resets the behaviour properties.
+     *
      */
     reset(x?: number, y?: number, z?: number, life?: number, easing?: EasingFunction): void;
     reset(life?: number, easing?: EasingFunction): void;
 
     /**
      * Initializes the behaviour on a particle.
+     *
      */
     initialize(particle: Particle): void;
 
@@ -64,4 +68,4 @@ export default class Rotate extends Behaviour {
     static fromJSON(json: JSONObject): Rotate;
 }
 
-export type Random = "random";
+export type Random = 'random';

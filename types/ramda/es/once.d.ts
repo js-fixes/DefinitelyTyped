@@ -1,2 +1,2 @@
-import { once } from "../index.js";
+import { once } from '../index';
 export default once;

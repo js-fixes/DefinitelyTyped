@@ -1,2 +1,2 @@
-import { minBy } from "../index.js";
+import { minBy } from '../index';
 export default minBy;

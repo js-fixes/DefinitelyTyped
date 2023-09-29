@@ -5,53 +5,53 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.1
 
-import { AmericanExpress, create as americanExpressCreate } from "./american-express";
+import { VERSION, BraintreeError, callback } from './core';
+import { AmericanExpress, create as americanExpressCreate } from './american-express';
 import {
     ApplePay,
-    ApplePayDetails,
-    ApplePayLineItem,
-    ApplePayLineItemType,
-    ApplePayPayload,
-    ApplePayPaymentRequest,
-    ApplePayPaymentTiming,
-    ApplePayRecurringPaymentDateUnit,
     ApplePaySession,
     ApplePayStatusCodes,
+    ApplePayDetails,
+    ApplePayPayload,
+    ApplePayPaymentRequest,
+    ApplePayLineItem,
+    ApplePayLineItemType,
+    ApplePayPaymentTiming,
+    ApplePayRecurringPaymentDateUnit,
     ApplePayTokenizeValues,
     create as applePayCreate,
-} from "./apple-pay";
-import { Client, create as clientCreate, CreditCardInfo } from "./client";
-import { BraintreeError, callback, VERSION } from "./core";
-import { create as dataCollectorCreate, DataCollector } from "./data-collector";
-import { create as googlePaymentCreate, GooglePayment, GooglePaymentTokenizePayload } from "./google-payment";
+} from './apple-pay';
+import { Client, CreditCardInfo, create as clientCreate } from './client';
+import { DataCollector, create as dataCollectorCreate } from './data-collector';
+import { GooglePayment, GooglePaymentTokenizePayload, create as googlePaymentCreate } from './google-payment';
 import {
-    create as hostedFieldsCreate,
-    HostedFieldFieldOptions,
     HostedFields,
-    HostedFieldsBinPayload,
+    HostedFieldFieldOptions,
+    HostedFieldsTokenizePayload,
     HostedFieldsEvent,
     HostedFieldsStateObject,
-    HostedFieldsTokenizePayload,
-} from "./hosted-fields";
+    HostedFieldsBinPayload,
+    create as hostedFieldsCreate,
+} from './hosted-fields';
 import {
-    create as localPaymentCreate,
     LocalPayment,
     LocalPaymentTokenizePayload,
     LocalPaymentTypes,
-} from "./local-payment";
-import { create as payPalCreate, PayPal, PayPalTokenizePayload } from "./paypal";
-import { create as payPalCheckoutCreate, PayPalCheckout, PayPalCheckoutCreatePaymentOptions } from "./paypal-checkout";
-import { create as threeDSecureCreate, ThreeDSecure, ThreeDSecureVerifyPayload } from "./three-d-secure";
+    create as localPaymentCreate,
+} from './local-payment';
+import { PayPal, PayPalTokenizePayload, create as payPalCreate } from './paypal';
+import { PayPalCheckout, PayPalCheckoutCreatePaymentOptions, create as payPalCheckoutCreate } from './paypal-checkout';
+import { ThreeDSecure, ThreeDSecureVerifyPayload, create as threeDSecureCreate } from './three-d-secure';
 import {
-    create as unionPayCreate,
     UnionPay,
-    UnionPayEnrollPayload,
     UnionPayFetchCapabilitiesPayload,
+    UnionPayEnrollPayload,
     UnionPayTokenizePayload,
-} from "./unionpay";
-import { create as usBankAccountCreate, USBankAccount } from "./us-bank-account";
-import { create as vaultManagerCreate, FetchPaymentMethodsPayload, VaultManager } from "./vault-manager";
-import { create as venmoCreate, Venmo, VenmoTokenizePayload } from "./venmo";
+    create as unionPayCreate,
+} from './unionpay';
+import { USBankAccount, create as usBankAccountCreate } from './us-bank-account';
+import { VaultManager, FetchPaymentMethodsPayload, create as vaultManagerCreate } from './vault-manager';
+import { Venmo, VenmoTokenizePayload, create as venmoCreate } from './venmo';
 
 interface PaymentClient<T> {
     create: T;
@@ -73,50 +73,50 @@ export const vaultManager: PaymentClient<typeof vaultManagerCreate>;
 export const venmo: PaymentClient<typeof venmoCreate>;
 
 export {
-    AmericanExpress,
-    ApplePay,
-    ApplePayDetails,
-    ApplePayLineItem,
-    ApplePayLineItemType,
-    ApplePayPayload,
-    ApplePayPaymentRequest,
-    ApplePayPaymentTiming,
-    ApplePayRecurringPaymentDateUnit,
-    ApplePaySession,
-    ApplePayStatusCodes,
-    ApplePayTokenizeValues,
+    VERSION,
     BraintreeError,
     callback,
+    AmericanExpress,
+    ApplePay,
+    ApplePaySession,
+    ApplePayDetails,
+    ApplePayStatusCodes,
+    ApplePayPayload,
+    ApplePayPaymentRequest,
+    ApplePayLineItem,
+    ApplePayLineItemType,
+    ApplePayPaymentTiming,
+    ApplePayRecurringPaymentDateUnit,
+    ApplePayTokenizeValues,
     Client,
     CreditCardInfo,
     DataCollector,
-    FetchPaymentMethodsPayload,
     GooglePayment,
     GooglePaymentTokenizePayload,
-    HostedFieldFieldOptions,
     HostedFields,
+    HostedFieldFieldOptions,
     HostedFieldsBinPayload,
+    HostedFieldsTokenizePayload,
     HostedFieldsEvent,
     HostedFieldsStateObject,
-    HostedFieldsTokenizePayload,
     LocalPayment,
-    LocalPaymentTokenizePayload,
     LocalPaymentTypes,
+    LocalPaymentTokenizePayload,
     PayPal,
+    PayPalTokenizePayload,
     PayPalCheckout,
     PayPalCheckoutCreatePaymentOptions,
-    PayPalTokenizePayload,
     ThreeDSecure,
     ThreeDSecureVerifyPayload,
     UnionPay,
-    UnionPayEnrollPayload,
     UnionPayFetchCapabilitiesPayload,
+    UnionPayEnrollPayload,
     UnionPayTokenizePayload,
     USBankAccount,
     VaultManager,
+    FetchPaymentMethodsPayload,
     Venmo,
     VenmoTokenizePayload,
-    VERSION,
 };
 
 export as namespace braintree;

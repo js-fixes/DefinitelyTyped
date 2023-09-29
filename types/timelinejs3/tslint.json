@@ -5,6 +5,7 @@
         "interface-name": false,
         "no-misused-new": false,
         "no-var-keyword": false,
+        "strict-export-declare-modifiers": false,
         "unified-signatures": false
     }
 }

@@ -39,6 +39,7 @@ declare namespace GoogleAdsScripts {
          *
          * Typical usage:
          *
+         *
          *      var excludedVideoAudienceSelector = AdsApp.videoTargeting()
          *          .excludedVideoAudiences()
          *          .withCondition("AdGroupStatus = 'ENABLED'")
@@ -50,11 +51,9 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface ExcludedVideoAudienceSelector
-            extends
-                Base.Selector<ExcludedVideoAudienceIterator>,
+            extends Base.Selector<ExcludedVideoAudienceIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

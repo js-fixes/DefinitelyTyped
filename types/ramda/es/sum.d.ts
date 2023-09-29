@@ -1,2 +1,2 @@
-import { sum } from "../index.js";
+import { sum } from '../index';
 export default sum;

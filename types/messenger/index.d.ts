@@ -85,6 +85,7 @@ interface MessageOptions {
 }
 
 interface MessengerOptions {
+
     /**
      * Extra classes to be appended to the container.
      */

@@ -37,6 +37,7 @@ interface ZeptoStatic {
     pgwModal: PgwModalMethod;
 }
 
+
 interface JQueryStatic {
     pgwModal: PgwModalMethod;
 }

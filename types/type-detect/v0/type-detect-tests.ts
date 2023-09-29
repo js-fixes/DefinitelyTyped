@@ -1,4 +1,5 @@
-import td = require("type-detect");
+
+import td = require('type-detect');
 
 var str: string;
 var bool: boolean;
@@ -14,3 +15,5 @@ lib.define(str, (val) => {
 });
 str = lib.of(x);
 bool = lib.test(x, str);
+
+

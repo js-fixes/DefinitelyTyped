@@ -1,2 +1,2 @@
-import { lastIndexOf } from "../index.js";
+import { lastIndexOf } from '../index';
 export default lastIndexOf;

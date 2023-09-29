@@ -1,18 +1,18 @@
 import {
-    decodeAuthMetadata,
+    decodeSimpleAuthPayload,
     decodeCompositeMetadata,
     decodeRoutes,
-    decodeSimpleAuthPayload,
+    decodeAuthMetadata,
     encodeCompositeMetadata,
     encodeRoute,
     encodeSimpleAuthMetadata,
-    MESSAGE_RSOCKET_AUTHENTICATION,
-    MESSAGE_RSOCKET_COMPOSITE_METADATA,
-    MESSAGE_RSOCKET_ROUTING,
     RSocketClient,
-    SIMPLE,
+    MESSAGE_RSOCKET_COMPOSITE_METADATA,
     TEXT_PLAIN,
-} from "rsocket-core";
+    MESSAGE_RSOCKET_ROUTING,
+    MESSAGE_RSOCKET_AUTHENTICATION,
+    SIMPLE
+} from 'rsocket-core';
 
 new RSocketClient<Buffer, Buffer>({
     // note: default `serializers` is pass-through
@@ -22,25 +22,25 @@ new RSocketClient<Buffer, Buffer>({
         // ms timeout if no keepalive response
         lifetime: 180000,
         // format of `data`
-        dataMimeType: "application/octet-stream",
+        dataMimeType: 'application/octet-stream',
         // format of `metadata`
         metadataMimeType: MESSAGE_RSOCKET_COMPOSITE_METADATA.string,
         // payload
         payload: {
             metadata: encodeCompositeMetadata([
-                [TEXT_PLAIN, Buffer.from("Hello World")],
+                [TEXT_PLAIN, Buffer.from('Hello World')],
                 [MESSAGE_RSOCKET_ROUTING, encodeRoute("my.route")],
                 [MESSAGE_RSOCKET_AUTHENTICATION, encodeSimpleAuthMetadata("user", "pass")],
-            ]),
-        },
+            ])
+        }
     },
     // Transports default to sending/receiving strings:
     // Use BufferEncoders to enable binary
-    transport: (undefined as any),
+    transport: (undefined as any)
 });
 
 const compositeMetadata = decodeCompositeMetadata(encodeCompositeMetadata([
-    [TEXT_PLAIN, Buffer.from("Hello World")],
+    [TEXT_PLAIN, Buffer.from('Hello World')],
     [MESSAGE_RSOCKET_ROUTING, encodeRoute("my.route")],
     [MESSAGE_RSOCKET_AUTHENTICATION, encodeSimpleAuthMetadata("user", "pass")],
 ]));

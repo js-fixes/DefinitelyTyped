@@ -1,6 +1,6 @@
-import GLImage from "gl-react-image";
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import GLImage from 'gl-react-image';
 
 const App = () => (
     <div>
@@ -13,6 +13,6 @@ const App = () => (
     </div>
 );
 
-const element = document.createElement("div");
+const element = document.createElement('div');
 document.body.appendChild(element);
 ReactDOM.render(<App />, element);

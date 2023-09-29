@@ -4,5 +4,5 @@ export class CanvasRenderTexture extends Texture {
     resize(width: number, height: number, scale: number): void;
     __dumpToDocument(): void;
 }
-import { RenderTargetCanvas } from "../drivers/canvas/RenderTargetCanvas";
-import { Texture } from "./Texture";
+import { Texture } from './Texture';
+import { RenderTargetCanvas } from '../drivers/canvas/RenderTargetCanvas';

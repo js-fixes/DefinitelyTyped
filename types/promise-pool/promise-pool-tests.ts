@@ -1,8 +1,9 @@
-import Q = require("q");
-import promisePool = require("promise-pool");
+
+﻿import Q = require('q');
+import promisePool = require('promise-pool');
 
 var pool = new promisePool.Pool<number>((taskDataId, index) => {
-    return Q.delay(Math.floor(Math.random() * 5000)).then(function() {
+    return Q.delay(Math.floor(Math.random() * 5000)).then(function () {
         taskDataId == 0;
         index == 0;
     });
@@ -11,7 +12,7 @@ var pool = new promisePool.Pool<number>((taskDataId, index) => {
 pool
     .pause()
     .delay(5000)
-    .then(function() {
+    .then(function () {
         pool.resume();
     });
 

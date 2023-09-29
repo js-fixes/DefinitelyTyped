@@ -13,8 +13,7 @@ export = GulpImage;
 declare function GulpImage(options?: GulpImage.Options): stream.Transform;
 
 declare namespace GulpImage {
-    type OptimizerSetting =
-        | boolean
+    type OptimizerSetting = boolean
         | any[];
 
     interface Options {

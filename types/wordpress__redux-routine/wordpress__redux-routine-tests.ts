@@ -1,5 +1,5 @@
-import createMiddleware from "@wordpress/redux-routine";
-import { applyMiddleware, createStore } from "redux";
+import { createStore, applyMiddleware } from 'redux';
+import createMiddleware from '@wordpress/redux-routine';
 
 const middleware = createMiddleware({
     FOO: action => action.foo,

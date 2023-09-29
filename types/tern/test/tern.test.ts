@@ -6,15 +6,16 @@ server.request({
     query: {
         type: "completions",
         file: "",
-        end: 0,
-    },
+        end: 0
+    }
 }, (error, response) => {
     if (response && response.isProperty) {
         //
     }
 });
 
-server.request({}, (error, response) => {
+server.request({
+}, (error, response) => {
     // @ts-expect-error
     if (response && response.isProperty) {
         //
@@ -25,19 +26,19 @@ declare module "tern/lib/tern" {
     interface QueryRegistry {
         someUnknownType: {
             query: {
-                type: "someUnknownType";
-            };
+                type: "someUnknownType"
+            },
             result: {
-                abc: boolean;
-            };
+                abc: boolean
+            }
         };
     }
 }
 
 server.request({
     query: {
-        type: "someUnknownType",
-    },
+        type: "someUnknownType"
+    }
 }, (error, response) => {
     if (response && response.abc) {
         //
@@ -45,7 +46,7 @@ server.request({
 });
 
 server.request({
-    query: undefined,
+    query: undefined
 }, (error, response) => {
     // @ts-expect-error
     if (response && response.isProperty) {

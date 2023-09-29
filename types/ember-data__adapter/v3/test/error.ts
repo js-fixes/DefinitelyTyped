@@ -4,17 +4,17 @@
 // we make these the root definitions and expand these as appropriate).
 
 import AdapterError, {
-    AbortError,
-    ConflictError,
-    errorsArrayToHash,
-    errorsHashToArray,
-    ForbiddenError,
     InvalidError,
-    NotFoundError,
-    ServerError,
     TimeoutError,
+    AbortError,
     UnauthorizedError,
-} from "@ember-data/adapter/error";
+    ForbiddenError,
+    NotFoundError,
+    ConflictError,
+    ServerError,
+    errorsHashToArray,
+    errorsArrayToHash,
+} from '@ember-data/adapter/error';
 
 class MyInvalid extends InvalidError {
     constructor() {

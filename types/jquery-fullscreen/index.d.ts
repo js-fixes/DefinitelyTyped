@@ -7,6 +7,7 @@
 /// <reference types="jquery"/>
 
 interface JQuery {
+
     /**
      * You can either switch the whole page or a single HTML element to fullscreen mode
      * This only works when the code was triggered by a user interaction (For example a onclick event on a button). Browsers don't allow entering fullscreen mode without user interaction.
@@ -25,3 +26,4 @@ interface JQuery {
      */
     toggleFullScreen(): JQuery | boolean;
 }
+

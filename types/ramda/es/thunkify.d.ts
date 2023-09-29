@@ -1,2 +1,2 @@
-import { thunkify } from "../index.js";
+import { thunkify } from '../index';
 export default thunkify;

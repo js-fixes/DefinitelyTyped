@@ -1,2 +1,2 @@
-import { without } from "../index.js";
+import { without } from '../index';
 export default without;

@@ -1,2 +1,2 @@
-import { innerJoin } from "../index.js";
+import { innerJoin } from '../index';
 export default innerJoin;

@@ -172,6 +172,7 @@ export interface VoronoiLayout<T> {
      * x1 is the right and y1 is the bottom.
      *
      * A clip extent is required when using voronoi.polygons.
+     *
      */
     extent(): [[number, number], [number, number]] | null;
     /**

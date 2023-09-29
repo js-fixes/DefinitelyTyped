@@ -1,5 +1,12 @@
-import { AllowPartial, Data, Full, Helper, Helpers, OptionalHelper } from "meteor/dburles:collection-helpers";
-import { Mongo } from "meteor/mongo";
+import { Mongo } from 'meteor/mongo';
+import {
+    Helper,
+    OptionalHelper,
+    Data,
+    Full,
+    Helpers,
+    AllowPartial,
+} from 'meteor/dburles:collection-helpers';
 
 interface Author {
     _id?: string | undefined;
@@ -19,31 +26,31 @@ interface Book {
     foo: Helper<string>;
 }
 
-const Books = new Mongo.Collection<Book>("books");
-const Authors = new Mongo.Collection<Author>("authors");
+const Books = new Mongo.Collection<Book>('books');
+const Authors = new Mongo.Collection<Author>('authors');
 
 // $ExpectType Collection<Book, Book>
 Books;
 
 // when inserting items, only data properties are required
 const author1 = Authors.insert({
-    firstName: "Charles",
-    lastName: "Darwin",
+    firstName: 'Charles',
+    lastName: 'Darwin',
 });
 
 const author2 = Authors.insert({
-    firstName: "Carl",
-    lastName: "Sagan",
+    firstName: 'Carl',
+    lastName: 'Sagan',
 });
 
 const book1 = Books.insert({
     authorId: author1,
-    name: "On the Origin of Species",
+    name: 'On the Origin of Species',
 });
 
 const book2 = Books.insert({
     authorId: author2,
-    name: "Contact",
+    name: 'Contact',
 });
 
 // when providing helpers, no data properties but all helpers are required
@@ -53,7 +60,7 @@ Books.helpers({
     author() {
         return Authors.findOne(this.authorId);
     },
-    foo: "bar",
+    foo: 'bar',
 });
 // @ts-expect-error
 Books.helpers({
@@ -81,14 +88,14 @@ const book = Books.findOne(book1)!;
 const author: Author | undefined = book.author();
 
 // can modify resulting Book and update Books with it, even though it has helpers attached
-book.name = "Renamed Book";
+book.name = 'Renamed Book';
 // $ExpectType number
 Books.update(book._id!, book);
 
 // with mandatory helpers, new objects can be declared directly as Data<T>
 const bookData: Data<Book> = {
-    authorId: "Author",
-    name: "Name",
+    authorId: 'Author',
+    name: 'Name',
 };
 
 // this interface has its helpers declared as optional; this makes instantiating the interface easier,
@@ -100,7 +107,7 @@ interface OptionalHelpers {
     zero?: Helper<number> | undefined;
 }
 
-const optionalHelpers = new Mongo.Collection<OptionalHelpers>("optionalHelpers");
+const optionalHelpers = new Mongo.Collection<OptionalHelpers>('optionalHelpers');
 // optional helpers still have to be provided when calling helpers
 // @ts-expect-error
 optionalHelpers.helpers({});
@@ -149,7 +156,7 @@ takesOptionalHelpers(literalOptHelp);
 // $ExpectType number
 takesOptionalHelpers({
     _id: "another id",
-    value: 13,
+    value: 13
 });
 // this might be a better choice if your interface is a general data type that you just happen to put in collections sometimes,
 // rather than a collection schema you work with retrieved instances of often
@@ -161,7 +168,7 @@ interface RecursiveHelpers {
     factorial: (arg: number) => number;
 }
 
-const recursiveHelpers = new Mongo.Collection<RecursiveHelpers>("recursiveHelpers");
+const recursiveHelpers = new Mongo.Collection<RecursiveHelpers>('recursiveHelpers');
 recursiveHelpers.helpers({
     factorial(x) {
         if (x <= 1) return 1;
@@ -180,7 +187,7 @@ interface RecursiveOptionalHelpers {
     factorial?: ((arg: number) => number) | undefined;
 }
 
-const recursiveOptionalHelpers = new Mongo.Collection<RecursiveHelpers>("recursiveHelpers");
+const recursiveOptionalHelpers = new Mongo.Collection<RecursiveHelpers>('recursiveHelpers');
 recursiveHelpers.helpers({
     factorial(x) {
         if (x <= 1) return 1;
@@ -200,14 +207,14 @@ interface MandatoryId {
     _id: string;
     value: number;
 }
-const mandatoryIds = new Mongo.Collection<MandatoryId>("mandatoryIds");
+const mandatoryIds = new Mongo.Collection<MandatoryId>('mandatoryIds');
 mandatoryIds.helpers({});
 const withoutId: Mongo.OptionalId<MandatoryId> = {
     value: 3,
 };
 
 // $ExpectType number | undefined
-mandatoryIds.upsert("new ID", { ...withoutId, _id: "new ID" }).numberAffected;
+mandatoryIds.upsert('new ID', { ...withoutId, _id: 'new ID' }).numberAffected;
 
 // regression test:
 // union properties on interfaces:
@@ -236,7 +243,7 @@ interface ComplicatedMembers {
     nonHelperUnion: number | string;
     helperMethodOrString: Helper<(() => string) | string>;
 }
-const complicatedMembers = new Mongo.Collection<ComplicatedMembers>("complicatedMembers");
+const complicatedMembers = new Mongo.Collection<ComplicatedMembers>('complicatedMembers');
 
 // every member recognized as a helper is required when providing helpers
 // $ExpectType void
@@ -247,7 +254,7 @@ complicatedMembers.helpers({
     helperNullableFalse: null,
     helperNull: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -258,7 +265,7 @@ complicatedMembers.helpers({
     helperNullableFalse: null,
     helperNull: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -269,7 +276,7 @@ complicatedMembers.helpers({
     helperNullableFalse: null,
     helperNull: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -280,7 +287,7 @@ complicatedMembers.helpers({
     helperNullableFalse: null,
     helperNull: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -291,7 +298,7 @@ complicatedMembers.helpers({
     helperNumber: 5,
     helperNull: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -313,7 +320,7 @@ complicatedMembers.helpers({
     helperNumber: 5,
     helperNullableFalse: null,
     helperVoidableNumber: undefined,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -324,7 +331,7 @@ complicatedMembers.helpers({
     helperNumber: 5,
     helperNullableFalse: null,
     helperNull: null,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
     helperMethodOrString: () => "method",
 });
 
@@ -336,13 +343,13 @@ complicatedMembers.helpers({
     helperNullableFalse: null,
     helperVoidableNumber: undefined,
     helperNull: null,
-    optionalHelperString: "foo",
+    optionalHelperString: 'foo',
 });
 
 const complicatedMembersId = complicatedMembers.insert({
     nullable: 2,
     alwaysNull: null,
-    nonHelperUnion: "test",
+    nonHelperUnion: 'test',
 });
 
 const complicatedMembersInstance = complicatedMembers.findOne(complicatedMembersId)!;
@@ -383,7 +390,7 @@ interface ActuallyOptionalHelpers {
     optionalHelperValue: OptionalHelper<number>;
     optionalHelperName?: OptionalHelper<string> | undefined;
 }
-const actuallyOptionalHelpers = new Mongo.Collection<ActuallyOptionalHelpers>("actuallyOptionalHelpers");
+const actuallyOptionalHelpers = new Mongo.Collection<ActuallyOptionalHelpers>('actuallyOptionalHelpers');
 
 // every one of those helpers is totally optional - we can even provide an empty object!
 // $ExpectType void
@@ -406,7 +413,7 @@ actuallyOptionalHelpers.helpers({
 });
 // $ExpectType void
 actuallyOptionalHelpers.helpers({
-    optionalHelperName: "foo",
+    optionalHelperName: 'foo',
 });
 // $ExpectType void
 actuallyOptionalHelpers.helpers({
@@ -417,7 +424,7 @@ actuallyOptionalHelpers.helpers({
         this.value++;
     },
     optionalHelperValue: 3,
-    optionalHelperName: "foo",
+    optionalHelperName: 'foo',
 });
 
 // as usual, only non-helper properties are required when inserting an item

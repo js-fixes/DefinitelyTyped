@@ -1,12 +1,14 @@
-import { createSpan, Vector3D } from "../../math";
-import { JSONObject } from "../Rate";
-import Velocity from "./Velocity";
+import { Vector3D, createSpan } from '../../math';
+import { JSONObject } from '../Rate';
+import Velocity from './Velocity';
 /**
  * Sets the velocity property on initialized particles.
+ *
  */
 export default class VectorVelocity extends Velocity {
     /**
      * Constructs a VectorVelocity initializer.
+     *
      */
     constructor(vector3d?: Vector3D, theta?: number, isEnabled?: boolean);
     /**
@@ -27,6 +29,7 @@ export default class VectorVelocity extends Velocity {
     protected _useV: boolean;
     /**
      * Creates a VectorVelocity initializer from JSON.
+     *
      */
     static fromJSON(json: JSONObject): VectorVelocity;
 }

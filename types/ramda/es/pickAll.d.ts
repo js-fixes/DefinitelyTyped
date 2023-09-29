@@ -1,2 +1,2 @@
-import { pickAll } from "../index.js";
+import { pickAll } from '../index';
 export default pickAll;

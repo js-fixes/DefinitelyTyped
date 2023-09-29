@@ -7,7 +7,8 @@
 /// <reference types="google.maps" />
 
 declare namespace SnazzyInfoWindow {
-    type PlacementOptions = "top" | "bottom" | "left" | "right";
+    type PlacementOptions =
+        'top' | 'bottom' | 'left' | 'right';
 
     interface Offset {
         top?: string | undefined;
@@ -136,6 +137,7 @@ declare namespace SnazzyInfoWindow {
          *   top: '10px',
          *   left: '20px'
          * }
+         *
          */
         offset?: Offset | undefined;
 

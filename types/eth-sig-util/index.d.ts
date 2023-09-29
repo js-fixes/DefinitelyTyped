@@ -20,13 +20,9 @@ export function normalize(input: string | number): string;
 ////////////////////////////////////////////////////////////////////////////////
 // Personal message signing utils
 
-export interface MessageData<T = any> {
-    data: T;
-}
+export interface MessageData<T = any> { data: T; }
 
-export interface SignedMessageData<T = any> extends MessageData<T> {
-    sig: string;
-}
+export interface SignedMessageData<T = any> extends MessageData<T> { sig: string; }
 
 export function personalSign(privateKey: Buffer, message: MessageData): string;
 
@@ -59,7 +55,7 @@ export function recoverTypedSignatureLegacy(
 ////////////////////////////////////////////////////////////////////////////////
 // Elliptic curve encryption utils
 
-export type EncryptionType = "x25519-xsalsa20-poly1305";
+export type EncryptionType = 'x25519-xsalsa20-poly1305';
 
 export interface EncryptedData {
     version: EncryptionType;
@@ -157,8 +153,7 @@ export namespace TypedDataUtils {
     function encodeType(primaryType: string, types: EIP712Types): string;
 
     function findTypeDependencies(
-        primaryType: string,
-        types: EIP712Types,
+        primaryType: string, types: EIP712Types,
     ): string[];
 
     function hashStruct(primaryType: string, data: EIP712Message, types: EIP712Types): Buffer;

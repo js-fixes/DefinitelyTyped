@@ -1,5 +1,5 @@
-import { applyMiddleware, Middleware } from "redux";
 import { createInjectableStore } from "redux-injectable-store";
+import { applyMiddleware, Middleware } from "redux";
 
 interface State {
     foo: string;
@@ -22,5 +22,5 @@ store.clearReducers();
 
 anotherStore.injectAll({
     bar: dummyReducer,
-    baz: dummyReducer,
+    baz: dummyReducer
 });

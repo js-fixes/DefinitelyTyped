@@ -5,6 +5,8 @@
 
 /// <reference types="node" />
 
+
+
 declare namespace espower {
     interface Espower {
         /**

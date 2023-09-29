@@ -1,17 +1,10 @@
 declare namespace GorillaEngine.UI {
-    interface KnobProps extends Common, Bounds, Clickable, Background, Skinnable, MIDILearn, Highlight {
+    interface KnobProps extends Common, Bounds, Clickable, Background, Skinnable {
         text: string;
         min: number;
         max: number;
         value: number;
         stepSize: number;
-        inverted: boolean;
-        scrollWheelEnabled: boolean;
-        image: string;
-        snapsToMousePosition: boolean;
-        minRotation: number;
-        maxRotation: number;
-        direction: 'horizontal' | 'vertical';
     }
 
     interface Knob extends KnobProps {}

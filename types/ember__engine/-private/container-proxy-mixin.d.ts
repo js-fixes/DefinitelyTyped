@@ -1,5 +1,5 @@
-import Mixin from "@ember/object/mixin";
-import Owner from "@ember/owner";
+import Owner from '@ember/owner';
+import Mixin from '@ember/object/mixin';
 
 /**
  * Given a fullName return a factory manager.

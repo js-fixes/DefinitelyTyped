@@ -1,8 +1,8 @@
-import { Pane, Splitpanes } from "splitpanes";
-import Vue from "vue";
+import Vue from 'vue';
+import { Splitpanes, Pane } from 'splitpanes';
 
 new Vue({
-    el: "#app",
+    el: '#app',
     data: {},
     components: {
         Splitpanes,

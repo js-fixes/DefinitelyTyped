@@ -1,8 +1,8 @@
-import CommonToken from "./CommonToken";
-import RecognitionException from "./error/RecognitionException";
-import InputStream from "./InputStream";
-import Recognizer from "./Recognizer";
-import Token from "./Token";
+import Recognizer from './Recognizer';
+import CommonToken from './CommonToken';
+import Token from './Token';
+import RecognitionException from './error/RecognitionException';
+import InputStream from './InputStream';
 
 /**
  * A lexer is recognizer that draws input symbols from a character stream.

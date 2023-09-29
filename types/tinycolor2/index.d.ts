@@ -16,7 +16,8 @@ declare namespace tinycolor {
         | ColorFormats.HSL
         | ColorFormats.HSLA
         | ColorFormats.HSV
-        | ColorFormats.HSVA;
+        | ColorFormats.HSVA
+        ;
     type ColorInput = ColorInputWithoutInstance | Instance;
 
     namespace ColorFormats {
@@ -79,7 +80,7 @@ declare namespace tinycolor {
          *
          * @param color - the color as one of the valid color input format.
          */
-        new(color?: ColorInput, opts?: ConstructorOptions): Instance;
+        new (color?: ColorInput, opts?: ConstructorOptions): Instance;
         (color?: ColorInput, opts?: ConstructorOptions): Instance;
 
         /**

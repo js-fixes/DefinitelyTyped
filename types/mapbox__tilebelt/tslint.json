@@ -2,6 +2,7 @@
     "extends": "@definitelytyped/dtslint/dt.json",
     "rules": {
         "array-type": false,
-        "no-redundant-jsdoc-2": false
+        "no-redundant-jsdoc-2": false,
+        "no-single-declare-module": false
     }
 }

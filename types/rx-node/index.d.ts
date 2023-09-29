@@ -7,6 +7,7 @@
 /// <reference types="rx" />
 
 declare namespace RxNode {
+
     export interface PublishableEventEmitter extends NodeJS.EventEmitter {
         publish(): void;
     }
@@ -28,11 +29,7 @@ declare namespace RxNode {
      * @param {String} [dataEventName] Event that notifies about incoming data. ("data" by default)
      * @returns {Observable} An observable sequence which fires on each 'data' event as well as handling 'error' and finish events like `end` or `finish`.
      */
-    function fromStream<T>(
-        stream: NodeJS.ReadableStream,
-        finishEventName?: string,
-        dataEventName?: string,
-    ): Rx.Observable<T>;
+    function fromStream<T>(stream: NodeJS.ReadableStream, finishEventName?: string, dataEventName?: string): Rx.Observable<T>;
 
     /**
      * Converts a flowing readable stream to an Observable sequence.
@@ -71,11 +68,8 @@ declare namespace RxNode {
      * @param {String} [encoding] The encoding of the item to write.
      * @returns {Disposable} The subscription handle.
      */
-    function writeToStream<T>(
-        observable: Rx.Observable<T>,
-        stream: NodeJS.WritableStream,
-        encoding: string,
-    ): Rx.Disposable;
+    function writeToStream<T>(observable: Rx.Observable<T>, stream: NodeJS.WritableStream, encoding: string): Rx.Disposable;
+
 }
 
 declare module "rx-node" {

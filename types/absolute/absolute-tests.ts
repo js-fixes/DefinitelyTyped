@@ -1,3 +1,4 @@
-import absolute from "absolute";
 
-const x: boolean = absolute("/home/foo");
+import absolute from 'absolute';
+
+const x: boolean = absolute('/home/foo');

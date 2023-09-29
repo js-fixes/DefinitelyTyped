@@ -1,5 +1,5 @@
-import * as Backbone from "backbone";
-import * as _ from "lodash";
+import * as Backbone from 'backbone';
+import * as _ from 'lodash';
 
 export type WpBackboneViewList = WpBackBoneView[] | { [key: string]: WpBackBoneView[] };
 
@@ -111,6 +111,7 @@ export type WpBackboneSubviews = Backbone.Model & {
      *
      * Accepts an `options` object. If `options.silent` is set, `unset`
      * will *not* be triggered on the master view's parent.
+     *
      */
     remove: (options: false | { silent: boolean }) => WpBackboneSubviews;
 
@@ -156,6 +157,7 @@ export type WpBackboneSubviews = Backbone.Model & {
  *
  * This extends the backbone view to have a build-in way to use subviews. This
  * makes it easier to have nested views.
+ *
  */
 export type WpBackBoneView = Backbone.View & {
     Subviews: WpBackboneSubviews;

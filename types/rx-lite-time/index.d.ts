@@ -11,11 +11,7 @@ declare namespace Rx {
         delayWithSelector(delayDurationSelector: (item: T) => number): Observable<T>;
         delayWithSelector(subscriptionDelay: number, delayDurationSelector: (item: T) => number): Observable<T>;
 
-        timeoutWithSelector<TTimeout>(
-            firstTimeout: Observable<TTimeout>,
-            timeoutdurationSelector?: (item: T) => Observable<TTimeout>,
-            other?: Observable<T>,
-        ): Observable<T>;
+        timeoutWithSelector<TTimeout>(firstTimeout: Observable<TTimeout>, timeoutdurationSelector?: (item: T) => Observable<TTimeout>, other?: Observable<T>): Observable<T>;
 
         debounceWithSelector<TTimeout>(debounceDurationSelector: (item: T) => Observable<TTimeout>): Observable<T>;
         /**
@@ -53,16 +49,14 @@ declare namespace Rx {
             iterate: (state: TState) => TState,
             resultSelector: (state: TState) => TResult,
             timeSelector: (state: TState) => number,
-            scheduler?: IScheduler,
-        ): Observable<TResult>;
+            scheduler?: IScheduler): Observable<TResult>;
         generateWithAbsoluteTime<TState, TResult>(
             initialState: TState,
             condition: (state: TState) => boolean,
             iterate: (state: TState) => TState,
             resultSelector: (state: TState) => TResult,
             timeSelector: (state: TState) => Date,
-            scheduler?: IScheduler,
-        ): Observable<TResult>;
+            scheduler?: IScheduler): Observable<TResult>;
     }
 }
 

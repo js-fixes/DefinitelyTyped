@@ -1,2 +1,2 @@
-import { forEachObjIndexed } from "../index.js";
+import { forEachObjIndexed } from '../index';
 export default forEachObjIndexed;

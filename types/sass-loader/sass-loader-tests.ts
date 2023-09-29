@@ -8,11 +8,11 @@ declare const content: string;
 SassLoader(content);
 
 const loaderOptions: SassLoader.Options = {
-    additionalData: "$env: \"development\";",
-    warnRuleAsWarning: true,
+  additionalData: '$env: "development";',
+  warnRuleAsWarning: true,
+  sourceMap: true,
+  sassOptions: {
     sourceMap: true,
-    sassOptions: {
-        sourceMap: true,
-    },
-    webpackImporter: true,
+  },
+  webpackImporter: true,
 };

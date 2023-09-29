@@ -1,4 +1,4 @@
-import { jaccard, jarowinkler, levenshtein, ngram, pearson, tanimoto } from "wuzzy";
+import { jarowinkler, levenshtein, ngram, pearson, jaccard, tanimoto } from 'wuzzy';
 
 declare const aString: string;
 declare const aStringArr: string[];
@@ -38,7 +38,7 @@ pearson({ a: 2.5, b: 1 }, { o: 3.5, e: 6.0 });
 // @ts-expect-error
 pearson();
 // @ts-expect-error
-pearson({ a: "2.5", b: "1" }, { o: "3.5", e: "6.0" });
+pearson({ a: '2.5', b: '1' }, { o: '3.5', e: '6.0' });
 // @ts-expect-error
 pearson(aString, bString);
 // @ts-expect-error

@@ -1,2 +1,2 @@
-import { dec } from "../index.js";
+import { dec } from '../index';
 export default dec;

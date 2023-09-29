@@ -7,6 +7,7 @@
  * Type Script Declaration for node-getopt
  */
 
+
 interface OptionMap {
     [index: string]: string | string[] | boolean;
 }
@@ -68,6 +69,7 @@ declare class Getopt {
      * parse argv
      *
      * Returns: {argv: '...', options: {...}}
+     *
      */
     public parse(argv: string[]): ParsedOption;
 

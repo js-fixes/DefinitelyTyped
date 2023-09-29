@@ -9,6 +9,7 @@
                 "errors": [["NeedsExportEquals", false]],
                 "mode": "code"
             }
-        ]
+        ],
+        "strict-export-declare-modifiers": false
     }
 }

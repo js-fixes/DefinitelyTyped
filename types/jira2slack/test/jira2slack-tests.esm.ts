@@ -1,4 +1,4 @@
-import { toJira, toSlack } from "jira2slack";
+import { toSlack, toJira } from 'jira2slack';
 
-toSlack(""); // $ExpectType string
-toJira(""); // $ExpectType string
+toSlack(''); // $ExpectType string
+toJira(''); // $ExpectType string

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Breadcrumb, Breadcrumbs } from "react-breadcrumbs";
+import { Breadcrumbs, Breadcrumb } from "react-breadcrumbs";
 
 class Wrapper extends React.Component<{ children?: React.ReactNode }> {
     render() {

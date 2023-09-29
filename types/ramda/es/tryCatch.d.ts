@@ -1,2 +1,2 @@
-import { tryCatch } from "../index.js";
+import { tryCatch } from '../index';
 export default tryCatch;

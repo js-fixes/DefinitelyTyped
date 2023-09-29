@@ -5,8 +5,8 @@
 
 /// <reference types="node" />
 
-import { Rule } from "htmlhint/types";
-import { Transform } from "stream";
+import { Transform } from 'stream';
+import { Rule } from 'htmlhint/types';
 
 declare namespace gulpHtmlhint {
     interface Options {
@@ -22,7 +22,7 @@ declare namespace gulpHtmlhint {
 
     type ReporterFunction = () => void;
 
-    type Reported = "fail" | "failOn" | "failAfter";
+    type Reported = 'fail' | 'failOn' | 'failAfter';
 
     interface Plugin {
         (options?: Options | string, customRules?: Rule[]): Transform;

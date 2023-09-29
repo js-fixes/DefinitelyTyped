@@ -3,6 +3,7 @@
     "rules": {
         "jsdoc-format": false,
         "no-redundant-jsdoc-2": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

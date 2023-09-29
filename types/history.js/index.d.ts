@@ -3,6 +3,7 @@
 // Definitions by: Boris Yankov <https://github.com/borisyankov>, Gidon Junge <https://github.com/gjunge>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 interface HistoryAdapter {
     bind(element: any, event: string, callback: () => void): void;
     trigger(element: any, event: string): void;
@@ -16,13 +17,14 @@ interface HistoryAdapter {
 // var Historyjs: Historyjs = <any>History;
 
 interface Historyjs {
+
     enabled: boolean;
 
     pushState(data: any, title: string, url: string, queue?: boolean): boolean;
     replaceState(data: any, title: string, url: string, queue?: boolean): boolean;
     getState(friendly?: boolean, create?: boolean): HistoryState;
-    getStateId(passedState: HistoryState): string;
-    getStateById(id: string): HistoryState;
+    getStateId (passedState: HistoryState): string;
+    getStateById (id: string): HistoryState;
     getStateByIndex(index: number): HistoryState;
     getCurrentIndex(): number;
     getHash(): string;
@@ -44,7 +46,7 @@ interface Historyjs {
      * @param {HistoryState} newState
      * @return {Boolean}
      */
-    setTitle(newState: HistoryState): boolean;
+    setTitle (newState: HistoryState): boolean
     clearQueue(): Historyjs;
     clearAllIntervals(): void;
     getRootUrl(): string;
@@ -52,7 +54,7 @@ interface Historyjs {
     emulated: {
         hashChange?: any;
         pushState?: any;
-    };
+    }
 }
 
 interface HistoryState {

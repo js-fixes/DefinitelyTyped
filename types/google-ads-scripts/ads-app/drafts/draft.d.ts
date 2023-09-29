@@ -87,12 +87,10 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface DraftSelector
-            extends
-                Base.Selector<DraftIterator>,
+            extends Base.Selector<DraftIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

@@ -6,9 +6,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.2
 
-import { CSSProperties } from "aphrodite";
-import * as PropTypes from "prop-types";
-import * as React from "react";
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
+import { CSSProperties } from 'aphrodite';
 
 // tslint:disable-next-line no-empty-interface
 interface Theme {}
@@ -41,11 +41,12 @@ interface WithStylesOptions {
 }
 
 type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
-type ComponentClassProps<C> = C extends new(props: infer P, context?: any) => any ? P : never;
-type SFCProps<C> = C extends (props: infer P & { children?: React.ReactNode | undefined }, context?: any) => any ? P
-    : never;
-type ElementProps<C> = C extends React.ComponentClass<any> ? ComponentClassProps<C>
-    : C extends React.FC<any> ? SFCProps<C>
+type ComponentClassProps<C> = C extends new (props: infer P, context?: any) => any ? P : never;
+type SFCProps<C> = C extends (props: infer P & { children?: React.ReactNode | undefined }, context?: any) => any ? P : never;
+type ElementProps<C> = C extends React.ComponentClass<any>
+    ? ComponentClassProps<C>
+    : C extends React.FC<any>
+    ? SFCProps<C>
     : any;
 type ElementConfig<C> = JSX.LibraryManagedAttributes<C, ElementProps<C>>;
 
@@ -58,4 +59,13 @@ declare function withStyles<T = Theme>(
 
 declare function css(...styles: any[]): object;
 
-export { css, CSSProperties, Styles, Theme, withStyles, WithStylesOptions, WithStylesProps, withStylesPropTypes };
+export {
+  css,
+  withStyles,
+  WithStylesProps,
+  withStylesPropTypes,
+  WithStylesOptions,
+  Theme,
+  Styles,
+  CSSProperties,
+};

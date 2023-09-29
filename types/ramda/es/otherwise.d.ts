@@ -1,2 +1,2 @@
-import { otherwise } from "../index.js";
+import { otherwise } from '../index';
 export default otherwise;

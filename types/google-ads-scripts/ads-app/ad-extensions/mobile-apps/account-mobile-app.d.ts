@@ -7,12 +7,10 @@ declare namespace GoogleAdsScripts {
         interface AccountMobileAppIterator extends Base.Iterator<AccountMobileApp> {}
 
         interface AccountMobileAppSelector
-            extends
-                Base.Selector<AccountMobileAppIterator>,
+            extends Base.Selector<AccountMobileAppIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

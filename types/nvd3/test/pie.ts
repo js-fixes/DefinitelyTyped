@@ -1,4 +1,5 @@
 namespace nvd3_test_pie {
+
     var testdata = [
         { key: "One", y: 5 },
         { key: "Two", y: 2 },
@@ -6,31 +7,28 @@ namespace nvd3_test_pie {
         { key: "Four", y: 7 },
         { key: "Five", y: 4 },
         { key: "Six", y: 3 },
-        { key: "Seven", y: 0.5 },
+        { key: "Seven", y: 0.5 }
     ];
 
     var width = 300;
     var height = 300;
 
-    nv.addGraph(function() {
+    nv.addGraph(function () {
         var chart = nv.models.pie()
-            .x(function(d) {
-                return d.key;
-            })
-            .y(function(d) {
-                return d.y;
-            })
+            .x(function (d) { return d.key; })
+            .y(function (d) { return d.y; })
             .width(width)
             .height(height)
-            .labelType(function(d, i, values) {
-                return values.key + ":" + values.value;
-            });
+            .labelType(function (d, i, values) {
+                return values.key + ':' + values.value;
+            })
+            ;
 
         d3.select("#test1")
             .datum([testdata])
             .transition().duration(1200)
-            .attr("width", width)
-            .attr("height", height)
+            .attr('width', width)
+            .attr('height', height)
             .call(chart);
 
         // LISTEN TO CLICK EVENTS ON THE PIE CONTAINER
@@ -48,27 +46,24 @@ namespace nvd3_test_pie {
         return chart;
     });
 
-    nv.addGraph(function() {
+    nv.addGraph(function () {
         var chart = nv.models.pie()
-            .x(function(d) {
-                return d.key;
-            })
-            .y(function(d) {
-                return d.y;
-            })
+            .x(function (d) { return d.key; })
+            .y(function (d) { return d.y; })
             .width(width)
             .height(height)
-            .labelType("percent")
-            .valueFormat(d3.format("%"))
+            .labelType('percent')
+            .valueFormat(d3.format('%'))
             .donut(true);
 
         d3.select("#test2")
             .datum([testdata])
             .transition().duration(1200)
-            .attr("width", width)
-            .attr("height", height)
+            .attr('width', width)
+            .attr('height', height)
             .call(chart);
 
         return chart;
     });
+
 }

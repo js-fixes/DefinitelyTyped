@@ -101,6 +101,7 @@ declare namespace GoogleAdsScripts {
              *
              * The following example sets the ad customizer item to run on Mondays and Tuesday from 8:00 to 11:00.
              *
+             *
              *      var mondayMorning = {
              *        dayOfWeek: "MONDAY",
              *        startHour: 8,
@@ -168,13 +169,11 @@ declare namespace GoogleAdsScripts {
          *       }
          */
         interface AdCustomizerItemSelector
-            extends
-                Base.Selector<AdCustomizerItemIterator>,
+            extends Base.Selector<AdCustomizerItemIterator>,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
                 Base.SelectorWithLimit,
                 Base.SelectorOrderBy,
-                Base.SelectorForDateRange
-        {}
+                Base.SelectorForDateRange {}
     }
 }

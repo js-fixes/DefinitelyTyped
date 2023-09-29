@@ -5,7 +5,7 @@
 
 /// <reference types="node" />
 
-import { ParserError, RedisError, ReplyError } from "redis-errors";
+import { ReplyError, RedisError, ParserError } from 'redis-errors';
 
 /**
  * RedisParserOptions

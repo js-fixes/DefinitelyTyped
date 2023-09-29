@@ -4,14 +4,14 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node" />
-import { BinaryToTextEncoding } from "crypto";
-import { Transform, TransformOptions } from "stream";
+import { Transform, TransformOptions } from 'stream';
+import { BinaryToTextEncoding } from 'crypto';
 
 export interface Blake2Options extends TransformOptions {
     digestLength: number;
 }
 
-export type Blake2Algorithm = "blake2b" | "blake2bp" | "blake2s" | "blake2sp" | "bypass";
+export type Blake2Algorithm = 'blake2b' | 'blake2bp' | 'blake2s' | 'blake2sp' | 'bypass';
 
 export class Hash extends Transform {
     constructor(algorithm: Blake2Algorithm, options?: Blake2Options);

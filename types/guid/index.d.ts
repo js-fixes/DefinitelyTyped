@@ -11,7 +11,8 @@ declare function guid(guid: object): object;
 declare namespace guid {
     const EMPTY: string;
 
-    const prototype: {};
+    const prototype: {
+    };
 
     function create(): object;
 

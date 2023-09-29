@@ -1,10 +1,12 @@
-var dynatree = $("element").dynatree();
 
-dynatree.visit((node) => {
+
+var dynatree = $('element').dynatree();
+
+dynatree.visit((node)=>{
     return false;
 });
 
-dynatree.visit((node) => {
+dynatree.visit((node)=>{
     return false;
 }, true);
 

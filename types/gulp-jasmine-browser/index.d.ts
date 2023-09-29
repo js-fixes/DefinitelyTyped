@@ -5,6 +5,7 @@
 
 /// <reference types="node" />
 
+
 interface IJasmineBrowser {
     specRunner(options?: any): NodeJS.ReadWriteStream;
     server(options?: any): NodeJS.ReadWriteStream;

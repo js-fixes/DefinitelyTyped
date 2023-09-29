@@ -3,11 +3,7 @@
 // Definitions by: janeluck <https://github.com/janeluck>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare function addDomEventListener(
-    target: HTMLElement | Document | Window,
-    eventType: string,
-    callback: (event: any) => any,
-): addDomEventListener.Listener;
+declare function addDomEventListener(target: HTMLElement | Document | Window, eventType: string, callback: (event: any) => any): addDomEventListener.Listener;
 
 declare namespace addDomEventListener {
     interface Listener {

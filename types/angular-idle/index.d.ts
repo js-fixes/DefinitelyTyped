@@ -6,14 +6,16 @@
 
 /// <reference types="angular" />
 
-import * as angular from "angular";
+import * as angular from 'angular';
 
-declare module "angular" {
+declare module 'angular' {
     export namespace idle {
+
         /**
          * Used to configure the Title service.
          */
         interface ITitleProvider extends IServiceProvider {
+
             /**
              * Enables or disables the Title functionality.
              *
@@ -23,6 +25,7 @@ declare module "angular" {
         }
 
         interface ITitleService {
+
             /**
              * Allows the title functionality to be enabled or disabled on the fly.
              */
@@ -104,6 +107,7 @@ declare module "angular" {
          * Used to configure the Keepalive service.
          */
         interface IKeepAliveProvider extends IServiceProvider {
+
             /**
              * If configured, options will be used to issue a request using $http.
              * If the value is null, no HTTP request will be issued.
@@ -130,6 +134,7 @@ declare module "angular" {
          * Idle.watch() is called. This can be disabled by configuring the IdleProvider.
          */
         interface IKeepAliveService {
+
             /**
              * Starts pinging periodically until stop() is called.
              */

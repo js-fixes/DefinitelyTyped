@@ -1,8 +1,8 @@
 import express = require("express");
 import formidable = require("formidable");
 
-import { Reply } from "../reply";
 import { Options } from "./options";
+import { Reply } from "../reply";
 
 export type BasicType = string | any[] | object | number;
 

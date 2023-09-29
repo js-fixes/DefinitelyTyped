@@ -1,2 +1,2 @@
-import { either } from "../index.js";
+import { either } from '../index';
 export default either;

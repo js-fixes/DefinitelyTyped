@@ -1,2 +1,2 @@
-import { construct } from "../index.js";
+import { construct } from '../index';
 export default construct;

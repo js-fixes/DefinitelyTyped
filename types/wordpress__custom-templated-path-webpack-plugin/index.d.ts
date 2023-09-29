@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.7
 
-import { compilation, Plugin } from "webpack";
+import { Plugin, compilation } from 'webpack';
 
 declare class CustomTemplatedPathPlugin extends Plugin {
     constructor(
@@ -18,9 +18,9 @@ declare class CustomTemplatedPathPlugin extends Plugin {
                     filename?: string | undefined;
                     hash?: string | undefined;
                     query?: any;
-                },
+                }
             ) => string
-        >,
+        >
     );
 }
 

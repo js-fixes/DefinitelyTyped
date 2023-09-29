@@ -1,3 +1,5 @@
+
+
 interface Dependency {
     dependencies?: string | undefined;
 }
@@ -64,7 +66,7 @@ namespace PrototypeStrategy {
 }
 
 namespace PassingConstructorArguments {
-    class ProfileView {}
+    class ProfileView { }
 
     doTest(ctx => {
         ctx.register("str", String, "hello world"); // signle simple argument

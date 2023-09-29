@@ -3,7 +3,7 @@
 // Definitions by: Justin Unterreiner <https://github.com/Justin-Credible>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-// #region paypal-mobile-js-helper.js
+//#region paypal-mobile-js-helper.js
 
 /**
  * The PayPalItem class defines an optional itemization for a payment.
@@ -11,6 +11,7 @@
  * @see https://developer.paypal.com/docs/api/#item-object for more details.
  */
 declare class PayPalItem {
+
     /**
      * @param name Name of the item. 127 characters max.
      * @param quantity Number of units. 10 characters max.
@@ -54,6 +55,7 @@ declare class PayPalItem {
  * @see https://developer.paypal.com/webapps/developer/docs/api/#details-object for more details.
  */
 declare class PayPalPaymentDetails {
+
     /**
      * @param subtotal Sub-total (amount) of items being paid for. 10 characters max with support for 2 decimal places.
      * @param shipping Amount charged for shipping. 10 characters max with support for 2 decimal places.
@@ -81,6 +83,7 @@ declare class PayPalPaymentDetails {
  * Convenience constructor. Returns a PayPalPayment with the specified amount, currency code, and short description.
  */
 declare class PayPalPayment {
+
     /**
      * @param amount The amount of the payment.
      * @param currencyCode The ISO 4217 currency for the payment.
@@ -90,13 +93,7 @@ declare class PayPalPayment {
      * • "Order" for taking an order, with authorization and capture to be done separately at a later time.
      * @param details PayPalPaymentDetails object (optional).
      */
-    constructor(
-        amount: string,
-        currency: string,
-        shortDescription: string,
-        intent: string,
-        details?: PayPalPaymentDetails,
-    );
+    constructor(amount: string, currency: string, shortDescription: string, intent: string, details?: PayPalPaymentDetails);
 
     /**
      * The amount of the payment.
@@ -160,6 +157,7 @@ declare class PayPalPayment {
 }
 
 declare class PayPalShippingAddress {
+
     /**
      * @param recipientName Name of the recipient at this address. 50 characters max.
      * @param line1 Line 1 of the address (e.g., Number, street, etc). 100 characters max.
@@ -169,15 +167,7 @@ declare class PayPalShippingAddress {
      * @param postalCode ZIP code or equivalent is usually required for countries that have them. 20 characters max. Required in certain countries.
      * @param countryCode 2-letter country code. 2 characters max.
      */
-    constructor(
-        recipientName: string,
-        line1: string,
-        line2: string,
-        city: string,
-        state: string,
-        postalCode: string,
-        countryCode: string,
-    );
+    constructor(recipientName: string, line1: string, line2: string, city: string, state: string, postalCode: string, countryCode: string);
 
     /**
      * Name of the recipient at this address. 50 characters max.
@@ -216,6 +206,7 @@ declare class PayPalShippingAddress {
 }
 
 declare class PayPalConfiguration {
+
     /**
      * @param options A set of options to use. Any options not specified will assume default values.
      */
@@ -349,6 +340,7 @@ declare class PayPalConfiguration {
  * Describes the options that can be passed into the PayPalConfiguration class constructor.
  */
 interface PayPalConfigurationOptions {
+
     /**
      * Will be overridden by email used in most recent PayPal login.
      */
@@ -473,11 +465,12 @@ interface PayPalConfigurationOptions {
     sandboxUserPin?: string | undefined;
 }
 
-// #endregion
+//#endregion
 
-// #region cdv-plugin-paypal-mobile-sdk.js
+//#region cdv-plugin-paypal-mobile-sdk.js
 
 declare namespace PayPalCordovaPlugin {
+
     export interface PayPalClientIds {
         PayPalEnvironmentProduction: string;
         PayPalEnvironmentSandbox: string;
@@ -567,11 +560,7 @@ declare namespace PayPalCordovaPlugin {
          * @param completionCallback a callback function accepting a js object, called when the user has completed payment
          * @param cancelCallback a callback function accepting a reason string, called when the user cancels the payment
          */
-        renderSinglePaymentUI(
-            payment: PayPalPayment,
-            completionCallback: (result: PayPalCordovaPlugin.SinglePaymentResult) => void,
-            cancelCallback: (cancelReason: string) => void,
-        ): void;
+        renderSinglePaymentUI(payment: PayPalPayment, completionCallback: (result: PayPalCordovaPlugin.SinglePaymentResult) => void, cancelCallback: (cancelReason: string) => void): void;
 
         /**
          * @deprecated
@@ -586,10 +575,7 @@ declare namespace PayPalCordovaPlugin {
          * @param environment available options are "PayPalEnvironmentNoNetwork", "PayPalEnvironmentProduction" and "PayPalEnvironmentSandbox"
          * @param callback applicationCorrelationID Your server will send this to PayPal in a 'Paypal-Application-Correlation-Id' header.
          */
-        applicationCorrelationIDForEnvironment(
-            environment: string,
-            completionCallback: (applicationCorrelationId: string) => void,
-        ): void;
+        applicationCorrelationIDForEnvironment(environment: string, completionCallback: (applicationCorrelationId: string) => void): void;
 
         /**
          * Once a user has consented to future payments, when the user subsequently initiates a PayPal payment
@@ -610,10 +596,7 @@ declare namespace PayPalCordovaPlugin {
          * @param completionCallback a callback function accepting a js object with future payment authorization
          * @param cancelCallback a callback function accepting a reason string, called when the user canceled without agreement
          */
-        renderFuturePaymentUI(
-            completionCallback: (result: PayPalCordovaPlugin.FuturePaymentResult) => void,
-            cancelCallback: (cancelReason: string) => void,
-        ): void;
+        renderFuturePaymentUI(completionCallback: (result: PayPalCordovaPlugin.FuturePaymentResult) => void, cancelCallback: (cancelReason: string) => void): void;
 
         /**
          * Please Read Docs on Profile Sharing at https://github.com/paypal/PayPal-iOS-SDK#profile-sharing
@@ -623,14 +606,10 @@ declare namespace PayPalCordovaPlugin {
          * @param completionCallback a callback function accepting a js object with future payment authorization
          * @param cancelCallback a callback function accepting a reason string, called when the user canceled without agreement
          */
-        renderProfileSharingUI(
-            scopes: string[],
-            completionCallback: (result: any) => void,
-            cancelCallback: (cancelReason: string) => void,
-        ): void;
+        renderProfileSharingUI(scopes: string[], completionCallback: (result: any) => void, cancelCallback: (cancelReason: string) => void): void;
     }
 }
 
 declare var PayPalMobile: PayPalCordovaPlugin.PayPalMobileStatic;
 
-// #endregion
+//#endregion

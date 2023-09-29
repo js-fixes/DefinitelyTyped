@@ -5,13 +5,14 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.2
 
+
 declare namespace DotObject {
     interface DotConstructor extends Dot {
-        new(
-            separator: string,
-            override?: boolean,
-            useArray?: boolean,
-            useBrackets?: boolean,
+        new (
+          separator: string,
+          override?: boolean,
+          useArray?: boolean,
+          useBrackets?: boolean
         ): Dot;
     }
 
@@ -21,6 +22,7 @@ declare namespace DotObject {
 
     interface Dot {
         /**
+         *
          * Copy a property from one object to another object.
          *
          * If the source path does not exist (undefined)
@@ -33,15 +35,9 @@ declare namespace DotObject {
          * @param {Function|Array} mods
          * @param {Boolean} merge
          */
-        copy(
-            source: string,
-            target: string,
-            obj1: any,
-            obj2: any,
-            mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>,
-            merge?: boolean,
-        ): void;
+        copy(source: string, target: string, obj1: any, obj2: any, mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>, merge?: boolean): void;
         /**
+         *
          * Convert object to dotted-key/value pair
          *
          * Usage:
@@ -51,19 +47,21 @@ declare namespace DotObject {
          * @param {Object} obj source object
          * @param {Object} tgt target object
          */
-        dot(obj: any, tgt: any): void;
+        dot(obj: any, tgt: any): void
         /**
-         * Convert object to dotted-key/value pair
-         *
-         * Usage:
-         *
-         *   var tgt = dot.dot(obj)
-         * @param {Object} obj source object
-         * @return {Object} result
-         */
-        dot(obj: any): any;
+        *
+        * Convert object to dotted-key/value pair
+        *
+        * Usage:
+        *
+        *   var tgt = dot.dot(obj)
+        * @param {Object} obj source object
+        * @return {Object} result
+        */
+        dot(obj: any): any
 
         /**
+         *
          * Remove value from an object using dot notation.
          *
          * @param {String | Array<String>} path
@@ -72,6 +70,7 @@ declare namespace DotObject {
          */
         del(path: string | string[], obj: any): any;
         /**
+         *
          * Delete value from an object using dot notation.
          *
          * @param {String | Array<String>} path
@@ -80,6 +79,7 @@ declare namespace DotObject {
          */
         delete(path: string | string[], obj: any): any;
         /**
+         *
          * Keep array
          *
          * example:
@@ -102,6 +102,7 @@ declare namespace DotObject {
          */
         keepArray: boolean;
         /**
+         *
          * Move a property from one place to the other.
          *
          * If the source path does not exist (undefined)
@@ -113,14 +114,9 @@ declare namespace DotObject {
          * @param {Function|Array} mods
          * @param {Boolean} merge
          */
-        move(
-            source: string,
-            target: string,
-            obj: any,
-            mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>,
-            merge?: boolean,
-        ): void;
+        move(source: string, target: string, obj: any, mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>, merge?: boolean): void;
         /**
+         *
          * Converts an object with dotted-key/value pairs to it's expanded version
          *
          * Optionally transformed by a set of modifiers.
@@ -143,6 +139,7 @@ declare namespace DotObject {
          */
         object(obj: object, mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>): object;
         /**
+         *
          * Pick a value from an object using dot notation.
          *
          * Optionally remove the value
@@ -153,6 +150,7 @@ declare namespace DotObject {
          */
         pick(path: string, obj: any, remove?: boolean): any;
         /**
+         *
          * Remove value from an object using dot notation.
          *
          * @param {String | Array<String>} path
@@ -161,24 +159,27 @@ declare namespace DotObject {
          */
         remove(path: string | string[], obj: any): any;
         /**
+         *
          * Replace/create with a string
          *
          * @param {String} path dotted path
          * @param {String} v value to be set
          * @param {Object} obj object to be modified
          * @param {Function|Array} mods optional modifier
-         */
+        */
         str(path: string, v: any, obj: object, mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>): void;
         /**
+         *
          * Replace/merge an object to an existing object property
          *
          * @param {String} path dotted path
          * @param {Object} v object to be set
          * @param {Object} obj object to be modified
          * @param {Boolean} merge optional merge
-         */
+        */
         set(path: string, v: any, obj: object, merge?: boolean): void;
         /**
+         *
          * Transfer a property from one object to another object.
          *
          * If the source path does not exist (undefined)
@@ -191,29 +192,23 @@ declare namespace DotObject {
          * @param {Function|Array} mods
          * @param {Boolean} merge
          */
-        transfer(
-            source: string,
-            target: string,
-            obj1: any,
-            obj2: any,
-            mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>,
-            merge?: boolean,
-        ): void;
+        transfer(source: string, target: string, obj1: any, obj2: any, mods?: ModifierFunctionWrapper | Array<ModifierFunctionWrapper>, merge?: boolean): void;
         /**
+         *
          * Transform an object
          *
          * Usage:
          *
          *   var obj = {
          *     "id": 1,
-         *    "some": {
-         *      "thing": "else"
-         *    }
+          *    "some": {
+          *      "thing": "else"
+          *    }
          *   }
          *
          *   var transform = {
          *     "id": "nr",
-         *    "some.thing": "name"
+          *    "some.thing": "name"
          *   }
          *
          *   var tgt = dot.transform(transform, obj)
@@ -228,6 +223,6 @@ declare namespace DotObject {
 
 declare var dot: DotObject.DotConstructor;
 
-declare module "dot-object" {
+declare module 'dot-object' {
     export = dot;
 }

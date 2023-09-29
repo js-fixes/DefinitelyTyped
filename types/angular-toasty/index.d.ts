@@ -7,6 +7,7 @@
 /// <reference types="angular" />
 
 declare namespace toasty {
+
     interface IToastyService {
         /**
          * Create a toast with the given options and type.
@@ -19,7 +20,7 @@ declare namespace toasty {
          * Create a default "quick toast" with the given title.
          * @param title
          */
-        (title: string | number): void;
+        (title: string|number): void;
 
         /**
          * Create a default toast with the given options.
@@ -31,7 +32,7 @@ declare namespace toasty {
          * Create a default "quick toast" with the given title.
          * @param title
          */
-        default(title: string | number): void;
+        default(title: string|number): void;
 
         /**
          * Create an info toast with the given options.
@@ -43,7 +44,7 @@ declare namespace toasty {
          * Create an info "quick toast" with the given title.
          * @param title
          */
-        info(title: string | number): void;
+        info(title: string|number): void;
 
         /**
          * Create a wait toast with the given options.
@@ -55,7 +56,7 @@ declare namespace toasty {
          * Create a wait "quick toast" with the given title.
          * @param title
          */
-        wait(title: string | number): void;
+        wait(title: string|number): void;
 
         /**
          * Create a success toast with the given options.
@@ -67,7 +68,7 @@ declare namespace toasty {
          * Create a success "quick toast" with the given title.
          * @param title
          */
-        success(title: string | number): void;
+        success(title: string|number): void;
 
         /**
          * Create an error toast with the given options.
@@ -79,7 +80,7 @@ declare namespace toasty {
          * Create an error "quick toast" with the given title.
          * @param title
          */
-        error(title: string | number): void;
+        error(title: string|number): void;
 
         /**
          * Create a warning toast with the given options.
@@ -91,7 +92,7 @@ declare namespace toasty {
          * Create a warning "quick toast" with the given title.
          * @param title
          */
-        warning(title: string | number): void;
+        warning(title: string|number): void;
 
         /**
          * Clear toast(s).
@@ -103,6 +104,7 @@ declare namespace toasty {
          * Get the global config.
          */
         getGlobalConfig(): IGlobalConfig;
+
     }
 
     interface IToastyConfig {
@@ -182,6 +184,7 @@ declare namespace toasty {
     }
 
     interface IGlobalConfig {
+
         /**
          * Maximum number of toasts to show at once.
          */
@@ -209,13 +212,14 @@ declare namespace toasty {
 
         /**
          * The window position where the toast pops up.
+         *
          */
         position?: string | undefined;
 
         /**
          * How long (in miliseconds) the toast shows before it's removed. Set to false to disable.
          */
-        timeout?: number | boolean | undefined;
+        timeout?: number|boolean | undefined;
 
         /**
          * Whether to play a sound when a toast is added.

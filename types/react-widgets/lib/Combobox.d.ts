@@ -1,5 +1,5 @@
 import { ComponentClass } from "react";
-import { AutoFocus, ReactWidgetsCommonDropdownProps } from "./CommonProps";
+import { ReactWidgetsCommonDropdownProps, AutoFocus } from "./CommonProps";
 
 declare namespace Combobox {
     interface ComboboxMessages {

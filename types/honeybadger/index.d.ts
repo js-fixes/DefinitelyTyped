@@ -5,8 +5,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.9
 
-import { EventEmitter } from "events";
-import { ErrorRequestHandler, RequestHandler } from "express";
+import { RequestHandler, ErrorRequestHandler } from 'express';
+import { EventEmitter } from 'events';
 
 declare namespace honeybadger {
     interface ConfigureOptions {

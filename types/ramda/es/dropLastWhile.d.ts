@@ -1,2 +1,2 @@
-import { dropLastWhile } from "../index.js";
+import { dropLastWhile } from '../index';
 export default dropLastWhile;

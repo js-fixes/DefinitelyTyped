@@ -29,6 +29,7 @@ declare namespace echarts {
          * encoding the `link` of the raw data.
          * The width of edge is shown proportionally to the `value` of `link`.
          *
+         *
          * @see https://echarts.apache.org/en/option.html#series-sankey
          */
         interface SeriesSankey {
@@ -44,6 +45,7 @@ declare namespace echarts {
              * If specified, it can be used to refer the component in option
              * or API.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.id
              */
             id?: string | undefined;
@@ -51,6 +53,7 @@ declare namespace echarts {
             /**
              * Series name used for displaying in
              * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-sankey.name
              */
@@ -70,6 +73,7 @@ declare namespace echarts {
              * Canvases with bigger `zlevel` will be placed on Canvases with
              * smaller `zlevel`.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.zlevel
              */
             zlevel?: number | undefined;
@@ -82,6 +86,7 @@ declare namespace echarts {
              *
              * `z` has a lower priority to `zlevel`, and will not create new
              * Canvas.
+             *
              *
              * @default
              * 2
@@ -99,6 +104,7 @@ declare namespace echarts {
              * If the `left` value is set to be `'left'`, `'center'`, or `'right'`,
              * then the component will be aligned automatically based on position.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-sankey.left
@@ -115,6 +121,7 @@ declare namespace echarts {
              * If the `left` value is set to be `'top'`, `'middle'`, or `'bottom'`,
              * then the component will be aligned automatically based on position.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-sankey.top
@@ -126,6 +133,7 @@ declare namespace echarts {
              *
              * `right` value can be instant pixel value like `20`; it can also
              * be percentage value relative to container width like `'20%'`.
+             *
              *
              * @default
              * 20%
@@ -140,6 +148,7 @@ declare namespace echarts {
              * `bottom` value can be instant pixel value like `20`; it can also
              * be percentage value relative to container width like `'20%'`.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-sankey.bottom
@@ -149,6 +158,7 @@ declare namespace echarts {
             /**
              * Width of sankey component.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.width
              */
             width?: number | string | undefined;
@@ -156,12 +166,14 @@ declare namespace echarts {
             /**
              * Height of sankey component.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.height
              */
             height?: number | string | undefined;
 
             /**
              * The node width of rectangle in graph.
+             *
              *
              * @default
              * 20
@@ -171,6 +183,7 @@ declare namespace echarts {
 
             /**
              * The gap between any two rectangles in each column from the graph.
+             *
              *
              * @default
              * 8
@@ -199,6 +212,7 @@ declare namespace echarts {
              * The test shows that iterations of layout could not be less than
              * the default value.
              *
+             *
              * @default
              * 32
              * @see https://echarts.apache.org/en/option.html#series-sankey.layoutIterations
@@ -210,6 +224,7 @@ declare namespace echarts {
              * can be horizontal from left to right or vertical from top to
              * bottom.
              * The corresponding parameter values ​​are `horizontal` or `vertical`.
+             *
              *
              * @default
              * "horizontal"
@@ -223,6 +238,7 @@ declare namespace echarts {
              * After opening, the user can drag any node in the Sankey diagram
              * to any position.
              * To turn this interaction off, simply set the value to `false`.
+             *
              *
              * @default
              * "true"
@@ -250,6 +266,7 @@ declare namespace echarts {
              * and its adjacent nodes are highlighted.
              * When hovering over an edge, the adjacent nodes are highlighted.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.focusNodeAdjacency
              */
             focusNodeAdjacency?: boolean | string | undefined;
@@ -257,11 +274,13 @@ declare namespace echarts {
             /**
              * `label` describes the text label style in each rectangular node.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.label
              */
             label?: {
                 /**
                  * Whether to show label.
+                 *
                  *
                  * @default
                  * "true"
@@ -301,6 +320,7 @@ declare namespace echarts {
                  * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                  * .
                  *
+                 *
                  * @default
                  * "right"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.position
@@ -314,6 +334,7 @@ declare namespace echarts {
                  * See:
                  * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                  * .
+                 *
                  *
                  * @default
                  * 5
@@ -329,6 +350,7 @@ declare namespace echarts {
                  * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                  * .
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.rotate
                  */
                 rotate?: number | undefined;
@@ -337,6 +359,7 @@ declare namespace echarts {
                  * Whether to move text slightly.
                  * For example: `[30, 40]` means move `30` horizontally and
                  * move `40` vertically.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.offset
                  */
@@ -381,6 +404,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.formatter
                  */
                 formatter?: Function | string | undefined;
@@ -390,6 +414,7 @@ declare namespace echarts {
                  *
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
+                 *
                  *
                  * @default
                  * ""#fff""
@@ -405,6 +430,7 @@ declare namespace echarts {
                  * + `'normal'`
                  * + `'italic'`
                  * + `'oblique'`
+                 *
                  *
                  * @default
                  * "normal"
@@ -423,6 +449,7 @@ declare namespace echarts {
                  * + `'lighter'`
                  * + 100 | 200 | 300 | 400...
                  *
+                 *
                  * @default
                  * "normal"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.fontWeight
@@ -434,6 +461,7 @@ declare namespace echarts {
                  *
                  * Can also be 'serif' , 'monospace', ...
                  *
+                 *
                  * @default
                  * "sans-serif"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.fontFamily
@@ -442,6 +470,7 @@ declare namespace echarts {
 
                 /**
                  * font size
+                 *
                  *
                  * @default
                  * 12
@@ -463,6 +492,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.align
                  */
                 align?: string | undefined;
@@ -481,6 +511,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.verticalAlign
                  */
                 verticalAlign?: string | undefined;
@@ -492,6 +523,7 @@ declare namespace echarts {
                  * level will be used. For example:
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label)
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.lineHeight
                  */
@@ -512,6 +544,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.backgroundColor
@@ -524,6 +557,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.borderColor
@@ -533,12 +567,14 @@ declare namespace echarts {
                 /**
                  * Border width of the text fregment.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.borderWidth
                  */
                 borderWidth?: number | undefined;
 
                 /**
                  * Border radius of the text fregment.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.borderRadius
                  */
@@ -555,12 +591,14 @@ declare namespace echarts {
                  * Notice, `width` and `height` specifies the width and height
                  * of the content, without `padding`.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.padding
                  */
                 padding?: any[] | number | undefined;
 
                 /**
                  * Shadow color of the text block.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -571,6 +609,7 @@ declare namespace echarts {
                 /**
                  * Show blur of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.shadowBlur
                  */
                 shadowBlur?: number | undefined;
@@ -578,12 +617,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text block.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.shadowOffsetY
                  */
@@ -608,6 +649,7 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.width
                  */
                 width?: number | string | undefined;
@@ -623,6 +665,7 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.height
                  */
                 height?: number | string | undefined;
@@ -633,6 +676,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.textBorderColor
@@ -642,12 +686,14 @@ declare namespace echarts {
                 /**
                  * Storke line width of the text.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.textBorderWidth
                  */
                 textBorderWidth?: number | undefined;
 
                 /**
                  * Shadow color of the text itself.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -658,6 +704,7 @@ declare namespace echarts {
                 /**
                  * Shadow blue of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.textShadowBlur
                  */
                 textShadowBlur?: number | undefined;
@@ -665,12 +712,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.textShadowOffsetX
                  */
                 textShadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text itself.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.textShadowOffsetY
                  */
@@ -686,6 +735,7 @@ declare namespace echarts {
                  * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                  * please.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich
                  */
                 rich?: {
@@ -698,6 +748,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -713,6 +764,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -731,6 +783,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -742,6 +795,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -750,6 +804,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -771,6 +826,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.align
                          */
                         align?: string | undefined;
@@ -789,6 +845,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -800,6 +857,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.label.rich.%3Cuser%20defined%20style%20name%3E)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                          */
@@ -820,6 +878,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -832,6 +891,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -841,12 +901,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                          */
@@ -864,12 +926,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -880,6 +944,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -887,12 +952,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                          */
@@ -920,6 +987,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.width
                          */
                         width?: number | string | undefined;
@@ -936,6 +1004,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.height
                          */
                         height?: number | string | undefined;
@@ -946,6 +1015,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -955,12 +1025,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -971,6 +1043,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -978,12 +1051,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                          */
@@ -994,6 +1069,7 @@ declare namespace echarts {
 
             /**
              * The style of node rectangle in sankey graphs.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle
              */
@@ -1013,12 +1089,14 @@ declare namespace echarts {
                  * >
                  * > [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.itemStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.color
                  */
                 color?: EChartOption.Color | undefined;
 
                 /**
                  * border color, whose format is similar to that of `color`.
+                 *
                  *
                  * @default
                  * "#aaa"
@@ -1029,6 +1107,7 @@ declare namespace echarts {
                 /**
                  * border width. No border when it is set to be 0.
                  *
+                 *
                  * @default
                  * 1
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.borderWidth
@@ -1038,6 +1117,7 @@ declare namespace echarts {
                 /**
                  * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                  * `'solid'` by default.
+                 *
                  *
                  * @default
                  * "solid"
@@ -1054,12 +1134,14 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.itemStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.shadowBlur
                  */
                 shadowBlur?: number | undefined;
 
                 /**
                  * Shadow color. Support same format as `color`.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.shadowColor
                  */
@@ -1068,12 +1150,14 @@ declare namespace echarts {
                 /**
                  * Offset distance on the horizontal direction of shadow.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Offset distance on the vertical direction of shadow.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.shadowOffsetY
                  */
@@ -1083,6 +1167,7 @@ declare namespace echarts {
                  * Opacity of the component.
                  * Supports value from 0 to 1, and the component will not be
                  * drawn when set to 0.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.itemStyle.opacity
                  */
@@ -1096,11 +1181,13 @@ declare namespace echarts {
              * the edge will automatically take the source node or target node
              * color as its own color.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle
              */
             lineStyle?: {
                 /**
                  * The color of the edge in sankey graphs.
+                 *
                  *
                  * @default
                  * "'#314656"
@@ -1111,6 +1198,7 @@ declare namespace echarts {
                 /**
                  * The opacity of the edge in sankey graph.
                  *
+                 *
                  * @default
                  * 0.2
                  * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle.opacity
@@ -1119,6 +1207,7 @@ declare namespace echarts {
 
                 /**
                  * The curveness of the edge in sankey graph.
+                 *
                  *
                  * @default
                  * 0.5
@@ -1135,12 +1224,14 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.lineStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle.shadowBlur
                  */
                 shadowBlur?: number | undefined;
 
                 /**
                  * Shadow color. Support same format as `color`.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle.shadowColor
                  */
@@ -1149,12 +1240,14 @@ declare namespace echarts {
                 /**
                  * Offset distance on the horizontal direction of shadow.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Offset distance on the vertical direction of shadow.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.lineStyle.shadowOffsetY
                  */
@@ -1171,6 +1264,7 @@ declare namespace echarts {
                 label?: {
                     /**
                      * Whether to show label.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.show
                      */
@@ -1208,6 +1302,7 @@ declare namespace echarts {
                      * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.position
                      */
                     position?: any[] | string | undefined;
@@ -1219,6 +1314,7 @@ declare namespace echarts {
                      * See:
                      * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                      * .
+                     *
                      *
                      * @default
                      * 5
@@ -1234,6 +1330,7 @@ declare namespace echarts {
                      * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rotate
                      */
                     rotate?: number | undefined;
@@ -1242,6 +1339,7 @@ declare namespace echarts {
                      * Whether to move text slightly.
                      * For example: `[30, 40]` means move `30` horizontally
                      * and move `40` vertically.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.offset
                      */
@@ -1287,6 +1385,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.formatter
                      */
                     formatter?: Function | string | undefined;
@@ -1296,6 +1395,7 @@ declare namespace echarts {
                      *
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -1311,6 +1411,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -1329,6 +1430,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.fontWeight
@@ -1340,6 +1442,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.fontFamily
@@ -1348,6 +1451,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -1369,6 +1473,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.align
                      */
                     align?: string | undefined;
@@ -1387,6 +1492,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -1398,6 +1504,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.lineHeight
                      */
@@ -1418,6 +1525,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.backgroundColor
@@ -1430,6 +1538,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.borderColor
@@ -1439,12 +1548,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.borderRadius
                      */
@@ -1461,12 +1572,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1477,6 +1590,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -1484,12 +1598,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.shadowOffsetY
                      */
@@ -1515,6 +1631,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.width
                      */
                     width?: number | string | undefined;
@@ -1530,6 +1647,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.height
                      */
                     height?: number | string | undefined;
@@ -1540,6 +1658,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.textBorderColor
@@ -1549,12 +1668,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1565,6 +1686,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -1572,12 +1694,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.textShadowOffsetY
                      */
@@ -1593,6 +1717,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich
                      */
                     rich?: {
@@ -1605,6 +1730,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -1620,6 +1746,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -1638,6 +1765,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -1649,6 +1777,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -1657,6 +1786,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -1678,6 +1808,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -1696,6 +1827,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -1707,6 +1839,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -1728,6 +1861,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -1740,6 +1874,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -1749,12 +1884,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -1773,12 +1910,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1789,6 +1928,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -1796,12 +1936,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -1829,6 +1971,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -1845,6 +1988,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
@@ -1855,6 +1999,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -1864,12 +2009,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1880,6 +2027,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -1887,12 +2035,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -1918,12 +2068,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -1934,6 +2086,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -1941,6 +2094,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -1957,12 +2111,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.shadowColor
                      */
@@ -1971,12 +2127,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.shadowOffsetY
                      */
@@ -1986,6 +2144,7 @@ declare namespace echarts {
                      * Opacity of the component.
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.itemStyle.opacity
                      */
@@ -1999,6 +2158,7 @@ declare namespace echarts {
                     /**
                      * The color of the edge in sankey graphs.
                      *
+                     *
                      * @default
                      * "'#314656"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.color
@@ -2008,6 +2168,7 @@ declare namespace echarts {
                     /**
                      * The opacity of the edge in sankey graph.
                      *
+                     *
                      * @default
                      * 0.2
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.opacity
@@ -2016,6 +2177,7 @@ declare namespace echarts {
 
                     /**
                      * The curveness of the edge in sankey graph.
+                     *
                      *
                      * @default
                      * 0.5
@@ -2032,12 +2194,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.emphasis.lineStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.shadowColor
                      */
@@ -2046,12 +2210,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.emphasis.lineStyle.shadowOffsetY
                      */
@@ -2091,6 +2257,7 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey)
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.data
              */
             data?: (number | SeriesSankey.DataObject)[] | (number | SeriesSankey.DataObject)[][] | undefined;
@@ -2098,6 +2265,7 @@ declare namespace echarts {
             /**
              * Equals to
              * [data](https://echarts.apache.org/en/option.html#series-sankey.data)
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-sankey.nodes
              */
@@ -2111,12 +2279,14 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey)
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.links
              */
             links?: SeriesSankey.LinkObject[] | undefined;
             /**
              * Equals to
              * [links](https://echarts.apache.org/en/option.html#series-sankey.links)
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-sankey.edges
              */
@@ -2127,12 +2297,14 @@ declare namespace echarts {
              * Default value is false, for triggering and responding to mouse
              * events.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.silent
              */
             silent?: boolean | undefined;
 
             /**
              * Whether to enable animation.
+             *
              *
              * @default
              * "true"
@@ -2144,6 +2316,7 @@ declare namespace echarts {
              * Whether to set graphic number threshold to animation.
              * Animation will be disabled when graphic number is larger than
              * threshold.
+             *
              *
              * @default
              * 2000
@@ -2157,6 +2330,7 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey)
              *
+             *
              * @default
              * 1000
              * @see https://echarts.apache.org/en/option.html#series-sankey.animationDuration
@@ -2168,6 +2342,7 @@ declare namespace echarts {
              * Varied easing effects can be found at
              * [easing effect example](https://echarts.apache.org/examples/en/editor.html?c=line-easing)
              * .
+             *
              *
              * @default
              * "linear"
@@ -2187,6 +2362,7 @@ declare namespace echarts {
              * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
              * for more information.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.animationDelay
              */
             animationDelay?: Function | number | undefined;
@@ -2197,6 +2373,7 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey)
              *
+             *
              * @default
              * 300
              * @see https://echarts.apache.org/en/option.html#series-sankey.animationDurationUpdate
@@ -2205,6 +2382,7 @@ declare namespace echarts {
 
             /**
              * Easing method used for animation.
+             *
              *
              * @default
              * "cubicOut"
@@ -2224,12 +2402,14 @@ declare namespace echarts {
              * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
              * for more information.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-sankey.animationDelayUpdate
              */
             animationDelayUpdate?: Function | number | undefined;
 
             /**
              * tooltip settings in this series.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-sankey.tooltip
              */
@@ -2241,6 +2421,7 @@ declare namespace echarts {
                 /**
                  * The name of data item.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.name
                  */
                 name?: string | undefined;
@@ -2248,12 +2429,14 @@ declare namespace echarts {
                 /**
                  * The value of data item.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.value
                  */
                 value?: any[] | number | undefined;
 
                 /**
                  * The style of this node.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle
                  */
@@ -2273,12 +2456,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -2289,6 +2474,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -2296,6 +2482,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -2312,12 +2499,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.shadowColor
                      */
@@ -2326,12 +2515,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.shadowOffsetY
                      */
@@ -2342,6 +2533,7 @@ declare namespace echarts {
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.itemStyle.opacity
                      */
                     opacity?: number | undefined;
@@ -2350,11 +2542,13 @@ declare namespace echarts {
                 /**
                  * The lable style of this node.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.label
                  */
                 label?: {
                     /**
                      * Whether to show label.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.show
                      */
@@ -2392,6 +2586,7 @@ declare namespace echarts {
                      * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.position
                      */
                     position?: any[] | string | undefined;
@@ -2403,6 +2598,7 @@ declare namespace echarts {
                      * See:
                      * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                      * .
+                     *
                      *
                      * @default
                      * 5
@@ -2418,6 +2614,7 @@ declare namespace echarts {
                      * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rotate
                      */
                     rotate?: number | undefined;
@@ -2426,6 +2623,7 @@ declare namespace echarts {
                      * Whether to move text slightly.
                      * For example: `[30, 40]` means move `30` horizontally
                      * and move `40` vertically.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.offset
                      */
@@ -2436,6 +2634,7 @@ declare namespace echarts {
                      *
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -2451,6 +2650,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -2469,6 +2669,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.fontWeight
@@ -2480,6 +2681,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.fontFamily
@@ -2488,6 +2690,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -2509,6 +2712,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.align
                      */
                     align?: string | undefined;
@@ -2527,6 +2731,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -2538,6 +2743,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.lineHeight
                      */
@@ -2558,6 +2764,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.backgroundColor
@@ -2570,6 +2777,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.borderColor
@@ -2579,12 +2787,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.borderRadius
                      */
@@ -2601,12 +2811,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -2617,6 +2829,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -2624,12 +2837,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.shadowOffsetY
                      */
@@ -2655,6 +2870,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.width
                      */
                     width?: number | string | undefined;
@@ -2670,6 +2886,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.height
                      */
                     height?: number | string | undefined;
@@ -2680,6 +2897,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.textBorderColor
@@ -2689,12 +2907,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -2705,6 +2925,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -2712,12 +2933,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.textShadowOffsetY
                      */
@@ -2733,6 +2956,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich
                      */
                     rich?: {
@@ -2745,6 +2969,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -2760,6 +2985,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -2778,6 +3004,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -2789,6 +3016,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -2797,6 +3025,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -2818,6 +3047,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -2836,6 +3066,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -2847,6 +3078,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -2868,6 +3100,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -2880,6 +3113,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -2889,12 +3123,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -2913,12 +3149,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -2929,6 +3167,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -2936,12 +3175,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -2969,6 +3210,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -2985,6 +3227,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
@@ -2995,6 +3238,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -3004,12 +3248,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -3020,6 +3266,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -3027,12 +3274,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-sankey.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -3063,6 +3312,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.color
                          */
                         color?: EChartOption.Color | undefined;
@@ -3070,6 +3320,7 @@ declare namespace echarts {
                         /**
                          * border color, whose format is similar to that of
                          * `color`.
+                         *
                          *
                          * @default
                          * "#000"
@@ -3080,6 +3331,7 @@ declare namespace echarts {
                         /**
                          * border width. No border when it is set to be 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.borderWidth
                          */
                         borderWidth?: number | undefined;
@@ -3087,6 +3339,7 @@ declare namespace echarts {
                         /**
                          * Border type, which can be `'solid'`, `'dashed'`,
                          * or `'dotted'`. `'solid'` by default.
+                         *
                          *
                          * @default
                          * "solid"
@@ -3103,12 +3356,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.shadowColor
                          */
@@ -3117,12 +3372,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.shadowOffsetY
                          */
@@ -3132,6 +3389,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.itemStyle.opacity
                          */
@@ -3144,6 +3402,7 @@ declare namespace echarts {
                     label?: {
                         /**
                          * Whether to show label.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.show
                          */
@@ -3181,6 +3440,7 @@ declare namespace echarts {
                          * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.position
                          */
                         position?: any[] | string | undefined;
@@ -3192,6 +3452,7 @@ declare namespace echarts {
                          * See:
                          * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                          * .
+                         *
                          *
                          * @default
                          * 5
@@ -3207,6 +3468,7 @@ declare namespace echarts {
                          * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rotate
                          */
                         rotate?: number | undefined;
@@ -3215,6 +3477,7 @@ declare namespace echarts {
                          * Whether to move text slightly.
                          * For example: `[30, 40]` means move `30` horizontally
                          * and move `40` vertically.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.offset
                          */
@@ -3225,6 +3488,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -3240,6 +3504,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -3258,6 +3523,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.fontWeight
@@ -3269,6 +3535,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.fontFamily
@@ -3277,6 +3544,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -3298,6 +3566,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.align
                          */
                         align?: string | undefined;
@@ -3316,6 +3585,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -3327,6 +3597,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.lineHeight
                          */
@@ -3347,6 +3618,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.backgroundColor
@@ -3359,6 +3631,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.borderColor
@@ -3368,12 +3641,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.borderRadius
                          */
@@ -3391,12 +3666,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -3407,6 +3684,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -3414,12 +3692,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.shadowOffsetY
                          */
@@ -3447,6 +3727,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.width
                          */
                         width?: number | string | undefined;
@@ -3463,6 +3744,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.height
                          */
                         height?: number | string | undefined;
@@ -3473,6 +3755,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.textBorderColor
@@ -3482,12 +3765,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -3498,6 +3783,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -3505,12 +3791,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.textShadowOffsetY
                          */
@@ -3526,6 +3814,7 @@ declare namespace echarts {
                          * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                          * please.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich
                          */
                         rich?: {
@@ -3538,6 +3827,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -3553,6 +3843,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -3571,6 +3862,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -3582,6 +3874,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -3590,6 +3883,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -3613,6 +3907,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.align
                                  */
                                 align?: string | undefined;
@@ -3633,6 +3928,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -3645,6 +3941,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                  */
@@ -3667,6 +3964,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -3679,6 +3977,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -3688,12 +3987,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                  */
@@ -3713,12 +4014,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -3729,6 +4032,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -3736,12 +4040,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                  */
@@ -3773,6 +4079,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.width
                                  */
                                 width?: number | string | undefined;
@@ -3790,6 +4097,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.height
                                  */
                                 height?: number | string | undefined;
@@ -3800,6 +4108,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -3809,12 +4118,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -3825,6 +4136,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -3832,12 +4144,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                  */
@@ -3850,6 +4164,7 @@ declare namespace echarts {
                 /**
                  * tooltip settings in this series data.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.data.tooltip
                  */
                 tooltip?: BaseTooltip | undefined;
@@ -3861,6 +4176,7 @@ declare namespace echarts {
                  * [name of source node](https://echarts.apache.org/en/option.html#series-graph.data.name)
                  * of edge
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.links.source
                  */
                 source?: string | undefined;
@@ -3870,12 +4186,14 @@ declare namespace echarts {
                  * [name of target node](https://echarts.apache.org/en/option.html#series-graph.data.name)
                  * of edge
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.links.target
                  */
                 target?: string | undefined;
 
                 /**
                  * The value of edge, which decides the width of edge.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.links.value
                  */
@@ -3884,11 +4202,13 @@ declare namespace echarts {
                 /**
                  * The line stlye of edge.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle
                  */
                 lineStyle?: {
                     /**
                      * The color of the edge in sankey graphs.
+                     *
                      *
                      * @default
                      * "'#314656"
@@ -3899,6 +4219,7 @@ declare namespace echarts {
                     /**
                      * The opacity of the edge in sankey graph.
                      *
+                     *
                      * @default
                      * 0.2
                      * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle.opacity
@@ -3907,6 +4228,7 @@ declare namespace echarts {
 
                     /**
                      * The curveness of the edge in sankey graph.
+                     *
                      *
                      * @default
                      * 0.5
@@ -3923,12 +4245,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.links.lineStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle.shadowColor
                      */
@@ -3937,12 +4261,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-sankey.links.lineStyle.shadowOffsetY
                      */
@@ -3960,6 +4286,7 @@ declare namespace echarts {
                         /**
                          * The color of the edge in sankey graphs.
                          *
+                         *
                          * @default
                          * "'#314656"
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.color
@@ -3969,6 +4296,7 @@ declare namespace echarts {
                         /**
                          * The opacity of the edge in sankey graph.
                          *
+                         *
                          * @default
                          * 0.2
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.opacity
@@ -3977,6 +4305,7 @@ declare namespace echarts {
 
                         /**
                          * The curveness of the edge in sankey graph.
+                         *
                          *
                          * @default
                          * 0.5
@@ -3993,12 +4322,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.links.emphasis.lineStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowColor
                          */
@@ -4007,12 +4338,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowOffsetY
                          */

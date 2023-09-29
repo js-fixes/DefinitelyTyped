@@ -1,6 +1,5 @@
-// js installs to root of node_modules
-// eslint-disable-next-line @definitelytyped/no-single-declare-module
-declare module "BrokenLinkCheckerReport" {
+// tslint:disable:no-single-declare-module js installs to root of node_modules
+declare module 'BrokenLinkCheckerReport' {
     export = BrokenLinkCheckerReport;
     /**
      * This class handles the creation of broken link checker report.
@@ -22,5 +21,5 @@ declare module "BrokenLinkCheckerReport" {
         getTotalLinksChecked(): number;
         reset(): void;
     }
-    import SyntheticsLink = require("SyntheticsLink");
+    import SyntheticsLink = require('SyntheticsLink');
 }

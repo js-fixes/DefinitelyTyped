@@ -1,11 +1,11 @@
-import { Diff } from "./diff";
-import { DiffFile } from "./diff-file";
-import { DiffOptions } from "./diff-options";
-import { Oid } from "./oid";
-import { Repository } from "./repository";
-import { Treebuilder } from "./tree-builder";
-import { TreeEntry } from "./tree-entry";
-import { TreeUpdate } from "./tree-update";
+import { Oid } from './oid';
+import { TreeEntry } from './tree-entry';
+import { Repository } from './repository';
+import { Treebuilder } from './tree-builder';
+import { DiffFile } from './diff-file';
+import { TreeUpdate } from './tree-update';
+import { Diff } from './diff';
+import { DiffOptions } from './diff-options';
 
 export namespace Tree {
     const enum WALK_MODE {
@@ -33,6 +33,7 @@ export class Tree {
     entryByPath(path: string): Promise<TreeEntry>;
     entryCount(): number;
 
+    free(): void;
     id(): Oid;
     owner(): Repository;
     /**
@@ -66,6 +67,8 @@ export class Tree {
     };
     /**
      * Return the path of this tree, like /lib/foo/bar
+     *
+     *
      */
     path(): string;
     /**

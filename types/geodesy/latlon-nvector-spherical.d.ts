@@ -2,9 +2,9 @@
  * @format
  */
 
-import { Dp, Format, GeoJSON, Polygon } from ".";
-import Dms from "./dms";
-import Vector3d from "./vector3d";
+import { GeoJSON, Format, Dp, Polygon } from '.';
+import Vector3d from './vector3d';
+import Dms from './dms';
 
 type PathBrngEnd = LatLonNvectorSpherical | number;
 
@@ -71,4 +71,4 @@ declare class NvectorSpherical extends Vector3d {
     toString(dp?: number): string;
 }
 
-export { Dms, LatLonNvectorSpherical as default, NvectorSpherical as Nvector };
+export { LatLonNvectorSpherical as default, NvectorSpherical as Nvector, Dms };

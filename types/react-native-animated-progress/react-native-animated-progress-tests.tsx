@@ -1,5 +1,5 @@
-import * as React from "react";
-import AnimatedProgress from "react-native-animated-progress";
+import AnimatedProgress from 'react-native-animated-progress';
+import * as React from 'react';
 
 const ProgressExample: React.FC = () => {
     const withoutProps = <AnimatedProgress />;

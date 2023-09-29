@@ -6,6 +6,7 @@
         "member-access": false,
         "new-parens": false,
         "no-redundant-jsdoc-2": false,
+        "no-single-declare-module": false,
         "no-var-keyword": false,
         "npm-naming": [
             true,
@@ -15,6 +16,7 @@
             }
         ],
         "prefer-const": false,
+        "strict-export-declare-modifiers": false,
         "triple-equals": false
     }
 }

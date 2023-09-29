@@ -1,2 +1,2 @@
-import { lensIndex } from "../index.js";
+import { lensIndex } from '../index';
 export default lensIndex;

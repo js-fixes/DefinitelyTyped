@@ -1,5 +1,5 @@
-import { HttpHeaders, HttpRequest } from "../http_client";
-import { Serializer } from "./serializer";
+import { HttpRequest, HttpHeaders } from '../http_client';
+import { Serializer } from './serializer';
 
 export class FormPart {
     readonly headers: HttpHeaders;

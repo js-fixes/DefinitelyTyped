@@ -26,12 +26,10 @@ declare namespace rename {
         extname?: string | undefined;
     }
 
-    type FilePath =
-        | string
+    type FilePath = string
         | Specification;
 
-    type Transformer =
-        | ((spec: FileObject) => FilePath)
+    type Transformer = ((spec: FileObject) => FilePath)
         | FilePath;
 
     interface ParsedFileObject {

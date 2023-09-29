@@ -1,8 +1,9 @@
+
 import stream = require("stream");
 import service = require("windows-service");
 
 service.add("MyService");
-service.add("MyService", { programPath: "./service.js" });
+service.add("MyService", {programPath: "./service.js"});
 
 var s: stream.Writable;
 var t: stream.Writable;
@@ -16,3 +17,4 @@ service.run(s, t, (): void => {
 });
 
 service.remove("MyService");
+

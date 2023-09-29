@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// <reference types="node" />
 
-import { Duplex, Stream } from "stream";
+import { Stream, Duplex } from 'stream';
 
 type DataType = string | Buffer | Stream;
 

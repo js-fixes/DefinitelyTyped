@@ -1,6 +1,6 @@
 export {};
-import { PusherRoom } from "./room";
-import { PusherUser } from "./user";
+import { PusherUser } from './user';
+import { PusherRoom } from './room';
 
 interface InlinePayload {
     type: string;
@@ -34,7 +34,7 @@ export type SendMessagePayload = InlinePayload | UrlPayload | FilePayload;
 type MessagePayload = InlinePayload | UrlPayload | AttachmentPayload;
 
 export interface MessagePart {
-    partType: "inline" | "url" | "attachment";
+    partType: 'inline' | 'url' | 'attachment';
     payload: MessagePayload;
 }
 

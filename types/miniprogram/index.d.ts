@@ -557,18 +557,16 @@ interface CanvasContext {
      * [Docs Link](https://miniprogram.alipay.com/docs/miniprogram/mpdev/api_ui_canvas_canvas-context_canvascontext-getimagedata)
      */
     getImageData: (
-        args:
-            & {
-                x: number;
-                y: number;
-                width: number;
-                height: number;
-            }
-            & AsyncCallback<{
-                width: number;
-                height: number;
-                data?: Uint8ClampedArray | undefined;
-            }>,
+        args: {
+            x: number;
+            y: number;
+            width: number;
+            height: number;
+        } & AsyncCallback<{
+            width: number;
+            height: number;
+            data?: Uint8ClampedArray | undefined;
+        }>,
     ) => void;
 
     /**
@@ -796,20 +794,18 @@ interface CanvasContext {
      * [Docs Link](https://miniprogram.alipay.com/docs/miniprogram/mpdev/api_ui_canvas_canvas-context_canvascontext-totempfilepath)
      */
     toTempFilePath: (
-        args:
-            & {
-                x?: number | undefined;
-                y?: number | undefined;
-                width?: number | undefined;
-                height?: number | undefined;
-                destWidth?: number | undefined;
-                destHeight?: number | undefined;
-                fileType?: string | undefined;
-                quality?: number | undefined;
-            }
-            & AsyncCallback<{
-                filePath: string;
-            }>,
+        args: {
+            x?: number | undefined;
+            y?: number | undefined;
+            width?: number | undefined;
+            height?: number | undefined;
+            destWidth?: number | undefined;
+            destHeight?: number | undefined;
+            fileType?: string | undefined;
+            quality?: number | undefined;
+        } & AsyncCallback<{
+            filePath: string;
+        }>,
     ) => void;
 
     /**
@@ -899,12 +895,11 @@ interface SelectorQuery {
     selectViewport: () => SelectorQuery;
 }
 
-interface MultiLevelSelectArgs extends
-    AsyncCallback<{
+interface MultiLevelSelectArgs
+    extends AsyncCallback<{
         success: boolean;
         result: any[];
-    }>
-{
+    }> {
     title?: string | undefined;
     list: any[];
     name: string;
@@ -928,11 +923,10 @@ interface SetBackgroundColorArgs extends AsyncVoidCallback {
     backgroundColorBottom: string;
 }
 
-interface ChooseImageArgs extends
-    AsyncCallback<{
+interface ChooseImageArgs
+    extends AsyncCallback<{
         apFilePaths: string[];
-    }>
-{
+    }> {
     count?: number | undefined;
     sizeType?: string[] | undefined;
     sourceType?: string[] | undefined;
@@ -1034,10 +1028,10 @@ interface RequestArgs extends AsyncCallback<RequestCallbackValue> {
      */
     headers?:
         | {
-            [key: string]: string;
-        }
+              [key: string]: string;
+          }
         | undefined;
-    method?: "GET" | "POST" | undefined;
+    method?: 'GET' | 'POST' | undefined;
     data?: any;
     timeout?: number | undefined;
     /**
@@ -1052,7 +1046,8 @@ interface UploadFileCallbackValue {
     header: any;
 }
 
-interface UploadFileArgs extends AsyncCallback<UploadFileCallbackValue> {
+interface UploadFileArgs
+    extends AsyncCallback<UploadFileCallbackValue> {
     url: string;
     filePath: string;
     fileName: string;
@@ -1070,48 +1065,48 @@ interface GetSystemInfoCallbackValue {
     /**
      * Cellphone model.
      */
-    model: string;
+     model: string;
 
-    /**
-     * Device pixel ratio.
-     */
-    pixelRatio: number;
-    windowWidth: number;
-    windowHeight: number;
-    language: string;
-    /**
-     * App version number.
-     */
-    version: string;
-    /**
-     * Device disk capacity.
-     */
-    storage: string;
-    /**
-     * Current battery percentage.
-     */
-    currentBattery: string;
-    /**
-     * System version.
-     */
-    system: string;
-    /**
-     * System name: Android, iOS.
-     */
-    platform: string;
-    titleBarHeight: number;
-    statusBarHeight: number;
-    screenWidth: number;
-    screenHeight: number;
-    /**
-     * Cellphone brand.
-     */
-    brand: string;
-    fontSizeSetting: number;
-    /**
-     * Current running client. The app value can refer to the following table.
-     */
-    app: string;
+     /**
+      * Device pixel ratio.
+      */
+     pixelRatio: number;
+     windowWidth: number;
+     windowHeight: number;
+     language: string;
+     /**
+      * App version number.
+      */
+     version: string;
+     /**
+      * Device disk capacity.
+      */
+     storage: string;
+     /**
+      * Current battery percentage.
+      */
+     currentBattery: string;
+     /**
+      * System version.
+      */
+     system: string;
+     /**
+      * System name: Android, iOS.
+      */
+     platform: string;
+     titleBarHeight: number;
+     statusBarHeight: number;
+     screenWidth: number;
+     screenHeight: number;
+     /**
+      * Cellphone brand.
+      */
+     brand: string;
+     fontSizeSetting: number;
+     /**
+      * Current running client. The app value can refer to the following table.
+      */
+     app: string;
 }
 
 type GetSystemInfoArgs = AsyncCallback<GetSystemInfoCallbackValue>;
@@ -1177,16 +1172,15 @@ interface AddPhoneContactArgs extends AsyncCallback<{ success: true }> {
     homeAddressPostalCode: string;
 }
 
-interface ShowAuthGuideArgs extends
-    AsyncCallback<{
+interface ShowAuthGuideArgs
+    extends AsyncCallback<{
         /**
          * When shown is true, it indicates the permission guide
          * pop-up will be shown; when it is false, it indicates
          * the user has allowed the permission.
          */
         shown: boolean;
-    }>
-{
+    }> {
     /**
      * Identifier of the permission under guide, used to identify
      * the type of the permission (such as LBS).
@@ -1206,7 +1200,7 @@ interface ScanArgs extends AsyncCallback<ScanCallbackValue> {
      * 1. qr: two-dimensional QR scanning frame.
      * 2. bar: Linear barcode scanning frame.
      */
-    type?: "qr" | "bar" | undefined;
+    type?: 'qr' | 'bar' | undefined;
 
     /**
      * Hide album entry or not. If it is false, there will be an entry
@@ -1274,12 +1268,11 @@ interface TradePayArgs extends AsyncCallback<{ resultCode: string }> {
     paymentUrl?: string | undefined;
 }
 
-interface SignContractArgs extends
-    AsyncCallback<{
+interface SignContractArgs
+    extends AsyncCallback<{
         authState: string;
         authCode: string;
-    }>
-{
+    }> {
     signStr: string;
 }
 
@@ -1339,8 +1332,7 @@ interface StartBluetoothDevicesDiscoveryArgs extends AsyncCallback {
 }
 
 interface ReadBLECharacteristicValueArgs
-    extends AsyncCallback<{ characteristic: { characteristicId: string; serviceId: string; value: string } }>
-{
+    extends AsyncCallback<{ characteristic: { characteristicId: string; serviceId: string; value: string } }> {
     deviceId: string;
     serviceId: string;
     characteristicId: string;
@@ -1602,6 +1594,7 @@ interface MiniprogramApi {
      * support the isolation between embedded webview cache and Mini Program
      * cache. Getting the cache of the specified key of embedded webview
      * ill not return the cached data of the same key of the Mini Program.
+     *
      *
      * [Docs Link](https://miniprogram.alipay.com/docs/miniprogram/mpdev/api_storage_getstorage)
      */
@@ -2260,21 +2253,19 @@ interface MiniprogramApi {
      * [Docs Link](https://miniprogram.alipay.com/docs/miniprogram/mpdev/api_device_bluetooth_ble_getbledevicecharacteristics)
      */
     getBLEDeviceCharacteristics: (
-        args:
-            & { deviceId: string; serviceId: string }
-            & AsyncCallback<{
-                characteristic: Array<{
-                    characteristicId: string;
-                    serviceId: string;
-                    value: string;
-                    properties: {
-                        read: boolean;
-                        write: boolean;
-                        notify: boolean;
-                        indicate: boolean;
-                    };
-                }>;
-            }>,
+        args: { deviceId: string; serviceId: string } & AsyncCallback<{
+            characteristic: Array<{
+                characteristicId: string;
+                serviceId: string;
+                value: string;
+                properties: {
+                    read: boolean;
+                    write: boolean;
+                    notify: boolean;
+                    indicate: boolean;
+                };
+            }>;
+        }>,
     ) => void;
 
     /**
@@ -2385,10 +2376,10 @@ interface LaunchQuery {
     path: string;
     referrerInfo?:
         | {
-            appId: string;
-            sourceServiceId: string;
-            extraData: any;
-        }
+              appId: string;
+              sourceServiceId: string;
+              extraData: any;
+          }
         | undefined;
 }
 
@@ -2427,7 +2418,7 @@ interface EmptyFn {
     (): void;
 }
 interface OnPullDownRefresh {
-    (opts: { form: "manual" | "code" }): void;
+    (opts: { form: 'manual' | 'code' }): void;
 }
 
 interface OnTabItemTap {
@@ -2435,63 +2426,61 @@ interface OnTabItemTap {
 }
 
 declare function Page(
-    obj:
-        & {
-            data?: any;
+    obj: {
+        data?: any;
 
-            /**
-             * Page loading
-             */
-            onLoad?: ((query?: any) => void) | undefined;
-            onShow?: EmptyFn | undefined;
-            /**
-             * Page loading complete
-             */
-            onReady?: EmptyFn | undefined;
-            onHide?: EmptyFn | undefined;
-            onUnload?: EmptyFn | undefined;
-            onTitleClick?: EmptyFn | undefined;
-            onPullDownRefresh?: OnPullDownRefresh | undefined;
-            onPullIntercept?: EmptyFn | undefined;
-            onReachBottom?: EmptyFn | undefined;
-            onShareAppMessage?: ((opts: any) => void) | undefined;
-            onOptionMenuClick?: EmptyFn | undefined;
-            onPopMenuClick?: EmptyFn | undefined;
-            onTabItemTap?: OnTabItemTap | undefined;
-            onPageScroll?: ((opts: { scrollTop: number }) => void) | undefined;
-            events?:
-                | {
-                    onBack?: EmptyFn | undefined;
-                    onKeyboardHeight?: EmptyFn | undefined;
-                    onOptionMenuClick?: EmptyFn | undefined;
-                    onPopMenuClick?: EmptyFn | undefined;
-                    onPullIntercept?: EmptyFn | undefined;
-                    onPullDownRefresh?: OnPullDownRefresh | undefined;
-                    onTitleClick?: EmptyFn | undefined;
-                    onTabItemTap?: OnTabItemTap | undefined;
-                    beforeTabItemTap?: EmptyFn | undefined;
-                    onResize?:
-                        | ((opts: {
+        /**
+         * Page loading
+         */
+        onLoad?: ((query?: any) => void) | undefined;
+        onShow?: EmptyFn | undefined;
+        /**
+         * Page loading complete
+         */
+        onReady?: EmptyFn | undefined;
+        onHide?: EmptyFn | undefined;
+        onUnload?: EmptyFn | undefined;
+        onTitleClick?: EmptyFn | undefined;
+        onPullDownRefresh?: OnPullDownRefresh | undefined;
+        onPullIntercept?: EmptyFn | undefined;
+        onReachBottom?: EmptyFn | undefined;
+        onShareAppMessage?: ((opts: any) => void) | undefined;
+        onOptionMenuClick?: EmptyFn | undefined;
+        onPopMenuClick?: EmptyFn | undefined;
+        onTabItemTap?: OnTabItemTap | undefined;
+        onPageScroll?: ((opts: { scrollTop: number }) => void) | undefined;
+        events?:
+            | {
+                  onBack?: EmptyFn | undefined;
+                  onKeyboardHeight?: EmptyFn | undefined;
+                  onOptionMenuClick?: EmptyFn | undefined;
+                  onPopMenuClick?: EmptyFn | undefined;
+                  onPullIntercept?: EmptyFn | undefined;
+                  onPullDownRefresh?: OnPullDownRefresh | undefined;
+                  onTitleClick?: EmptyFn | undefined;
+                  onTabItemTap?: OnTabItemTap | undefined;
+                  beforeTabItemTap?: EmptyFn | undefined;
+                  onResize?:
+                      | ((opts: {
                             size: {
                                 windowWidth: number;
                                 windowHeight: number;
                             };
                         }) => void)
-                        | undefined;
-                }
-                | undefined;
+                      | undefined;
+              }
+            | undefined;
 
-            [key: string]: any;
-        }
-        & ThisType<{
-            readonly data: any;
-            readonly route: string;
-            setData: (data: any, cb?: EmptyFn) => void;
-            $spliceData: (data: any, cb?: EmptyFn) => void;
-            $batchedUpdates: (cb: EmptyFn) => void;
+        [key: string]: any;
+    } & ThisType<{
+        readonly data: any;
+        readonly route: string;
+        setData: (data: any, cb?: EmptyFn) => void;
+        $spliceData: (data: any, cb?: EmptyFn) => void;
+        $batchedUpdates: (cb: EmptyFn) => void;
 
-            [key: string]: any;
-        }>,
+        [key: string]: any;
+    }>,
 ): void;
 
 declare function getCurrentPages(): any[];

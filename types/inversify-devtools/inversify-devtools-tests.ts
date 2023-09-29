@@ -1,5 +1,5 @@
-import { Kernel } from "inversify";
 import render from "inversify-devtools";
+import { Kernel } from "inversify";
 
 let connectKernel = render("root");
 let kernel = new Kernel();

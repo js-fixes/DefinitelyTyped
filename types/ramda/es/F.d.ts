@@ -1,2 +1,2 @@
-import { F } from "../index.js";
+import { F } from '../index';
 export default F;

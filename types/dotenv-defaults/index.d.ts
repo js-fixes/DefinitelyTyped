@@ -3,13 +3,13 @@
 // Definitions by: Piotr Błażejewicz <https://github.com/peterblazejewicz>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { DotenvConfigOptions, DotenvConfigOutput, DotenvParseOutput } from "dotenv";
+import { DotenvParseOutput, DotenvConfigOutput, DotenvConfigOptions } from 'dotenv';
 
 /**
  * A dotenv system that supports defaults
  */
 
-declare module "dotenv" {
+declare module 'dotenv' {
     interface DotenvConfigOptions {
         /**
          * @default '.env.defaults'

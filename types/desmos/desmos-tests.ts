@@ -65,7 +65,7 @@ calculator.asyncScreenshot(
         height: 300,
         mathBounds: { left: -5, right: 5 },
     },
-    setImageSrc,
+    setImageSrc
 );
 
 // Use the smallest bounding box containing the current viewport and preserve the aspect ratio
@@ -238,16 +238,14 @@ Desmos.supportedLanguages; // ['es', 'fr']
 calculator.updateSettings({ language: "fr" });
 
 // All features enabled
-// $ExpectType boolean
-Desmos.enabledFeatures.GraphingCalculator
-    && Desmos.enabledFeatures.FourFunctionCalculator
-    && Desmos.enabledFeatures.ScientificCalculator;
+Desmos.enabledFeatures.GraphingCalculator &&
+    Desmos.enabledFeatures.FourFunctionCalculator &&
+    Desmos.enabledFeatures.ScientificCalculator; // $ExpectType boolean
 
 // Only graphing calculator enabled
-// $ExpectType boolean
-Desmos.enabledFeatures.GraphingCalculator
-    && !Desmos.enabledFeatures.FourFunctionCalculator
-    && !Desmos.enabledFeatures.ScientificCalculator;
+Desmos.enabledFeatures.GraphingCalculator &&
+    !Desmos.enabledFeatures.FourFunctionCalculator &&
+    !Desmos.enabledFeatures.ScientificCalculator; // $ExpectType boolean
 
 const elt1 = document.getElementById("four-function-calculator") as HTMLDivElement;
 const calculator1 = Desmos.FourFunctionCalculator(elt1);

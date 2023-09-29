@@ -11,11 +11,10 @@ gulpJasmine({
     reporter: dummyReporter,
     timeout: 1000,
     errorOnFail: false,
-    config: {},
+    config: {}
 });
 gulpJasmine({ reporter: [dummyReporter, dummyReporter] });
 const readonlyDummyReporters: ReadonlyArray<jasmine.CustomReporter> = [
-    dummyReporter,
-    dummyReporter,
+    dummyReporter, dummyReporter
 ];
 gulpJasmine({ reporter: readonlyDummyReporters });

@@ -1,2 +1,2 @@
-import { path } from "../index.js";
+import { path } from '../index';
 export default path;

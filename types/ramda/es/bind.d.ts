@@ -1,2 +1,2 @@
-import { bind } from "../index.js";
+import { bind } from '../index';
 export default bind;

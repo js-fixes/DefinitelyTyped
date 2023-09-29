@@ -1,7 +1,7 @@
-import { Repository } from "./repository";
-import { StatusEntry } from "./status-entry";
-import { StatusList } from "./status-list";
-import { StatusOptions } from "./status-options";
+import { Repository } from './repository';
+import { StatusList } from './status-list';
+import { StatusOptions } from './status-options';
+import { StatusEntry } from './status-entry';
 
 export namespace Status {
     const enum STATUS {

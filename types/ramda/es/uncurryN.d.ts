@@ -1,2 +1,2 @@
-import { uncurryN } from "../index.js";
+import { uncurryN } from '../index';
 export default uncurryN;

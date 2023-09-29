@@ -1,5 +1,4 @@
-// eslint-disable-next-line @definitelytyped/no-self-import
-import Mixin from "@ember/object/mixin";
+import Mixin from '@ember/object/mixin';
 
 interface ActionsHash {
     [index: string]: (...params: any[]) => any;

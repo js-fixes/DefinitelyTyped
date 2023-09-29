@@ -1,5 +1,5 @@
-import { MATH_TYPE_POLAR_3D } from "./types";
-import Vector3D from "./Vector3D";
+import Vector3D from './Vector3D';
+import { MATH_TYPE_POLAR_3D } from './types';
 
 export default class Polar3D {
     constructor(radius?: number, theta?: number, phi?: number);

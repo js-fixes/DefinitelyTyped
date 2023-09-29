@@ -1,6 +1,5 @@
-// js installs to root of node_modules
-// eslint-disable-next-line @definitelytyped/no-single-declare-module
-declare module "SyntheticsMetricEmitter" {
+// tslint:disable:no-single-declare-module js installs to root of node_modules
+declare module 'SyntheticsMetricEmitter' {
     class SyntheticsMetricEmitter {
         _namespace: string;
         _awsCloudWatchClient: any;
@@ -66,5 +65,5 @@ declare module "SyntheticsMetricEmitter" {
             stepConfiguration: any,
         ): Promise<boolean>;
     }
-    import { SyntheticsConfiguration } from "SyntheticsConfiguration";
+    import { SyntheticsConfiguration } from 'SyntheticsConfiguration';
 }

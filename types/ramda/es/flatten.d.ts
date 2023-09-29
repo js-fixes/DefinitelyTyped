@@ -1,2 +1,2 @@
-import { flatten } from "../index.js";
+import { flatten } from '../index';
 export default flatten;

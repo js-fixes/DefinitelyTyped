@@ -5,7 +5,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { Component, CSSProperties, ReactNode } from "react";
+import { Component, ReactNode, CSSProperties } from 'react';
 
 export interface LazyLoadProps {
     once?: boolean | undefined;

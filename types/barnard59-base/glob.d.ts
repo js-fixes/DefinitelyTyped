@@ -1,5 +1,5 @@
-import * as G from "glob";
-import { Readable } from "readable-stream";
+import { Readable } from 'readable-stream';
+import * as G from 'glob';
 
 interface Options extends G.IOptions {
     pattern: string;

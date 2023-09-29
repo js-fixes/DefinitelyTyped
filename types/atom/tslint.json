@@ -3,6 +3,7 @@
     "rules": {
         "await-promise": [true, "CancellablePromise"],
         "no-any": true,
+        "strict-export-declare-modifiers": false,
         "invalid-void": false
     }
 }

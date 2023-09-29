@@ -84,12 +84,8 @@ export interface CheckoutOptions {
 }
 
 declare const RazorpayCheckout: {
-    open: (
-        options: CheckoutOptions,
-        successCallback?: (data: SuccessResponse) => void,
-        errorCallback?: (data: ErrorResponse) => void,
-    ) => Promise<SuccessResponse>;
-    onExternalWalletSelection: (externalWalletCallback: (data: unknown) => void) => void;
+    open: (options: CheckoutOptions, successCallback?: (data: SuccessResponse) => void, errorCallback?: (data: ErrorResponse) => void) => Promise<SuccessResponse>,
+    onExternalWalletSelection: (externalWalletCallback: (data: unknown) => void) => void
 };
 
 export default RazorpayCheckout;

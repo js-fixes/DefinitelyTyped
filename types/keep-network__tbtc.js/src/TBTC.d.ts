@@ -1,7 +1,7 @@
 import BN = require("bn.js");
-import type { TBTCConfig } from "./CommonTypes";
-import { Constants } from "./Constants.js";
 import { DepositFactory } from "./Deposit.js";
+import { Constants } from "./Constants.js";
+import type { TBTCConfig } from './CommonTypes';
 export default class TBTC {
     depositFactory: DepositFactory;
     constants: Constants;

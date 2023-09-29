@@ -76,6 +76,7 @@ export interface AttemptTimeoutOptions {
  * @param [options.randomize=false] Randomizes the timeouts by multiplying a factor between 1-2.
  * @param [options.forever=false] Wether to retry forever.
  * @param [options.unref=false] Wether to unref the setTimeout's.
+ *
  */
 export function operation(options?: OperationOptions): RetryOperation;
 
@@ -146,6 +147,7 @@ export interface CreateTimeoutOptions {
  *
  * @param object The object to be wrapped
  * @param methods Methods which need to be wrapped
+ *
  */
 export function wrap(object: object, methods?: string[]): void;
 export function wrap(object: object, options?: WrapOptions, methods?: string[]): void;

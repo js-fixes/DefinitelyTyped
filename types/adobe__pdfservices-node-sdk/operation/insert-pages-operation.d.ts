@@ -23,10 +23,13 @@
  *      .catch(err => console.log(err));
  * </code>
  * </pre>
+ *
  */
 export class InsertPagesOperation {
     /**
+     *
      * Constructs a {@link InsertPagesOperation} instance.
+     *
      */
     static createNew(): InsertPagesOperation;
     static get SupportedSourceFormat(): {
@@ -48,6 +51,7 @@ export class InsertPagesOperation {
      * <p>
      * If <code>pageRanges</code> is not provided, all the pages of the input PDF file will be inserted at the specified
      * page of the base PDF file.
+     *
      */
     addPagesToInsertAt(basePage: number, inputFile: FileRef, pageRanges?: PageRanges): void;
     /**
@@ -56,9 +60,10 @@ export class InsertPagesOperation {
      * The resulting file may be stored in the system temporary directory (per the os.tempdir(), symlinks are resolved
      * to the actual path).
      * See {@link FileRef} for how temporary resources are cleaned up.
+     *
      */
     execute(context: ExecutionContext): Promise<FileRef>;
     validate(context: any): void;
     updateFilesToInsert(basePage: any, combineOperationInput: any): void;
 }
-import { ExecutionContext, FileRef, PageRanges } from "../pdfservices-sdk";
+import { ExecutionContext, FileRef, PageRanges } from '../pdfservices-sdk';

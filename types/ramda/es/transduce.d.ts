@@ -1,2 +1,2 @@
-import { transduce } from "../index.js";
+import { transduce } from '../index';
 export default transduce;

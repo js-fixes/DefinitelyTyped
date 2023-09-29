@@ -1,5 +1,5 @@
-import { ResizableProps } from "re-resizable";
-import { ComponentType, ReactNode } from "react";
+import { ComponentType, ReactNode } from 'react';
+import { ResizableProps } from 're-resizable';
 
 declare namespace ResizableBox {
     type Props = ResizableProps & {

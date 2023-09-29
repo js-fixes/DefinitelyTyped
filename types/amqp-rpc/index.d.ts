@@ -5,6 +5,8 @@
 
 /// <reference types="node" />
 
+
+
 export interface Options {
     connection?: any;
     url?: string | undefined;
@@ -16,7 +18,7 @@ export interface Options {
     } | undefined;
     ipml_options?: {
         defaultExchangeName?: string | undefined;
-    } | undefined;
+    } | undefined
     conn_options?: any;
 }
 
@@ -61,19 +63,9 @@ export declare class amqpRPC {
     generateQueueName(type: string): string;
     disconnect(): void;
     call<T>(cmd: string, params: T, cb?: Callback, context?: any, options?: CallOptions): string;
-    on<T>(
-        cmd: string,
-        cb: (param?: T, cb?: Callback, info?: CommandInfo) => void,
-        context?: any,
-        options?: HandlerOptions,
-    ): boolean;
+    on<T>(cmd: string, cb: (param?: T, cb?: Callback, info?: CommandInfo) => void, context?: any, options?: HandlerOptions): boolean;
     off(cmd: string): boolean;
     callBroadcast<T>(cmd: string, params: T, options?: BroadcastOptions): void;
-    onBroadcast<T>(
-        cmd: string,
-        cb?: (params?: T, cb?: CallbackWithError) => void,
-        context?: any,
-        options?: any,
-    ): boolean;
+    onBroadcast<T>(cmd: string, cb?: (params?: T, cb?: CallbackWithError) => void, context?: any, options?: any): boolean;
     offBroadcast(cmd: string): boolean;
 }

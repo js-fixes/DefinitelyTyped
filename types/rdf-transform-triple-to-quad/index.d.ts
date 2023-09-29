@@ -1,15 +1,19 @@
-// Type definitions for rdf-transform-triple-to-quad 2.0
+// Type definitions for rdf-transform-triple-to-quad 1.0
 // Project: https://github.com/rdf-ext/rdf-transform-triple-to-quad
 // Definitions by: tpluscode <https://github.com/tpluscode>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { BaseQuad, DataFactory, Quad, Quad_Graph, Stream } from "rdf-js";
-import { Transform } from "readable-stream";
+import { Transform } from 'stream';
+import { Quad_Graph, DataFactory, BaseQuad, Quad, Stream } from 'rdf-js';
 
-export interface TripleToQuadTransformOptions {
-    factory: DataFactory;
+declare namespace TripleToQuadTransform {
+    interface TripleToQuadTransformOptions {
+        factory: DataFactory;
+    }
 }
 
-export default class TripleToQuadTransform<Q extends BaseQuad = Quad> extends Transform implements Stream<Q> {
-    constructor(graph?: Quad_Graph | string, options?: TripleToQuadTransformOptions);
+declare class TripleToQuadTransform<Q extends BaseQuad = Quad> extends Transform implements Stream<Q> {
+    constructor(graph?: Quad_Graph | string, options?: TripleToQuadTransform.TripleToQuadTransformOptions);
 }
+
+export = TripleToQuadTransform;

@@ -1,5 +1,10 @@
-import { ByteRange, CallbackType, LoadCallbackType, TagType } from "../types";
-import MediaFileReader from "./MediaFileReader";
+import {
+    CallbackType,
+    LoadCallbackType,
+    ByteRange,
+    TagType
+} from '../types';
+import MediaFileReader from './MediaFileReader';
 
 export default class MediaTagReader {
     _mediaFileReader: MediaFileReader;
@@ -15,12 +20,12 @@ export default class MediaTagReader {
 
     read(callbacks: CallbackType): void;
 
-    getShortcuts(): { [key: string]: string | string[] };
+    getShortcuts(): {[key: string]: (string|string[])};
 
     _loadData(
         mediaFileReader: MediaFileReader,
-        callbacks: LoadCallbackType,
-    ): void;
+        callbacks: LoadCallbackType
+      ): void;
 
     _parseData(mediaFileReader: MediaFileReader, tags?: string[]): TagType;
 

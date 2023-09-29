@@ -130,7 +130,8 @@ interface KnockoutValidationAsyncCallback {
     (result: KnockoutValidationAsyncCallbackArgs): void;
 }
 
-interface KnockoutValidationRuleBase {
+interface KnockoutValidationRuleBase
+{
     message: string | KnockoutValidationMessageFunction;
 }
 
@@ -164,9 +165,8 @@ interface KnockoutValidationRuleDefinitions {
     required: KnockoutValidationRuleDefinition;
     step: KnockoutValidationRuleDefinition;
     unique: KnockoutValidationRuleDefinition;
-    [ruleName: string]:
-        | KnockoutValidationRuleDefinition
-        | KnockoutValidationAsyncRuleDefinition;
+    [ruleName: string]: KnockoutValidationRuleDefinition |
+                        KnockoutValidationAsyncRuleDefinition;
 }
 
 interface KnockoutValidationRule {
@@ -214,10 +214,7 @@ interface KnockoutValidationStatic {
     utils: KnockoutValidationUtils;
 
     localize(msgTranslations: KnockoutValidationLocalizationDictionary): void;
-    defineLocale(
-        newLocale: string,
-        msgTranslations: KnockoutValidationLocalizationDictionary,
-    ): KnockoutValidationLocalizationDictionary;
+    defineLocale(newLocale: string, msgTranslations: KnockoutValidationLocalizationDictionary): KnockoutValidationLocalizationDictionary;
     locale(newLocale: string): string;
     validateObservable(observable: KnockoutObservable<any>): boolean;
 }
@@ -242,4 +239,4 @@ declare module "knockout.validation" {
     export = validation;
 }
 
-declare var validation: KnockoutValidationStatic;
+declare var validation: KnockoutValidationStatic

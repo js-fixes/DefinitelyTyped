@@ -1,6 +1,6 @@
-import { Cert } from "./cert";
-import { Remote } from "./remote";
-import { Strarray } from "./str-array";
+import { Remote } from './remote';
+import { Strarray } from './str-array';
+import { Cert } from './cert';
 
 export namespace Transport {
     const enum FLAGS {

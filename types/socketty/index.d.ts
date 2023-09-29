@@ -9,6 +9,7 @@ export = socketty;
 export as namespace socketty;
 
 declare namespace socketty {
+
     interface Socketty {
         /**
          * Connect to a socketty server.

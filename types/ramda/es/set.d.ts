@@ -1,2 +1,2 @@
-import { set } from "../index.js";
+import { set } from '../index';
 export default set;

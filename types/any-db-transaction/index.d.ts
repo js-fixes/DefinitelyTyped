@@ -35,6 +35,7 @@ declare namespace begin {
      * Note that the 'error' event may be emitted multiple times! depending on the callback you are registering, you way want to wrap it using [once][].
      */
     interface Transaction extends anyDB.Queryable {
+
         /**
          * Issue a COMMIT (or RELEASE ... in the case of nested transactions) statement to the database.
          * If a continuation is provided it will be called (possibly with an error) after the COMMIT
@@ -79,25 +80,9 @@ declare namespace begin {
 /**
  * Start a transaction
  */
-declare function begin(
-    q: anyDB.Queryable,
-    options?: begin.TransactionOptions,
-    callback?: (error: Error, transaction: begin.Transaction) => void,
-): begin.Transaction;
-declare function begin(
-    q: anyDB.Queryable,
-    callback?: (error: Error, transaction: begin.Transaction) => void,
-): begin.Transaction;
-declare function begin(
-    q: anyDB.Queryable,
-    beginStatement?: string,
-    callback?: (error: Error, transaction: begin.Transaction) => void,
-): begin.Transaction;
-declare function begin(
-    q: anyDB.Queryable,
-    options?: begin.TransactionOptions,
-    beginStatement?: string,
-    callback?: (error: Error, transaction: begin.Transaction) => void,
-): begin.Transaction;
+declare function begin(q: anyDB.Queryable, options?: begin.TransactionOptions, callback?: (error: Error, transaction: begin.Transaction) => void): begin.Transaction;
+declare function begin(q: anyDB.Queryable, callback?: (error: Error, transaction: begin.Transaction) => void): begin.Transaction;
+declare function begin(q: anyDB.Queryable, beginStatement?: string, callback?: (error: Error, transaction: begin.Transaction) => void): begin.Transaction;
+declare function begin(q: anyDB.Queryable, options?: begin.TransactionOptions, beginStatement?: string, callback?: (error: Error, transaction: begin.Transaction) => void): begin.Transaction;
 
 export = begin;

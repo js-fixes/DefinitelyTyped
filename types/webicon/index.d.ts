@@ -29,29 +29,29 @@ import { StaticUrlDeclaration } from "./Web/StaticUrlDeclaration";
 import { UrlConfig } from "./Web/UrlConfig";
 
 export {
-    AliasOptions,
-    Config,
-    ConfigurationHandler,
     CssClassConfig,
     CssIconSet,
-    CssIconSetOptions,
-    DynamicUrlDeclaration,
     IconClassGenerator,
+    ImageIcon,
+    AliasOptions,
+    CssIconSetOptions,
+    ImageIconOptions,
+    SvgCumulativeIconSetOptions,
+    SvgIconOptions,
+    SvgIconSetOptions,
+    SvgCumulativeIconSet,
+    SvgIcon,
+    SvgIconSet,
+    Config,
+    ConfigurationHandler,
     IconLoadedEventHandler,
     IconPreloader,
     Identifiable,
-    ImageIcon,
-    ImageIconOptions,
     Injector,
     PublicApi,
+    DynamicUrlDeclaration,
     StaticUrlDeclaration,
-    SvgCumulativeIconSet,
-    SvgCumulativeIconSetOptions,
-    SvgIcon,
-    SvgIconOptions,
-    SvgIconSet,
-    SvgIconSetOptions,
-    UrlConfig,
+    UrlConfig
 };
 
 declare global {

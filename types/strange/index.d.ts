@@ -26,13 +26,15 @@ declare const Range: RangeConstructor;
 
 interface RangeConstructor {
     /**
+     *
      * @param begin Range's beginning, or left endpoint.
      * @param end Range's end, or right endpoint.
      * @param bounds Range's bounds.
      */
-    new<T extends Range.Endpoint>(begin?: T | null, end?: T | null, bounds?: Range.Bounds): Range<T>;
+    new <T extends Range.Endpoint>(begin?: T | null, end?: T | null, bounds?: Range.Bounds): Range<T>;
 
     /**
+     *
      * @param begin Range's beginning, or left endpoint.
      * @param end Range's end, or right endpoint.
      * @param bounds Range's bounds.
@@ -311,5 +313,5 @@ interface Range<T extends Range.Endpoint> {
 
 declare namespace Range {
     type Endpoint = Date | number | string | { valueOf(): number | string };
-    type Bounds = "()" | "[]" | "[)" | "(]";
+    type Bounds = '()' | '[]' | '[)' | '(]';
 }

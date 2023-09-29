@@ -1,6 +1,6 @@
-import React = require("react");
+import React = require('react');
 
-import { Data, EmojiProps } from "../..";
+import { EmojiProps, Data } from '../..';
 
 export interface NimbleEmojiProps extends EmojiProps {
     data: Data;

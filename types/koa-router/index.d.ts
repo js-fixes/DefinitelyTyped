@@ -519,6 +519,7 @@ declare class Router<StateT = any, CustomT = {}> {
      *
      * router.url('user', { id: 3 }, { query: "limit=1" });
      * // => "/users/3?limit=1"
+     *
      */
     url(name: string, params: any, options?: Router.IUrlOptionsQuery): string;
     url(name: string, params: any, options?: Router.IUrlOptionsQuery): Error;

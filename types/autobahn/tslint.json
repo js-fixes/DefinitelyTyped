@@ -5,6 +5,7 @@
         "interface-name": false,
         "no-inferrable-types": false,
         "no-var-keyword": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

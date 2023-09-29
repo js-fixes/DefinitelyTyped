@@ -5,6 +5,7 @@
 
 /// <reference types="node" />
 
+
 interface IOptions {
     title?: string | undefined;
     minimal?: boolean | undefined;
@@ -12,6 +13,6 @@ interface IOptions {
 
 declare function debug(options?: IOptions): NodeJS.ReadWriteStream;
 
-declare namespace debug {}
+declare namespace debug { }
 
 export = debug;

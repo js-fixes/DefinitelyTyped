@@ -1,2 +1,2 @@
-import { lensPath } from "../index.js";
+import { lensPath } from '../index';
 export default lensPath;

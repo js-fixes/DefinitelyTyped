@@ -70,13 +70,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface VideoTopicSelector
-            extends
-                Base.Selector<VideoTopicIterator>,
+            extends Base.Selector<VideoTopicIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

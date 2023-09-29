@@ -1,2 +1,2 @@
-import { gt } from "../index.js";
+import { gt } from '../index';
 export default gt;

@@ -39,23 +39,10 @@ export interface PatternOptions {
     generator?: GeneratorType | undefined;
 }
 
-export type GeneratorType =
-    | "chevrons"
-    | "octogons"
-    | "overlappingCircles"
-    | "plusSigns"
-    | "xes"
-    | "sineWaves"
-    | "hexagons"
-    | "overlappingRings"
-    | "plaid"
-    | "triangles"
-    | "squares"
-    | "nestedSquares"
-    | "mosaicSquares"
-    | "concentricCircles"
-    | "diamonds"
-    | "tessellation";
+export type GeneratorType = 'chevrons' | 'octogons' | 'overlappingCircles' |
+    'plusSigns' | 'xes' | 'sineWaves' | 'hexagons' | 'overlappingRings' |
+    'plaid' |'triangles' | 'squares' | 'nestedSquares' | 'mosaicSquares' |
+    'concentricCircles' | 'diamonds' | 'tessellation';
 
 export interface Pattern {
     /** Gets the pattern's background color as a hexadecimal string. */

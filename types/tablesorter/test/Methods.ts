@@ -1,15 +1,5 @@
 import "./Tests";
-import {
-    ParsedCell,
-    Parser,
-    RelativeSortDefinition,
-    SortDefinition,
-    SortDefinitionOrder,
-    StorageConfiguration,
-    TablesorterHeading,
-    TriggerCallbackHandler,
-    Widget,
-} from "tablesorter";
+import { SortDefinitionOrder, TriggerCallbackHandler, SortDefinition, RelativeSortDefinition, Parser, Widget, ParsedCell, TablesorterHeading, StorageConfiguration } from "tablesorter";
 import { RelativeSorting } from "tablesorter/Sorting/RelativeSorting";
 import { StorageType } from "tablesorter/Storage/StorageType";
 
@@ -37,8 +27,7 @@ export class TestMethods<T extends HTMLElement> {
      */
     protected mixedSorting: ReadonlyArray<SortDefinition | RelativeSortDefinition> = [
         [0, "d"],
-        [1, "o"],
-    ];
+        [1, "o"]];
 
     /**
      * A trigger-callback for testing.
@@ -46,7 +35,7 @@ export class TestMethods<T extends HTMLElement> {
     protected triggerCallback: TriggerCallbackHandler<T> = (table) => {
         // $ExpectType T
         table;
-    };
+    }
 
     /**
      * Tests for the methods.
@@ -57,7 +46,7 @@ export class TestMethods<T extends HTMLElement> {
         const config = this.table[0].config;
         const parser: Parser<T> = {} as any;
         const widget: Widget<T> = {} as any;
-        const parsedCellCallback = (cell: ParsedCell): void => {};
+        const parsedCellCallback = (cell: ParsedCell): void => { };
         const ajaxSettings: JQuery.AjaxSettings = {} as any;
         const request: JQuery.jqXHR = {} as any;
         const storageConfig: StorageConfiguration = {
@@ -65,7 +54,7 @@ export class TestMethods<T extends HTMLElement> {
             id: "",
             page: "",
             storageType: "c",
-            url: "",
+            url: ""
         };
 
         /**
@@ -87,7 +76,7 @@ export class TestMethods<T extends HTMLElement> {
         $.tablesorter.addRows(config, "", this.sorting, this.triggerCallback);
 
         $.tablesorter.addInstanceMethods({ hello: () => null });
-        $.tablesorter.addInstanceMethods({ world() {} });
+        $.tablesorter.addInstanceMethods({ world() { } });
 
         $.tablesorter.addParser(parser);
 
@@ -150,8 +139,7 @@ export class TestMethods<T extends HTMLElement> {
                 // $ExpectType HTMLElement
                 element;
                 return true;
-            },
-        );
+            });
         $.tablesorter.getColumnText(tableElement, 0);
         $.tablesorter.getColumnText(tableElement, 0, parsedCellCallback);
         $.tablesorter.getColumnText(tableElement, 0, parsedCellCallback, "*");
@@ -167,8 +155,7 @@ export class TestMethods<T extends HTMLElement> {
                 // $ExpectType HTMLElement
                 element;
                 return true;
-            },
-        );
+            });
 
         // $ExpectType string | boolean | undefined
         $.tablesorter.getData($(), config.headers[0], "sorter");

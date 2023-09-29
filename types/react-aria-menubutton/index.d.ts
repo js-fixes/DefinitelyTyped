@@ -12,7 +12,8 @@ export interface WrapperState {
     isOpen: boolean;
 }
 
-export interface WrapperProps<T extends HTMLElement> extends React.HTMLProps<T> {
+export interface WrapperProps<T extends HTMLElement>
+    extends React.HTMLProps<T> {
     /**
      * A callback to run when the user makes a selection
      * (i.e. clicks or presses Enter or Space on a `MenuItem`).
@@ -54,7 +55,8 @@ export interface WrapperProps<T extends HTMLElement> extends React.HTMLProps<T> 
  */
 export class Wrapper extends React.Component<WrapperProps<HTMLElement>> {}
 
-export interface ButtonProps<T extends HTMLElement> extends React.HTMLProps<T> {
+export interface ButtonProps<T extends HTMLElement>
+    extends React.HTMLProps<T> {
     /**
      * If true, the element is disabled
      * (aria-disabled='true', not in tab order, clicking has no effect).
@@ -77,7 +79,8 @@ export interface ButtonProps<T extends HTMLElement> extends React.HTMLProps<T> {
  */
 export const Button: React.ForwardRefExoticComponent<ButtonProps<HTMLElement>>;
 
-export interface MenuProps<T extends HTMLElement> extends Omit<React.HTMLProps<T>, "children"> {
+export interface MenuProps<T extends HTMLElement>
+    extends Omit<React.HTMLProps<T>, 'children'> {
     /**
      * The HTML tag for this element. Default: 'div'.
      */
@@ -90,7 +93,8 @@ export interface MenuProps<T extends HTMLElement> extends Omit<React.HTMLProps<T
  */
 export class Menu extends React.Component<MenuProps<HTMLElement>> {}
 
-export interface MenuItemProps<T extends HTMLElement> extends React.HTMLProps<T> {
+export interface MenuItemProps<T extends HTMLElement>
+    extends React.HTMLProps<T> {
     /**
      * If value has a value, it will be passed to the onSelection handler
      * when the `MenuItem` is selected
@@ -138,7 +142,7 @@ export function openMenu(
          * menu opens. Default: `false`.
          */
         focusMenu: boolean;
-    },
+    }
 ): void;
 
 /**
@@ -154,5 +158,5 @@ export function closeMenu(
          * menu closes. Default: `false`.
          */
         focusButton: boolean;
-    },
+    }
 ): void;

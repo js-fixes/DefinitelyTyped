@@ -28,12 +28,7 @@ export function jsToString(
     qualifiedName?: string,
     documentType?: object,
 ): string;
-export function stringify(
-    objTree: object,
-    namespaceURI?: string,
-    qualifiedName?: string,
-    documentType?: object,
-): string;
+export function stringify(objTree: object, namespaceURI?: string, qualifiedName?: string, documentType?: object): string;
 
 export function xmlToJs(
     xmlDocument: any,

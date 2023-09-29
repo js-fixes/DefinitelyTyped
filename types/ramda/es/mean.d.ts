@@ -1,2 +1,2 @@
-import { mean } from "../index.js";
+import { mean } from '../index';
 export default mean;

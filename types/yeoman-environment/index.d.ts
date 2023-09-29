@@ -5,11 +5,11 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 4.2
 
-import { Command } from "commander";
 import { EventEmitter } from "events";
 import { ExecaChildProcess, ExecaSyncReturnValue, Options, SyncOptions } from "execa";
-import * as inquirer from "inquirer";
+import { Command } from "commander";
 import { Store as MemFsStore } from "mem-fs";
+import * as inquirer from "inquirer";
 import * as Generator from "yeoman-generator";
 import Storage = require("yeoman-generator/lib/util/storage");
 import TerminalAdapter = require("./lib/adapter");
@@ -97,7 +97,7 @@ declare class Environment<TOptions extends Environment.Options = Environment.Opt
     static createEnv<TOptions extends Environment.Options = Environment.Options>(
         args?: string | string[],
         opts?: TOptions,
-        adapter?: Environment.Adapter,
+        adapter?: Environment.Adapter
     ): Environment<TOptions>;
 
     /**
@@ -113,7 +113,7 @@ declare class Environment<TOptions extends Environment.Options = Environment.Opt
         version: string,
         args?: string | string[],
         opts?: TOptions,
-        adapter?: Environment.Adapter,
+        adapter?: Environment.Adapter
     ): Environment<TOptions>;
 
     /**
@@ -229,10 +229,7 @@ declare class Environment<TOptions extends Environment.Options = Environment.Opt
      * @returns Either the newly created generator or the error that occurred.
      */
     create<TOptions extends Generator.GeneratorOptions>(
-        namespaceOrPath: string,
-        args: string[],
-        options?: Environment.InstantiateOptions<TOptions>,
-    ): Generator<TOptions> | Error;
+        namespaceOrPath: string, args: string[], options?: Environment.InstantiateOptions<TOptions>): Generator<TOptions> | Error;
 
     /**
      * Handles the specified `error`.
@@ -349,7 +346,7 @@ declare class Environment<TOptions extends Environment.Options = Environment.Opt
     instantiate(
         generator: Generator.GeneratorConstructor,
         args: string[],
-        options: Environment.InstantiateOptions,
+        options: Environment.InstantiateOptions
     ): Generator;
 
     /**
@@ -450,12 +447,7 @@ declare class Environment<TOptions extends Environment.Options = Environment.Opt
      * @param resolved The file-path to the generator.
      * @param packagePath The path to the npm package of the generator.
      */
-    registerStub(
-        generator: Generator.GeneratorConstructor,
-        namespace: string,
-        resolved?: string,
-        packagePath?: string,
-    ): this;
+    registerStub(generator: Generator.GeneratorConstructor, namespace: string, resolved?: string, packagePath?: string): this;
 
     /**
      * Resolves the path of the specified module.

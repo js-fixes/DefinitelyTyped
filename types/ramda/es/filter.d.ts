@@ -1,2 +1,2 @@
-import { filter } from "../index.js";
+import { filter } from '../index';
 export default filter;

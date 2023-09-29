@@ -99,9 +99,8 @@ export namespace Status {
     }>;
 
     export type Code = StatusCode[keyof StatusCode];
-    export const Code:
-        & StatusCode
-        & Readonly<{
+    export const Code: StatusCode &
+        Readonly<{
             /**
              * Returns the Guacamole protocol status code which most closely
              * represents the given HTTP status code.

@@ -65,17 +65,11 @@ declare class SSH {
 
     mkdir(path: string, type?: "sftp", givenSftp?: SSH.SFTP): Promise<void>;
 
-    exec(
-        command: string,
-        parameters?: ReadonlyArray<string>,
-        options?: SSH.ExecOptions & { stream?: "stdout" | "stderr" | undefined },
-    ): Promise<string>;
+    exec(command: string, parameters?: ReadonlyArray<string>,
+        options?: SSH.ExecOptions & { stream?: "stdout"|"stderr" | undefined }): Promise<string>;
 
-    exec(
-        command: string,
-        parameters?: ReadonlyArray<string>,
-        options?: SSH.ExecOptions & { stream: "both" },
-    ): Promise<SSH.ExecResult>;
+    exec(command: string, parameters?: ReadonlyArray<string>,
+        options?: SSH.ExecOptions & { stream: "both" }): Promise<SSH.ExecResult>;
 
     execCommand(givenCommand: string, options?: SSH.ExecOptions): Promise<SSH.ExecResult>;
 
@@ -83,13 +77,9 @@ declare class SSH {
 
     putFile(localFile: string, remoteFile: string, givenSftp?: SSH.SFTP, givenOpts?: TransferOptions): Promise<void>;
 
-    putFiles(files: ReadonlyArray<{ local: string; remote: string }>, givenConfig?: SSH.PutFilesOptions): Promise<void>;
+    putFiles(files: ReadonlyArray<{ local: string, remote: string }>, givenConfig?: SSH.PutFilesOptions): Promise<void>;
 
-    putDirectory(
-        localDirectory: string,
-        remoteDirectory: string,
-        givenConfig?: SSH.PutDirectoryOptions,
-    ): Promise<boolean>;
+    putDirectory(localDirectory: string, remoteDirectory: string, givenConfig?: SSH.PutDirectoryOptions): Promise<boolean>;
 
     dispose(): void;
 }

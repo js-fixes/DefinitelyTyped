@@ -1,2 +1,2 @@
-import { fromPairs } from "../index.js";
+import { fromPairs } from '../index';
 export default fromPairs;

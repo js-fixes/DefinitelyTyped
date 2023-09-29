@@ -3,8 +3,10 @@
 // Definitions by: vvakame <https://github.com/vvakame>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 // lib/git/git.js
 export declare class Git {
+
     constructor(gitDirectory: any);
 
     refs(options: any, prefix: string, callback: (err: any, data: string) => void): void;
@@ -15,14 +17,7 @@ export declare class Git {
 
     git(functionName: any, options: any, ...args: any[]): void; // last element is callback
 
-    call_git(
-        prefix: string,
-        command: any,
-        postfix: string,
-        options: any,
-        args: any,
-        callback: (error: any, result: string) => void,
-    ): void;
+    call_git(prefix: string, command: any, postfix: string, options: any, args: any, callback: (error: any, result: string) => void): void;
 
     rev_list(callback: Function): void;
 
@@ -180,18 +175,7 @@ export declare class Commit {
     short_message: string;
     _id_abbrev: any;
 
-    constructor(
-        repo: Repo,
-        id: string,
-        parents: any[],
-        tree: any,
-        author: Actor,
-        authoredDate: string,
-        committer: Actor,
-        committedDate: string,
-        message: string,
-        filechanges: any,
-    );
+    constructor(repo: Repo, id: string, parents: any[], tree: any, author: Actor, authoredDate: string, committer: Actor, committedDate: string, message: string, filechanges: any);
 
     load(callback: Function): void;
 
@@ -245,7 +229,7 @@ export declare class Config {
 
     constructor(repo: any);
 
-    fetch(key: any, defaultValue: any): any;
+    fetch(key: any, defaultValue: any): any
 
     set(key: any, value: any, callback: Function): void;
 }
@@ -263,18 +247,7 @@ export declare class Diff {
     deleted_file: any;
     diff: any;
 
-    constructor(
-        repo: any,
-        aPath: any,
-        bPath: any,
-        aBlob: any,
-        bBlob: any,
-        aMode: any,
-        bMode: any,
-        newFile: any,
-        deletedFile: any,
-        diff: any,
-    );
+    constructor(repo: any, aPath: any, bPath: any, aBlob: any, bBlob: any, aMode: any, bMode: any, newFile: any, deletedFile: any, diff: any);
 
     static list_from_string(repo: any, text: any, callback: Function): void;
 }
@@ -602,7 +575,7 @@ export declare class Repository {
 
     get_raw_trees(sha: any, path: any): string;
 
-    ls_tree_path(sha: any, path: any, append: any): any;
+    ls_tree_path(sha: any, path: any, append: any): any
 
     quick_diff(tree1: any, tree2: any, path: any, recurse: any): any[];
 

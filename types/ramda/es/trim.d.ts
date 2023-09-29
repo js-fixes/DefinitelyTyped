@@ -1,2 +1,2 @@
-import { trim } from "../index.js";
+import { trim } from '../index';
 export default trim;

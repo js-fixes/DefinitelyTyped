@@ -5,7 +5,7 @@
 //                 Chris. Webster <https://github.com/webstech>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { BlockTextBuilder } from "./lib/block-text-builder";
+import { BlockTextBuilder } from './lib/block-text-builder';
 
 export type compiledFunction = (str: string) => string;
 export type metaData = any;
@@ -14,7 +14,7 @@ export type metaData = any;
  * Preprocess options, compile selectors into a decision tree,
  * return a function intended for batch processing.
  */
-export function compile(options?: HtmlToTextOptions): compiledFunction;
+ export function compile(options?: HtmlToTextOptions): compiledFunction;
 
 /**
  * Convert given HTML content to plain text string.
@@ -26,7 +26,8 @@ export function compile(options?: HtmlToTextOptions): compiledFunction;
  * });
  * console.log(text); // HELLO WORLD
  */
-export function htmlToText(html: string, options?: HtmlToTextOptions, metadata?: metaData): string;
+export function htmlToText(html: string, options?: HtmlToTextOptions,
+    metadata?: metaData): string;
 export { htmlToText as convert };
 
 export interface HtmlToTextOptions {
@@ -102,12 +103,12 @@ export interface HtmlToTextOptions {
      * @deprecated Use selectors instead.
      */
     tags?: TagDefinitions | undefined;
-}
+ }
 
-/**
- * Options for narrowing down to informative parts of HTML document.
- */
-export interface BaseElementsOptions {
+ /**
+  * Options for narrowing down to informative parts of HTML document.
+  */
+ export interface BaseElementsOptions {
     /**
      * The resulting text output will be composed from the text content of elements
      * matched with these selectors.
@@ -121,7 +122,7 @@ export interface BaseElementsOptions {
      *
      * `'occurrence'` - all bases will appear in the same order as in input HTML.
      */
-    orderBy?: "selectors" | "occurrence" | undefined;
+    orderBy?: 'selectors' | 'occurrence' | undefined;
     /**
      * Use the entire document if none of provided selectors matched.
      */
@@ -182,7 +183,7 @@ export interface LongWordSplitOptions {
 /**
  * Describes how to handle tags matched by a selector.
  */
-export interface SelectorDefinition {
+ export interface SelectorDefinition {
     /**
      * CSS selector. Refer to README for notes on supported selectors etc.
      */
@@ -315,11 +316,11 @@ export interface FormatOptions {
     /**
      * (Only for: `inlineSurround` formatter.) String prefix to be inserted before inline tag contents.
      */
-    prefix?: string | undefined;
+     prefix?: string | undefined;
     /**
      * (Only for: `inlineSurround` formatter.) String suffix to be inserted after inline tag contents.
      */
-    suffix?: string | undefined;
+     suffix?: string | undefined;
     /**
      * User defined values are supported.
      */
@@ -328,7 +329,7 @@ export interface FormatOptions {
      * @deprecated Use linkBrackets instead.
      * (Only for: `anchor` formatter.) Don't print brackets around links.
      */
-    noLinkBrackets?: boolean | undefined;
+     noLinkBrackets?: boolean | undefined;
 }
 
 /**
@@ -367,12 +368,8 @@ export interface DomNode {
 /**
  * A function to stringify a DOM node.
  */
-export type FormatCallback = (
-    elem: DomNode,
-    walk: RecursiveCallback,
-    builder: BlockTextBuilder,
-    formatOptions: FormatOptions,
-) => void;
+export type FormatCallback = (elem: DomNode, walk: RecursiveCallback,
+    builder: BlockTextBuilder, formatOptions: FormatOptions) => void;
 
 /**
  * A function to process child nodes.
@@ -384,7 +381,7 @@ export type RecursiveCallback = (nodes: DomNode[], builder: BlockTextBuilder) =>
  * Type of object passed to tags in the options.
  */
 export interface TagDefinitions {
-    ""?: TagDefinition | undefined;
+    ''?: TagDefinition | undefined;
     a?: TagDefinition | undefined;
     article?: TagDefinition | undefined;
     aside?: TagDefinition | undefined;

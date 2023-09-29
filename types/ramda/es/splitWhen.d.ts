@@ -1,2 +1,2 @@
-import { splitWhen } from "../index.js";
+import { splitWhen } from '../index';
 export default splitWhen;

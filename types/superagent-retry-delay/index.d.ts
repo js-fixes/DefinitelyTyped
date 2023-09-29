@@ -4,9 +4,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 3.9
 
-import * as cookiejar from "cookiejar";
+import { SuperAgentRequest, SuperAgentStatic, Request, Response } from "superagent";
 import * as stream from "stream";
-import { Request, Response, SuperAgentRequest, SuperAgentStatic } from "superagent";
+import * as cookiejar from "cookiejar";
 
 // these types should be exported by `superagent` but are not -------
 

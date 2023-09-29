@@ -1,4 +1,4 @@
-// Type definitions for autocannon 7.12
+// Type definitions for autocannon 7.9
 // Project: https://github.com/mcollina/autocannon#readme
 // Definitions by: Jeremy Bensimon <https://github.com/jeremyben>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -6,7 +6,7 @@
 
 /// <reference types="node" />
 
-import { IncomingHttpHeaders } from "http";
+import { IncomingHttpHeaders } from 'http';
 
 declare namespace autocannon {
     interface Options {
@@ -19,58 +19,58 @@ declare namespace autocannon {
          * A path to a Unix Domain Socket or a Windows Named Pipe.
          * A `url` is still required in order to send the correct Host header and path.
          */
-        socketPath?: string;
+        socketPath?: string | undefined;
 
         /**
          * The number of concurrent connections.
          * @default 10
          */
-        connections?: number;
+        connections?: number | undefined;
 
         /**
          * The number of seconds to run the autocannon.
          * Can be a [timestring](https://www.npmjs.com/package/timestring).
          * @default 10
          */
-        duration?: number | string;
+        duration?: number | string | undefined;
 
         /**
          * A `Number` stating the amount of requests to make before ending the test.
          * This overrides duration and takes precedence, so the test won't end
          * until the amount of requests needed to be completed are completed.
          */
-        amount?: number;
+        amount?: number | undefined;
 
         /**
          * The number of seconds to wait for a response before timeout.
          * @default 10
          */
-        timeout?: number;
+        timeout?: number | undefined;
 
         /**
          *  The number of [pipelined requests](https://en.wikipedia.org/wiki/HTTP_pipelining) for each connection.
          * Will cause the `Client` API to throw when greater than 1
          * @default 1
          */
-        pipelining?: number;
+        pipelining?: number | undefined;
 
         /**
          * The threshold of the number of errors when making the requests to the server before this instance bail's out.
          * This instance will take all existing results so far and aggregate them into the results.
          * If none passed here, the instance will ignore errors and never bail out.
          */
-        bailout?: number;
+        bailout?: number | undefined;
 
         /**
          * The http method to use.
          * @default 'GET'
          */
-        method?: Request["method"];
+        method?: Request['method'] | undefined;
 
         /**
          * A `String` to be added to the results for identification.
          */
-        title?: string;
+        title?: string | undefined;
 
         /**
          * A `String` or a `Buffer` containing the body of the request.
@@ -82,13 +82,13 @@ declare namespace autocannon {
          *
          * Leave undefined for an empty body.
          */
-        body?: Request["body"];
+        body?: Request['body'] | undefined;
 
         /**
          * An `Object` containing the headers of the request.
          * @default {}
          */
-        headers?: Request["headers"];
+        headers?: Request['headers'] | undefined;
 
         /**
          * A `Function` which will be passed the Client object for each connection to be made.
@@ -98,38 +98,38 @@ declare namespace autocannon {
          *
          * @default noop(){}
          */
-        setupClient?: (client: Client) => void;
+        setupClient?: ((client: Client) => void) | undefined;
 
         /**
          * A `Number` stating the max requests to make per connection.
          * `amount` takes precedence if both are set.
          */
-        maxConnectionRequests?: number;
+        maxConnectionRequests?: number | undefined;
 
         /**
          * A `Number` stating the max requests to make overall.
          * Can't be less than `connections`.
          */
-        maxOverallRequests?: number;
+        maxOverallRequests?: number | undefined;
 
         /**
          * A `Number` stating the rate of requests to make per second from each individual connection.
          * No rate limiting by default.
          */
-        connectionRate?: number;
+        connectionRate?: number | undefined;
 
         /**
          * A `Number` stating the rate of requests to make per second from all connections.
          * `connectionRate` takes precedence if both are set.
          * No rate limiting by default.
          */
-        overallRate?: number;
+        overallRate?: number | undefined;
 
         /**
          * A `Number` which makes the individual connections disconnect and reconnect to the server
          * whenever it has sent that number of requests.
          */
-        reconnectRate?: number;
+        reconnectRate?: number | undefined;
 
         /**
          * An `Array` of `Objects` which represents the sequence of requests to make while benchmarking.
@@ -138,130 +138,77 @@ declare namespace autocannon {
          * The `Objects` in this array can have `body`, `headers`, `method`, or `path` attributes, which overwrite those that are passed in this `opts` object.
          * Therefore, the ones in this (`opts`) object take precedence and should be viewed as defaults.
          */
-        requests?: Request[];
+        requests?: Request[] | undefined;
 
         /**
          * A `Boolean` which enables the replacement of `[<id>]` tags within the request body with a randomly generated ID,
          * allowing for unique fields to be sent with requests.
          * @default false
          */
-        idReplacement?: boolean;
+        idReplacement?: boolean | undefined;
 
         /**
          * A `Boolean` which allows you to setup an instance of autocannon that restarts indefinitely after emiting results with the `done` event.
          * Useful for efficiently restarting your instance. To stop running forever, you must cause a `SIGINT` or call the `.stop()` function on your instance.
          * @default false
          */
-        forever?: boolean;
+        forever?: boolean | undefined;
 
         /**
          * A `String` identifying the server name for the SNI (Server Name Indication) TLS extension.
          */
-        servername?: string;
+        servername?: string | undefined;
 
         /**
          * A `Boolean` which allows you to disable tracking non 2xx code responses in latency and bytes per second calculations.
          * @default false
          */
-        excludeErrorStats?: boolean;
+        excludeErrorStats?: boolean | undefined;
 
         /**
          * The number of worker threads to use to fire requests.
          */
-        workers?: number;
-
-        /**
-         * The number of milliseconds to elapse between taking samples. This controls the sample interval,
-         * & therefore the total number of samples, which affects statistical analyses.
-         * @default 1
-         */
-        sampleInt?: number;
-
-        /**
-         * A String or an Object containing the multipart/form-data options or a path to the JSON file containing them
-         */
-        form?: string | object;
-
-        /**
-         * An object that you'd like to initialize your context with.
-         */
-        initialContext?: object;
-
-        /**
-         * A Function which will be passed the response body for each completed request. Each request, whose verifyBody
-         * function does not return a truthy value, is counted in mismatches
-         */
-        verifyBody?: (body: Request["body"]) => boolean;
-
-        /**
-         * A Boolean which disables the correction of latencies to compensate for the coordinated omission issue.
-         * Does not make sense when no rate of requests has been specified (connectionRate or overallRate)
-         */
-        ignoreCoordinatedOmission?: boolean;
-
-        /**
-         * an Object of parsed HAR content. Autocannon will extra and use entries.request: requests, method, form
-         * and body options will be ignored.
-         * NOTE: you must ensure that entries are targeting the same domain as url option.
-         */
-        har?: object;
-
-        /**
-         * A String representing the expected response body. Each request whose response body is not equal to
-         * expectBody is counted in mismatches
-         */
-        expectBody?: string;
-
-        /**
-         * An Object that is passed into tls.connect call.
-         * Note: this only applies if your URL is secure.
-         */
-        tlsOptions?: object;
-
-        /**
-         * A Boolean which allows you to disable the aggregate result phase of an instance run.
-         */
-        skipAggregateResult?: boolean;
+        workers?: number | undefined;
     }
 
     interface Request {
         body?: string | Buffer | undefined;
         headers?: IncomingHttpHeaders | undefined;
         method?:
-            | "ACL"
-            | "BIND"
-            | "CHECKOUT"
-            | "CONNECT"
-            | "COPY"
-            | "DELETE"
-            | "GET"
-            | "HEAD"
-            | "LINK"
-            | "LOCK"
-            | "M-SEARCH"
-            | "MERGE"
-            | "MKACTIVITY"
-            | "MKCALENDAR"
-            | "MKCOL"
-            | "MOVE"
-            | "NOTIFY"
-            | "OPTIONS"
-            | "PATCH"
-            | "POST"
-            | "PROPFIND"
-            | "PROPPATCH"
-            | "PURGE"
-            | "PUT"
-            | "REBIND"
-            | "REPORT"
-            | "SEARCH"
-            | "SOURCE"
-            | "SUBSCRIBE"
-            | "TRACE"
-            | "UNBIND"
-            | "UNLINK"
-            | "UNLOCK"
-            | "UNSUBSCRIBE"
+            | 'ACL'
+            | 'BIND'
+            | 'CHECKOUT'
+            | 'CONNECT'
+            | 'COPY'
+            | 'DELETE'
+            | 'GET'
+            | 'HEAD'
+            | 'LINK'
+            | 'LOCK'
+            | 'M-SEARCH'
+            | 'MERGE'
+            | 'MKACTIVITY'
+            | 'MKCALENDAR'
+            | 'MKCOL'
+            | 'MOVE'
+            | 'NOTIFY'
+            | 'OPTIONS'
+            | 'PATCH'
+            | 'POST'
+            | 'PROPFIND'
+            | 'PROPPATCH'
+            | 'PURGE'
+            | 'PUT'
+            | 'REBIND'
+            | 'REPORT'
+            | 'SEARCH'
+            | 'SOURCE'
+            | 'SUBSCRIBE'
+            | 'TRACE'
+            | 'UNBIND'
+            | 'UNLINK'
+            | 'UNLOCK'
+            | 'UNSUBSCRIBE'
             | undefined;
         path?: string | undefined;
     }
@@ -274,36 +221,36 @@ declare namespace autocannon {
          * Emitted once everything has been setup in your autocannon instance and it has started.
          * Useful for if running the instance forever.
          */
-        on(event: "start", listener: () => void): this;
+        on(event: 'start', listener: () => void): this;
 
         /**
          * Emitted every second this autocannon is running a benchmark.
          * Useful for displaying stats, etc. Used by the `track` function.
          */
-        on(event: "tick", listener: () => void): this; // tslint:disable-line:unified-signatures
+        on(event: 'tick', listener: () => void): this; // tslint:disable-line:unified-signatures
 
         /**
          * Emitted when the autocannon finishes a benchmark.
          */
-        on(event: "done", listener: (result: Result) => void): this;
+        on(event: 'done', listener: (result: Result) => void): this;
 
         /**
          * Emitted when the autocannons http-client gets a http response from the server.
          */
         on(
-            event: "response",
+            event: 'response',
             listener: (client: Client, statusCode: number, resBytes: number, responseTime: number) => void,
         ): this;
 
         /**
          * Emitted in the case of a request error e.g. a timeout.
          */
-        on(event: "reqError", listener: (err: any) => void): this;
+        on(event: 'reqError', listener: (err: any) => void): this;
 
         /**
          * Emitted if there is an error during the setup phase of autocannon.
          */
-        on(event: "error", listener: (err: any) => void): this; // tslint:disable-line:unified-signatures
+        on(event: 'error', listener: (err: any) => void): this; // tslint:disable-line:unified-signatures
     }
 
     /**
@@ -349,17 +296,17 @@ declare namespace autocannon {
         /**
          * Emitted when a request sent from this client has received the headers of its reply.
          */
-        on(event: "headers", listener: (headers: IncomingHttpHeaders) => void): this;
+        on(event: 'headers', listener: (headers: IncomingHttpHeaders) => void): this;
 
         /**
          * Emitted when a request sent from this client has received the body of a reply.
          */
-        on(event: "body", listener: (body: Buffer) => void): this;
+        on(event: 'body', listener: (body: Buffer) => void): this;
 
         /**
          * Emitted when the client has received a completed response for a request it made.
          */
-        on(event: "response", listener: (statusCode: number, resBytes: number, responseTime: number) => void): this;
+        on(event: 'response', listener: (statusCode: number, resBytes: number, responseTime: number) => void): this;
     }
 
     /**
@@ -409,19 +356,19 @@ declare namespace autocannon {
         non2xx: number;
 
         /** The number of 1xx response status codes received. */
-        "1xx": number;
+        '1xx': number;
 
         /** The number of 2xx response status codes received. */
-        "2xx": number;
+        '2xx': number;
 
         /** The number of 3xx response status codes received. */
-        "3xx": number;
+        '3xx': number;
 
         /** The number of 4xx response status codes received. */
-        "4xx": number;
+        '4xx': number;
 
         /** The number of 5xx response status codes received. */
-        "5xx": number;
+        '5xx': number;
 
         /** The number of requests with a mismatched body. */
         mismatches: number;

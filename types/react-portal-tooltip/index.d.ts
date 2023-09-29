@@ -3,10 +3,10 @@
 // Definitions by: naortor <https://github.com/naortor>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import * as React from "react";
+import * as React from 'react';
 
-import StatefulToolTip from "./lib/StatefulToolTip";
-import ToolTip from "./lib/ToolTip";
+import ToolTip from './lib/ToolTip';
+import StatefulToolTip from './lib/StatefulToolTip';
 
 export default ToolTip;
 export { StatefulToolTip };

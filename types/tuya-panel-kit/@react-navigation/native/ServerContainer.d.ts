@@ -1,11 +1,9 @@
-import * as React from "react";
-import { ServerContextType } from "./ServerContext";
-import type { ServerContainerRef } from "./types";
-declare const _default: React.ForwardRefExoticComponent<
-    ServerContextType & {
-        children: React.ReactNode;
-    } & React.RefAttributes<ServerContainerRef>
->;
+import * as React from 'react';
+import { ServerContextType } from './ServerContext';
+import type { ServerContainerRef } from './types';
+declare const _default: React.ForwardRefExoticComponent<ServerContextType & {
+    children: React.ReactNode;
+} & React.RefAttributes<ServerContainerRef>>;
 /**
  * Container component for server rendering.
  *

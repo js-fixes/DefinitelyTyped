@@ -7,8 +7,8 @@
 /// <reference types="jquery" />
 interface JQuery {
     /**
-     * Initialize MagicSuggest on this selector
-     */
+    * Initialize MagicSuggest on this selector
+    */
     magicSuggest(configurationObject?: MagicSuggest.Configuration): MagicSuggest.Instance;
 }
 
@@ -306,6 +306,7 @@ declare namespace MagicSuggest {
          */
         toggleOnClick?: boolean | undefined;
 
+
         /**
          * Amount (in ms) between keyboard registers.
          */
@@ -320,6 +321,7 @@ declare namespace MagicSuggest {
          * If set to boolean; using comma will validate the user's choice
          */
         useCommaKey?: boolean | undefined;
+
 
         /**
          * Determines whether or not the results will be displayed with a zebra table style
@@ -362,8 +364,8 @@ declare namespace MagicSuggest {
         clear(isSilent?: boolean): void;
 
         /**
-         * Collapse the drop down part of the combo
-         */
+        * Collapse the drop down part of the combo
+        */
         collapse(): void;
 
         /**
@@ -372,13 +374,13 @@ declare namespace MagicSuggest {
         disable(): void;
 
         /**
-         * Empties out the combo user text
-         */
+        * Empties out the combo user text
+        */
         empty(): void;
 
         /**
-         * Set the component in a enable state.
-         */
+        * Set the component in a enable state.
+        */
         enable(): void;
 
         /**
@@ -461,5 +463,6 @@ declare namespace MagicSuggest {
          * @param params
          */
         setDataUrlParams(params: any): void;
+
     }
 }

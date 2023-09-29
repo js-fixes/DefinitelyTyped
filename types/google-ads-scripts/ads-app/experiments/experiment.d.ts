@@ -97,12 +97,10 @@ declare namespace GoogleAdsScripts {
          *  }
          */
         interface ExperimentSelector
-            extends
-                Base.Selector<ExperimentIterator>,
+            extends Base.Selector<ExperimentIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

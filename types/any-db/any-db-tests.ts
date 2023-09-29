@@ -1,3 +1,5 @@
+
+
 "use strict";
 
 import anyDB = require("any-db");
@@ -8,7 +10,7 @@ var sql: string = "SELECT * FROM questions";
 conn.query(sql, [1, "boo"]);
 
 conn.query(sql).on("data", (row: Object[]): void => {
-    // nothing
+// nothing
 });
 
 conn.query(sql, [1, "s"], (error: Error, result: anyDB.ResultSet): void => {
@@ -18,16 +20,18 @@ conn.query(sql, [1, "s"], (error: Error, result: anyDB.ResultSet): void => {
 
 conn.end();
 
+
 var poolConfig: anyDB.PoolConfig = {
     min: 1,
-    max: 200,
+    max: 200
 };
 
 var pool: anyDB.ConnectionPool = anyDB.createPool("mysql://user:password@localhost/testdb", poolConfig);
 
 pool.query(sql).on("data", (row: Object[]): void => {
-    // nothing
+// nothing
 });
 
 pool.close((error: Error): void => {
 });
+

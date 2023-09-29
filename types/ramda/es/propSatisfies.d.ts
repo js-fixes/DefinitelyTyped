@@ -1,2 +1,2 @@
-import { propSatisfies } from "../index.js";
+import { propSatisfies } from '../index';
 export default propSatisfies;

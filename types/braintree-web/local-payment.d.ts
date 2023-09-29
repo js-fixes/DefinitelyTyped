@@ -1,16 +1,16 @@
-import { Client } from "./client";
-import { callback } from "./core";
+import { callback } from './core';
+import { Client } from './client';
 
 export type LocalPaymentTypes =
-    | "bancontact"
-    | "blik"
-    | "eps"
-    | "giropay"
-    | "ideal"
-    | "sofort"
-    | "mybank"
-    | "p24"
-    | "trustly";
+    | 'bancontact'
+    | 'blik'
+    | 'eps'
+    | 'giropay'
+    | 'ideal'
+    | 'sofort'
+    | 'mybank'
+    | 'p24'
+    | 'trustly';
 
 export interface LocalPaymentTokenizePayload {
     correlationId: string;
@@ -46,9 +46,9 @@ export interface LocalPaymentStartPaymentOptions {
     fallback?: LocalPaymentFallback | undefined;
     windowOptions?:
         | {
-            width?: number | undefined;
-            height?: number | undefined;
-        }
+              width?: number | undefined;
+              height?: number | undefined;
+          }
         | undefined;
     givenName?: string | undefined;
     surname?: string | undefined;

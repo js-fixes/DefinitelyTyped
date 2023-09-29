@@ -1,2 +1,2 @@
-import { zipWith } from "../index.js";
+import { zipWith } from '../index';
 export default zipWith;

@@ -236,11 +236,6 @@ declare namespace CircuitBreaker {
          * @default true
          */
         enableSnapshots?: boolean | undefined;
-
-        /**
-         * Optional EventEmitter to be passed in to control the buckets instead of the bucket-interval timer
-         */
-        rotateBucketController?: EventEmitter | undefined;
     }
 
     interface Status extends EventEmitter {

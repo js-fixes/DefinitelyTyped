@@ -1,27 +1,27 @@
-import { HandlerProvider } from "../handlers/RelayDefaultHandlerProvider";
-import { GraphQLResponse, Network, PayloadData, UploadableMap } from "../network/RelayNetworkTypes";
-import { RelayObservable } from "../network/RelayObservable";
-import { Disposable, RenderPolicy } from "../util/RelayRuntimeTypes";
-import { TaskScheduler } from "./RelayModernQueryExecutor";
-import { RelayOperationTracker } from "./RelayOperationTracker";
-import type { GetDataID } from "./RelayResponseNormalizer";
+import { HandlerProvider } from '../handlers/RelayDefaultHandlerProvider';
 import {
-    Environment,
-    LogFunction,
+    OperationLoader,
+    Store,
     MissingFieldHandler,
+    OperationTracker,
+    LogFunction,
+    OptimisticUpdateFunction,
     OperationAvailability,
     OperationDescriptor,
-    OperationLoader,
-    OperationTracker,
-    OptimisticResponseConfig,
-    OptimisticUpdateFunction,
-    RequiredFieldLogger,
     SelectorStoreUpdater,
+    StoreUpdater,
     SingularReaderSelector,
     Snapshot,
-    Store,
-    StoreUpdater,
-} from "./RelayStoreTypes";
+    OptimisticResponseConfig,
+    Environment,
+    RequiredFieldLogger,
+} from './RelayStoreTypes';
+import { Network, PayloadData, GraphQLResponse, UploadableMap } from '../network/RelayNetworkTypes';
+import { TaskScheduler } from './RelayModernQueryExecutor';
+import { RelayOperationTracker } from './RelayOperationTracker';
+import { Disposable, RenderPolicy } from '../util/RelayRuntimeTypes';
+import { RelayObservable } from '../network/RelayObservable';
+import type { GetDataID } from './RelayResponseNormalizer';
 
 export interface EnvironmentConfig {
     readonly configName?: string | undefined;

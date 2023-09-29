@@ -54,3 +54,4 @@ interface Module {
  * 模块
  */
 declare const module: Module;
+

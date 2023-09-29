@@ -6,8 +6,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.4
 
-import { AnyAction, Middleware, Reducer, ReducersMapObject, Store } from "redux";
-import { Task } from "redux-saga";
+import { Task } from 'redux-saga';
+import { AnyAction, Middleware, Reducer, ReducersMapObject, Store } from 'redux';
 
 export type SagaFunction = (...args: any[]) => any;
 

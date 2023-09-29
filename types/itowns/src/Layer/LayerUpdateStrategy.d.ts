@@ -14,5 +14,4 @@ export function chooseNextLevelToFetch(
     nodeLevel: any,
     currentLevel: any,
     layer: any,
-    failureParams: any,
-): any;
+    failureParams: any): any;

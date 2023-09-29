@@ -1,2 +1,2 @@
-import { mapAccumRight } from "../index.js";
+import { mapAccumRight } from '../index';
 export default mapAccumRight;

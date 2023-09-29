@@ -33,7 +33,7 @@ declare namespace hbs {
         extName?: string | undefined;
     }
 
-    export { HbsTransporter, NodemailerExpressHandlebarsOptions, TemplateOptions };
+    export { TemplateOptions, HbsTransporter, NodemailerExpressHandlebarsOptions };
 }
 
 export = hbs;

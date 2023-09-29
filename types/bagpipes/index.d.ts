@@ -49,8 +49,7 @@ export interface FittingDef {
  */
 export type Fitting = (
     context: FittingContext,
-    next: { (err: Error | null | undefined, res?: any): void },
-) => void;
+    next: {(err: Error | null | undefined, res?: any): void}) => void;
 
 /**
  * Fitting creation Function

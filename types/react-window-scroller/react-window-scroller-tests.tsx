@@ -1,6 +1,6 @@
-import * as React from "react";
-import { FixedSizeList } from "react-window";
+import * as React from 'react';
 import { ReactWindowScroller } from "react-window-scroller";
+import { FixedSizeList } from "react-window";
 
 const WindowScrollList = () => {
     return (
@@ -16,7 +16,9 @@ const WindowScrollList = () => {
                     itemCount={1000}
                     itemSize={100}
                 >
-                    {({ data, index, style }) => <div style={style}>{data[index]}</div>}
+                    {({ data, index, style }) => (
+                        <div style={style}>{data[index]}</div>
+                    )}
                 </FixedSizeList>
             )}
         </ReactWindowScroller>

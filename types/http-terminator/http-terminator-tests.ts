@@ -1,6 +1,6 @@
-import { createServer as createHttpServer } from "http";
-import { createHttpTerminator } from "http-terminator";
-import { createServer as createHttpsServer } from "https";
+import { createServer as createHttpServer } from 'http';
+import { createServer as createHttpsServer } from 'https';
+import { createHttpTerminator } from 'http-terminator';
 
 const httpServer = createHttpServer();
 const httpTerminator = createHttpTerminator({ server: httpServer });

@@ -7,161 +7,170 @@
 
 /// <reference types="jquery" />
 
-import { Collection, Events, EventsMixin, Model } from "backbone";
+import { EventsMixin, Events, Model, Collection } from 'backbone';
 
-declare module "backbone" {
+declare module 'backbone' {
     class RelationalModel extends Model {
         /**
-         * Do not use, prefer TypeScript's extend functionality.
-         */
-        // private static extend(properties:any, classProperties?:any):any;
+        * Do not use, prefer TypeScript's extend functionality.
+        **/
+        //private static extend(properties:any, classProperties?:any):any;
 
-        relations: any;
-        subModelTypes: any;
-        subModelTypeAttribute: any;
+        relations:any;
+        subModelTypes:any;
+        subModelTypeAttribute:any;
 
-        initializeRelations(options: any): void;
 
-        updateRelations(options: any): void;
+        initializeRelations(options:any):void;
 
-        queue(func: any): void;
+        updateRelations(options:any):void;
 
-        processQueue(): void;
+        queue(func:any):void;
 
-        getRelation(name: string): Relation;
+        processQueue():void;
 
-        getRelations(): Relation[];
+        getRelation(name:string):Relation;
 
-        fetchRelated(key: string, options?: any, update?: boolean): any;
+        getRelations():Relation[];
 
-        toJSON(options?: any): any;
+        fetchRelated(key:string, options?:any, update?:boolean):any;
+
+        toJSON(options?: any):any;
 
         static setup();
 
-        static build(attributes: any, options?: any);
+        static build(attributes:any, options?:any);
 
-        static findOrCreate(attributes: string, options?: any);
+        static findOrCreate(attributes:string, options?:any);
 
-        static findOrCreate(attributes: number, options?: any);
+        static findOrCreate(attributes:number, options?:any);
 
-        static findOrCreate(attributes: any, options?: any);
+        static findOrCreate(attributes:any, options?:any);
     }
 
     class Relation extends Model {
-        options: any;
-        instance: any;
-        key: any;
-        keyContents: any;
-        relatedModel: any;
-        relatedCollection: any;
-        reverseRelation: any;
-        related: any;
 
-        checkPreconditions(): boolean;
+        options:any;
+        instance:any;
+        key:any;
+        keyContents:any;
+        relatedModel:any;
+        relatedCollection:any;
+        reverseRelation:any;
+        related:any;
 
-        setRelated(related: Model): void;
+        checkPreconditions():boolean;
 
-        setRelated(related: Collection): void;
+        setRelated(related:Model):void;
 
-        getReverseRelations(model: RelationalModel): Relation;
+        setRelated(related:Collection):void;
 
-        destroy(): JQueryXHR | false;
+        getReverseRelations(model:RelationalModel):Relation;
+
+        destroy():JQueryXHR | false;
     }
 
     class HasOne extends Relation {
-        collectionType: any;
+        collectionType:any;
 
-        findRelated(options: any): Model;
+        findRelated(options:any):Model;
 
-        setKeyContents(keyContents: string): void;
+        setKeyContents(keyContents:string):void;
 
-        setKeyContents(keyContents: string[]): void;
+        setKeyContents(keyContents:string[]):void;
 
-        setKeyContents(keyContents: number): void;
+        setKeyContents(keyContents:number):void;
 
-        setKeyContents(keyContents: number[]): void;
+        setKeyContents(keyContents:number[]):void;
 
-        setKeyContents(keyContents: Collection): void;
+        setKeyContents(keyContents:Collection):void;
 
-        onChange(model: Model, attr: any, options: any): void;
+        onChange(model:Model, attr:any, options:any):void;
 
-        handleAddition(model: Model, coll: Collection, options: any): void;
+        handleAddition(model:Model, coll:Collection, options:any):void;
 
-        handleRemoval(model: Model, coll: Collection, options: any): void;
+        handleRemoval(model:Model, coll:Collection, options:any):void;
 
-        handleReset(coll: Collection, options: any): void;
+        handleReset(coll:Collection, options:any):void;
 
-        tryAddRelated(model: Model, coll: any, options: any): void;
+        tryAddRelated(model:Model, coll:any, options:any):void;
 
-        addRelated(model: Model, options: any): void;
+        addRelated(model:Model, options:any):void;
 
-        removeRelated(model: Model, coll: any, options: any): void;
+        removeRelated(model:Model, coll:any, options:any):void;
+
     }
 
+
     class HasMany extends Relation {
-        collectionType: any;
+        collectionType:any;
 
-        findRelated(options: any): Model;
+        findRelated(options:any):Model;
 
-        setKeyContents(keyContents: string): void;
+        setKeyContents(keyContents:string):void;
 
-        setKeyContents(keyContents: number): void;
+        setKeyContents(keyContents:number):void;
 
-        setKeyContents(keyContents: Model): void;
+        setKeyContents(keyContents:Model):void;
 
-        onChange(model: Model, attr: any, options: any): void;
+        onChange(model:Model, attr:any, options:any):void;
 
-        tryAddRelated(model: Model, coll: any, options: any): void;
+        tryAddRelated(model:Model, coll:any, options:any):void;
 
-        addRelated(model: Model, options: any): void;
+        addRelated(model:Model, options:any):void;
 
-        removeRelated(model: Model, coll: any, options: any): void;
+        removeRelated(model:Model, coll:any, options:any):void;
+
     }
 
     class Store extends EventsMixin implements Events {
         initializeRelation(model, relation, options);
 
-        addModelScope(scope: any): void;
+        addModelScope(scope:any):void;
 
-        removeModelScope(scope): void;
+        removeModelScope(scope):void;
 
-        addSubModels(subModelTypes: RelationalModel, superModelType: RelationalModel): void;
+        addSubModels(subModelTypes:RelationalModel, superModelType:RelationalModel):void;
 
-        setupSuperModel(modelType: RelationalModel): void;
+        setupSuperModel(modelType:RelationalModel):void;
 
-        addReverseRelation(relation: any): void;
+        addReverseRelation(relation:any):void;
 
-        addOrphanRelation(relation: any): void;
+        addOrphanRelation(relation:any):void;
 
-        processOrphanRelations(): void;
+        processOrphanRelations():void;
 
-        retroFitRelation(relation: RelationalModel, create: boolean): Collection;
+        retroFitRelation(relation:RelationalModel, create:boolean):Collection;
 
-        getCollection(type: RelationalModel, create: boolean): Collection;
+        getCollection(type:RelationalModel, create:boolean):Collection;
 
-        getObjectByName(name: string): any;
+        getObjectByName(name:string):any;
 
-        resolveIdForItem(type: any, item: any): any;
 
-        static find(type: any, item: string): RelationalModel;
+        resolveIdForItem(type:any, item:any):any;
 
-        static find(type: any, item: number): RelationalModel;
+        static find(type:any, item:string):RelationalModel;
 
-        static find(type: any, item: RelationalModel): RelationalModel;
+        static find(type:any, item:number):RelationalModel;
 
-        static find(type: any, item: any): RelationalModel;
+        static find(type:any, item:RelationalModel):RelationalModel;
 
-        register(model: RelationalModel): void;
+        static find(type:any, item:any):RelationalModel;
 
-        checkId(model: RelationalModel, id: any): void;
+        register(model:RelationalModel):void;
 
-        update(model: RelationalModel): void;
+        checkId(model:RelationalModel, id:any):void;
+
+        update(model:RelationalModel):void;
 
         // tslint:disable-next-line use-default-type-parameter
         unregister(type: RelationalModel | Collection | typeof RelationalModel): void;
 
-        reset(): void;
+        reset():void;
+
+
     }
 
     const store: Store;
+
 }

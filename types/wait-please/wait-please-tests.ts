@@ -1,4 +1,4 @@
-import { frame, idle, tick, time } from "wait-please";
+import { tick, frame, time, idle } from 'wait-please';
 
 tick(); // $ExpectType Promise<void>
 tick(3); // $ExpectType Promise<void>

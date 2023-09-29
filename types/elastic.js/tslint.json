@@ -3,6 +3,7 @@
     "rules": {
         "ban-types": false,
         "no-empty-interface": false,
-        "no-internal-module": false
+        "no-internal-module": false,
+        "strict-export-declare-modifiers": false
     }
 }

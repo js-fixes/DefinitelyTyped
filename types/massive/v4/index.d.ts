@@ -10,11 +10,9 @@
 
 export = massive;
 
-declare function massive(
-    connection: massive.ConnectionInfo | string,
-    loaderConfig?: massive.Loader,
-    driverConfig?: object,
-): Promise<massive.Database>;
+declare function massive(connection: massive.ConnectionInfo | string,
+                         loaderConfig?: massive.Loader,
+                         driverConfig?: object): Promise<massive.Database>;
 
 declare namespace massive {
     type UUID = number | string;

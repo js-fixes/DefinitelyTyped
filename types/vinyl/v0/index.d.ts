@@ -5,6 +5,8 @@
 
 /// <reference types="node" />
 
+
+
 import fs = require("fs");
 
 /**
@@ -13,8 +15,8 @@ import fs = require("fs");
 declare class File {
     constructor(options?: {
         /**
-         * Default: process.cwd()
-         */
+        * Default: process.cwd()
+        */
         cwd?: string | undefined;
         /**
          * Used for relative pathing. Typically where a glob starts.
@@ -93,8 +95,7 @@ declare class File {
              * If false, the destination stream will not be ended (same as node core).
              */
             end?: boolean | undefined;
-        },
-    ): T;
+        }): T;
 
     /**
      * Returns a pretty String interpretation of the File. Useful for console.log.

@@ -1,4 +1,11 @@
-import { ComponentType, FocusEventHandler, HTMLProps, KeyboardEventHandler, MouseEventHandler, ReactNode } from "react";
+import {
+    ComponentType,
+    HTMLProps,
+    ReactNode,
+    KeyboardEventHandler,
+    MouseEventHandler,
+    FocusEventHandler
+} from 'react';
 
 declare namespace Modal {
     interface Props extends HTMLProps<HTMLDivElement> {

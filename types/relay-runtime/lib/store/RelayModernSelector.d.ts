@@ -1,13 +1,13 @@
-import { NormalizationSelectableNode } from "../util/NormalizationNode";
-import { ReaderFragment } from "../util/ReaderNode";
-import { DataID, Variables } from "../util/RelayRuntimeTypes";
+import { ReaderFragment } from '../util/ReaderNode';
 import {
-    NormalizationSelector,
+    SingularReaderSelector,
     PluralReaderSelector,
     ReaderSelector,
     RequestDescriptor,
-    SingularReaderSelector,
-} from "./RelayStoreTypes";
+    NormalizationSelector,
+} from './RelayStoreTypes';
+import { DataID, Variables } from '../util/RelayRuntimeTypes';
+import { NormalizationSelectableNode } from '../util/NormalizationNode';
 
 /**
  * Given the result `item` from a parent that fetched `fragment`, creates a

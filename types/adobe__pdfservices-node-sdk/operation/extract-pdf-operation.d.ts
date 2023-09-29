@@ -32,6 +32,7 @@
  *  }
  * </code>
  * </pre>
+ *
  */
 export class ExtractPdfOperation {
     /**
@@ -60,5 +61,5 @@ export class ExtractPdfOperation {
     execute(context: ExecutionContext): Promise<any>;
     validate(): void;
 }
-import { ExecutionContext, FileRef, PdfFormat } from "../pdfservices-sdk";
-import { ExtractPdfOptions } from "./option/extractpdf/extract-pdf-options";
+import { ExecutionContext, FileRef, PdfFormat } from '../pdfservices-sdk';
+import { ExtractPdfOptions } from './option/extractpdf/extract-pdf-options';

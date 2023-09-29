@@ -7,6 +7,7 @@
 /// <reference types="jquery" />
 
 declare namespace JQueryPayment {
+
     interface Payment {
         /**
          * Validates a card number:

@@ -1,4 +1,4 @@
-import { DataFactory, NamedNode, Stream } from "@rdfjs/types";
+import { NamedNode, DataFactory, Stream } from '@rdfjs/types';
 
 export type PrefixMapInit = Array<[string, NamedNode]>;
 

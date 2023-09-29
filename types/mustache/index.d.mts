@@ -1,22 +1,22 @@
 import * as mustache from "./index.js";
 
 export {
-    COMMENT,
-    EQUAL,
+    RAW_VALUE,
     ESCAPED_VALUE,
-    EscapeFunction,
+    UNESCAPED_VALUE,
+    SECTION,
     INVERTED,
-    OpeningAndClosingTags,
+    COMMENT,
     PARTIAL,
+    EQUAL,
+    TemplateSpanType,
+    TemplateSpans,
+    EscapeFunction,
+    OpeningAndClosingTags,
     PartialLookupFn,
     PartialsOrLookupFn,
-    RAW_VALUE,
     RenderOptions,
-    SECTION,
-    TemplateCache,
-    TemplateSpans,
-    TemplateSpanType,
-    UNESCAPED_VALUE,
+    TemplateCache
 } from "./index.js";
 
 export default mustache;

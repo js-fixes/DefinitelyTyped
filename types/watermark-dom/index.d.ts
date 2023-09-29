@@ -82,6 +82,7 @@ export interface Settings {
      *
      * @description 要求设置在大于等于0.005
      * @default 0.15
+     *
      */
     watermark_alpha?: number | undefined;
     /**

@@ -1,2 +1,2 @@
-import { reduceWhile } from "../index.js";
+import { reduceWhile } from '../index';
 export default reduceWhile;

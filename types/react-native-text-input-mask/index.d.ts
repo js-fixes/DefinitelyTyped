@@ -5,18 +5,16 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import * as React from "react";
-import * as ReactNative from "react-native";
+import * as React from 'react';
+import * as ReactNative from 'react-native';
 
 export type onChangeTextCallback = (formatted: string, extracted?: string) => void;
 
 export interface TextInputMaskProps
-    extends
-        ReactNative.ViewProps,
+    extends ReactNative.ViewProps,
         ReactNative.TextInputIOSProps,
         ReactNative.TextInputAndroidProps,
-        ReactNative.AccessibilityProps
-{
+        ReactNative.AccessibilityProps {
     refInput?: ((ref: any) => void) | undefined;
     maskDefaultValue?: boolean | undefined;
     mask?: string | undefined;
@@ -41,7 +39,7 @@ export interface TextInputMaskProps
      *
      * https://facebook.github.io/react-native/docs/textinput.html#autocapitalize
      */
-    autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined;
+    autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters' | undefined;
 
     /**
      * If false, disables auto-correct.
@@ -107,16 +105,14 @@ export interface TextInputMaskProps
     /**
      * Callback that is called when the text input's text changes.
      */
-    onChange?:
-        | ((event: {
-            nativeEvent: {
-                text: string;
-                contentSize: { width: number; height: number };
-                target: number;
-                eventCount: number;
-            };
-        }) => void)
-        | undefined;
+    onChange?: ((event: {
+        nativeEvent: {
+            text: string;
+            contentSize: { width: number; height: number };
+            target: number;
+            eventCount: number;
+        };
+    }) => void) | undefined;
 
     /**
      * Callback that is called when the text input's content size changes.
@@ -125,9 +121,7 @@ export interface TextInputMaskProps
      *
      * Only called for multiline text inputs.
      */
-    onContentSizeChange?:
-        | ((event: { nativeEvent: { contentSize: { width: number; height: number } } }) => void)
-        | undefined;
+    onContentSizeChange?: ((event: { nativeEvent: { contentSize: { width: number; height: number } } }) => void) | undefined;
 
     /**
      * Callback that is called when text input ends.
@@ -142,9 +136,7 @@ export interface TextInputMaskProps
     /**
      * Callback that is called when the text input selection is changed.
      */
-    onSelectionChange?:
-        | ((e: ReactNative.NativeSyntheticEvent<ReactNative.TextInputSelectionChangeEventData>) => void)
-        | undefined;
+    onSelectionChange?: ((e: ReactNative.NativeSyntheticEvent<ReactNative.TextInputSelectionChangeEventData>) => void) | undefined;
 
     /**
      * Callback that is called when the text input's submit button is pressed.

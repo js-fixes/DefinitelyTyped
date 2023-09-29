@@ -1,4 +1,4 @@
-import * as angular from "angular";
+import * as angular from 'angular';
 
 "use strict";
 
@@ -23,11 +23,12 @@ class UploadController {
             ngfMultiple: true,
             ngfRatio: "8:10,1.6",
             ngfStopPropagation: true,
-            ngfValidateForce: true,
+            ngfValidateForce: true
         });
     }
 
     onFileSelect(files: Array<File>) {
+
         this.Upload
             .upload({
                 url: "/api/upload",
@@ -35,9 +36,9 @@ class UploadController {
                 data: {
                     media: files,
                     extraData: {
-                        test: true,
-                    },
-                },
+                        test: true
+                    }
+                }
             }).abort().xhr((evt: any) => {
                 console.log("xhr");
             }).progress((evt: angular.angularFileUpload.IFileProgressEvent) => {
@@ -54,7 +55,7 @@ class UploadController {
             .base64DataUrl(files[0])
             .then((file: string) => {
                 console.log(file);
-            });
+            })
 
         this.Upload
             .dataUrl(files[0], true)
@@ -87,8 +88,8 @@ class UploadController {
                 resizeIf: (width: number, height: number) => {
                     return true;
                 },
-                pattern: ".jpg",
-                type: "image/jpeg",
+                pattern: '.jpg',
+                type: 'image/jpeg'
             })
             .then((resizedFile) => {
                 console.log(resizedFile);

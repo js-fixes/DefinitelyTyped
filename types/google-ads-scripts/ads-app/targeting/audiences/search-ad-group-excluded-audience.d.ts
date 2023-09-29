@@ -48,13 +48,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface SearchAdGroupExcludedAudienceSelector
-            extends
-                Base.Selector<SearchAdGroupExcludedAudienceIterator>,
+            extends Base.Selector<SearchAdGroupExcludedAudienceIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

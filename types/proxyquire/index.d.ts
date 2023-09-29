@@ -7,6 +7,7 @@ declare var p: Proxyquire;
 export = p;
 
 interface Proxyquire {
+
     (request: string, stubs: any): any;
     <T>(request: string, stubs: any): T;
 

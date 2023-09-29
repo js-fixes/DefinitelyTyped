@@ -4,6 +4,7 @@
         "array-type": false,
         "ban-types": false,
         "no-duplicate-imports": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

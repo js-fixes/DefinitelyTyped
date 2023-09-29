@@ -16,17 +16,14 @@ interface Fields {
     name: string;
 }
 declare class Service {
-    constructor(
-        opts: {
-            info: boolean;
-            cmd: string;
-        } & Fields,
-        backend: Backend,
-    );
+    constructor(opts: {
+        info: boolean,
+        cmd: string,
+    } & Fields, backend: Backend);
     info: boolean;
     cmd: string;
     _bands: Buffer[];
-    action: string | { "git-receive-pack": string; "git-upload-pack": "pull" };
+    action: string | {"git-receive-pack": string, "git-upload-pack": "pull"};
     type: string;
     _backend: Backend;
     fields: Fields;

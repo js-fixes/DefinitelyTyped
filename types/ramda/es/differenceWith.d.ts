@@ -1,2 +1,2 @@
-import { differenceWith } from "../index.js";
+import { differenceWith } from '../index';
 export default differenceWith;

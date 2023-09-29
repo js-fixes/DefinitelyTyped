@@ -3,7 +3,7 @@
 // Definitions by: ExE Boss <https://github.com/ExE-Boss>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Suite, Test } from "mocha";
+import { Test, Suite } from 'mocha';
 
 /** Construct a type with the properties of T except for those in type K. */
 type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
@@ -80,7 +80,7 @@ declare namespace Mocha {
          *
          * @default "bdd"
          */
-        detectedInterface: "bdd" | "tdd" | "qunit";
+        detectedInterface: 'bdd' | 'tdd' | 'qunit';
 
         /**
          * Triggers root suite execution.
@@ -93,7 +93,7 @@ declare namespace Mocha {
     }
 
     interface BDD extends BaseInterface {
-        detectedInterface: "bdd";
+        detectedInterface: 'bdd';
 
         /**
          * [bdd]
@@ -205,7 +205,7 @@ declare namespace Mocha {
     }
 
     interface TDD extends BaseInterface {
-        detectedInterface: "tdd";
+        detectedInterface: 'tdd';
 
         /**
          * [tdd, qunit]
@@ -261,17 +261,13 @@ declare namespace Mocha {
     }
 
     interface QUnit extends BaseInterface {
-        detectedInterface: "qunit";
+        detectedInterface: 'qunit';
 
         suite: SuiteFunction;
         test: TestFunction;
     }
 
-    type AnyInterface =
-        & Omit<BDD, "detectedInterface">
-        & Omit<TDD, "detectedInterface">
-        & Omit<QUnit, "detectedInterface">
-        & BaseInterface;
+    type AnyInterface = Omit<BDD, 'detectedInterface'> & Omit<TDD, 'detectedInterface'> & Omit<QUnit, 'detectedInterface'> & BaseInterface;
     // #endregion
 
     // #region Test context
@@ -285,7 +281,7 @@ declare namespace Mocha {
         isSuite: false;
         isTest: false;
         isHook: true;
-        hook: "before" | "after" | "beforeEach" | "afterEach";
+        hook: 'before' | 'after' | 'beforeEach' | 'afterEach';
     }
 
     interface TestContextBase {
@@ -424,16 +420,8 @@ declare namespace Mocha {
     interface TestFunction {
         (fn: TestCase): Test;
         (title: string, fn?: TestCase): Test;
-        (
-            title: string,
-            options: Options & { async?: false | undefined; fn?: TestCase | undefined },
-            fn?: TestCase,
-        ): Test;
-        (
-            title: string,
-            options: Options & { async: true; fn?: TestCaseWithDone | undefined },
-            fn?: TestCaseWithDone,
-        ): Test;
+        (title: string, options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
+        (title: string, options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;
         // tslint:disable-next-line: unified-signatures
         (options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
         (options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;
@@ -465,16 +453,8 @@ declare namespace Mocha {
     interface ExclusiveTestFunction {
         (fn: TestCase): Test;
         (title: string, fn?: TestCase): Test;
-        (
-            title: string,
-            options: Options & { async?: false | undefined; fn?: TestCase | undefined },
-            fn?: TestCase,
-        ): Test;
-        (
-            title: string,
-            options: Options & { async: true; fn?: TestCaseWithDone | undefined },
-            fn?: TestCaseWithDone,
-        ): Test;
+        (title: string, options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
+        (title: string, options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;
         // tslint:disable-next-line: unified-signatures
         (options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
         (options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;
@@ -492,16 +472,8 @@ declare namespace Mocha {
     interface PendingTestFunction {
         (fn: TestCase): Test;
         (title: string, fn?: TestCase): Test;
-        (
-            title: string,
-            options: Options & { async?: false | undefined; fn?: TestCase | undefined },
-            fn?: TestCase,
-        ): Test;
-        (
-            title: string,
-            options: Options & { async: true; fn?: TestCaseWithDone | undefined },
-            fn?: TestCaseWithDone,
-        ): Test;
+        (title: string, options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
+        (title: string, options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;
         // tslint:disable-next-line: unified-signatures
         (options: Options & { async?: false | undefined; fn?: TestCase | undefined }, fn?: TestCase): Test;
         (options: Options & { async: true; fn?: TestCaseWithDone | undefined }, fn?: TestCaseWithDone): Test;

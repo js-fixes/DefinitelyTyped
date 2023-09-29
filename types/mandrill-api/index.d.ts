@@ -11,6 +11,8 @@
 
 /// <reference types="node" />
 
+
+
 export interface ICallback {
     (json: Object): void;
 }
@@ -158,6 +160,7 @@ export declare class Exports {
      */
     info(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Returns a list of your exports.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -223,6 +226,7 @@ export declare class Users {
      */
     info(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Validate an API key and respond to a ping
      * @param {Object} params the hash of the parameters to pass to the request
@@ -230,6 +234,7 @@ export declare class Users {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     ping(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Validate an API key and respond to a ping (anal JSON parser version)
@@ -246,6 +251,7 @@ export declare class Users {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     senders(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Rejects {
@@ -279,6 +285,7 @@ export declare class Rejects {
      */
     list(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Deletes an email rejection. There is no limit to how many rejections
      * you can remove from your blacklist, but keep in mind that each deletion
@@ -290,6 +297,7 @@ export declare class Rejects {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     delete(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Inbound {
@@ -303,6 +311,7 @@ export declare class Inbound {
      */
     domains(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Add an inbound domain to your account
      * @param {Object} params the hash of the parameters to pass to the request
@@ -311,6 +320,7 @@ export declare class Inbound {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     addDomain(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Check the MX settings for an inbound domain. The domain must have already been added with the add-domain call
@@ -321,6 +331,7 @@ export declare class Inbound {
      */
     checkDomain(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Delete an inbound domain from the account. All mail will stop routing for this domain immediately.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -330,6 +341,7 @@ export declare class Inbound {
      */
     deleteDomain(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * List the mailbox routes defined for an inbound domain
      * @param {Object} params the hash of the parameters to pass to the request
@@ -338,6 +350,7 @@ export declare class Inbound {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     routes(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Add a new mailbox route to an inbound domain
@@ -350,6 +363,7 @@ export declare class Inbound {
      */
     addRoute(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Update the pattern or webhook of an existing inbound mailbox route. If null is provided for any fields, the values will remain unchanged.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -361,6 +375,7 @@ export declare class Inbound {
      */
     updateRoute(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Delete an existing inbound mailbox route
      * @param {Object} params the hash of the parameters to pass to the request
@@ -369,6 +384,7 @@ export declare class Inbound {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     deleteRoute(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Take a raw MIME document destined for a domain with inbound domains set up, and send it to the inbound hook exactly as if it had been sent over SMTP
@@ -383,6 +399,7 @@ export declare class Inbound {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     sendRaw(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Tags {
@@ -396,6 +413,7 @@ export declare class Tags {
      */
     list(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Deletes a tag permanently. Deleting a tag removes the tag from any messages
      * that have been sent, and also deletes the tag's stats. There is no way to
@@ -406,6 +424,7 @@ export declare class Tags {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     delete(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Return more detailed information about a single tag, including aggregates of recent stats
@@ -617,6 +636,7 @@ export declare class Messages {
      */
     info(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Get the full content of a recently sent message
      * @param {Object} params the hash of the parameters to pass to the request
@@ -625,6 +645,7 @@ export declare class Messages {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     content(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Parse the full MIME document for an email message, returning the content of the message broken into its constituent pieces
@@ -652,6 +673,7 @@ export declare class Messages {
      */
     sendRaw(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Queries your scheduled emails by sender or recipient, or both.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -670,6 +692,7 @@ export declare class Messages {
      */
     cancelScheduled(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Reschedules a scheduled email.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -679,6 +702,7 @@ export declare class Messages {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     reschedule(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Whitelists {
@@ -714,6 +738,7 @@ export declare class Whitelists {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     delete(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Ips {
@@ -727,6 +752,7 @@ export declare class Ips {
      */
     list(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Retrieves information about a single dedicated ip.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -735,6 +761,7 @@ export declare class Ips {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     info(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Requests an additional dedicated IP for your account. Accounts may
@@ -747,6 +774,7 @@ export declare class Ips {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     provision(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Begins the warmup process for a dedicated IP. During the warmup process,
@@ -769,6 +797,7 @@ export declare class Ips {
      */
     cancelWarmup(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Moves a dedicated IP to a different pool.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -779,6 +808,7 @@ export declare class Ips {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     setPool(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Deletes a dedicated IP. This is permanent and cannot be undone.
@@ -797,6 +827,7 @@ export declare class Ips {
      */
     listPools(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Describes a single dedicated IP pool.
      * @param {Object} params the hash of the parameters to pass to the request
@@ -805,6 +836,7 @@ export declare class Ips {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     poolInfo(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Creates a pool and returns it. If a pool already exists with this
@@ -815,6 +847,7 @@ export declare class Ips {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     createPool(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Deletes a pool. A pool must be empty before you can delete it, and you cannot delete your default pool.
@@ -875,6 +908,7 @@ export declare class Subaccounts {
      */
     add(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
 
+
     /**
      * Given the ID of an existing subaccount, return the data about it
      * @param {Object} params the hash of the parameters to pass to the request
@@ -904,6 +938,7 @@ export declare class Subaccounts {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     delete(params: any, onsuccess?: ICallback, onerror?: ICallback): void;
+
 
     /**
      * Pause a subaccount's sending. Any future emails delivered to this subaccount will be queued for a maximum of 3 days until the subaccount is resumed.
@@ -1033,6 +1068,7 @@ export declare class Webhooks {
      * @param {Function} onerror an optional callback to execute when the API call errors out - defaults to throwing the error as an exception
      */
     delete(params: { id: number }, onsuccess?: ICallback, onerror?: ICallback): void;
+
 }
 
 export declare class Senders {

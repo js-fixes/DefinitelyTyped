@@ -1,7 +1,7 @@
-import { CheckoutOptions } from "./checkout-options";
-import { Oid } from "./oid";
-import { Repository } from "./repository";
-import { Signature } from "./signature";
+import { Repository } from './repository';
+import { Signature } from './signature';
+import { Oid } from './oid';
+import { CheckoutOptions } from './checkout-options';
 
 export namespace Stash {
     const enum APPLY_FLAGS {

@@ -1,2 +1,2 @@
-import { comparator } from "../index.js";
+import { comparator } from '../index';
 export default comparator;

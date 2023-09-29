@@ -5,6 +5,7 @@
 
 /// <reference types="node" />
 
+
 declare namespace coffeelint {
     interface Coffeelint {
         /**

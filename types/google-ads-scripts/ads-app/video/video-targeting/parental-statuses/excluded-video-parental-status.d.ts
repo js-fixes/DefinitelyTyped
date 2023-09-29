@@ -46,11 +46,9 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface ExcludedVideoParentalStatusSelector
-            extends
-                Base.Selector<ExcludedVideoParentalStatusIterator>,
+            extends Base.Selector<ExcludedVideoParentalStatusIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

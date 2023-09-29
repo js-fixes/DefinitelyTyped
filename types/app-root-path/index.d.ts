@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 interface RootPath {
+
     /**
      * Application root directory absolute path
      */

@@ -7,60 +7,66 @@
 declare var Blazy: Blazy;
 
 interface Blazy {
-    new(options: BlazyOptions): BlazyInstance;
+
+  new (options: BlazyOptions): BlazyInstance;
+
 }
 
 interface BlazyOptions {
-    breakpoints?: Breakpoint[] | undefined;
 
-    container?: string | undefined;
+  breakpoints?: Breakpoint[] | undefined;
 
-    error?: ((ele: Element | HTMLElement, msg: string) => void) | undefined;
+  container?: string | undefined;
 
-    errorClass?: string | undefined;
+  error?: ((ele: Element|HTMLElement, msg: string) => void) | undefined;
 
-    loadInvisible?: boolean | undefined;
+  errorClass?: string | undefined;
 
-    offset?: number | undefined;
+  loadInvisible?: boolean | undefined;
 
-    saveViewportOffsetDelay?: number | undefined;
+  offset?: number | undefined;
 
-    selector?: string | undefined;
+  saveViewportOffsetDelay?: number | undefined;
 
-    separator?: string | undefined;
+  selector?: string | undefined;
 
-    src?: string | undefined;
+  separator?: string | undefined;
 
-    success?: ((ele: Element | HTMLElement) => void) | undefined;
+  src?: string | undefined;
 
-    successClass?: string | undefined;
+  success?: ((ele: Element|HTMLElement) => void) | undefined;
 
-    validateDelay?: number | undefined;
+  successClass?: string | undefined;
+
+  validateDelay?: number | undefined;
+
 }
 
 interface BlazyInstance {
-    /**
-     * Revalidates document for visible images. Useful if you add images with scripting or ajax.
-     */
-    revalidate(): void;
 
-    /**
-     * Forces the given element(s) to load if not collapsed. If you also want to load a collapsed/hidden elements you can add true as the second parameter.
-     * You can pass a single element or a list of elements. Tested with getElementById, getElementsByClassName, querySelectorAll, querySelector and jQuery selector.
-     */
-    load(elements: Element | Element[] | HTMLElement | HTMLElement[] | HTMLCollection | NodeList, force: boolean): void;
+  /**
+   * Revalidates document for visible images. Useful if you add images with scripting or ajax.
+   */
+  revalidate(): void;
 
-    /**
-     * Unbind events and resets image array.
-     */
-    destroy(): void;
+  /**
+   * Forces the given element(s) to load if not collapsed. If you also want to load a collapsed/hidden elements you can add true as the second parameter.
+   * You can pass a single element or a list of elements. Tested with getElementById, getElementsByClassName, querySelectorAll, querySelector and jQuery selector.
+   */
+  load(elements: Element|Element[]|HTMLElement|HTMLElement[]|HTMLCollection|NodeList, force: boolean): void;
+
+  /**
+   * Unbind events and resets image array.
+   */
+  destroy(): void;
+
 }
 
 interface Breakpoint {
-    width: number;
-    src: string;
+  width: number;
+  src: string;
 }
 
-declare module "blazy" {
-    export = Blazy;
+declare module 'blazy' {
+  export = Blazy;
 }

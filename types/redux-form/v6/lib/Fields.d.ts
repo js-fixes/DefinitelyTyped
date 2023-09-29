@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { ComponentConstructor, FieldValue, Formatter, Parser, WrappedFieldProps } from "../index";
+import { ComponentConstructor, Formatter, Parser, FieldValue, WrappedFieldProps } from "../index";
 
 /**
  * These are the props to give to `Field`.

@@ -1,5 +1,5 @@
-import Component from "../../components/Component";
-import DomElement from "../DomElement";
+import DomElement from '../DomElement';
+import Component from '../../components/Component';
 
 export default interface RenderResult extends DomElement {
     document: Document | false;

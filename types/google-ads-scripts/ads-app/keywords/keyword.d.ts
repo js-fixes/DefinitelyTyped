@@ -141,14 +141,12 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface KeywordSelector
-            extends
-                Base.Selector<KeywordIterator>,
+            extends Base.Selector<KeywordIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
 
         /** Provides access to keyword URLs. */
         interface KeywordUrls {

@@ -1,6 +1,6 @@
 // import EntwinePointTileNode from "../Core/EntwinePointTileNode";
-import Extent from "../Core/Geographic/Extent";
 import PointCloudLayer, { PointCloudLayerOptions } from "./PointCloudLayer";
+import Extent from "../Core/Geographic/Extent";
 
 declare class EntwinePointTileLayer extends PointCloudLayer {
     constructor(id: string, config: PointCloudLayerOptions);

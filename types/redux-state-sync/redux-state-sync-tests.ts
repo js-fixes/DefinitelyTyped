@@ -1,10 +1,5 @@
-import { Action, applyMiddleware, createStore } from "redux";
-import {
-    createStateSyncMiddleware,
-    initMessageListener,
-    initStateWithPrevTab,
-    withReduxStateSync,
-} from "redux-state-sync";
+import { createStore, applyMiddleware, Action } from "redux";
+import { createStateSyncMiddleware, initStateWithPrevTab, withReduxStateSync, initMessageListener } from "redux-state-sync";
 
 interface TestState {
     a: number;
@@ -13,11 +8,11 @@ interface TestState {
 }
 const initialState: TestState = {
     a: 0,
-    b: "",
-    c: "",
+    b: '',
+    c: '',
 };
 const middleware = createStateSyncMiddleware({
-    channel: "test",
+    channel: 'test',
     predicate: (action) => true,
     blacklist: [],
     whitelist: [],
@@ -36,7 +31,7 @@ function rootReducer(state: TestState = initialState, action: Action): TestState
 const store = createStore(
     withReduxStateSync(rootReducer, (prevState, nextState) => nextState),
     initialState,
-    applyMiddleware(middleware),
+    applyMiddleware(middleware)
 );
 initStateWithPrevTab(store);
 initMessageListener(store);

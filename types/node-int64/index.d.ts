@@ -6,6 +6,7 @@
 
 /// <reference types="node" />
 
+
 declare class Int64 {
     static MAX_INT: number;
     static MIN_INT: number;
@@ -18,6 +19,7 @@ declare class Int64 {
     constructor(str: string);
     constructor(num: number);
     constructor(hi: number, lo: number);
+
 
     _2scomp(): void;
 

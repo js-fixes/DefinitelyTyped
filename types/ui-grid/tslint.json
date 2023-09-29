@@ -11,6 +11,7 @@
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
         "only-arrow-functions": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

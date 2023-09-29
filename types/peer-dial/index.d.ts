@@ -75,12 +75,7 @@ export class DialDevice {
     constructor(deviceInfo: DeviceInfo);
     getAppInfoXml(appName: string, callback?: (data: string, err: any) => void): void;
     getAppInfo(appName: string, callback?: (data: AppInfo, err: any) => void): void;
-    launchApp(
-        appName: string,
-        launchData: string,
-        contentType: string,
-        callback?: (data: string, err: any) => void,
-    ): void;
+    launchApp(appName: string, launchData: string, contentType: string, callback?: (data: string, err: any) => void): void;
     stopApp(appName: string, pid: string, callback?: (data: number, err: any) => void): void;
 }
 
@@ -93,6 +88,6 @@ export interface DeviceInfo {
     modelName: string;
     UDN: string;
     iconList: object[] | {
-        icon: object;
+        icon: object
     };
 }

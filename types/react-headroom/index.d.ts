@@ -5,7 +5,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { Component, CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, Component } from 'react';
 
 declare class Headroom extends Component<ReactHeadroomProps> {
     constructor(props: ReactHeadroomProps);

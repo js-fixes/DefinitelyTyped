@@ -3,7 +3,7 @@
 // Definitions by: Daniel Perez Alvarez <https://github.com/unindented>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Reducer, ReducersMapObject, Store, StoreEnhancer } from "redux";
+import { Store, StoreEnhancer, Reducer, ReducersMapObject } from 'redux';
 
 /**
  * An `InjectableStore` allows reducers to "inject" themselves into the store

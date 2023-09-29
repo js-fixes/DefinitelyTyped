@@ -16,17 +16,13 @@ interface JQuery {
     typeahead<T>(options: Twitter.Typeahead.Options, datasets: Twitter.Typeahead.Dataset<T>[]): JQuery;
 
     /**
-     * For a given input[type="text"], enables typeahead functionality.
-     *
-     * @param options Options hash that's used for configuration
-     * @param dataset At least one dataset is required
-     * @param datasets Rest of the datasets.
-     */
-    typeahead<T>(
-        options: Twitter.Typeahead.Options,
-        dataset: Twitter.Typeahead.Dataset<T>,
-        ...datasets: Twitter.Typeahead.Dataset<T>[]
-    ): JQuery;
+      * For a given input[type="text"], enables typeahead functionality.
+      *
+      * @param options Options hash that's used for configuration
+      * @param dataset At least one dataset is required
+      * @param datasets Rest of the datasets.
+      */
+    typeahead<T>(options: Twitter.Typeahead.Options, dataset: Twitter.Typeahead.Dataset<T>, ...datasets: Twitter.Typeahead.Dataset<T>[]): JQuery;
 
     /**
      * Returns the current value of the typeahead.
@@ -34,7 +30,7 @@ interface JQuery {
      *
      * @param methodName Method 'val'
      */
-    typeahead(methodName: "val"): string;
+    typeahead(methodName: 'val'): string;
 
     /**
      * Accommodates the val overload.
@@ -49,7 +45,7 @@ interface JQuery {
      * @param methodName Method 'val'
      * @param val The value to be set
      */
-    typeahead(methodName: "val", val: string): JQuery;
+    typeahead(methodName: 'val', val: string): JQuery;
 
     /**
      * Accommodates the set val overload.
@@ -64,21 +60,21 @@ interface JQuery {
      *
      * @param methodName Method 'open'
      */
-    typeahead(methodName: "open"): JQuery;
+    typeahead(methodName: 'open'): JQuery;
 
     /**
      * Closes the suggestion menu.
      *
      * @param methodName Method 'close'
      */
-    typeahead(methodName: "close"): JQuery;
+    typeahead(methodName: 'close'): JQuery;
 
     /**
      * Removes typeahead functionality and reverts the input element back to its original state.
      *
      * @param methodName Method 'destroy'
      */
-    typeahead(methodName: "destroy"): JQuery;
+    typeahead(methodName: 'destroy'): JQuery;
 
     /**
      * Attach an event handler function for typeahead:active event to the selected elements.
@@ -94,7 +90,7 @@ interface JQuery {
      * @param events typeahead:active event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:active", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -104,11 +100,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:active",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:active", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:active event to the selected elements.
@@ -118,12 +110,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:active",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:active", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:idle event to the selected elements.
@@ -139,7 +126,7 @@ interface JQuery {
      * @param events typeahead:idle event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:idle", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -149,11 +136,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:idle",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:idle", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:idle event to the selected elements.
@@ -163,12 +146,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:idle",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:idle", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:open event to the selected elements.
@@ -184,7 +162,7 @@ interface JQuery {
      * @param events typeahead:open event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:open", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -194,11 +172,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:open",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:open", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:open event to the selected elements.
@@ -208,12 +182,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:open",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:open", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:close event to the selected elements.
@@ -229,7 +198,7 @@ interface JQuery {
      * @param events typeahead:close event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:close", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -239,11 +208,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:close",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:close", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:close event to the selected elements.
@@ -253,12 +218,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:close",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:close", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:change event to the selected elements.
@@ -274,7 +234,7 @@ interface JQuery {
      * @param events typeahead:change event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:change", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -284,11 +244,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:change",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:change", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:change event to the selected elements.
@@ -298,12 +254,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:change",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:change", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:render event to the selected elements.
@@ -319,7 +270,7 @@ interface JQuery {
      * @param events typeahead:render event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:render", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -329,11 +280,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:render",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:render", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:render event to the selected elements.
@@ -343,12 +290,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:render",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:render", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:select event to the selected elements.
@@ -364,7 +306,7 @@ interface JQuery {
      * @param events typeahead:select event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
+    */
     on(events: "typeahead:select", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
@@ -374,11 +316,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:select",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:select", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:select event to the selected elements.
@@ -388,12 +326,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:select",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:select", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:autocomplete event to the selected elements.
@@ -409,12 +342,8 @@ interface JQuery {
      * @param events typeahead:autocomplete event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
-    on(
-        events: "typeahead:autocomplete",
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...args: any[]) => any,
-    ): JQuery;
+    */
+    on(events: "typeahead:autocomplete", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:autocomplete event to the selected elements.
@@ -423,11 +352,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:autocomplete",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:autocomplete", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:autocomplete event to the selected elements.
@@ -437,12 +362,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:autocomplete",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:autocomplete", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:cursorchange event to the selected elements.
@@ -458,12 +378,8 @@ interface JQuery {
      * @param events typeahead:cursorchange event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
-    on(
-        events: "typeahead:cursorchange",
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...args: any[]) => any,
-    ): JQuery;
+    */
+    on(events: "typeahead:cursorchange", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:cursorchange event to the selected elements.
@@ -472,11 +388,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:cursorchange",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:cursorchange", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:cursorchange event to the selected elements.
@@ -486,12 +398,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:cursorchange",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:cursorchange", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncrequest event to the selected elements.
@@ -507,12 +414,8 @@ interface JQuery {
      * @param events typeahead:asyncrequest event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
-    on(
-        events: "typeahead:asyncrequest",
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...args: any[]) => any,
-    ): JQuery;
+    */
+    on(events: "typeahead:asyncrequest", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncrequest event to the selected elements.
@@ -521,11 +424,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asyncrequest",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asyncrequest", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncrequest event to the selected elements.
@@ -535,12 +434,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asyncrequest",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asyncrequest", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asynccancel event to the selected elements.
@@ -556,12 +450,8 @@ interface JQuery {
      * @param events typeahead:asynccancel event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
-    on(
-        events: "typeahead:asynccancel",
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...args: any[]) => any,
-    ): JQuery;
+    */
+    on(events: "typeahead:asynccancel", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asynccancel event to the selected elements.
@@ -570,11 +460,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asynccancel",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asynccancel", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asynccancel event to the selected elements.
@@ -584,12 +470,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asynccancel",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asynccancel", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncreceive event to the selected elements.
@@ -605,12 +486,8 @@ interface JQuery {
      * @param events typeahead:asyncreceive event fired when the typeahead moves to active state.
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
-     */
-    on(
-        events: "typeahead:asyncreceive",
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...args: any[]) => any,
-    ): JQuery;
+    */
+    on(events: "typeahead:asyncreceive", data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncreceive event to the selected elements.
@@ -619,11 +496,7 @@ interface JQuery {
      * @param selector A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asyncreceive",
-        selector: string,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asyncreceive", selector: string, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Attach an event handler function for typeahead:asyncreceive event to the selected elements.
@@ -633,12 +506,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
      */
-    on(
-        events: "typeahead:asyncreceive",
-        selector: string,
-        data: any,
-        handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any,
-    ): JQuery;
+    on(events: "typeahead:asyncreceive", selector: string, data: any, handler: (eventObject: JQueryEventObject, ...eventData: any[]) => any): JQuery;
 
     /**
      * Remove an event handler.
@@ -836,21 +704,21 @@ interface JQuery {
 declare namespace Twitter.Typeahead {
     interface Options {
         /**
-         * If true, when suggestions are rendered, pattern matches for the current query in text nodes will be wrapped in a strong element with its class set to {{classNames.highlight}}.
-         * Defaults to false.
-         */
+          * If true, when suggestions are rendered, pattern matches for the current query in text nodes will be wrapped in a strong element with its class set to {{classNames.highlight}}.
+          * Defaults to false.
+          */
         highlight?: boolean | undefined;
 
         /**
-         * If false, the typeahead will not show a hint.
-         * Defaults to true.
-         */
+          * If false, the typeahead will not show a hint.
+          * Defaults to true.
+          */
         hint?: boolean | undefined;
 
         /**
-         * The minimum character length needed before suggestions start getting rendered.
-         * Defaults to 1.
-         */
+          * The minimum character length needed before suggestions start getting rendered.
+          * Defaults to 1.
+          */
         minLength?: number | undefined;
 
         /**
@@ -860,16 +728,16 @@ declare namespace Twitter.Typeahead {
     }
 
     /**
-     * A typeahead is composed of one or more datasets. When an end-user
-     * modifies the value of a typeahead, each dataset will attempt to render
-     * suggestions for the new value.
-     * For most use cases, one dataset should suffice. It's only in the scenario
-     * where you want rendered suggestions to be grouped based on some sort of
-     * categorical relationship that you'd need to use multiple datasets. For
-     * example, on twitter.com, the search typeahead groups results into recent
-     * searches, trends, and accounts  that would be a great use case for using
-     * multiple datasets.
-     */
+      * A typeahead is composed of one or more datasets. When an end-user
+      * modifies the value of a typeahead, each dataset will attempt to render
+      * suggestions for the new value.
+      * For most use cases, one dataset should suffice. It's only in the scenario
+      * where you want rendered suggestions to be grouped based on some sort of
+      * categorical relationship that you'd need to use multiple datasets. For
+      * example, on twitter.com, the search typeahead groups results into recent
+      * searches, trends, and accounts  that would be a great use case for using
+      * multiple datasets.
+      */
     interface Dataset<T> {
         /**
          * The backing data source for suggestions.
@@ -879,9 +747,7 @@ declare namespace Twitter.Typeahead {
          * (e.g. suggestions that come for an AJAX request).
          *  source can also be a Bloodhound instance.
          */
-        source:
-            | Bloodhound<T>
-            | ((query: string, syncResults: (result: T[]) => void, asyncResults?: (result: T[]) => void) => void);
+        source: Bloodhound<T> | ((query: string, syncResults: (result: T[]) => void, asyncResults?: (result: T[]) => void) => void);
 
         /**
          * Lets the dataset know if async suggestions should be expected.
@@ -892,16 +758,16 @@ declare namespace Twitter.Typeahead {
         async?: boolean | undefined;
 
         /**
-         * The name of the dataset.
-         * This will be appended to {{classNames.dataset}} - to form the class name of the containing DOM element.
-         * Must only consist of underscores, dashes, letters (a-z), and numbers.
-         * Defaults to a random number.
-         */
+          * The name of the dataset.
+          * This will be appended to {{classNames.dataset}} - to form the class name of the containing DOM element.
+          * Must only consist of underscores, dashes, letters (a-z), and numbers.
+          * Defaults to a random number.
+          */
         name?: string | undefined;
 
         /**
-         * The max number of suggestions to be displayed. Defaults to 5.
-         */
+          * The max number of suggestions to be displayed. Defaults to 5.
+          */
         limit?: number | undefined;
 
         /**
@@ -959,7 +825,7 @@ declare namespace Twitter.Typeahead {
          * Used to render a single suggestion. If set, this has to be a precompiled template.
          * The associated suggestion object will serve as the context.
          * Defaults to the value of display wrapped in a div tag i.e. <div>{{value}}</div>.
-         */
+          */
         suggestion?: ((suggestion: T) => string) | undefined;
     }
 
@@ -1199,13 +1065,14 @@ declare namespace Bloodhound {
 
         /**
          * DEPRECATED: transform the remote response before the Bloodhound instance operates on it.
-         */
+         * */
         filter?: ((response: T) => T) | undefined;
+
     }
 
     /**
-     * Build-in tokenization methods.
-     */
+    * Build-in tokenization methods.
+    */
     interface Tokenizers {
         /**
          * Split a given string on whitespace characters.
@@ -1316,7 +1183,7 @@ declare class Bloodhound<T> {
      */
     public all(): T[];
 
-    /**
+    /**@Types/typeahead
      * Clears the internal search index that's powered by local, prefetch, and #add.
      */
     public clear(): Bloodhound<T>;

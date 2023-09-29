@@ -1,18 +1,18 @@
-import { TableauEventName, ToolbarButtonName, ToolbarPosition } from "./enums";
-import { Sheet, SheetInfo } from "./sheet";
+import { ToolbarPosition, ToolbarButtonName, TableauEventName } from './enums';
 import {
     CustomViewEvent,
     FilterEvent,
     MarksEvent,
     ParameterEvent,
     StoryPointSwitchEvent,
-    TableauEvent,
     TabSwitchEvent,
+    TableauEvent,
     ToolbarStateEvent,
     UrlActionEvent,
     VizResizeEvent,
-} from "./viz.event";
-import { Workbook } from "./workbook";
+} from './viz.event';
+import { Workbook } from './workbook';
+import { Sheet, SheetInfo } from './sheet';
 
 // Define types to use in addEventListener and removeEventListener overloads
 export type TableauEventCustomView = Extract<
@@ -35,7 +35,7 @@ export type TableauEventUrlAction = Extract<TableauEventName, TableauEventName.U
 export type TableauEventVizResize = Extract<TableauEventName, TableauEventName.VIZ_RESIZE>;
 
 // Embedded device types, controls which variant of the viz displays
-export type DeviceType = "default" | "desktop" | "tablet" | "phone";
+export type DeviceType = 'default' | 'desktop' | 'tablet' | 'phone';
 
 export class VizManager {
     getVizs(): Viz[];

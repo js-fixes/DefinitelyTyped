@@ -5,7 +5,7 @@
 
 /// <reference types="node" />
 
-import { Readable as ReadableStream, ReadableOptions, Stream } from "stream";
+import { Stream, Readable as ReadableStream, ReadableOptions } from 'stream';
 
 declare class MultiStream extends ReadableStream {
     constructor(streams: MultiStream.Streams, opts?: ReadableOptions);

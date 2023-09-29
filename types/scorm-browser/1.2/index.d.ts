@@ -1,16 +1,16 @@
 import {
-    CMIBlank,
     CMIBoolean,
-    CMIDecimal,
-    CMIFeedback,
+    CMIBlank,
+    CMIString255,
     CMIIdentifier,
+    CMIDecimal,
+    CMITimeSpan,
+    CMIString4096,
     CMIInteger,
     CMISInteger,
-    CMIString255,
-    CMIString4096,
     CMITime,
-    CMITimeSpan,
-} from "./CMIDataTypes";
+    CMIFeedback,
+} from './CMIDataTypes';
 import {
     CMIElementComments,
     CMIElementCommentsFromLMS,
@@ -61,8 +61,8 @@ import {
     CMIElementStudentPreferenceText,
     CMIElementSuspendData,
     CMIElementVersion,
-} from "./CMIElement";
-import { CMIErrorCode } from "./CMIErrorCode";
+} from './CMIElement';
+import { CMIErrorCode } from './CMIErrorCode';
 import {
     CMIVocabularyCredit,
     CMIVocabularyEntry,
@@ -72,12 +72,12 @@ import {
     CMIVocabularyResult,
     CMIVocabularyStatus,
     CMIVocabularyTimeLimitAction,
-} from "./CMIVocabulary";
+} from './CMIVocabulary';
 
-export * from "./CMIDataTypes";
-export * from "./CMIElement";
-export * from "./CMIErrorCode";
-export * from "./CMIVocabulary";
+export * from './CMIDataTypes';
+export * from './CMIElement';
+export * from './CMIErrorCode';
+export * from './CMIVocabulary';
 
 /**
  * The Sharable Content Object Reference Model (SCORM) Version 1.2 Run-Time Environment

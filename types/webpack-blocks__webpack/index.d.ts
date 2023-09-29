@@ -4,32 +4,17 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.7
 
-import { Configuration, Entry, Options, Output, Plugin, Resolve } from "webpack";
-
 import {
-    Block,
-    ConfigSetter,
-    Context,
-    env,
-    group,
-    InitialContext,
-    match,
-    MatchOptions,
-    Util,
-    when,
-} from "@webpack-blocks/core";
-export {
-    Block,
-    ConfigSetter,
-    Context,
-    env,
-    group,
-    InitialContext,
-    match,
-    MatchOptions,
-    Util,
-    when,
-} from "@webpack-blocks/core";
+    Configuration,
+    Entry,
+    Options,
+    Output,
+    Plugin,
+    Resolve
+} from 'webpack';
+
+import { Context, Util, MatchOptions, ConfigSetter, InitialContext, Block, env, group, match, when } from '@webpack-blocks/core';
+export { Context, Util, MatchOptions, ConfigSetter, InitialContext, Block, env, group, match, when } from '@webpack-blocks/core';
 
 type PluginFunction = (compiler: any) => Plugin;
 

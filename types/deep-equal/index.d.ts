@@ -10,7 +10,6 @@ interface DeepEqualOptions {
 declare function deepEqual(
     actual: any,
     expected: any,
-    opts?: DeepEqualOptions,
-): boolean;
+    opts?: DeepEqualOptions): boolean;
 
 export = deepEqual;

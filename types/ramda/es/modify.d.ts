@@ -1,2 +1,2 @@
-import { modify } from "../index.js";
+import { modify } from '../index';
 export default modify;

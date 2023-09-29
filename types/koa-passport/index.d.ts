@@ -14,7 +14,9 @@
 
  =============================================== */
 
-import { Middleware } from "koa";
+import {
+    Middleware,
+} from "koa";
 
 import * as passport from "passport";
 
@@ -37,15 +39,11 @@ declare namespace KoaPassport {
         use(name: string, strategy: passport.Strategy): this;
         unuse(name: string): this;
         framework(fw: passport.Framework): this;
-        initialize(options?: { userProperty: string }): Middleware;
-        session(options?: { pauseStream: boolean }): Middleware;
+        initialize(options?: { userProperty: string; }): Middleware;
+        session(options?: { pauseStream: boolean; }): Middleware;
 
         authenticate(strategy: string | string[], callback?: (...args: any[]) => any): Middleware;
-        authenticate(
-            strategy: string | string[],
-            options: passport.AuthenticateOptions | object,
-            callback?: (...args: any[]) => any,
-        ): Middleware;
+        authenticate(strategy: string | string[], options: passport.AuthenticateOptions | object, callback?: (...args: any[]) => any): Middleware;
         authorize(strategy: string | string[], callback?: (...args: any[]) => any): Middleware;
         authorize(strategy: string | string[], options: any, callback?: (...args: any[]) => any): Middleware;
 

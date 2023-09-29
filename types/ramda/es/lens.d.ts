@@ -1,2 +1,2 @@
-import { lens } from "../index.js";
+import { lens } from '../index';
 export default lens;

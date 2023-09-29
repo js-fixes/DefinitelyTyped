@@ -8,9 +8,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.7
 
-import { EmberRunQueues, RunMethod } from "@ember/runloop/-private/types";
-import { EmberRunTimer } from "@ember/runloop/types";
-import "@ember/runloop/-private/backburner";
+import { RunMethod, EmberRunQueues } from '@ember/runloop/-private/types';
+import { EmberRunTimer } from '@ember/runloop/types';
+import '@ember/runloop/-private/backburner';
 
 export interface RunNamespace {
     /**

@@ -1,2 +1,2 @@
-import { replace } from "../index.js";
+import { replace } from '../index';
 export default replace;

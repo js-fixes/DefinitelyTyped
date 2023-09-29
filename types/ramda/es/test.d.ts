@@ -1,2 +1,2 @@
-import { test } from "../index.js";
+import { test } from '../index';
 export default test;

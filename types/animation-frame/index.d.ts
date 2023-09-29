@@ -9,3 +9,4 @@ interface AnimationFrame {
 }
 
 declare var AnimationFrame: AnimationFrame;
+

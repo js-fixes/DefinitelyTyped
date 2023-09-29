@@ -1,2 +1,2 @@
-import { defaultTo } from "../index.js";
+import { defaultTo } from '../index';
 export default defaultTo;

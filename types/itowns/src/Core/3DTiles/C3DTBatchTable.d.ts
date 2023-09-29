@@ -6,8 +6,7 @@ declare class C3DTBatchTable {
         jsonLength: number,
         binaryLength: number,
         batchLength: number,
-        registeredExtensions: any,
-    ); // TODO
+        registeredExtensions: any); // TODO
 
     type: C3DTilesTypes;
     batchLength: number;

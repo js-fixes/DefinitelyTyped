@@ -1,7 +1,7 @@
-import { Buf } from "./buf";
-import { Oid } from "./oid";
-import { Repository } from "./repository";
-import { SubmoduleUpdateOptions } from "./submodule-update-options";
+import { Repository } from './repository';
+import { Buf } from './buf';
+import { Oid } from './oid';
+import { SubmoduleUpdateOptions } from './submodule-update-options';
 
 export namespace Submodule {
     const enum IGNORE {
@@ -62,6 +62,7 @@ export class Submodule {
     branch(): string;
     fetchRecurseSubmodules(): number;
 
+    free(): void;
     headId(): Oid;
     ignore(): number;
     indexId(): Oid;
@@ -76,6 +77,8 @@ export class Submodule {
     sync(): Promise<number>;
     /**
      * Updates a submodule
+     *
+     *
      */
     update(init: number, options?: SubmoduleUpdateOptions): Promise<number>;
     updateStrategy(): number;

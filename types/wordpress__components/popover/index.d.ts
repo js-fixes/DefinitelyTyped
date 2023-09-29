@@ -1,6 +1,5 @@
-import { ComponentType, FocusEvent, HTMLProps, ReactElement, ReactNode } from "react";
-// eslint-disable-next-line @definitelytyped/no-self-import
-import { Slot } from "@wordpress/components";
+import { ComponentType, HTMLProps, ReactNode, ReactElement, FocusEvent } from 'react';
+import { Slot } from '@wordpress/components';
 
 declare namespace Popover {
     interface Props extends HTMLProps<HTMLDivElement> {
@@ -37,7 +36,7 @@ declare namespace Popover {
          *
          * @defaultValue "firstElement"
          */
-        focusOnMount?: "firstElement" | "container" | false | undefined;
+        focusOnMount?: 'firstElement' | 'container' | false | undefined;
         /**
          * Set this to customize the text that is shown in popover's header
          * when it is fullscreen on mobile.
@@ -89,15 +88,15 @@ declare namespace Popover {
      * node. Specify y- and x-axis as a space-separated string.
      */
     type Position =
-        | "top left"
-        | "top right"
-        | "top center"
-        | "middle left"
-        | "middle right"
-        | "middle center"
-        | "bottom left"
-        | "bottom right"
-        | "bottom center";
+        | 'top left'
+        | 'top right'
+        | 'top center'
+        | 'middle left'
+        | 'middle right'
+        | 'middle center'
+        | 'bottom left'
+        | 'bottom right'
+        | 'bottom center';
 }
 
 declare const Popover: ComponentType<Popover.Props> & {

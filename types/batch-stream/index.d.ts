@@ -5,7 +5,8 @@
 
 /// <reference types="node" />
 
-import stream = require("stream");
+
+import stream = require('stream');
 
 interface Options {
     size?: number | undefined;

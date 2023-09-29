@@ -4,39 +4,40 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import * as H from "history";
-import * as React from "react";
-import * as ReactRouter from "react-router";
-import * as Redux from "redux";
+import * as React from 'react';
+import * as ReactRouter from 'react-router';
+import * as Redux from 'redux';
+import * as H from 'history';
 
-import {
-    go,
-    goBack,
-    goForward,
-    historyAPI,
-    push,
-    pushState,
-    replace,
-    replaceState,
-    setState,
-} from "./lib/actionCreators";
+import routerStateReducer from "./lib/routerStateReducer";
+import ReduxRouter from "./lib/ReduxRouter";
 import reduxReactRouter from "./lib/client";
 import isActive from "./lib/isActive";
-import ReduxRouter from "./lib/ReduxRouter";
-import routerStateReducer from "./lib/routerStateReducer";
-
-export {
+import {
+    historyAPI,
+    pushState,
+    push,
+    replaceState,
+    replace,
+    setState,
     go,
     goBack,
-    goForward,
-    historyAPI,
-    isActive,
-    push,
-    pushState,
-    reduxReactRouter,
+    goForward
+} from "./lib/actionCreators";
+
+export {
     ReduxRouter,
-    replace,
-    replaceState,
     routerStateReducer,
+    reduxReactRouter,
+    isActive,
+    historyAPI,
+    pushState,
+    push,
+    replaceState,
+    replace,
     setState,
+    go,
+    goBack,
+    goForward
 };
+

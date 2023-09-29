@@ -1,2 +1,2 @@
-import { unfold } from "../index.js";
+import { unfold } from '../index';
 export default unfold;

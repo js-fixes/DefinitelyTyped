@@ -4,6 +4,7 @@
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
         "npm-naming": false,
-        "only-arrow-functions": false
+        "only-arrow-functions": false,
+        "strict-export-declare-modifiers": false
     }
 }

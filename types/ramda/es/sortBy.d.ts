@@ -1,2 +1,2 @@
-import { sortBy } from "../index.js";
+import { sortBy } from '../index';
 export default sortBy;

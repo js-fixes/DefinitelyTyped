@@ -1,6 +1,4 @@
-interface LeaveMeAloneDtslint {
-    foo: string;
-}
+interface LeaveMeAloneDtslint { foo: string; }
 // // Re-enable when we move @types/react to TS 3.0
 
 // import * as React from 'react';

@@ -1,6 +1,6 @@
-import { DateRangeType, FilterType, NullOption, PeriodType } from "./enums";
-import { Worksheet } from "./sheet";
-import { Field } from "./workbook";
+import { NullOption, PeriodType, DateRangeType, FilterType } from './enums';
+import { Worksheet } from './sheet';
+import { Field } from './workbook';
 
 export interface FilterOptions {
     isExcludeMode: boolean;

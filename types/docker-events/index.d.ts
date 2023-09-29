@@ -5,8 +5,8 @@
 
 /// <reference types="node" />
 
-import * as Dockerode from "dockerode";
-import * as events from "events";
+import * as events from 'events';
+import * as Dockerode from 'dockerode';
 
 declare namespace DockerEvents {
     interface DockerEventsOptions {

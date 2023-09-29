@@ -103,11 +103,7 @@ interface BluetoothRemoteGATTCharacteristic extends EventTarget, CharacteristicE
     writeValueWithoutResponse(value: BufferSource): Promise<void>;
     startNotifications(): Promise<BluetoothRemoteGATTCharacteristic>;
     stopNotifications(): Promise<BluetoothRemoteGATTCharacteristic>;
-    addEventListener(
-        type: "characteristicvaluechanged",
-        listener: (this: this, ev: Event) => any,
-        useCapture?: boolean,
-    ): void;
+    addEventListener(type: "characteristicvaluechanged", listener: (this: this, ev: Event) => any, useCapture?: boolean): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
@@ -149,31 +145,19 @@ interface WatchAdvertisementsOptions {
     signal?: AbortSignal;
 }
 
-interface BluetoothDevice
-    extends EventTarget, BluetoothDeviceEventHandlers, CharacteristicEventHandlers, ServiceEventHandlers
-{
+interface BluetoothDevice extends EventTarget, BluetoothDeviceEventHandlers, CharacteristicEventHandlers, ServiceEventHandlers {
     readonly id: string;
     readonly name?: string | undefined;
     readonly gatt?: BluetoothRemoteGATTServer | undefined;
     forget(): Promise<void>;
     watchAdvertisements(options?: WatchAdvertisementsOptions): Promise<void>;
     readonly watchingAdvertisements: boolean;
-    addEventListener(
-        type: "gattserverdisconnected",
-        listener: (this: this, ev: Event) => any,
-        useCapture?: boolean,
-    ): void;
-    addEventListener(
-        type: "advertisementreceived",
-        listener: (this: this, ev: BluetoothAdvertisingEvent) => any,
-        useCapture?: boolean,
-    ): void;
+    addEventListener(type: "gattserverdisconnected", listener: (this: this, ev: Event) => any, useCapture?: boolean): void;
+    addEventListener(type: "advertisementreceived", listener: (this: this, ev: BluetoothAdvertisingEvent) => any, useCapture?: boolean): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 
-interface Bluetooth
-    extends EventTarget, BluetoothDeviceEventHandlers, CharacteristicEventHandlers, ServiceEventHandlers
-{
+interface Bluetooth extends EventTarget, BluetoothDeviceEventHandlers, CharacteristicEventHandlers, ServiceEventHandlers {
     getDevices(): Promise<BluetoothDevice[]>;
     getAvailability(): Promise<boolean>;
     onavailabilitychanged: (this: this, ev: Event) => any;
@@ -181,11 +165,7 @@ interface Bluetooth
     requestDevice(options?: RequestDeviceOptions): Promise<BluetoothDevice>;
     requestLEScan(options?: BluetoothLEScanOptions): Promise<BluetoothLEScan>;
     addEventListener(type: "availabilitychanged", listener: (this: this, ev: Event) => any, useCapture?: boolean): void;
-    addEventListener(
-        type: "advertisementreceived",
-        listener: (this: this, ev: BluetoothAdvertisingEvent) => any,
-        useCapture?: boolean,
-    ): void;
+    addEventListener(type: "advertisementreceived", listener: (this: this, ev: BluetoothAdvertisingEvent) => any, useCapture?: boolean): void;
     addEventListener(type: string, listener: EventListenerOrEventListenerObject, useCapture?: boolean): void;
 }
 

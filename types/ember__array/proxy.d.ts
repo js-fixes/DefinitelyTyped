@@ -1,7 +1,6 @@
-// eslint-disable-next-line @definitelytyped/no-self-import
 import MutableArray from "@ember/array/mutable";
-import EmberObject from "@ember/object";
 import ComputedProperty from "@ember/object/computed";
+import EmberObject from "@ember/object";
 
 interface EmberArrayLike<T> {
     length: number | ComputedProperty<number>;

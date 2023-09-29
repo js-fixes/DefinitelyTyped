@@ -79,8 +79,8 @@ declare class GridField {
     private _tableViewWidth;
 }
 declare namespace GridField {
-    export { DetailGrid, LookupMultipleInsertEvent };
+    export { LookupMultipleInsertEvent, DetailGrid };
 }
-type DetailGrid = import("./DetailGrid");
-import DataSet = require("@nginstack/engine/lib/dataset/DataSet.js");
-type LookupMultipleInsertEvent = import("../classdef/LookupMultipleInsertEvent");
+type DetailGrid = import('./DetailGrid');
+import DataSet = require('@nginstack/engine/lib/dataset/DataSet.js');
+type LookupMultipleInsertEvent = import('../classdef/LookupMultipleInsertEvent');

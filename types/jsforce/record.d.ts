@@ -1,8 +1,8 @@
-import { Stream } from "stream";
+import { Stream } from 'stream';
 
-import { Connection } from "./connection";
-import { RecordResult } from "./record-result";
-import { SalesforceId } from "./salesforce-id";
+import { RecordResult } from './record-result';
+import { Connection } from './connection';
+import { SalesforceId } from './salesforce-id';
 
 export class RecordReference<T = any> {
     constructor(conn: Connection, type: string, id: SalesforceId);
@@ -12,11 +12,7 @@ export class RecordReference<T = any> {
     delete(options?: Object, callback?: (err: Error, result: RecordResult) => void): Promise<RecordResult>;
     destroy(options?: Object, callback?: (err: Error, result: RecordResult) => void): Promise<RecordResult>;
     retrieve(options?: Object, callback?: (err: Error, record: Record<T>) => void): Promise<Record<T>>;
-    update(
-        record: Partial<T>,
-        options?: Object,
-        callback?: (err: Error, result: RecordResult) => void,
-    ): Promise<RecordResult>;
+    update(record: Partial<T>, options?: Object, callback?: (err: Error, result: RecordResult) => void): Promise<RecordResult>;
 }
 
 export interface RecordAttributes {
@@ -26,5 +22,5 @@ export interface RecordAttributes {
 
 export type Record<T = any> = {
     Id?: SalesforceId | undefined;
-    attributes?: RecordAttributes | undefined;
+    attributes?: RecordAttributes | undefined
 } & T;

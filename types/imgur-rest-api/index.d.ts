@@ -4,8 +4,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace ImgurRestApi {
+
     interface Response<T> {
-        data: any; // T|Error;
+        data: any; //T|Error;
         status: number;
         success: boolean;
     }
@@ -16,7 +17,7 @@ declare namespace ImgurRestApi {
         bio: string;
         reputation: number;
         created: number;
-        pro_expiration: any; // number|boolean;
+        pro_expiration: any; //number|boolean;
     }
 
     interface AccountSettings {
@@ -24,7 +25,7 @@ declare namespace ImgurRestApi {
         high_quality: boolean;
         public_images: boolean;
         album_privacy: string;
-        pro_expiration: any; // number|boolean;
+        pro_expiration: any; //number|boolean;
         accepted_gallery_terms: boolean;
         active_emails: Array<string>;
         messaging_enabled: boolean;
@@ -74,7 +75,7 @@ declare namespace ImgurRestApi {
         parent_id: number;
         deleted: boolean;
         vote?: string | undefined;
-        children: Array<Comment>;
+        children: Array<Comment>
     }
 
     interface Conversation {
@@ -92,7 +93,7 @@ declare namespace ImgurRestApi {
     interface CustomGallery {
         account_url: string;
         link: string;
-        tags: Array<string>;
+        tags: Array<string>
         item_count: number;
         items: Array<GalleryItem>;
     }
@@ -222,7 +223,7 @@ declare namespace ImgurRestApi {
         followers: number;
         total_items: number;
         following?: boolean | undefined;
-        items: Array<GalleryItem>;
+        items: Array<GalleryItem>
     }
 
     interface TagVote {

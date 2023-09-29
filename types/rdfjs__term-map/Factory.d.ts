@@ -1,5 +1,5 @@
-import { Term } from "@rdfjs/types";
-import TermMap from "./index.js";
+import TermMap from './index.js';
+import { Term } from '@rdfjs/types';
 
 export interface TermMapFactory {
     // eslint-disable-next-line @definitelytyped/no-unnecessary-generics
@@ -8,7 +8,7 @@ export interface TermMapFactory {
 
 interface FactoryCtor {
     new(): TermMapFactory;
-    exports: ["termMap"];
+    exports: ['termMap'];
 }
 declare const factoryCtor: FactoryCtor;
 export default factoryCtor;

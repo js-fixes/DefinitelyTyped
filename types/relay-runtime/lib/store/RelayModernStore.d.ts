@@ -1,17 +1,17 @@
-import { DataID, Disposable } from "../util/RelayRuntimeTypes";
 import {
     CheckOptions,
+    Store,
     MutableRecordSource,
+    Scheduler,
+    OperationLoader,
     OperationAvailability,
     OperationDescriptor,
-    OperationLoader,
     RecordSource,
-    RequestDescriptor,
-    Scheduler,
     SingularReaderSelector,
     Snapshot,
-    Store,
-} from "./RelayStoreTypes";
+    RequestDescriptor,
+} from './RelayStoreTypes';
+import { DataID, Disposable } from '../util/RelayRuntimeTypes';
 
 export interface InvalidationState {
     dataIDs: ReadonlyArray<DataID>;

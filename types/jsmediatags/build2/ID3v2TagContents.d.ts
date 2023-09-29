@@ -1,4 +1,8 @@
-import { ByteArray, TagFrameFlags, TagHeaderFlags } from "../types";
+import {
+    ByteArray,
+    TagHeaderFlags,
+    TagFrameFlags
+} from '../types';
 
 export default class ID3v2TagContents {
     _size: number;
@@ -7,9 +11,9 @@ export default class ID3v2TagContents {
     _contents: ByteArray;
     _frames: { [key: string]: ByteArray[] };
     _extendedHeader: {
-        UPDATE: number;
-        CRC: number;
-        RESTRICTIONS: number;
+        UPDATE: number,
+        CRC: number,
+        RESTRICTIONS: number
     };
     _hasExtendedHeader: boolean;
     _nextFrameOffset: number;
@@ -31,14 +35,14 @@ export default class ID3v2TagContents {
         textEncoding: number,
         textSize: number,
         imageEncoding: number,
-        imageSize: number,
+        imageSize: number
     ): ID3v2TagContents;
 
     addFrame(
         id: string,
         data: ByteArray,
         flags?: TagFrameFlags,
-        noFlagsDataLength?: number,
+        noFlagsDataLength?: number
     ): ID3v2TagContents;
 
     _addExtendedHeaderData(tagKey: string, tagData: ByteArray): void;

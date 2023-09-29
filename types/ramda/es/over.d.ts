@@ -1,2 +1,2 @@
-import { over } from "../index.js";
+import { over } from '../index';
 export default over;

@@ -1,4 +1,6 @@
-import { ByteArray } from "../types";
+import {
+    ByteArray
+} from '../types';
 
 export default class FLACTagContents {
     blocks: MetadataBlock[];

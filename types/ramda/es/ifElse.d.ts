@@ -1,2 +1,2 @@
-import { ifElse } from "../index.js";
+import { ifElse } from '../index';
 export default ifElse;

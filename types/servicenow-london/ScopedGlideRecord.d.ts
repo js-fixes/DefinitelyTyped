@@ -21,7 +21,7 @@ interface ScopedGlideRecord {
      *
      * var gr = new GlideRecord('incident');
      */
-    new(tableName: string): ScopedGlideRecord;
+    new (tableName: string): ScopedGlideRecord;
 
     /**
      * Adds a filter to return active records.
@@ -70,6 +70,7 @@ interface ScopedGlideRecord {
      * gr.query();
      * while(gr.next())
      *   gs.log(gr.getValue(myAddingFunction));
+     *
      */
     addFunction(fun: string): void;
 
@@ -111,7 +112,7 @@ interface ScopedGlideRecord {
     addJoinQuery(
         joinTable: string,
         primaryField?: string,
-        joinTableField?: string,
+        joinTableField?: string
     ): ScopedQueryCondition;
 
     /**

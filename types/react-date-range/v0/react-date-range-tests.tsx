@@ -1,5 +1,10 @@
 import * as React from "react";
-import { DateRange, DateRangePicker, defaultRanges, Range } from "react-date-range";
+import {
+    defaultRanges,
+    DateRange,
+    DateRangePicker,
+    Range
+} from "react-date-range";
 
 class ReactDatePicker extends React.Component<any, any> {
     constructor(props: {}) {
@@ -20,7 +25,7 @@ class ReactDatePicker extends React.Component<any, any> {
                     onChange={this.handleChange}
                     theme={{
                         Calendar: { width: 200 },
-                        PredefinedRanges: { marginLeft: 10, marginTop: 10 },
+                        PredefinedRanges: { marginLeft: 10, marginTop: 10 }
                     }}
                 />
             </div>
@@ -43,7 +48,7 @@ class ReactDateRangePicker extends React.Component<any, any> {
                 <DateRangePicker
                     linkedCalendars={true}
                     ranges={defaultRanges}
-                    scroll={{ enabled: true }}
+                    scroll={{enabled: true}}
                     onInit={this.handleChange}
                     onChange={this.handleChange}
                     showSelectionPreview={true}
@@ -55,7 +60,7 @@ class ReactDateRangePicker extends React.Component<any, any> {
                     weekStartsOn={1}
                     theme={{
                         Calendar: { width: 200 },
-                        PredefinedRanges: { marginLeft: 10, marginTop: 10 },
+                        PredefinedRanges: { marginLeft: 10, marginTop: 10 }
                     }}
                 />
             </div>

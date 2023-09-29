@@ -1,5 +1,6 @@
-import * as Boom from "boom";
-import * as Hapi from "hapi";
+
+import * as Hapi from 'hapi';
+import * as Boom from 'boom';
 
 // Assignment of a typical function to ContinuationValueFunction is possible
 const handleError: Hapi.ContinuationValueFunction = (err?: Boom.BoomError | null, value?: any) => {
@@ -12,10 +13,10 @@ const handleError: Hapi.ContinuationValueFunction = (err?: Boom.BoomError | null
 
     // Discriminated union type works:
     switch (customError.data.customType) {
-        case "Custom1":
+        case 'Custom1':
             customError.data.custom1;
             break;
-        case "Custom2":
+        case 'Custom2':
             customError.data.custom2;
             break;
     }
@@ -25,11 +26,7 @@ const handleError: Hapi.ContinuationValueFunction = (err?: Boom.BoomError | null
 handleError(Boom.badData());
 
 // Accepts an error with custom data
-const errorWithData = Boom.badImplementation("", {
-    custom1: "test",
-    customType: "Custom1" as "Custom1",
-    isCustom: true as true,
-});
+const errorWithData = Boom.badImplementation('', { custom1: 'test', customType: 'Custom1' as 'Custom1', isCustom: true as true });
 handleError(errorWithData);
 
 // Accepts an error with a more explicit type
@@ -48,12 +45,12 @@ interface CustomDataBase {
 }
 
 interface CustomData1 extends CustomDataBase {
-    customType: "Custom1";
+    customType: 'Custom1';
     custom1: string;
 }
 
 interface CustomData2 extends CustomDataBase {
-    customType: "Custom2";
+    customType: 'Custom2';
     custom2: string;
 }
 

@@ -1,6 +1,6 @@
-import { ComponentType, ReactComponentElement, ReactDOM, SVGProps } from "react";
+import { ComponentType, SVGProps, ReactComponentElement, ReactDOM } from 'react';
 
-import Dashicon from "../dashicon";
+import Dashicon from '../dashicon';
 
 declare namespace Icon {
     type IconType<P> = Dashicon.Icon | ComponentType<P> | JSX.Element;
@@ -18,9 +18,10 @@ declare namespace Icon {
         size?: number | undefined;
     }
     // prettier-ignore
-    type AdditionalProps<T> = T extends ComponentType<infer U> ? U
-        : T extends Dashicon.Icon ? SVGProps<SVGSVGElement>
-        : {};
+    type AdditionalProps<T> =
+        T extends ComponentType<infer U> ? U :
+        T extends Dashicon.Icon ? SVGProps<SVGSVGElement> :
+        {};
     type Props<P> = BaseProps<P> & AdditionalProps<IconType<P>>;
 }
 // eslint-disable-next-line @definitelytyped/no-unnecessary-generics

@@ -11,12 +11,10 @@ declare namespace GoogleAdsScripts {
         interface AdGroupPriceIterator extends Base.Iterator<AdGroupPrice> {}
 
         interface AdGroupPriceSelector
-            extends
-                Base.Selector<AdGroupPriceIterator>,
+            extends Base.Selector<AdGroupPriceIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

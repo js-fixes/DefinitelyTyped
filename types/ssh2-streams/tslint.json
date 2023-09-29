@@ -3,6 +3,7 @@
     "rules": {
         "ban-types": false,
         "object-literal-shorthand": false,
+        "strict-export-declare-modifiers": false,
         "unified-signatures": false
     }
 }

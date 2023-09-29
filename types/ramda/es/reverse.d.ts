@@ -1,2 +1,2 @@
-import { reverse } from "../index.js";
+import { reverse } from '../index';
 export default reverse;

@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import { NextFunction, Request, Response } from "express";
+import { Request, Response, NextFunction } from 'express';
 
 /**
  * Enforces HTTPS connections on any incoming requests.

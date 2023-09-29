@@ -4,7 +4,10 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import express = require("express");
+
+
+
+import express = require('express');
 
 declare function expressPartials(options?: any): express.RequestHandler;
 

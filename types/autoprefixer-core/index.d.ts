@@ -3,6 +3,7 @@
 // Definitions by: Asana <https://asana.com>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 interface Config {
     browsers?: string[] | undefined;
     cascade?: boolean | undefined;
@@ -16,7 +17,7 @@ interface Options {
     map?: {
         inline?: boolean | undefined;
         prev?: string | Object | undefined;
-    } | undefined;
+    } | undefined
 }
 
 interface Result {

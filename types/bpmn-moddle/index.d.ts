@@ -96,7 +96,7 @@ declare namespace BPMNModdle {
     interface Monitoring extends BaseElement {}
 
     // tslint:disable-next-line:no-empty-interface
-    interface Performer extends ResourceRole {}
+   interface Performer extends ResourceRole {}
     interface Process extends FlowElementsContainer, CallableElement {
         processType: string;
         isClosed: boolean;
@@ -536,7 +536,9 @@ declare namespace BPMNModdle {
         calledChoreographyRef: Choreography;
         participantAssociations: ParticipantAssociation[];
     }
-    interface SubChoreography extends ChoreographyActivity, FlowElementsContainer {
+    interface SubChoreography
+        extends ChoreographyActivity,
+            FlowElementsContainer {
         artifacts: Artifact[];
     }
     interface ChoreographyTask extends ChoreographyActivity {
@@ -585,7 +587,10 @@ declare namespace BPMNModdle {
         implementation: string;
         operationRef: Operation;
     }
-    interface SubProcess extends Activity, FlowElementsContainer, InteractionNode {
+    interface SubProcess
+        extends Activity,
+            FlowElementsContainer,
+            InteractionNode {
         triggeredByEvent: boolean;
         artifacts: Artifact[];
     }
@@ -904,13 +909,13 @@ declare namespace BPMNModdle {
     }
 
     interface BPMNModdleConstructor {
-        new(packages?: any, options?: Option): BPMNModdle;
+        new (packages?: any, options?: Option): BPMNModdle;
     }
 
     type ImportFn = (
         err: Error,
         definitions: Definitions,
-        parseContext: any,
+        parseContext: any
     ) => void;
 
     interface Moddle {
@@ -928,7 +933,7 @@ declare namespace BPMNModdle {
          */
         create<T = ElementTypes, K extends keyof T = keyof T>(
             descriptor: K,
-            attrs?: any,
+            attrs?: any
         ): T[K];
         create(descriptor: any, attrs?: any): BaseElement;
 
@@ -963,6 +968,7 @@ declare namespace BPMNModdle {
          * });
          *
          * // go ahead and serialize the stuff
+         *
          *
          * @param  name  the name of the element
          * @param  nsUri the namespace uri of the element
@@ -1052,7 +1058,7 @@ declare namespace BPMNModdle {
             xmlStr: string,
             typeName: string,
             options: Option,
-            done: ImportFn,
+            done: ImportFn
         ): void;
 
         /**

@@ -1,2 +1,2 @@
-import { not } from "../index.js";
+import { not } from '../index';
 export default not;

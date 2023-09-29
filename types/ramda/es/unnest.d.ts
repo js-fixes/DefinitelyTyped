@@ -1,2 +1,2 @@
-import { unnest } from "../index.js";
+import { unnest } from '../index';
 export default unnest;

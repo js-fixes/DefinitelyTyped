@@ -1,3 +1,4 @@
-import lescape = require("escape-latex");
+
+import lescape = require('escape-latex');
 
 lescape("String to be escaped here #yolo");

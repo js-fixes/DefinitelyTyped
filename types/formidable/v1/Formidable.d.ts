@@ -1,5 +1,5 @@
 import { IncomingMessage } from "http";
-import { DefaultOptions, EmitData, EventData, Fields, File, Files, Options, Part, PluginFunction } from "./";
+import { EmitData, EventData, Fields, File, Files, Options, Part, PluginFunction, DefaultOptions } from "./";
 declare class IncomingForm {
     static readonly DEFAULT_OPTIONS: DefaultOptions;
     constructor(options?: Partial<Options>);

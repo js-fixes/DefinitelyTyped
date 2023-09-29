@@ -6,10 +6,12 @@
 
 /// <reference types="signals" />
 
-import * as signal from "signals";
+import * as signal from 'signals';
 
 declare namespace HasherJs {
+
     export interface HasherStatic {
+
         // {string} hasher.appendHash
         // String that should always be added to the end of Hash value.
         appendHash: string;

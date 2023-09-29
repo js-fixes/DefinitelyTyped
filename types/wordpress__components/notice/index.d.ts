@@ -1,5 +1,5 @@
-import { Status } from "@wordpress/notices";
-import { ComponentType, MouseEventHandler, ReactNode } from "react";
+import { ComponentType, MouseEventHandler, ReactNode } from 'react';
+import { Status } from '@wordpress/notices';
 
 declare namespace Notice {
     interface Props {

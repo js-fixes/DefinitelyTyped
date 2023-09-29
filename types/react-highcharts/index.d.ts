@@ -16,6 +16,7 @@ interface ReactHighchartsProps {
      */
     config: Highcharts.Options;
     /**
+     *
      * @param after-render callback.
      */
     callback?(chart: Highcharts.ChartObject): void;

@@ -1,2 +1,2 @@
-import { dropRepeatsWith } from "../index.js";
+import { dropRepeatsWith } from '../index';
 export default dropRepeatsWith;

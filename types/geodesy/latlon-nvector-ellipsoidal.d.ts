@@ -2,9 +2,9 @@
  * @format
  */
 
-import { Datum } from ".";
+import { Datum } from '.';
 
-import LatLonEllipsoidal, { Cartesian, Dms, Vector3d } from "./latlon-ellipsoidal";
+import LatLonEllipsoidal, { Cartesian, Vector3d, Dms } from './latlon-ellipsoidal';
 
 declare class LatLon_NvectorEllipsoidal extends LatLonEllipsoidal {
     deltaTo(point: LatLon_NvectorEllipsoidal): Ned;
@@ -34,9 +34,9 @@ declare class Ned {
 }
 
 export {
-    Cartesian_Nvector as Cartesian,
-    Dms,
     LatLon_NvectorEllipsoidal as default,
-    Ned,
     NvectorEllipsoidal as Nvector,
+    Cartesian_Nvector as Cartesian,
+    Ned,
+    Dms,
 };

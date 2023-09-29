@@ -3,9 +3,12 @@
 // Definitions by: Seth Westphal <https://github.com/westy92>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import * as redis from "redis";
 
-declare class Scripto {
+
+  import * as redis from 'redis';
+
+  declare class Scripto {
+
     constructor(redisClient: redis.RedisClient);
 
     eval(scriptName: string, keys: string[], args: any[], callback: (err: Error, result: any) => void): void;
@@ -16,14 +19,17 @@ declare class Scripto {
     loadFromFile(name: string, filepath: string): void;
 
     run(scriptName: string, keys: string[], args: any[], callback: (err: Error, result: any) => void): void;
-}
 
-declare namespace Scripto {
+  }
+
+  declare namespace Scripto {
+
     export type Script = string;
 
     export interface Scripts {
-        [scriptName: string]: Script;
+      [scriptName: string]: Script;
     }
-}
+    
+  }
 
-export = Scripto;
+  export = Scripto;

@@ -22,4 +22,6 @@ export class Cred {
     static userpassPlaintextNew(username: string, password: string): Cred;
 
     hasUsername(): number;
+
+    free(): void;
 }

@@ -1,8 +1,8 @@
-import { CheckoutOptions } from "./checkout-options";
-import { Commit } from "./commit";
-import { Index } from "./index";
-import { MergeOptions } from "./merge-options";
-import { Repository } from "./repository";
+import { MergeOptions } from './merge-options';
+import { CheckoutOptions } from './checkout-options';
+import { Repository } from './repository';
+import { Commit } from './commit';
+import { Index } from './index';
 
 export interface RevertOptions {
     version?: number | undefined;

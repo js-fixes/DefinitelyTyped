@@ -7,6 +7,7 @@
 /// <reference types="jquery"/>
 
 interface JQuery {
+
     /**
      * Simulates an event.
      *

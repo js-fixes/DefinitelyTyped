@@ -5,8 +5,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import { stores } from "koa-session";
-import { ClientOpts } from "redis";
+import { ClientOpts } from 'redis';
+import { stores } from 'koa-session';
 
 declare namespace redisStore {
     interface RedisOptions extends ClientOpts {

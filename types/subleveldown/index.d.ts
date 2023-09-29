@@ -4,9 +4,9 @@
 //                 Dmitry Demensky <https://github.com/demensky>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { AbstractIterator, AbstractLevelDOWN, ErrorCallback } from "abstract-leveldown";
-import { CodecOptions } from "level-codec";
-import { LevelUp } from "levelup";
+import { LevelUp } from 'levelup';
+import { AbstractLevelDOWN, AbstractIterator, ErrorCallback } from 'abstract-leveldown';
+import { CodecOptions } from 'level-codec';
 
 /** @see {@link SubDownOptions#open} */
 type SubDownOpenHook = (callback: ErrorCallback) => void;

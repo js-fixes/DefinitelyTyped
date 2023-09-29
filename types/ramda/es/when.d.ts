@@ -1,2 +1,2 @@
-import { when } from "../index.js";
+import { when } from '../index';
 export default when;

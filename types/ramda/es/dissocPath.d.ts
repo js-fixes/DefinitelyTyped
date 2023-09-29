@@ -1,2 +1,2 @@
-import { dissocPath } from "../index.js";
+import { dissocPath } from '../index';
 export default dissocPath;

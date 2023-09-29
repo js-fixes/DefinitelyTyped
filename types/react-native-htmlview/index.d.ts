@@ -4,8 +4,15 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { ComponentType, ReactNode } from "react";
-import { ImageStyle, StyleProp, TextProps, TextStyle, ViewProps, ViewStyle } from "react-native";
+import { ComponentType, ReactNode } from 'react';
+import {
+    StyleProp,
+    TextProps,
+    ViewProps,
+    TextStyle,
+    ViewStyle,
+    ImageStyle,
+} from 'react-native';
 
 type Nullish = null | undefined;
 
@@ -33,7 +40,7 @@ export interface HTMLViewProps {
     stylesheet?:
         | {
             [key: string]: StyleProp<ViewStyle | TextStyle | ImageStyle>;
-        }
+          }
         | undefined;
 
     onLinkPress?(url: string): void;
@@ -41,6 +48,7 @@ export interface HTMLViewProps {
     onLinkLongPress?(url: string): void;
 
     /**
+     *
      * A custom function to render HTML nodes however you see fit. If the function returns undefined (not null), the
      * default renderer will be used for that node. The function takes the following arguments:
      *

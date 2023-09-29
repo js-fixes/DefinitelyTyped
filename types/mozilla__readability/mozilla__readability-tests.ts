@@ -1,4 +1,4 @@
-import { Options, Readability } from "@mozilla/readability";
+import { Readability, Options } from '@mozilla/readability';
 
 declare class JSDOM {
     constructor(html?: string);

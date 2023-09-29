@@ -5,8 +5,8 @@
 /**
  * Namespace: browser.permissions
  */
-import { Events } from "./events";
 import { Manifest } from "./manifest";
+import { Events } from "./events";
 
 export namespace Permissions {
     interface Permissions {

@@ -3,11 +3,12 @@
 // Definitions by: Seth Westphal <https://github.com/westy92>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "phone-formatter" {
-    export interface FormatOptions {
-        normalize: boolean;
-    }
+declare module 'phone-formatter' {
 
-    export function normalize(digits: string): string;
-    export function format(digits: string, format: string, options?: FormatOptions): string;
+  export interface FormatOptions {
+    normalize: boolean;
+  }
+
+  export function normalize(digits: string): string;
+  export function format(digits: string, format: string, options?: FormatOptions): string;
 }

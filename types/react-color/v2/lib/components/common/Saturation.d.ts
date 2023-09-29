@@ -1,4 +1,4 @@
-import { Component, ComponentType, CSSProperties } from "react";
+import { Component, CSSProperties, ComponentType } from "react";
 import { CustomPickerInjectedProps, HSVColor } from "../../..";
 
 export interface SaturationStyle {

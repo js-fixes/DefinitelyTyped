@@ -1,9 +1,11 @@
-import * as angular from "angular";
+import * as angular from 'angular';
 
-var app = angular.module("testModule", ["ngDialog"]);
+var app = angular.module('testModule', ['ngDialog']);
 
 class DialogTestController {
+
     constructor(ngDialog: angular.dialog.IDialogService, scope: ng.IScope) {
+
         ngDialog.close("login-popup", "bye");
         ngDialog.closeAll("bye");
 
@@ -20,7 +22,7 @@ class DialogTestController {
             data: "string",
             disableAnimation: false,
             name: "login-popup",
-            scope,
+            scope
         });
 
         loginDialog.closePromise.then((result) => {
@@ -32,21 +34,25 @@ class DialogTestController {
         }
 
         var deleteConfirm = ngDialog.openConfirm({
-            template: "confirm.html",
+            template: "confirm.html"
         });
     }
 }
 
 class LoginDialogController {
-    constructor($scope: angular.dialog.IDialogScope) {
+
+    constructor($scope:angular.dialog.IDialogScope) {
+
         $scope.closeThisDialog("bye");
     }
 }
 
-app.controller("TestController", DialogTestController);
+app.controller('TestController', DialogTestController);
 
 app.config((ngDialogProvider: angular.dialog.IDialogProvider) => {
+
     ngDialogProvider.setDefaults({
-        className: "flat-ui",
-    });
+        className: "flat-ui"
+    })
+
 });

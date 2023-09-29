@@ -131,12 +131,7 @@ export function placeCaretAtHorizontalEdge(container: HTMLElement | undefined, i
  * @param [rect]              The rectangle to position the caret with.
  * @param [mayUseScroll=true] `true` to allow scrolling, `false` to disallow.
  */
-export function placeCaretAtVerticalEdge(
-    container: HTMLElement | undefined,
-    isReverse: boolean,
-    rect?: DOMRect,
-    mayUseScroll?: boolean,
-): void;
+export function placeCaretAtVerticalEdge(container: HTMLElement | undefined, isReverse: boolean, rect?: DOMRect, mayUseScroll?: boolean): void;
 
 /**
  * Given a DOM node, removes it from the DOM.

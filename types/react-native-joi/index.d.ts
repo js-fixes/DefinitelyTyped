@@ -4,31 +4,17 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 // TypeScript Version: 2.3
-export type Types =
-    | "any"
-    | "alternatives"
-    | "array"
-    | "boolean"
-    | "binary"
-    | "date"
-    | "function"
-    | "lazy"
-    | "number"
-    | "object"
-    | "string";
+export type Types = 'any' | 'alternatives' | 'array' | 'boolean' | 'binary' | 'date' | 'function' | 'lazy' | 'number' | 'object' | 'string';
 
 export type LanguageOptions = string | boolean | null | {
     [key: string]: LanguageOptions;
 };
 
-export type LanguageRootOptions =
-    & {
-        root?: string | undefined;
-        key?: string | undefined;
-        messages?: { wrapArrays?: boolean | undefined } | undefined;
-    }
-    & Partial<Record<Types, LanguageOptions>>
-    & { [key: string]: LanguageOptions };
+export type LanguageRootOptions = {
+    root?: string | undefined;
+    key?: string | undefined;
+    messages?: { wrapArrays?: boolean | undefined; } | undefined;
+} & Partial<Record<Types, LanguageOptions>> & { [key: string]: LanguageOptions; };
 
 export interface ValidationOptions {
     /**
@@ -61,7 +47,7 @@ export interface ValidationOptions {
     /**
      * sets the default presence requirements. Supported modes: 'optional', 'required', and 'forbidden'. Defaults to 'optional'.
      */
-    presence?: "optional" | "required" | "forbidden" | undefined;
+    presence?: 'optional' | 'required' | 'forbidden' | undefined;
     /**
      * provides an external data set to be used in references
      */
@@ -125,7 +111,7 @@ export interface IpOptions {
     cidr?: string | undefined;
 }
 
-export type GuidVersions = "uuidv1" | "uuidv2" | "uuidv3" | "uuidv4" | "uuidv5";
+export type GuidVersions = 'uuidv1' | 'uuidv2' | 'uuidv3' | 'uuidv4' | 'uuidv5';
 
 export interface GuidOptions {
     version: GuidVersions[] | GuidVersions;
@@ -238,11 +224,9 @@ export interface ValidationErrorItem {
     context?: Context | undefined;
 }
 
-export type ValidationErrorFunction = (
-    errors: ValidationErrorItem[],
-) => string | ValidationErrorItem | ValidationErrorItem[] | Error;
+export type ValidationErrorFunction = (errors: ValidationErrorItem[]) => string | ValidationErrorItem | ValidationErrorItem[] | Error;
 
-export interface ValidationResult<T> extends Pick<Promise<T>, "then" | "catch"> {
+export interface ValidationResult<T> extends Pick<Promise<T>, 'then' | 'catch'> {
     error: ValidationError;
     value: T;
 }
@@ -253,8 +237,7 @@ export interface SchemaMap {
     [key: string]: SchemaLike | SchemaLike[];
 }
 
-export type Schema =
-    | AnySchema
+export type Schema = AnySchema
     | ArraySchema
     | AlternativesSchema
     | BinarySchema
@@ -589,7 +572,7 @@ export interface StringSchema extends AnySchema {
      * Requires the string value to be in a unicode normalized form. If the validation convert option is on (enabled by default), the string will be normalized.
      * @param form - The unicode normalization form to use. Valid values: NFC [default], NFD, NFKC, NFKD
      */
-    normalize(form?: "NFC" | "NFD" | "NFKC" | "NFKD"): this;
+    normalize(form?: 'NFC' | 'NFD' | 'NFKC' | 'NFKD'): this;
 
     /**
      * Requires the string value to be a valid base64 string; does not check the decoded value.
@@ -944,7 +927,7 @@ export interface DateSchema extends AnySchema {
      * allowing to explicitly ensure a date is either in the past or in the future.
      * It can also be a reference to another field.
      */
-    greater(date: "now" | Date | number | string | Reference): this;
+    greater(date: 'now' | Date | number | string | Reference): this;
 
     /**
      * Specifies that the value must be less than date.
@@ -952,7 +935,7 @@ export interface DateSchema extends AnySchema {
      * allowing to explicitly ensure a date is either in the past or in the future.
      * It can also be a reference to another field.
      */
-    less(date: "now" | Date | number | string | Reference): this;
+    less(date: 'now' | Date | number | string | Reference): this;
 
     /**
      * Specifies the oldest date allowed.
@@ -960,7 +943,7 @@ export interface DateSchema extends AnySchema {
      * allowing to explicitly ensure a date is either in the past or in the future.
      * It can also be a reference to another field.
      */
-    min(date: "now" | Date | number | string | Reference): this;
+    min(date: 'now' | Date | number | string | Reference): this;
 
     /**
      * Specifies the latest date allowed.
@@ -968,7 +951,7 @@ export interface DateSchema extends AnySchema {
      * allowing to explicitly ensure a date is either in the past or in the future.
      * It can also be a reference to another field.
      */
-    max(date: "now" | Date | number | string | Reference): this;
+    max(date: 'now' | Date | number | string | Reference): this;
 
     /**
      * Specifies the allowed date format:
@@ -985,7 +968,7 @@ export interface DateSchema extends AnySchema {
      * Requires the value to be a timestamp interval from Unix Time.
      * @param type - the type of timestamp (allowed values are unix or javascript [default])
      */
-    timestamp(type?: "javascript" | "unix"): this;
+    timestamp(type?: 'javascript' | 'unix'): this;
 }
 
 export interface FunctionSchema extends AnySchema {
@@ -1046,7 +1029,7 @@ export type ExtensionBoundSchema = Schema & {
 
 export interface Rules<P extends object = any> {
     name: string;
-    params?: ObjectSchema | { [key in keyof P]: SchemaLike } | undefined;
+    params?: ObjectSchema | {[key in keyof P]: SchemaLike; } | undefined;
     setup?(this: ExtensionBoundSchema, params: P): Schema | void;
     validate?(this: ExtensionBoundSchema, params: P, value: any, state: State, options: ValidationOptions): any;
     description?: string | ((params: P) => string) | undefined;
@@ -1156,12 +1139,7 @@ export function lazy(cb: () => Schema, options?: LazyOptions): LazySchema;
  */
 export function validate<T>(value: T, schema: SchemaLike, options?: ValidationOptions): ValidationResult<T>;
 export function validate<T, R>(value: T, schema: SchemaLike, callback: (err: ValidationError, value: T) => R): R;
-export function validate<T, R>(
-    value: T,
-    schema: SchemaLike,
-    options: ValidationOptions,
-    callback: (err: ValidationError, value: T) => R,
-): R;
+export function validate<T, R>(value: T, schema: SchemaLike, options: ValidationOptions, callback: (err: ValidationError, value: T) => R): R;
 
 /**
  * Converts literal schema definition to joi schema object (or returns the same back if already a joi schema object).
@@ -1205,7 +1183,7 @@ export function reach(schema: ObjectSchema, path: string | string[]): Schema;
 /**
  * Creates a new Joi instance customized with the extension(s) you provide included.
  */
-export function extend(extension: Extension | Extension[], ...extensions: Array<Extension | Extension[]>): any;
+export function extend(extension: Extension|Extension[], ...extensions: Array<Extension|Extension[]>): any;
 
 // --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 

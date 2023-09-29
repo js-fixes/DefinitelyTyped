@@ -1,2 +1,2 @@
-import { cond } from "../index.js";
+import { cond } from '../index';
 export default cond;

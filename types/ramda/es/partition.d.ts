@@ -1,2 +1,2 @@
-import { partition } from "../index.js";
+import { partition } from '../index';
 export default partition;

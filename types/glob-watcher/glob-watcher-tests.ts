@@ -6,12 +6,13 @@ function test() {
     const path = "";
     const globs = ["", ""];
 
-    const opts1 = {};
+    const opts1 = {
+    };
 
     const opts2 = {
         delay: 500,
         events: ["add", "change", "unlink"],
-        depth: 1,
+        depth: 1
     };
 
     optionsTypeTest(opts1);

@@ -1,4 +1,7 @@
-import { ChunkType, DataType } from "../types";
+import {
+    ChunkType,
+    DataType
+} from '../types';
 
 export default class ChunkedFileData {
     static NOT_FOUND: number;
@@ -11,8 +14,8 @@ export default class ChunkedFileData {
 
     _getChunkRange(
         offsetStart: number,
-        offsetEnd: number,
-    ): { startIx: number; endIx: number; insertIx?: number };
+        offsetEnd: number
+      ): {startIx: number, endIx: number, insertIx?: number};
 
     hasDataRange(offsetStart: number, offsetEnd: number): boolean;
 

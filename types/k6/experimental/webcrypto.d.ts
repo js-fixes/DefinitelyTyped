@@ -17,6 +17,7 @@ export interface Crypto extends SubtleCrypto {
     /**
      * Fills the passed TypedArray with cryptographically sound random values.
      *
+     *
      * @param typedArray - The TypedArray to fill with random values.
      * @throws {QuotaExceededError} - thrown if the `byteLength` of `typedArray` exceeds 65536.
      * @returns The typedArray argument.
@@ -98,7 +99,7 @@ export interface SubtleCrypto {
      * @throws {TypeError} - when trying to use an invalid format.
      * @returns A promise that resolves with the exported key.
      */
-    exportKey(format: "raw", key: CryptoKey): Promise<ArrayBuffer>;
+    exportKey(format: 'raw', key: CryptoKey): Promise<ArrayBuffer>;
 
     /**
      * Use the `generateKey()` method to generate a new key (for symmetric
@@ -113,7 +114,7 @@ export interface SubtleCrypto {
     generateKey(
         algorithm: AesKeyGenParams | HmacKeyGenParams,
         extractable: boolean,
-        keyUsages: Array<"encrypt" | "decrypt" | "sign" | "verify">,
+        keyUsages: Array<'encrypt' | 'decrypt' | 'sign' | 'verify'>,
     ): Promise<CryptoKey>;
 
     /**
@@ -131,11 +132,11 @@ export interface SubtleCrypto {
      * @returns A promise that resolves with the imported `CryptoKey`.
      */
     importKey(
-        format: "raw",
+        format: 'raw',
         keyData: ArrayBuffer | ArrayBufferView | DataView,
-        algorithm: "AES-CBC" | "AES-CTR" | "AES-GCM" | Algorithm<"AES-CBC" | "AES-CTR" | "AES-GCM"> | HmacImportParams,
+        algorithm: 'AES-CBC' | 'AES-CTR' | 'AES-GCM' | Algorithm<'AES-CBC' | 'AES-CTR' | 'AES-GCM'> | HmacImportParams,
         extractable: boolean,
-        keyUsages: Array<"encrypt" | "decrypt" | "sign" | "verify">,
+        keyUsages: Array<'encrypt' | 'decrypt' | 'sign' | 'verify'>,
     ): Promise<CryptoKey>;
 
     /**
@@ -151,7 +152,7 @@ export interface SubtleCrypto {
      * @returns A promise that resolves with the signature.
      */
     sign(
-        algorithm: "HMAC" | Algorithm<"HMAC">,
+        algorithm: 'HMAC' | Algorithm<'HMAC'>,
         key: CryptoKey,
         data: ArrayBuffer | ArrayBufferView | DataView,
     ): Promise<ArrayBuffer>;
@@ -167,7 +168,7 @@ export interface SubtleCrypto {
      * @returns A promise that resolves with a boolean indicating whether the signature is valid.
      */
     verify(
-        algorithm: "HMAC" | Algorithm<"HMAC">,
+        algorithm: 'HMAC' | Algorithm<'HMAC'>,
         key: CryptoKey,
         signature: ArrayBuffer | ArrayBufferView | DataView,
         data: ArrayBuffer | ArrayBufferView | DataView,
@@ -178,7 +179,7 @@ export interface CryptoKey {
     /**
      * The type of key the object represents.
      */
-    readonly type: "secret" | "private" | "public";
+    readonly type: 'secret' | 'private' | 'public';
 
     /**
      * A boolean value indicating whether or not the
@@ -196,7 +197,7 @@ export interface CryptoKey {
     /**
      * An array of strings, indicating what can be done with the key.
      */
-    readonly usages: Array<"encrypt" | "decrypt" | "sign" | "verify">;
+    readonly usages: Array<'encrypt' | 'decrypt' | 'sign' | 'verify'>;
 }
 
 /**
@@ -221,7 +222,7 @@ export type AlgorithmIdentifier = string;
  * The `HashAlgorithmIdentifier` type of the Web Crypto API represents
  * the name of a hash algorithm.
  */
-export type HashAlgorithmIdentifier = "SHA-1" | "SHA-256" | "SHA-384" | "SHA-512";
+export type HashAlgorithmIdentifier = 'SHA-1' | 'SHA-256' | 'SHA-384' | 'SHA-512';
 
 /**
  * The `AesKeyGenParams` dictionary of the Web Crypto API represents the
@@ -232,7 +233,7 @@ export interface AesKeyGenParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "AES-GCM" | "AES-CBC" | "AES-CTR" | "AES-CFB" | "AES-KW";
+    name: 'AES-GCM' | 'AES-CBC' | 'AES-CTR' | 'AES-CFB' | 'AES-KW';
 
     /**
      * The length of the key, in bits.
@@ -250,7 +251,7 @@ export interface AesCtrParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "AES-CTR";
+    name: 'AES-CTR';
 
     /**
      * The initial value of the counter block. This must be 16-byte
@@ -279,7 +280,7 @@ export interface AesCbcParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "AES-CBC";
+    name: 'AES-CBC';
 
     /**
      * The initialization vector to use for the operation.
@@ -300,7 +301,7 @@ export interface AesGcmParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "AES-GCM";
+    name: 'AES-GCM';
 
     /**
      * The initialization vector to use for the operation.
@@ -337,12 +338,12 @@ export interface HmacKeyGenParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "HMAC";
+    name: 'HMAC';
 
     /**
      * A string representing the name of the digest function to use.
      */
-    hash: "SHA-1" | "SHA-256" | "SHA-384" | "SHA-512";
+    hash: 'SHA-1' | 'SHA-256' | 'SHA-384' | 'SHA-512';
 
     /**
      * The length of the key, in bits. If the length is not specified,
@@ -362,7 +363,7 @@ export interface HmacImportParams extends Algorithm<AlgorithmIdentifier> {
     /**
      * The name of the algorithm to use.
      */
-    name: "HMAC";
+    name: 'HMAC';
 
     /**
      * The name of the digest function to use.

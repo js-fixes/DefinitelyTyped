@@ -1,5 +1,5 @@
-import TextAnimation from "ink-text-animation";
-import React from "react";
+import React from 'react';
+import TextAnimation from 'ink-text-animation';
 
 const Demo = () => (
     <div>

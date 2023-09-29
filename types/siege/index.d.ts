@@ -5,10 +5,8 @@
 
 /// <reference types="node" />
 
-type Stringifiable = NodeJS.Dict<
-    string | number | boolean | ReadonlyArray<string> | ReadonlyArray<number> | ReadonlyArray<boolean> | null
->;
-type Method = "GET" | "POST";
+type Stringifiable = NodeJS.Dict<string | number | boolean | ReadonlyArray<string> | ReadonlyArray<number> | ReadonlyArray<boolean> | null>;
+type Method = 'GET' | 'POST';
 
 interface Options {
     serve?: string | undefined;
@@ -35,7 +33,7 @@ interface ReportOptions {
         line?: string | undefined;
         c2mem?: string | undefined;
     } | undefined;
-    type?: "json" | "plain" | "color" | undefined;
+    type?: 'json' | 'plain' | 'color' | undefined;
 }
 
 declare class For<T> {

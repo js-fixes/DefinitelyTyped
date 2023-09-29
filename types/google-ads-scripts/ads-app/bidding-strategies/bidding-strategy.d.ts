@@ -54,13 +54,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface BiddingStrategySelector
-            extends
-                Base.Selector<BiddingStrategyIterator>,
+            extends Base.Selector<BiddingStrategyIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

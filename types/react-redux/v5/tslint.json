@@ -11,6 +11,7 @@
         "only-arrow-functions": false,
         "prefer-const": false,
         "prefer-object-spread": false,
+        "strict-export-declare-modifiers": false,
         "unified-signatures": false,
         "use-default-type-parameter": false
     }

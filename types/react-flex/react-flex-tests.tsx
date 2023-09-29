@@ -1,5 +1,5 @@
-import * as React from "react";
 import { Flex, Item } from "react-flex";
+import * as React from "react";
 
 const ex1: JSX.Element = (
     <Flex row alignItems="center">

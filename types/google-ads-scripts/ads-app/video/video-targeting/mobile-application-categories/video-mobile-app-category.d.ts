@@ -72,13 +72,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface VideoMobileAppCategorySelector
-            extends
-                Base.Selector<VideoMobileAppCategoryIterator>,
+            extends Base.Selector<VideoMobileAppCategoryIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

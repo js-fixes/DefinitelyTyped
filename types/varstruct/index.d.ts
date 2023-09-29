@@ -257,8 +257,6 @@ declare namespace makeObjectStruct {
 }
 
 type CodecType<T> = T extends makeObjectStruct.Codec<infer TCodec> ? TCodec : never;
-type CodecTypes<Tuple extends readonly [...any[]]> =
-    & {
-        [k in keyof Tuple]: CodecType<Tuple[k]>;
-    }
-    & { length: Tuple["length"] };
+type CodecTypes<Tuple extends readonly [...any[]]> = {
+    [k in keyof Tuple]: CodecType<Tuple[k]>;
+} & { length: Tuple['length'] };

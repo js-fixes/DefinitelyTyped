@@ -5,8 +5,14 @@
 // TypeScript Version: 2.8
 // From https://github.com/hapijs/yar/blob/master/API.md
 
-import { Id, PolicyOptions } from "catbox";
-import { CachePolicyOptions, Plugin, Request, Server, ServerOptionsCache } from "hapi";
+import {
+    Server,
+    ServerOptionsCache,
+    Request,
+    Plugin,
+    CachePolicyOptions,
+} from 'hapi';
+import { PolicyOptions, Id } from 'catbox';
 declare namespace yar {
     interface YarOptions {
         /**
@@ -77,7 +83,7 @@ declare namespace yar {
              * enables the same-site cookie parameter.
              * Default to 'Lax'.
              */
-            isSameSite?: "Lax" | "Strict" | false | undefined;
+            isSameSite?: 'Lax' | 'Strict' | false | undefined;
             /**
              * determines whether or not to transfer using TLS/SSL.
              * Defaults to true.
@@ -161,7 +167,7 @@ declare namespace yar {
 declare const yar: Plugin<yar.YarOptions>;
 export = yar;
 
-declare module "hapi" {
+declare module 'hapi' {
     interface Request {
         yar: yar.Yar;
     }

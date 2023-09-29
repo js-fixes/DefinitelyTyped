@@ -23,6 +23,7 @@
  *      .catch(err => console.log(err));
  * </code>
  * </pre>
+ *
  */
 export class ReplacePagesOperation {
     /**
@@ -60,4 +61,4 @@ export class ReplacePagesOperation {
     execute(context: ExecutionContext): Promise<FileRef>;
     validate(context: any): void;
 }
-import { ExecutionContext, FileRef, PageRanges } from "../pdfservices-sdk";
+import { ExecutionContext, FileRef, PageRanges } from '../pdfservices-sdk';

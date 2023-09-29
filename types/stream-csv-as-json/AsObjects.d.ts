@@ -1,7 +1,7 @@
 /// <reference types="node" />
 
-import { Transform, TransformOptions } from "stream";
-import * as Chain from "stream-chain";
+import { TransformOptions, Transform } from 'stream';
+import * as Chain from 'stream-chain';
 
 export = AsObjects;
 

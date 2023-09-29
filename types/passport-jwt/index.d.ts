@@ -9,9 +9,9 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import * as express from "express";
-import { VerifyOptions } from "jsonwebtoken";
-import { Strategy as PassportStrategy } from "passport-strategy";
+import { Strategy as PassportStrategy } from 'passport-strategy';
+import * as express from 'express';
+import { VerifyOptions } from 'jsonwebtoken';
 
 export declare class Strategy extends PassportStrategy {
     constructor(opt: StrategyOptions, verify: VerifyCallback);

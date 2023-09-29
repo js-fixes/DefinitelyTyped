@@ -1,4 +1,4 @@
-import typescript from "@webpack-blocks/typescript";
-import { createConfig } from "@webpack-blocks/webpack";
+import { createConfig } from '@webpack-blocks/webpack';
+import typescript from '@webpack-blocks/typescript';
 
 createConfig([typescript()]);

@@ -1,5 +1,5 @@
-import { Point } from "../BasicTypes";
-import { Render } from "../Render/Render";
+import { Render } from '../Render/Render';
+import { Point } from '../BasicTypes';
 /**
  * State of the page on the basis of which rendering
  */
@@ -19,11 +19,11 @@ export enum PageOrientation {
     /** Left side page */
     LEFT = 0,
     /** Right side page */
-    RIGHT = 1,
+    RIGHT = 1
 }
 export enum PageDensity {
     SOFT = "soft",
-    HARD = "hard",
+    HARD = "hard"
 }
 /**
  * Class representing a book page

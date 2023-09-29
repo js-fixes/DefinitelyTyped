@@ -1,2 +1,2 @@
-import { zip } from "../index.js";
+import { zip } from '../index';
 export default zip;

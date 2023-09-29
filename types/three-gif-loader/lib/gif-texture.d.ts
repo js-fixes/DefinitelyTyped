@@ -1,5 +1,5 @@
-import { GifReader } from "omggif";
-import { CanvasTexture } from "three";
+import { CanvasTexture } from 'three';
+import { GifReader } from 'omggif';
 
 export default class GifTexture extends CanvasTexture {
     setReader(reader: GifReader): void;

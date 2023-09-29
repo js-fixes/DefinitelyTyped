@@ -1,4 +1,4 @@
-import { Rule, Scope } from "eslint";
+import { Scope, Rule } from 'eslint';
 
 export interface ReferenceTrackerOptions {
     /**
@@ -9,7 +9,7 @@ export interface ReferenceTrackerOptions {
     /**
      * The mode to determine the ImportDeclaration's behavior for CJS modules.
      */
-    mode?: "legacy" | "strict";
+    mode?: 'legacy' | 'strict';
 }
 
 export interface TraceMap<T = unknown> {

@@ -7,8 +7,10 @@
 // TypeScript Version: 3.0
 
 /**
+ *
  * Official documentation for rox-react-native is available here:
  * https://docs.cloudbees.com/docs/cloudbees-feature-flags-api/4.9/api-reference/react-native-api
+ *
  */
 
 export interface RoxContainer {
@@ -30,14 +32,14 @@ export function register(namespace: string, roxContainer: RoxContainer): void;
  */
 export function setup(
     apiKey: string,
-    options?: RoxSetupOptions,
+    options?: RoxSetupOptions
 ): Promise<unknown>;
 
 export interface RoxSetupOptions {
     version?: string | undefined;
     // https://docs.cloudbees.com/docs/cloudbees-feature-flags-api/4.9/api-reference/react-native-api#_configurationfetchedhandler
     configurationFetchedHandler?(fetcherResult: RoxFetcherResult): void;
-    debugLevel?: "verbose" | undefined;
+    debugLevel?: 'verbose' | undefined;
     // https://docs.cloudbees.com/docs/cloudbees-feature-flags-api/4.9/api-reference/react-native-api#_using_the_impressionhandler_option
     impressionHandler?(reporting: RoxReporting, experiment: RoxExperiment, context: unknown): void;
     platform?: string | undefined;
@@ -55,10 +57,10 @@ export interface RoxSetupOptions {
 }
 
 export enum RoxFetcherStatus {
-    AppliedFromEmbedded = "APPLIED_FROM_EMBEDDED",
-    AppliedFromCache = "APPLIED_FROM_CACHE",
-    AppliedFromNetwork = "APPLIED_FROM_NETWORK",
-    ErrorFetchFailed = "ERROR_FETCH_FAILED",
+    AppliedFromEmbedded = 'APPLIED_FROM_EMBEDDED',
+    AppliedFromCache = 'APPLIED_FROM_CACHE',
+    AppliedFromNetwork = 'APPLIED_FROM_NETWORK',
+    ErrorFetchFailed = 'ERROR_FETCH_FAILED',
 }
 
 export interface RoxFetcherResult {
@@ -86,18 +88,18 @@ export interface RoxExperiment {
  */
 export function setCustomNumberProperty(
     name: string,
-    value: number | (() => number),
+    value: number | (() => number)
 ): void;
 export function setCustomStringProperty(
     name: string,
-    value: string | (() => string),
+    value: string | (() => string)
 ): void;
 export function setCustomBooleanProperty(
     name: string,
-    value: boolean | (() => boolean),
+    value: boolean | (() => boolean)
 ): void;
 export function setDynamicCustomPropertyRule(
-    handler: (propName: string, context: unknown) => number | string | boolean,
+    handler: (propName: string, context: unknown) => number | string | boolean
 ): void;
 
 /**
@@ -222,7 +224,7 @@ export namespace overrides {
      *
      * Note that for boolean flag we still give the value as a string.
      */
-    function setOverride(nameSpacedFlagName: string, value: string | "false" | "true"): void;
+    function setOverride(nameSpacedFlagName: string, value: string | 'false' | 'true'): void;
 
     /**
      * Clears the override value from the flag (and the disk).
@@ -256,6 +258,6 @@ export namespace dynamicApi {
      * Getting string value of a Variant flag
      */
     function value(nameSpacedFlagName: string, defaultValue: string, context?: unknown): string;
-}
+  }
 
 export const flags: ReadonlyArray<Flag>;

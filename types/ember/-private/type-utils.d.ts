@@ -16,19 +16,23 @@ export type MethodNamesOf<O> = {
     [K in keyof O]: O[K] extends AnyFn ? K : never;
 }[keyof O];
 
-export type MethodParams<T, M extends MethodNamesOf<T>> = Parameters<MethodsOf<T>[M]>;
+export type MethodParams<T, M extends MethodNamesOf<T>> =
+    Parameters<MethodsOf<T>[M]>;
 
-export type MethodReturns<T, M extends MethodNamesOf<T>> = ReturnType<MethodsOf<T>[M]>;
-
-/** Get the return value of a method string name or a function. */
-export type EmberMethodParams<T, M extends EmberMethod<T>> = M extends AnyMethod<T> ? Parameters<M>
-    : M extends keyof T ? T[M] extends AnyMethod<T> ? Parameters<MethodsOf<T>[M]> : never
-    : never;
+export type MethodReturns<T, M extends MethodNamesOf<T>> =
+    ReturnType<MethodsOf<T>[M]>;
 
 /** Get the return value of a method string name or a function. */
-export type EmberMethodReturn<T, M extends EmberMethod<T>> = M extends AnyMethod<T> ? ReturnType<M>
-    : M extends keyof T ? T[M] extends AnyMethod<T> ? ReturnType<MethodsOf<T>[M]> : never
-    : never;
+export type EmberMethodParams<T, M extends EmberMethod<T>> =
+    M extends AnyMethod<T> ? Parameters<M> :
+    M extends keyof T ? T[M] extends AnyMethod<T> ? Parameters<MethodsOf<T>[M]> : never :
+    never;
+
+/** Get the return value of a method string name or a function. */
+export type EmberMethodReturn<T, M extends EmberMethod<T>> =
+    M extends AnyMethod<T> ? ReturnType<M> :
+    M extends keyof T ? T[M] extends AnyMethod<T> ? ReturnType<MethodsOf<T>[M]> : never :
+    never;
 
 /**
  * A type utility for Ember's common name-of-object-on-target-or-function
@@ -42,7 +46,7 @@ export type EmberMethod<Target> = AnyMethod<Target> | keyof Target;
 // case (see e.g. `@ember/component/helper`'s use with functional helpers).
 declare const Data: unique symbol;
 export class Opaque<Data> {
-    declare private [Data]: Data;
+    private declare [Data]: Data;
 }
 
 // export type { Opaque };

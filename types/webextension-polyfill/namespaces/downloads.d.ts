@@ -7,8 +7,8 @@
  *
  * Permissions: "downloads"
  */
-import { Events } from "./events";
 import { ExtensionTypes } from "./extensionTypes";
+import { Events } from "./events";
 
 export namespace Downloads {
     type FilenameConflictAction = "uniquify" | "overwrite" | "prompt";

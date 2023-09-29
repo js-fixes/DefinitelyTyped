@@ -1,2 +1,2 @@
-import { endsWith } from "../index.js";
+import { endsWith } from '../index';
 export default endsWith;

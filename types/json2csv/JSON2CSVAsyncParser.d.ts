@@ -1,4 +1,4 @@
-import { Readable, Transform, TransformOptions, Writable } from "stream";
+import { Transform, TransformOptions, Writable, Readable } from "stream";
 import JSON2CSVBase = require("./JSON2CSVBase");
 import JSON2CSVTransform = require("./JSON2CSVTransform");
 

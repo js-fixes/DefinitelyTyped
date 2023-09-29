@@ -1,2 +1,2 @@
-import { indexBy } from "../index.js";
+import { indexBy } from '../index';
 export default indexBy;

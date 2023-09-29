@@ -1,2 +1,2 @@
-import { identical } from "../index.js";
+import { identical } from '../index';
 export default identical;

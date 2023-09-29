@@ -1,2 +1,2 @@
-import { lensProp } from "../index.js";
+import { lensProp } from '../index';
 export default lensProp;

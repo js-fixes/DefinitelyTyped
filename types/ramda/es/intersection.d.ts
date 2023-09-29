@@ -1,2 +1,2 @@
-import { intersection } from "../index.js";
+import { intersection } from '../index';
 export default intersection;

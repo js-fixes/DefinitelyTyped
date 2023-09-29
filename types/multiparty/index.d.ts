@@ -5,9 +5,10 @@
 
 /// <reference types="node" />
 
-import http = require("http");
-import events = require("events");
-import stream = require("stream");
+
+import http = require('http');
+import events = require('events');
+import stream = require('stream');
 
 export declare class Form extends events.EventEmitter {
     constructor(options?: FormOptions);

@@ -26,12 +26,7 @@ declare function mergeImages(sources: mergeImages.ImageSource[], options?: merge
 declare namespace mergeImages {
     type Image = string | Buffer;
 
-    type ImageSource = Image | {
-        src: Image;
-        x?: number | undefined;
-        y?: number | undefined;
-        opacity?: number | undefined;
-    };
+    type ImageSource = Image | { src: Image; x?: number | undefined; y?: number | undefined; opacity?: number | undefined };
 
     interface Options {
         /**

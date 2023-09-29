@@ -1,2 +1,2 @@
-import { until } from "../index.js";
+import { until } from '../index';
 export default until;

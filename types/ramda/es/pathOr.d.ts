@@ -1,2 +1,2 @@
-import { pathOr } from "../index.js";
+import { pathOr } from '../index';
 export default pathOr;

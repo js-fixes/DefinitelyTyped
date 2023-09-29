@@ -1,2 +1,2 @@
-import { modulo } from "../index.js";
+import { modulo } from '../index';
 export default modulo;

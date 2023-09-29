@@ -1,45 +1,45 @@
 import {
-    constants,
-    createHistogram,
+    performance as NodePerf,
+    monitorEventLoopDelay,
+    PerformanceObserverCallback,
+    PerformanceObserver,
+    PerformanceEntry,
     EntryType,
+    constants,
     EventLoopUtilization,
     IntervalHistogram,
-    monitorEventLoopDelay,
-    NodeGCPerformanceDetail,
-    performance as NodePerf,
-    PerformanceEntry,
-    PerformanceObserver,
-    PerformanceObserverCallback,
     RecordableHistogram,
-} from "node:perf_hooks";
+    createHistogram,
+    NodeGCPerformanceDetail,
+} from 'node:perf_hooks';
 
 // Test module import once, the rest use global
-NodePerf.mark("start");
+NodePerf.mark('start');
 (() => {})();
-performance.mark("end");
+performance.mark('end');
 
-performance.mark("test", {
-    detail: "something",
+performance.mark('test', {
+    detail: 'something',
     startTime: 123,
 });
 
-performance.measure("test", {
-    detail: "something",
+performance.measure('test', {
+    detail: 'something',
     duration: 123,
-    start: "startMark",
-    end: "endMark",
+    start: 'startMark',
+    end: 'endMark',
 });
 
-performance.measure("test", {
-    detail: "something",
+performance.measure('test', {
+    detail: 'something',
     duration: 123,
     start: 123,
     end: 456,
 });
 
-performance.measure("name", "startMark", "endMark");
-performance.measure("name", "startMark");
-performance.measure("name");
+performance.measure('name', 'startMark', 'endMark');
+performance.measure('name', 'startMark');
+performance.measure('name');
 
 const timeOrigin: number = performance.timeOrigin;
 
@@ -62,11 +62,11 @@ const performanceObserverCallback: PerformanceObserverCallback = (list, obs) => 
 };
 const obs = new PerformanceObserver(performanceObserverCallback);
 obs.observe({
-    entryTypes: ["gc"],
+    entryTypes: ['gc'],
     buffered: true,
 });
 obs.observe({
-    type: "gc",
+    type: 'gc',
     buffered: true,
 });
 
@@ -89,10 +89,7 @@ const exceeds: number = monitor.exceeds;
 // eventLoopUtilization isn't available in DOM environment, so use the import rather than the global
 const eventLoopUtilization1: EventLoopUtilization = NodePerf.eventLoopUtilization();
 const eventLoopUtilization2: EventLoopUtilization = NodePerf.eventLoopUtilization(eventLoopUtilization1);
-const eventLoopUtilization3: EventLoopUtilization = NodePerf.eventLoopUtilization(
-    eventLoopUtilization2,
-    eventLoopUtilization1,
-);
+const eventLoopUtilization3: EventLoopUtilization = NodePerf.eventLoopUtilization(eventLoopUtilization2, eventLoopUtilization1);
 
 let histogram: RecordableHistogram = createHistogram({
     figures: 123,

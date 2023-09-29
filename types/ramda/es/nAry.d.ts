@@ -1,2 +1,2 @@
-import { nAry } from "../index.js";
+import { nAry } from '../index';
 export default nAry;

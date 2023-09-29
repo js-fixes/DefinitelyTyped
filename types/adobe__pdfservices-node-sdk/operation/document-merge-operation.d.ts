@@ -30,6 +30,7 @@
 export class DocumentMergeOperation {
     /**
      * Constructs a {@link DocumentMergeOperation} instance.
+     *
      */
     static createNew(options: DocumentMergeOptions): DocumentMergeOperation;
     static get SupportedSourceFormat(): {
@@ -55,5 +56,5 @@ export class DocumentMergeOperation {
     execute(context: ExecutionContext): Promise<FileRef>;
     validate(context: any): void;
 }
-import { ExecutionContext, FileRef } from "../pdfservices-sdk";
-import { DocumentMergeOptions } from "./option/documentmerge/document-merge-options";
+import { ExecutionContext, FileRef } from '../pdfservices-sdk';
+import { DocumentMergeOptions } from './option/documentmerge/document-merge-options';

@@ -5,10 +5,10 @@
 
 /* tslint:disable:no-redundant-jsdoc-2 */
 
-import { Case as CaseEnum } from "./src/Case";
-import Engine from "./src/Engine";
-import { Gender as GenderEnum } from "./src/Gender";
-import { Lemma, LemmaOptions } from "./src/Lemma";
+import { Gender as GenderEnum } from './src/Gender';
+import { Case as CaseEnum } from './src/Case';
+import { LemmaOptions, Lemma } from './src/Lemma';
+import Engine from './src/Engine';
 
 export as namespace RussianNounsJS;
 

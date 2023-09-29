@@ -7,17 +7,18 @@
 /// <reference types="react" />
 
 declare module "react-easy-chart" {
+
     interface BarData {
         x: number | Date | string;
         y: number;
-        color?: string | undefined;
+        color?: string | undefined
     }
     interface BarChartProps {
         /** Whether to show axis labels */
         axes?: boolean | undefined;
 
         /** Labels for each of the axis */
-        axisLabels?: { x?: string | undefined; y?: string | undefined; y2?: string | undefined } | undefined;
+        axisLabels?: { x?: string | undefined, y?: string | undefined, y2?: string | undefined } | undefined;
 
         /** The width of an individual bar in pixels */
         barWidth?: number | undefined;
@@ -44,12 +45,7 @@ declare module "react-easy-chart" {
         lineData?: Array<LineData> | undefined;
 
         /** css margins */
-        margin?: {
-            top?: number | undefined;
-            right?: number | undefined;
-            bottom?: number | undefined;
-            left?: number | undefined;
-        } | undefined;
+        margin?: { top?: number | undefined, right?: number | undefined, bottom?: number | undefined, left?: number | undefined } | undefined;
 
         mouseMoveHandler?: ((data: BarData, mouseEvent: MouseEvent) => any) | undefined;
 
@@ -70,10 +66,10 @@ declare module "react-easy-chart" {
         xTickNumber?: number | undefined;
 
         /** What data type the x axis is */
-        xType?: "time" | "text" | "linear" | undefined;
+        xType?: 'time' | 'text' | 'linear' | undefined;
 
         /** What data type the second y axis is */
-        y2Type?: "time" | "text" | "linear" | undefined;
+        y2Type?: 'time' | 'text' | 'linear' | undefined;
 
         /** Whether to show the axis on the right (default false: left) */
         yAxisOrientRight?: boolean | undefined;
@@ -95,7 +91,7 @@ declare module "react-easy-chart" {
     interface PieChartProps {
         clickHandler?: ((data: PieData, mouseEvent: MouseEvent) => any) | undefined;
 
-        data: Array<{ key: string; value: number; color?: string | undefined }>;
+        data: Array<{ key: string, value: number, color?: string | undefined }>;
 
         /** Size in pixels of the inner hole (diameter) */
         innerHoleSize?: number | undefined;
@@ -129,7 +125,7 @@ declare module "react-easy-chart" {
         axes?: boolean | undefined;
 
         /** Labels for each of the axis */
-        axisLabels?: { x?: string | undefined; y?: string | undefined } | undefined;
+        axisLabels?: { x?: string | undefined, y?: string | undefined } | undefined;
 
         clickHandler?: ((data: LineData, mouseEvent: MouseEvent) => any) | undefined;
 
@@ -145,31 +141,17 @@ declare module "react-easy-chart" {
         height?: number | undefined;
 
         /** Smoothing option for the lines */
-        interpolate?:
-            | "linear"
-            | "linear-closed"
-            | "step"
-            | "step-before"
-            | "step-after"
-            | "basis"
-            | "basis-open"
-            | "basis-closed"
-            | "bundle"
-            | "cardinal"
-            | "cardinal-open"
-            | "cardinal-closed"
-            | "monotone"
-            | undefined;
+        interpolate?: 'linear' | 'linear-closed'
+            | 'step' | 'step-before' | 'step-after'
+            | 'basis' | 'basis-open' | 'basis-closed'
+            | 'bundle'
+            | 'cardinal' | 'cardinal-open' | 'cardinal-closed'
+            | 'monotone' | undefined;
 
         lineColors?: Array<string> | undefined;
 
         /** css margins */
-        margin?: {
-            top?: number | undefined;
-            right?: number | undefined;
-            bottom?: number | undefined;
-            left?: number | undefined;
-        } | undefined;
+        margin?: { top?: number | undefined, right?: number | undefined, bottom?: number | undefined, left?: number | undefined } | undefined;
 
         mouseMoveHandler?: ((data: LineData, mouseEvent: MouseEvent) => any) | undefined;
 
@@ -193,7 +175,7 @@ declare module "react-easy-chart" {
         xTicks?: number | undefined;
 
         /** What data type the x axis is */
-        xType?: "time" | "text" | "linear" | undefined;
+        xType?: 'time' | 'text' | 'linear' | undefined;
 
         /** Whether to show the axis on the right (default false: left) */
         yAxisOrientRight?: boolean | undefined;
@@ -205,7 +187,7 @@ declare module "react-easy-chart" {
         yTicks?: number | undefined;
 
         /** What data type the x axis is */
-        yType?: "time" | "text" | "linear" | undefined;
+        yType?: 'time' | 'text' | 'linear' | undefined;
     }
     class LineChart extends React.Component<LineChartProps> {
     }
@@ -228,12 +210,12 @@ declare module "react-easy-chart" {
         axes?: boolean | undefined;
 
         /** Labels for each of the axis */
-        axisLabels?: { x?: string | undefined; y?: string | undefined } | undefined;
+        axisLabels?: { x?: string | undefined, y?: string | undefined } | undefined;
 
         clickHandler?: ((data: ScatterplotData, mouseEvent: MouseEvent) => any) | undefined;
 
         /** Allows styling of individual types of points */
-        config?: Array<{ type: string; color: string; stroke: string }> | undefined;
+        config?: Array<{ type: string, color: string, stroke: string }> | undefined;
 
         data: Array<ScatterplotData>;
 
@@ -247,12 +229,7 @@ declare module "react-easy-chart" {
         height?: number | undefined;
 
         /** css margins */
-        margin?: {
-            top?: number | undefined;
-            right?: number | undefined;
-            bottom?: number | undefined;
-            left?: number | undefined;
-        } | undefined;
+        margin?: { top?: number | undefined, right?: number | undefined, bottom?: number | undefined, left?: number | undefined } | undefined;
 
         mouseMoveHandler?: ((data: ScatterplotData, mouseEvent: MouseEvent) => any) | undefined;
 
@@ -270,7 +247,7 @@ declare module "react-easy-chart" {
         xDomainRange?: Array<number> | Array<Date> | Array<string> | undefined;
 
         /** What data type the x axis is */
-        xType?: "time" | "text" | "linear" | undefined;
+        xType?: 'time' | 'text' | 'linear' | undefined;
 
         /** Whether to show the axis on the right (default false: left) */
         yAxisOrientRight?: boolean | undefined;
@@ -279,7 +256,7 @@ declare module "react-easy-chart" {
         yDomainRange?: Array<number> | Array<Date> | Array<string> | undefined;
 
         /** What data type the x axis is */
-        yType?: "time" | "text" | "linear" | undefined;
+        yType?: 'time' | 'text' | 'linear' | undefined;
     }
     class ScatterplotChart extends React.Component<ScatterplotChartProps> {
     }
@@ -299,5 +276,8 @@ declare module "react-easy-chart" {
         styles?: { [cssSelector: string]: React.CSSProperties } | undefined;
     }
     class Legend extends React.Component<LegendProps> {
+
     }
+
 }
+

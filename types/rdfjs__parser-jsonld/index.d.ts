@@ -4,9 +4,9 @@
 //                 tpluscode <https://github.com/tpluscode>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { EventEmitter } from "events";
-import { Context } from "jsonld/jsonld-spec.js";
-import { BaseQuad, DataFactory, Quad, Sink, Stream } from "rdf-js";
+import { Context } from 'jsonld/jsonld-spec.js';
+import { DataFactory, Sink, Stream, BaseQuad, Quad } from 'rdf-js';
+import { EventEmitter } from 'events';
 
 export interface ParserOptions {
     baseIRI?: string | undefined;

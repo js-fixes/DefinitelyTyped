@@ -1,2 +1,2 @@
-import { product } from "../index.js";
+import { product } from '../index';
 export default product;

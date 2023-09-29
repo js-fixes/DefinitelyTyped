@@ -14,6 +14,7 @@
             }
         ],
         "only-arrow-functions": false,
+        "strict-export-declare-modifiers": false,
         "triple-equals": false,
         "unified-signatures": false
     }

@@ -1,5 +1,5 @@
-import * as Chart from "chart.js";
+import VueChartkick from 'vue-chartkick';
 import Vue from "vue";
-import VueChartkick from "vue-chartkick";
+import * as Chart from "chart.js";
 
-Vue.use(VueChartkick, { adapter: Chart });
+Vue.use(VueChartkick, {adapter: Chart});

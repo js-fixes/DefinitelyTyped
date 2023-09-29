@@ -8,28 +8,27 @@ import * as srp from "secure-random-password";
         characters: [
             { characters: srp.upper, exactly: 1 },
             { characters: srp.symbols, exactly: 1 },
-            srp.lower,
-        ],
+            srp.lower]
     });
     srp.randomPassword({
         characters: [
             { characters: srp.symbols, exactly: 1 },
             { characters: srp.upper },
-        ],
+        ]
     });
     srp.randomPassword({
-        characters: { characters: srp.symbols },
+        characters: { characters: srp.symbols }
     });
     srp.randomPassword({
         characters: [
             { characters: srp.symbols, exactly: 1 },
             { characters: srp.upper },
-            "_-",
-        ],
+            '_-',
+        ]
     });
-    srp.randomPassword({ avoidAmbiguous: false, characters: "O0o" });
-    srp.randomPassword({ characters: "abc" });
-    srp.randomPassword({ characters: srp.lower, predicate: (x: string) => !x.includes("secure") });
+    srp.randomPassword({ avoidAmbiguous: false, characters: 'O0o' });
+    srp.randomPassword({ characters: 'abc' });
+    srp.randomPassword({ characters: srp.lower, predicate: (x: string) => !x.includes('secure') });
 
     srp.randomString();
     srp.randomString({ length: 8 });
@@ -43,7 +42,7 @@ import * as srp from "secure-random-password";
             srp.digits,
             srp.symbols,
             srp.fullSymbols,
-            srp.copyableSymbols,
-        ],
+            srp.copyableSymbols
+        ]
     });
 }

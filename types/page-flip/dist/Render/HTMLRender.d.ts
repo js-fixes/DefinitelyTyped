@@ -1,6 +1,6 @@
-import { PageFlip } from "../PageFlip";
-import { FlipSetting } from "../Settings";
-import { Render } from "./Render";
+import { Render } from './Render';
+import { PageFlip } from '../PageFlip';
+import { FlipSetting } from '../Settings';
 /**
  * Class responsible for rendering the HTML book
  */

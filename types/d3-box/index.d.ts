@@ -28,3 +28,4 @@ declare module "d3" {
         quantiles(x: (d: any[]) => number[]): Box;
     }
 }
+

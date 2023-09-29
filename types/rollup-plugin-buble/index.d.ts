@@ -6,8 +6,8 @@
 
 /// <reference types="node" />
 
-import { TransformOptions } from "buble";
-import { Plugin } from "rollup";
+import { Plugin } from 'rollup';
+import { TransformOptions } from 'buble';
 
 declare namespace buble {
     interface Options extends TransformOptions {

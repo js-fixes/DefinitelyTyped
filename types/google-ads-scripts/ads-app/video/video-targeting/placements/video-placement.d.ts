@@ -72,13 +72,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface VideoPlacementSelector
-            extends
-                Base.Selector<VideoPlacementIterator>,
+            extends Base.Selector<VideoPlacementIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

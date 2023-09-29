@@ -1,6 +1,7 @@
 {
     "extends": "@definitelytyped/dtslint/dt.json",
     "rules": {
+        "no-single-declare-module": false,
         "npm-naming": [
             true,
             {
@@ -8,6 +9,7 @@
                 "mode": "code"
             }
         ],
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

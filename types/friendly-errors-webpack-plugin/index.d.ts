@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.7
 
-import { Compiler, Plugin } from "webpack";
+import { Plugin, Compiler } from 'webpack';
 
 export = FriendlyErrorsWebpackPlugin;
 
@@ -22,8 +22,8 @@ declare namespace FriendlyErrorsWebpackPlugin {
 
     interface Options {
         compilationSuccessInfo?: {
-            messages: string[];
-            notes: string[];
+            messages: string[],
+            notes: string[],
         } | undefined;
         onErrors?(severity: Severity, errors: string): void;
         clearConsole?: boolean | undefined;

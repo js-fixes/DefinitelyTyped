@@ -1,3 +1,4 @@
+
 /// <reference types="jquery" />
 
 var nodes = document.getElementsByClassName(".test-container");
@@ -5,7 +6,7 @@ var node = document.getElementById("#test-container");
 var $nodes = $(".selector");
 
 eqjs.query(node);
-eqjs.query(node, () => {});
+eqjs.query(node, () => { });
 eqjs.query(nodes);
 eqjs.query($nodes);
 

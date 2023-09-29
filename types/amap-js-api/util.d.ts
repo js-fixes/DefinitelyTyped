@@ -61,10 +61,7 @@ declare namespace AMap {
          */
         function includes<T = any>(array: T[], item: T): boolean;
 
-        function requestIdleCallback(
-            callback: (...args: any[]) => any,
-            options?: { timeout?: number | undefined },
-        ): number;
+        function requestIdleCallback(callback: (...args: any[]) => any, options?: { timeout?: number | undefined }): number;
 
         function cancelIdleCallback(handle: number): void;
 

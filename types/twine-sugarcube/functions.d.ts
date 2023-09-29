@@ -1,4 +1,4 @@
-import { SugarCubeStoryVariables, SugarCubeTemporaryVariables } from "./userdata";
+import { SugarCubeTemporaryVariables, SugarCubeStoryVariables } from "./userdata";
 
 declare global {
     /**
@@ -320,8 +320,7 @@ declare global {
     function setPageElement(
         idOrElement: string | HTMLElement,
         passages: string | string[],
-        defaultText?: string,
-    ): HTMLElement | null;
+        defaultText?: string): HTMLElement | null;
 
     /**
      * Returns a new array consisting of all of the tags of the given passages.

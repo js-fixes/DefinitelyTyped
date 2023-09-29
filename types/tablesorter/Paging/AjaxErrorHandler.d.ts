@@ -23,10 +23,5 @@ export interface AjaxErrorHandler<TElement = HTMLElement> {
      * @return
      * The error-message to display in the table-head.
      */
-    (
-        config: TablesorterConfigurationStore<TElement>,
-        request: JQuery.jqXHR,
-        ajaxSettings: JQuery.AjaxSettings,
-        thrownError: string,
-    ): string;
+    (config: TablesorterConfigurationStore<TElement>, request: JQuery.jqXHR, ajaxSettings: JQuery.AjaxSettings, thrownError: string): string;
 }

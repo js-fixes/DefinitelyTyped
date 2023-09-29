@@ -13,6 +13,7 @@ declare namespace ng {
 }
 
 declare namespace angularScenario {
+
     export interface RunFunction {
         (functionToRun: any): any;
     }
@@ -106,9 +107,7 @@ declare namespace angularScenario {
         mouseover(): any;
         mousedown(): any;
         mouseup(): any;
-        query(
-            callback: (selectedDOMElements: JQuery, callbackWhenDone: (objNull: any, futureValue: any) => any) => any,
-        ): any;
+        query(callback: (selectedDOMElements: JQuery, callbackWhenDone: (objNull: any, futureValue: any) => any) => any): any;
         val(): Future;
         text(): Future;
         html(): Future;

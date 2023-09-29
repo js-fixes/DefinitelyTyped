@@ -4,11 +4,12 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Reference: https://github.com/Fuzzyma/svg.resize.js
 
+
 declare namespace svgjs {
     export interface Element {
-        selectize(): Element;
-        selectize(obj: Object): Element;
-        resize(): Element;
-        resize(obj: Object): Element;
+        selectize(): Element
+        selectize(obj: Object): Element
+        resize(): Element
+        resize(obj: Object): Element
     }
 }

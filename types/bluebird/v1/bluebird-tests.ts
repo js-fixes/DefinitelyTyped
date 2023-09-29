@@ -1,3 +1,5 @@
+
+
 // Tests by: Bart van der Schoor <https://github.com/Bartvds>
 
 // Note: replicate changes to all overloads in both definition and test file
@@ -37,21 +39,21 @@ interface Bar {
 // - - - - - - - - - - - - - - - - -
 
 interface StrFooMap {
-    [key: string]: Foo;
+    [key:string]:Foo;
 }
 
 interface StrBarMap {
-    [key: string]: Bar;
+    [key:string]:Bar;
 }
 
 // - - - - - - - - - - - - - - - - -
 
 interface StrFooArrMap {
-    [key: string]: Foo[];
+    [key:string]:Foo[];
 }
 
 interface StrBarArrMap {
-    [key: string]: Bar[];
+    [key:string]:Bar[];
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -149,7 +151,8 @@ barThen = barProm;
 fooProm = new Promise((resolve: (value: Foo) => void, reject: (reason: any) => void) => {
     if (bool) {
         resolve(foo);
-    } else {
+    }
+    else {
         reject(new Error(str));
     }
 });
@@ -165,7 +168,8 @@ fooProm = new Promise((resolve: (value: Foo) => void) => {
 fooProm = new Promise<Foo>((resolve, reject) => {
     if (bool) {
         resolve(fooThen);
-    } else {
+    }
+    else {
         reject(new Error(str));
     }
 });
@@ -182,6 +186,7 @@ fooResolver.reject(err);
 fooResolver.progress(bar);
 
 fooResolver.callback = (err: any, value: Foo) => {
+
 };
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -294,6 +299,7 @@ barProm = fooProm.done((value: Foo) => {
 }, (reason: any) => {
     return bar;
 }, (note: any) => {
+
 });
 barProm = fooProm.done((value: Foo) => {
     return bar;
@@ -311,6 +317,7 @@ barProm = fooProm.done((value: Foo) => {
 }, (reason: any) => {
     return barThen;
 }, (note: any) => {
+
 });
 barProm = fooProm.done((value: Foo) => {
     return barThen;
@@ -339,8 +346,10 @@ fooProm = fooProm.timeout(num, str);
 
 fooProm.nodeify();
 fooProm = fooProm.nodeify((err: any) => {
+
 });
 fooProm = fooProm.nodeify((err: any, foo?: Foo) => {
+
 });
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -350,6 +359,7 @@ barProm = fooProm.fork((value: Foo) => {
 }, (reason: any) => {
     return bar;
 }, (note: any) => {
+
 });
 barProm = fooProm.fork((value: Foo) => {
     return bar;
@@ -367,6 +377,7 @@ barProm = fooProm.fork((value: Foo) => {
 }, (reason: any) => {
     return barThen;
 }, (note: any) => {
+
 });
 barProm = fooProm.fork((value: Foo) => {
     return barThen;
@@ -401,7 +412,7 @@ fooInspection = fooProm.inspect();
 anyProm = fooProm.call(str);
 anyProm = fooProm.call(str, 1, 2, 3);
 
-// TODO enable get() test when implemented
+//TODO enable get() test when implemented
 // barProm = fooProm.get(str);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -448,7 +459,7 @@ barProm = fooArrProm.spread<Bar>((one: Foo, two: Bar, twotwo: Foo) => {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO fix collection inference
+//TODO fix collection inference
 
 barArrProm = fooProm.all<Bar>();
 
@@ -464,7 +475,7 @@ barProm = fooProm.race<Bar>();
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO fix collection inference
+//TODO fix collection inference
 
 barArrProm = fooProm.map<Foo, Bar>((item: Foo, index: number, arrayLength: number) => {
     return bar;
@@ -493,7 +504,7 @@ fooArrProm = fooArrProm.filter<Foo>((item: Foo) => {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-function getMaybePromise(): Foo | Promise<Foo> {
+function getMaybePromise(): Foo|Promise<Foo> {
     return foo;
 }
 
@@ -509,13 +520,9 @@ fooProm = Promise.try(() => {
 fooProm = Promise.try(() => {
     return foo;
 }, arr);
-fooProm = Promise.try(
-    () => {
-        return foo;
-    },
-    arr,
-    x,
-);
+fooProm = Promise.try(() => {
+    return foo;
+}, arr, x);
 
 // - - - - - - - - - - - - - - - - -
 
@@ -525,13 +532,9 @@ fooProm = Promise.try(() => {
 fooProm = Promise.try(() => {
     return fooThen;
 }, arr);
-fooProm = Promise.try(
-    () => {
-        return fooThen;
-    },
-    arr,
-    x,
-);
+fooProm = Promise.try(() => {
+    return fooThen;
+}, arr, x);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -547,13 +550,9 @@ fooProm = Promise.attempt(() => {
 fooProm = Promise.attempt(() => {
     return foo;
 }, arr);
-fooProm = Promise.attempt(
-    () => {
-        return foo;
-    },
-    arr,
-    x,
-);
+fooProm = Promise.attempt(() => {
+    return foo;
+}, arr, x);
 
 // - - - - - - - - - - - - - - - - -
 
@@ -563,17 +562,14 @@ fooProm = Promise.attempt(() => {
 fooProm = Promise.attempt(() => {
     return fooThen;
 }, arr);
-fooProm = Promise.attempt(
-    () => {
-        return fooThen;
-    },
-    arr,
-    x,
-);
+fooProm = Promise.attempt(() => {
+    return fooThen;
+}, arr, x);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-func = Promise.method(function() {
+func = Promise.method(function () {
+
 });
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -602,7 +598,7 @@ Promise.longStackTraces();
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO enable delay
+//TODO enable delay
 
 fooProm = Promise.delay(fooThen, num);
 fooProm = Promise.delay(foo, num);
@@ -612,12 +608,13 @@ voidProm = Promise.delay(num);
 
 func = Promise.promisify(f);
 func = Promise.promisify(f, obj);
+;
 
 obj = Promise.promisifyAll(obj);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO enable generator
+//TODO enable generator
 /*
  func = Promise.coroutine(f);
 
@@ -628,11 +625,12 @@ obj = Promise.promisifyAll(obj);
 BlueBird = Promise.noConflict();
 
 Promise.onPossiblyUnhandledRejection((reason: any) => {
+
 });
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO expand tests to overloads
+//TODO expand tests to overloads
 fooArrProm = Promise.all(fooThenArrThen);
 fooArrProm = Promise.all(fooArrProm);
 fooArrProm = Promise.all(fooThenArr);
@@ -645,7 +643,7 @@ objProm = Promise.props(obj);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO expand tests to overloads
+//TODO expand tests to overloads
 fooInspectionArrProm = Promise.settle(fooThenArrThen);
 fooInspectionArrProm = Promise.settle(fooArrProm);
 fooInspectionArrProm = Promise.settle(fooThenArr);
@@ -653,7 +651,7 @@ fooInspectionArrProm = Promise.settle(fooArr);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO expand tests to overloads
+//TODO expand tests to overloads
 fooProm = Promise.any(fooThenArrThen);
 fooProm = Promise.any(fooArrProm);
 fooProm = Promise.any(fooThenArr);
@@ -661,7 +659,7 @@ fooProm = Promise.any(fooArr);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO expand tests to overloads
+//TODO expand tests to overloads
 fooProm = Promise.race(fooThenArrThen);
 fooProm = Promise.race(fooArrProm);
 fooProm = Promise.race(fooThenArr);
@@ -669,7 +667,7 @@ fooProm = Promise.race(fooArr);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// TODO expand tests to overloads
+//TODO expand tests to overloads
 fooArrProm = Promise.some(fooThenArrThen, num);
 fooArrProm = Promise.some(fooArrThen, num);
 fooArrProm = Promise.some(fooThenArr, num);

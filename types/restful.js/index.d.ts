@@ -3,8 +3,9 @@
 // Definitions by: Qubo <https://github.com/tkqubo>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 export interface Headers {
-    [key: string]: any;
+    [key: string]: any
 }
 
 export interface Api extends Endpoint<Api> {
@@ -154,7 +155,7 @@ export interface MemberResponse<T> extends ResponseBase {
         headers: Headers;
         status: number;
         statusText: string;
-    };
+    }
     body(): ResponseBody<T>;
 }
 
@@ -164,7 +165,7 @@ export interface CollectionResponse<T> extends ResponseBase {
         headers: Headers;
         status: number;
         statusText: string;
-    };
+    }
     body(): ResponseBody<T>[];
 }
 

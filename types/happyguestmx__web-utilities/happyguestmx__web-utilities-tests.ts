@@ -1,4 +1,4 @@
-import { common, fsp } from "@happyguestmx/web-utilities";
+import { fsp, common } from '@happyguestmx/web-utilities';
 
 new fsp.FSP([], [], true, true);
 common.isEmpty({});

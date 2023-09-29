@@ -1,11 +1,11 @@
-import { Client } from "./client";
-import { callback } from "./core";
-import { GooglePaymentDetails } from "./google-payment";
-import { HostedFieldsAccountDetails } from "./hosted-fields";
-import { PayPalAccountDetails } from "./paypal";
-import { ThreeDSecureAccountDetails } from "./three-d-secure";
-import { UnionPayAccountDetails } from "./unionpay";
-import { VenmoAccountDetails } from "./venmo";
+import { callback } from './core';
+import { Client } from './client';
+import { GooglePaymentDetails } from './google-payment';
+import { HostedFieldsAccountDetails } from './hosted-fields';
+import { PayPalAccountDetails } from './paypal';
+import { ThreeDSecureAccountDetails } from './three-d-secure';
+import { UnionPayAccountDetails } from './unionpay';
+import { VenmoAccountDetails } from './venmo';
 
 /**
  * Manages customer's payment methods.

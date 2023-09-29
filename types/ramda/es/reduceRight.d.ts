@@ -1,2 +1,2 @@
-import { reduceRight } from "../index.js";
+import { reduceRight } from '../index';
 export default reduceRight;

@@ -1,2 +1,2 @@
-import { toLower } from "../index.js";
+import { toLower } from '../index';
 export default toLower;

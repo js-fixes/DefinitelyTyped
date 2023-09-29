@@ -1,6 +1,6 @@
-import { Mimetype } from "./GuacCommon.d";
-import { Layer } from "./Layer";
-import { VisibleLayer } from "./VisibleLayer";
+import { Layer } from './Layer';
+import { VisibleLayer } from './VisibleLayer';
+import { Mimetype } from './GuacCommon.d';
 
 export {};
 

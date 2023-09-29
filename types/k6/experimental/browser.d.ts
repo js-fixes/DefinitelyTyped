@@ -13,11 +13,16 @@ export type EvaluationArgument = object;
 
 export type PageFunction<Arg, R> = string | ((arg: Unboxed<Arg>) => R);
 
-export type Unboxed<Arg> = Arg extends [infer A0, infer A1] ? [Unboxed<A0>, Unboxed<A1>]
-    : Arg extends [infer A0, infer A1, infer A2] ? [Unboxed<A0>, Unboxed<A1>, Unboxed<A2>]
-    : Arg extends [infer A0, infer A1, infer A2, infer A3] ? [Unboxed<A0>, Unboxed<A1>, Unboxed<A2>, Unboxed<A3>]
-    : Arg extends Array<infer T> ? Array<Unboxed<T>>
-    : Arg extends object ? { [Key in keyof Arg]: Unboxed<Arg[Key]> }
+export type Unboxed<Arg> = Arg extends [infer A0, infer A1]
+    ? [Unboxed<A0>, Unboxed<A1>]
+    : Arg extends [infer A0, infer A1, infer A2]
+    ? [Unboxed<A0>, Unboxed<A1>, Unboxed<A2>]
+    : Arg extends [infer A0, infer A1, infer A2, infer A3]
+    ? [Unboxed<A0>, Unboxed<A1>, Unboxed<A2>, Unboxed<A3>]
+    : Arg extends Array<infer T>
+    ? Array<Unboxed<T>>
+    : Arg extends object
+    ? { [Key in keyof Arg]: Unboxed<Arg[Key]> }
     : Arg;
 
 export interface SelectOptionsObject {
@@ -38,24 +43,24 @@ export interface SelectOptionsObject {
 }
 
 export type ResourceType =
-    | "document"
-    | "stylesheet"
-    | "image"
-    | "media"
-    | "font"
-    | "script"
-    | "texttrack"
-    | "xhr"
-    | "fetch"
-    | "eventsource"
-    | "websocket"
-    | "manifest"
-    | "other";
-export type MouseButton = "left" | "right" | "middle";
-export type KeyboardModifier = "Alt" | "Control" | "Meta" | "Shift";
-export type ElementState = "attached" | "detached" | "visible" | "hidden";
-export type InputElementState = ElementState | "enabled" | "disabled" | "editable";
-export type LifecycleEvent = "load" | "domcontentloaded" | "networkidle";
+    | 'document'
+    | 'stylesheet'
+    | 'image'
+    | 'media'
+    | 'font'
+    | 'script'
+    | 'texttrack'
+    | 'xhr'
+    | 'fetch'
+    | 'eventsource'
+    | 'websocket'
+    | 'manifest'
+    | 'other';
+export type MouseButton = 'left' | 'right' | 'middle';
+export type KeyboardModifier = 'Alt' | 'Control' | 'Meta' | 'Shift';
+export type ElementState = 'attached' | 'detached' | 'visible' | 'hidden';
+export type InputElementState = ElementState | 'enabled' | 'disabled' | 'editable';
+export type LifecycleEvent = 'load' | 'domcontentloaded' | 'networkidle';
 
 export interface TimeoutOptions {
     /**
@@ -120,16 +125,14 @@ export interface KeyboardModifierOptions {
     modifiers?: KeyboardModifier[];
 }
 
-export type KeyboardPressOptions =
-    & {
-        /**
-         * If set to `true` and a navigation occurs from performing this action, it
-         * will not wait for it to complete. Defaults to `false`.
-         */
-        noWaitAfter?: boolean;
-    }
-    & EventSequenceOptions
-    & TimeoutOptions;
+export type KeyboardPressOptions = {
+    /**
+     * If set to `true` and a navigation occurs from performing this action, it
+     * will not wait for it to complete. Defaults to `false`.
+     */
+    noWaitAfter?: boolean;
+} & EventSequenceOptions &
+    TimeoutOptions;
 
 export type MouseMoveOptions = ElementClickOptions & KeyboardModifierOptions;
 
@@ -306,7 +309,7 @@ export interface Rect {
     height: number;
 }
 
-export type ImageFormat = "jpeg" | "png";
+export type ImageFormat = 'jpeg' | 'png';
 
 export interface ScreenshotOptions {
     /**
@@ -340,14 +343,14 @@ export interface ScreenshotOptions {
  * - `mutation` - use a mutation observer
  * - `interval` - use a polling interval
  */
-export type PollingMethod = "raf" | "mutation" | "interval";
+export type PollingMethod = 'raf' | 'mutation' | 'interval';
 
 export interface PollingOptions {
     /**
      * Polling method to use.
      * @default 'raf'
      */
-    polling?: "raf" | "mutation" | "interval";
+    polling?: 'raf' | 'mutation' | 'interval';
 
     /**
      * Polling interval in milliseconds if `polling` is set to `interval`.
@@ -367,22 +370,13 @@ export interface ElementStateFilter {
  * BrowserPermissions defines all the possible permissions that can be granted
  * to the browser application.
  */
-export type BrowserPermissions =
-    | "geolocation"
-    | "midi"
-    | "midi-sysex"
-    | "notifications"
-    | "camera"
-    | "microphone"
-    | "background-sync"
-    | "ambient-light-sensor"
-    | "accelerometer"
-    | "gyroscope"
-    | "magnetometer"
-    | "accessibility-events"
-    | "clipboard-read"
-    | "clipboard-write"
-    | "payment-handler";
+export type BrowserPermissions = 'geolocation' | 'midi' | 'midi-sysex' |
+                                  'notifications' | 'camera' |
+                                  'microphone' | 'background-sync' |
+                                  'ambient-light-sensor' | 'accelerometer' |
+                                  'gyroscope' | 'magnetometer' |
+                                  'accessibility-events' | 'clipboard-read' |
+                                  'clipboard-write' | 'payment-handler';
 
 export interface NewBrowserContextOptions {
     /**
@@ -396,7 +390,7 @@ export interface NewBrowserContextOptions {
      * are `'light'`, `'dark'`, and `'no-preference'`. Default to
      * `'light'`.
      */
-    colorScheme?: "light" | "dark" | "no-preference";
+    colorScheme?: 'light' | 'dark' | 'no-preference';
 
     /**
      * Sets the resolution ratio in physical pixels to the resolution in
@@ -486,7 +480,7 @@ export interface NewBrowserContextOptions {
      * 'prefers-reduced-motion' media feature. Defaults to
      * `'no-preference'`.
      */
-    reducedMotion?: "reduce" | "no-preference";
+    reducedMotion?: 'reduce' | 'no-preference';
 
     /**
      * Sets a window screen size for all pages in the context. It can
@@ -605,39 +599,37 @@ export interface BrowserContext {
     /**
      * Adds cookies into the `BrowserContext`.
      */
-    addCookies(
-        cookies: Array<{
-            name: string;
+    addCookies(cookies: Array<{
+        name: string,
 
-            value: string;
+        value: string,
 
-            /**
-             * either url or domain / path are required.
-             */
-            url?: string;
+        /**
+         * either url or domain / path are required.
+         */
+        url?: string,
 
-            /**
-             * either url or domain / path are required.
-             */
-            domain?: string;
+        /**
+         * either url or domain / path are required.
+         */
+        domain?: string,
 
-            /**
-             * either url or domain / path are required.
-             */
-            path?: string;
+        /**
+         * either url or domain / path are required.
+         */
+        path?: string,
 
-            /**
-             * Unix time in seconds.
-             */
-            expires?: number;
+        /**
+         * Unix time in seconds.
+         */
+        expires?: number,
 
-            httpOnly?: boolean;
+        httpOnly?: boolean,
 
-            secure?: boolean;
+        secure?: boolean,
 
-            sameSite?: "Strict" | "Lax" | "None";
-        }>,
-    ): void;
+        sameSite?: 'Strict' | 'Lax' | 'None',
+    }>): void;
 
     /**
      * Clear the `BrowserContext`'s cookies.
@@ -666,7 +658,7 @@ export interface BrowserContext {
             /**
              * The origin to grant permissions to, e.g. 'https://test.k6.com'.
              */
-            origin: string;
+            origin: string,
         },
     ): void;
 
@@ -746,6 +738,7 @@ export interface BrowserContext {
          * always wait for 'close' or 'page' events.
          */
         event: string,
+
         /**
          * The `Page` or null event data will be passed to it and it must
          * return true to continue.
@@ -761,13 +754,13 @@ export interface BrowserContext {
              * If null is passed to predicate, this signals that the page is
              * closing.
              */
-            predicate: (page: Page | null) => boolean;
+            predicate: (page: Page | null) => boolean,
 
             /**
              * Maximum time to wait in milliseconds. Pass 0 to disable timeout.
              * Defaults to 30000 milliseconds.
              */
-            timeout?: number;
+            timeout?: number,
         },
     ): Page | null;
 }
@@ -1915,19 +1908,19 @@ export interface Page {
          * Emulates `'prefers-colors-scheme'` media feature, supported values are
          * `'light'`, `'dark'`, and `'no-preference'`.
          */
-        colorScheme?: "light" | "dark" | "no-preference";
+        colorScheme?: 'light' | 'dark' | 'no-preference';
 
         /**
          * Changes the CSS media type of the page. The only allowed values are
          * `'screen'`, and `'print'`.
          */
-        media?: "screen" | "print";
+        media?: 'screen' | 'print';
 
         /**
          * Emulates `'prefers-reduced-motion'` media feature, supported values are
          * `'reduce'`, `'no-preference'`.
          */
-        reducedMotion?: "reduce" | "no-preference";
+        reducedMotion?: 'reduce' | 'no-preference';
     }): void;
 
     /**
@@ -1943,7 +1936,7 @@ export interface Page {
      * @param type
      */
     emulateVisionDeficiency(
-        type: "none" | "blurredVision" | "deuteranopia" | "protanopia" | "tritanopia" | "achromatopsia",
+        type: 'none' | 'blurredVision' | 'deuteranopia' | 'protanopia' | 'tritanopia' | 'achromatopsia',
     ): void;
 
     /**
@@ -2542,6 +2535,7 @@ export interface Page {
          * page.setDefaultTimeout(timeout) methods.
          *
          * Setting the value to `0` will disable the timeout.
+         *
          */
         timeout?: number;
 
@@ -2557,7 +2551,7 @@ export interface Page {
          * this method for testing especially with chatty websites where the event
          * may never fire, rely on web assertions to assess readiness instead.
          */
-        waitUntil?: "load" | "domcontentloaded" | "networkidle";
+        waitUntil?: 'load' | 'domcontentloaded' | 'networkidle';
     }): null | Response;
 
     /**
@@ -2666,6 +2660,7 @@ export interface Page {
              * page.setDefaultTimeout(timeout) methods.
              *
              * Setting the value to `0` will disable the timeout.
+             *
              */
             timeout?: number;
 
@@ -2681,7 +2676,7 @@ export interface Page {
              * this method for testing especially with chatty websites where the event
              * may never fire, rely on web assertions to assess readiness instead.
              */
-            waitUntil?: "load" | "domcontentloaded" | "networkidle";
+            waitUntil?: 'load' | 'domcontentloaded' | 'networkidle';
         },
     ): void;
 
@@ -2975,7 +2970,7 @@ export interface Page {
              * treated as an interval in milliseconds at which the function would be
              * executed. Defaults to `raf`.
              */
-            polling?: number | "raf";
+            polling?: number | 'raf';
 
             /**
              * Maximum time in milliseconds. Defaults to `30` seconds. Default is
@@ -3005,7 +3000,7 @@ export interface Page {
      * @param options
      */
     waitForLoadState(
-        state?: "load" | "domcontentloaded" | "networkidle",
+        state?: 'load' | 'domcontentloaded' | 'networkidle',
         options?: {
             /**
              * Maximum operation time in milliseconds. Defaults to `30` seconds. The
@@ -3016,6 +3011,7 @@ export interface Page {
              * page.setDefaultTimeout(timeout) methods.
              *
              * Setting the value to `0` will disable the timeout.
+             *
              */
             timeout?: number;
         },
@@ -3037,6 +3033,7 @@ export interface Page {
          * page.setDefaultTimeout(timeout) methods.
          *
          * Setting the value to `0` will disable the timeout.
+         *
          */
         timeout?: number;
 
@@ -3052,7 +3049,7 @@ export interface Page {
          * this method for testing especially with chatty websites where the event
          * may never fire, rely on web assertions to assess readiness instead.
          */
-        waitUntil?: "load" | "domcontentloaded" | "networkidle";
+        waitUntil?: 'load' | 'domcontentloaded' | 'networkidle';
     }): Promise<null | Response>;
 
     /**
@@ -3076,7 +3073,7 @@ export interface Page {
              * - `'hidden'` - wait for element to be either detached from DOM, or have
              * an empty bounding box or `visibility:hidden`.
              */
-            state?: "attached" | "detached" | "visible" | "hidden";
+            state?: 'attached' | 'detached' | 'visible' | 'hidden';
 
             /**
              * When `true`, the call requires selector to resolve to a single element.

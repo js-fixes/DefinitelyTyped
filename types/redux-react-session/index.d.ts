@@ -3,15 +3,15 @@
 // Definitions by: João Neto <https://github.com/joaomlneto>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Action, Reducer, Store } from "redux";
+import { Reducer, Action, Store } from 'redux';
 import {
-    GetSessionErrorAction,
     GetSessionSuccessAction,
-    GetUserSessionErrorAction,
+    GetSessionErrorAction,
     GetUserSessionSuccessAction,
+    GetUserSessionErrorAction,
     InvalidSessionAction,
-} from "./actions";
-import { SessionState } from "./reducer";
+} from './actions';
+import { SessionState } from './reducer';
 
 export type ActionTypes<UserType> =
     | GetSessionSuccessAction

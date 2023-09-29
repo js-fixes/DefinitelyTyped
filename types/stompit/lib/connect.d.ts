@@ -1,4 +1,4 @@
-import { IpcNetConnectOpts, Socket, TcpNetConnectOpts } from "net";
+import { Socket, TcpNetConnectOpts, IpcNetConnectOpts } from "net";
 import { ConnectionOptions as TlsConnectionOptions } from "tls";
 
 import Client = require("./Client");
@@ -6,8 +6,7 @@ import { SocketOptions } from "./Socket";
 
 declare function connect(
     optionsOrPathOrPort: connect.ConnectOptions | string | number,
-    connectionListener?: connect.ConnectionListener,
-): Client;
+    connectionListener?: connect.ConnectionListener): Client;
 declare function connect(port: number, host?: string, connectionListener?: connect.ConnectionListener): Client;
 
 export = connect;

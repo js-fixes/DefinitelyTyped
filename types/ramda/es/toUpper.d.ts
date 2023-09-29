@@ -1,2 +1,2 @@
-import { toUpper } from "../index.js";
+import { toUpper } from '../index';
 export default toUpper;

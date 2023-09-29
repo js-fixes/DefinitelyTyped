@@ -1,5 +1,5 @@
-import { PassThrough } from "stream";
-import { Options } from "./index";
+import { Options } from './index';
+import { PassThrough } from 'stream';
 
 /**
  * Fetches package data identified by `spec` and returns the data as a buffer.

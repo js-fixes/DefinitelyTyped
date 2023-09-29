@@ -3,6 +3,7 @@
 // Definitions by: Nobuhiro Nakamura <https://github.com/lefb766>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 interface DomReady {
     (callback: () => any): DomReady;
     version: string;
@@ -11,3 +12,4 @@ interface DomReady {
 declare var domReady: DomReady;
 
 export = domReady;
+

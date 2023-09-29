@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 4.1
 
-import { Connection, Schema } from "mongoose";
+import { Schema, Connection } from 'mongoose';
 
 interface MongooseIdValidatorOptions {
     /* Optional, custom validation message with {PATH} being replaced

@@ -26,10 +26,7 @@ declare class NamedRegExp {
     // Non-standard extensions
     toString(): string;
 
-    [Symbol.replace](
-        str: string,
-        replacement: string | ((match: string, ...capturedGroups: string[]) => string),
-    ): string;
+    [Symbol.replace](str: string, replacement: string | ((match: string, ...capturedGroups: string[]) => string)): string;
 
     [Symbol.match](str: string): NamedRegExpExecArray;
 

@@ -6,6 +6,7 @@
         "no-reference-import": false,
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

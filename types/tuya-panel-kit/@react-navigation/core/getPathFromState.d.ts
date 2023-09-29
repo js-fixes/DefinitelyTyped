@@ -1,13 +1,12 @@
-import type { NavigationState, PartialState } from "../routers";
-import type { PathConfigMap } from "./types";
-// tslint:disable:interface-over-type-literal
-// eslint-disable-next-line @definitelytyped/strict-export-declare-modifiers
+import type { NavigationState, PartialState } from '../routers';
+import type { PathConfigMap } from './types';
+// tslint:disable-next-line strict-export-declare-modifiers interface-over-type-literal
 declare type Options = {
     initialRouteName?: string | undefined;
     screens: PathConfigMap;
 };
-// eslint-disable-next-line @definitelytyped/strict-export-declare-modifiers
-declare type State = NavigationState | Omit<PartialState<NavigationState>, "stale">;
+// tslint:disable-next-line strict-export-declare-modifiers
+declare type State = NavigationState | Omit<PartialState<NavigationState>, 'stale'>;
 /**
  * Utility to serialize a navigation state object to a path string.
  *

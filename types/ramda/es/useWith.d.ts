@@ -1,2 +1,2 @@
-import { useWith } from "../index.js";
+import { useWith } from '../index';
 export default useWith;

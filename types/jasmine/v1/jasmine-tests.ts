@@ -1,3 +1,5 @@
+
+
 describe("A suite", () => {
     it("contains spec with an expectation", () => {
         expect(true).toBe(true);
@@ -36,26 +38,26 @@ describe("Included matchers:", () => {
         it("should work for objects", () => {
             var foo = {
                 a: 12,
-                b: 34,
+                b: 34
             };
             var bar = {
                 a: 12,
-                b: 34,
+                b: 34
             };
             expect(foo).toEqual(bar);
         });
     });
 
     it("The 'toMatch' matcher is for regular expressions", () => {
-        var message = "foo bar baz";
+        var message = 'foo bar baz';
         expect(message).toMatch(/bar/);
-        expect(message).toMatch("bar");
+        expect(message).toMatch('bar');
         expect(message).not.toMatch(/quux/);
     });
 
     it("The 'toBeDefined' matcher compares against `undefined`", () => {
         var a = {
-            foo: "foo",
+            foo: 'foo'
         };
         expect(a.foo).toBeDefined();
         expect((a as any).bar).not.toBeDefined();
@@ -63,7 +65,7 @@ describe("Included matchers:", () => {
 
     it("The `toBeUndefined` matcher compares against `undefined`", () => {
         var a = {
-            foo: "foo",
+            foo: 'foo'
         };
         expect(a.foo).not.toBeUndefined();
         expect((a as any).bar).toBeUndefined();
@@ -71,44 +73,44 @@ describe("Included matchers:", () => {
 
     it("The 'toBeNull' matcher compares against null", () => {
         var a: string = null;
-        var foo = "foo";
+        var foo = 'foo';
         expect(null).toBeNull();
         expect(a).toBeNull();
         expect(foo).not.toBeNull();
     });
 
     it("The 'toBeTruthy' matcher is for boolean casting testing", () => {
-        var a: string, foo = "foo";
+      var a: string, foo = 'foo';
         expect(foo).toBeTruthy();
         expect(a).not.toBeTruthy();
     });
 
     it("The 'toBeFalsy' matcher is for boolean casting testing", () => {
-        var a: string, foo = "foo";
+      var a: string, foo = 'foo';
         expect(a).toBeFalsy();
         expect(foo).not.toBeFalsy();
     });
 
     it("The 'toContain' matcher is for finding an item in an Array", () => {
-        var a = ["foo", "bar", "baz"];
-        expect(a).toContain("bar");
-        expect(a).not.toContain("quux");
+        var a = ['foo', 'bar', 'baz'];
+        expect(a).toContain('bar');
+        expect(a).not.toContain('quux');
     });
 
     it("The 'toBeLessThan' matcher is for mathematical comparisons", () => {
-        var pi = 3.1415926, e = 2.78;
+      var pi = 3.1415926, e = 2.78;
         expect(e).toBeLessThan(pi);
         expect(pi).not.toBeLessThan(e);
     });
 
     it("The 'toBeGreaterThan' is for mathematical comparisons", () => {
-        var pi = 3.1415926, e = 2.78;
+      var pi = 3.1415926, e = 2.78;
         expect(pi).toBeGreaterThan(e);
         expect(e).not.toBeGreaterThan(pi);
     });
 
     it("The 'toBeCloseTo' matcher is for precision math comparison", () => {
-        var pi = 3.1415926, e = 2.78;
+      var pi = 3.1415926, e = 2.78;
         expect(pi).not.toBeCloseTo(e, 0.1);
         expect(pi).toBeCloseTo(e, 0);
     });
@@ -118,7 +120,7 @@ describe("Included matchers:", () => {
             return 1 + 2;
         };
         var bar = () => {
-            // return a + 1;
+            //return a + 1;
         };
         expect(foo).not.toThrow();
         expect(bar).toThrow();
@@ -197,16 +199,16 @@ xdescribe("A spec", () => {
 });
 
 describe("A spy", () => {
-    var foo: any, bar: any = null;
+  var foo: any, bar: any = null;
     beforeEach(() => {
         foo = {
             setBar: (value: any) => {
                 bar = value;
-            },
+            }
         };
-        spyOn(foo, "setBar");
+        spyOn(foo, 'setBar');
         foo.setBar(123);
-        foo.setBar(456, "another param");
+        foo.setBar(456, 'another param');
     });
     it("tracks that the spy was called", () => {
         expect(foo.setBar).toHaveBeenCalled();
@@ -216,7 +218,7 @@ describe("A spy", () => {
     });
     it("tracks all the arguments of its calls", () => {
         expect(foo.setBar).toHaveBeenCalledWith(123);
-        expect(foo.setBar).toHaveBeenCalledWith(456, "another param");
+        expect(foo.setBar).toHaveBeenCalledWith(456, 'another param');
     });
     it("allows access to the most recent call", () => {
         expect(foo.setBar.mostRecentCall.args[0]).toEqual(456);
@@ -230,7 +232,7 @@ describe("A spy", () => {
 });
 
 describe("A spy, when configured to call through", () => {
-    var foo: any, bar: any, fetchedBar: any;
+  var foo: any, bar: any, fetchedBar: any;
     beforeEach(() => {
         foo = {
             setBar: (value: any) => {
@@ -238,9 +240,9 @@ describe("A spy, when configured to call through", () => {
             },
             getBar: () => {
                 return bar;
-            },
+            }
         };
-        spyOn(foo, "getBar").andCallThrough();
+        spyOn(foo, 'getBar').andCallThrough();
         foo.setBar(123);
         fetchedBar = foo.getBar();
     });
@@ -256,7 +258,7 @@ describe("A spy, when configured to call through", () => {
 });
 
 describe("A spy, when faking a return value", () => {
-    var foo: any, bar: any, fetchedBar: any;
+  var foo: any, bar: any, fetchedBar: any;
     beforeEach(() => {
         foo = {
             setBar: (value: any) => {
@@ -264,9 +266,9 @@ describe("A spy, when faking a return value", () => {
             },
             getBar: () => {
                 return bar;
-            },
+            }
         };
-        spyOn(foo, "getBar").andReturn(745);
+        spyOn(foo, 'getBar').andReturn(745);
         foo.setBar(123);
         fetchedBar = foo.getBar();
     });
@@ -282,7 +284,7 @@ describe("A spy, when faking a return value", () => {
 });
 
 describe("A spy, when faking a return value", () => {
-    var foo: any, bar: any, fetchedBar: any;
+  var foo: any, bar: any, fetchedBar: any;
     beforeEach(() => {
         foo = {
             setBar: (value: any) => {
@@ -290,9 +292,9 @@ describe("A spy, when faking a return value", () => {
             },
             getBar: () => {
                 return bar;
-            },
+            }
         };
-        spyOn(foo, "getBar").andCallFake(() => {
+        spyOn(foo, 'getBar').andCallFake(() => {
             return 1001;
         });
         foo.setBar(123);
@@ -313,11 +315,11 @@ describe("A spy, when created manually", () => {
     var whatAmI: any;
 
     beforeEach(() => {
-        whatAmI = jasmine.createSpy("whatAmI");
+        whatAmI = jasmine.createSpy('whatAmI');
         whatAmI("I", "am", "a", "spy");
     });
     it("is named, which helps in error reporting", () => {
-        expect(whatAmI.identity).toEqual("whatAmI");
+        expect(whatAmI.identity).toEqual('whatAmI');
     });
     it("tracks that the spy was called", () => {
         expect(whatAmI).toHaveBeenCalled();
@@ -336,7 +338,7 @@ describe("A spy, when created manually", () => {
 describe("Multiple spies, when created manually", () => {
     var tape: any;
     beforeEach(() => {
-        tape = jasmine.createSpyObj("tape", ["play", "pause", "stop", "rewind"]);
+        tape = jasmine.createSpyObj('tape', ['play', 'pause', 'stop', 'rewind']);
         tape.play();
         tape.pause();
         tape.rewind(0);
@@ -365,7 +367,7 @@ describe("jasmine.any", () => {
     });
     describe("when used with a spy", () => {
         it("is useful for comparing arguments", () => {
-            var foo = jasmine.createSpy("foo");
+            var foo = jasmine.createSpy('foo');
             foo(12, () => {
                 return true;
             });
@@ -377,7 +379,7 @@ describe("jasmine.any", () => {
 describe("Manually ticking the Jasmine Mock Clock", () => {
     var timerCallback: any;
     beforeEach(() => {
-        timerCallback = jasmine.createSpy("timerCallback");
+        timerCallback = jasmine.createSpy('timerCallback');
         jasmine.Clock.useMock();
     });
     it("causes a timeout to be called synchronously", () => {
@@ -404,7 +406,7 @@ describe("Manually ticking the Jasmine Mock Clock", () => {
 });
 
 describe("Asynchronous specs", () => {
-    var value: number, flag: any;
+  var value: number, flag: any;
     it("should support async execution of test preparation and exepectations", () => {
         runs(() => {
             flag = false;
@@ -413,14 +415,10 @@ describe("Asynchronous specs", () => {
                 flag = true;
             }, 500);
         });
-        waitsFor(
-            () => {
-                value++;
-                return flag;
-            },
-            "The Value should be incremented",
-            750,
-        );
+        waitsFor(() => {
+            value++;
+            return flag;
+        }, "The Value should be incremented", 750);
         runs(() => {
             expect(value).toBeGreaterThan(0);
         });
@@ -441,7 +439,7 @@ describe("Asynchronous specs", () => {
             currentWindowOnload(null);
         }
 
-        (document.querySelector(".version") as HTMLElement).innerHTML = jasmineEnv.versionString();
+        (document.querySelector('.version') as HTMLElement).innerHTML = jasmineEnv.versionString();
         execJasmine();
     };
 

@@ -28,5 +28,5 @@ export class Viewport extends MessageDispatcher {
     get isLandscape(): boolean;
     get isPortrait(): boolean;
 }
-import { Rectangle } from "../geom/Rectangle";
-import { MessageDispatcher } from "../messages/MessageDispatcher";
+import { MessageDispatcher } from '../messages/MessageDispatcher';
+import { Rectangle } from '../geom/Rectangle';

@@ -13,10 +13,7 @@ import * as fs from "fs";
  * Globs are executed in order, so negations should follow positive globs
  * fs.src(['!b*.js', '*.js']) would not exclude any files, but this would: fs.src(['*.js', '!b*.js'])
  */
-declare function GlobWatcher(
-    globs: string | string[],
-    cb?: ((done: (err?: any) => void) => void) | (() => GlobWatcher.AsyncType),
-): fs.FSWatcher;
+declare function GlobWatcher(globs: string | string[], cb?: ((done: (err?: any) => void) => void) | (() => GlobWatcher.AsyncType)): fs.FSWatcher;
 
 /**
  * Watch globs and execute a function upon change, with intelligent defaults for debouncing and queueing.
@@ -24,16 +21,10 @@ declare function GlobWatcher(
  * Globs are executed in order, so negations should follow positive globs
  * fs.src(['!b*.js', '*.js']) would not exclude any files, but this would: fs.src(['*.js', '!b*.js'])
  */
-declare function GlobWatcher(
-    globs: string | string[],
-    opt?: GlobWatcher.WatchOptions,
-    cb?: ((done: (err?: any) => void) => void) | (() => GlobWatcher.AsyncType),
-): fs.FSWatcher;
+declare function GlobWatcher(globs: string | string[], opt?: GlobWatcher.WatchOptions, cb?: ((done: (err?: any) => void) => void) | (() => GlobWatcher.AsyncType)): fs.FSWatcher;
 
 declare namespace GlobWatcher {
-    type AsyncType = NodeJS.EventEmitter | PromiseLike<any> | {
-        subscribe(next?: (value: any) => void, error?: (error: any) => void, complete?: () => void): any;
-    };
+    type AsyncType = NodeJS.EventEmitter | PromiseLike<any> | { subscribe(next?: (value: any) => void, error?: (error: any) => void, complete?: () => void): any };
 
     interface WatchOptions {
         /**

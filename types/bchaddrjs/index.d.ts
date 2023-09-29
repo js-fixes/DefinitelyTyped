@@ -130,6 +130,4 @@ export function isP2SHAddress(address: string): boolean;
 /**
  * Error thrown when the address given as input is not a valid Bitcoin Cash address.
  */
-export class InvalidAddressError extends Error {
-    constructor();
-}
+export class InvalidAddressError extends Error { constructor(); }

@@ -1,5 +1,6 @@
 const aceAnchorTests = {
-    "test create anchor": function() {
+
+    "test create anchor" : function() {
         var doc = new AceAjax.Document("juhu");
         var anchor = new AceAjax.Anchor(doc, 0, 0);
 
@@ -11,7 +12,7 @@ const aceAnchorTests = {
         var doc = new AceAjax.Document("juhu\nkinners");
         var anchor = new AceAjax.Anchor(doc, 1, 4);
 
-        doc.insert({ row: 1, column: 1 }, "123");
+        doc.insert({row: 1, column: 1}, "123");
         assert.position(anchor.getPosition(), 1, 7);
     },
 
@@ -27,7 +28,7 @@ const aceAnchorTests = {
         var doc = new AceAjax.Document("juhu\nkinners");
         var anchor = new AceAjax.Anchor(doc, 1, 4);
 
-        doc.insertNewLine({ row: 0, column: 0 });
+        doc.insertNewLine({row: 0, column: 0});
         assert.position(anchor.getPosition(), 2, 4);
     },
 
@@ -35,7 +36,7 @@ const aceAnchorTests = {
         var doc = new AceAjax.Document("juhu\nkinners");
         var anchor = new AceAjax.Anchor(doc, 1, 4);
 
-        doc.insertNewLine({ row: 1, column: 2 });
+        doc.insertNewLine({row: 1, column: 2});
         assert.position(anchor.getPosition(), 2, 2);
     },
 
@@ -124,5 +125,5 @@ const aceAnchorTests = {
         });
 
         doc.remove(new AceAjax.Range(2, 0, 2, 1));
-    },
+    }
 };

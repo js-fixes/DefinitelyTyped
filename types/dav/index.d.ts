@@ -17,7 +17,7 @@ export interface CreateAccountOptions {
     /**
      * one of 'caldav' or 'carddav'. Defaults to 'caldav'.
      */
-    accountType?: "caldav" | "carddav" | undefined;
+    accountType?: 'caldav' | 'carddav' | undefined;
 
     /**
      * list of caldav filters to send with request.
@@ -155,7 +155,7 @@ export interface SyncCalendarOptions {
      * either 'basic' or 'webdav'. If unspecified, will try to do webdav sync
      * and failover to basic sync if rfc 6578 is not supported by the server.
      */
-    syncMethod?: "basic" | "webdav" | undefined;
+    syncMethod?: 'basic' | 'webdav' | undefined;
 
     /**
      * VTIMEZONE calendar object.
@@ -191,7 +191,7 @@ export interface SyncCaldavAccountOptions {
      * either 'basic' or 'webdav'. If unspecified, will try to do webdav sync
      * and failover to basic sync if rfc 6578 is not supported by the server.
      */
-    syncMethod?: "basic" | "webdav" | undefined;
+    syncMethod?: 'basic' | 'webdav' | undefined;
 
     /**
      * VTIMEZONE calendar object.
@@ -287,7 +287,7 @@ export interface SyncAddressBookOptions {
      * either 'basic' or 'webdav'.If unspecified, will try to do webdav sync
      * and failover to basic sync if rfc 6578 is not supported by the server.
      */
-    syncMethod?: "basic" | "webdav" | undefined;
+    syncMethod?: 'basic' | 'webdav' | undefined;
 
     /**
      * request sender.
@@ -318,7 +318,7 @@ export interface SyncCarddavAccountOptions {
      * either 'basic' or 'webdav'. If unspecified, will try to do webdav sync
      * and failover to basic sync if rfc 6578 is not supported by the server.
      */
-    syncMethod?: "basic" | "webdav" | undefined;
+    syncMethod?: 'basic' | 'webdav' | undefined;
 
     /**
      * VTIMEZONE calendar object.
@@ -424,6 +424,7 @@ export namespace transport {
         constructor(credentials: Credentials);
 
         /**
+         *
          * @param request object with request info.
          * @param url
          * @param options
@@ -443,6 +444,7 @@ export namespace transport {
         constructor(credentials: Credentials);
 
         /**
+         *
          * @param request object with request info.
          * @param url
          * @param options
@@ -457,6 +459,7 @@ export namespace transport {
 
 export namespace request {
     /**
+     *
      * @param options
      * @returns
      */
@@ -475,6 +478,7 @@ export namespace request {
     }
 
     /**
+     *
      * @param options
      * @returns
      */
@@ -498,6 +502,7 @@ export namespace request {
     }
 
     /**
+     *
      * @param options
      * @returns
      */
@@ -526,6 +531,7 @@ export namespace request {
     }
 
     /**
+     *
      * @param requestData
      * @param options
      * @returns
@@ -533,6 +539,7 @@ export namespace request {
     function collectionQuery(requestData: string, options: SetRequestHeadersOptions): Request;
 
     /**
+     *
      * @param options
      * @returns
      */
@@ -556,6 +563,7 @@ export namespace request {
     }
 
     /**
+     *
      * @param options
      * @returns
      */
@@ -584,6 +592,7 @@ export namespace request {
     }
 
     /**
+     *
      * @param options
      * @returns
      */
@@ -697,6 +706,7 @@ export class Client {
     updateCard(card: VCard, options?: UpdateCardOptions): Promise<VCard>;
 
     /**
+     *
      * Delete the parameter vcard object on the server.
      * @param card target vcard object.
      * @param options
@@ -878,9 +888,9 @@ export namespace debug {
 }
 
 export namespace ns {
-    const CALENDAR_SERVER = "http://calendarserver.org/ns/";
-    const CALDAV_APPLE = "http://apple.com/ns/ical/";
-    const CALDAV = "urn:ietf:params:xml:ns:caldav";
-    const CARDDAV = "urn:ietf:params:xml:ns:carddav";
-    const DAV = "DAV:";
+    const CALENDAR_SERVER = 'http://calendarserver.org/ns/';
+    const CALDAV_APPLE = 'http://apple.com/ns/ical/';
+    const CALDAV = 'urn:ietf:params:xml:ns:caldav';
+    const CARDDAV = 'urn:ietf:params:xml:ns:carddav';
+    const DAV = 'DAV:';
 }

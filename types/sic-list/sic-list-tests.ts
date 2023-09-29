@@ -1,17 +1,17 @@
 import {
-    getCode,
-    getCodeList,
-    getCodes,
-    getData,
     getDescription,
-    getDescriptionList,
+    getCode,
     getDescriptions,
+    getCodes,
+    getDescriptionList,
+    getCodeList,
+    getData,
     overwrite,
-} from "sic-list";
+} from 'sic-list';
 
-const description: string | undefined = getDescription("");
+const description: string | undefined = getDescription('');
 
-const code: string | undefined = getCode("1234");
+const code: string | undefined = getCode('1234');
 
 const descriptions: string[] = getDescriptions();
 
@@ -23,4 +23,4 @@ const codeList: { [code: string]: string } = getCodeList();
 
 const data: Array<{ code: string; description: string }> = getData();
 
-overwrite([{ code: "1234", description: "" }]);
+overwrite([{ code: '1234', description: '' }]);

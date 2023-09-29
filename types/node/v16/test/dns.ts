@@ -1,20 +1,20 @@
 import {
-    ADDRCONFIG,
-    ALL,
-    AnyRecord,
     lookup,
+    ADDRCONFIG,
+    V4MAPPED,
     LookupAddress,
     lookupService,
-    MxRecord,
-    promises,
-    RecordWithTtl,
     resolve,
+    AnyRecord,
+    MxRecord,
     resolve4,
+    RecordWithTtl,
     resolve6,
     Resolver,
+    ALL,
+    promises,
     setDefaultResultOrder,
-    V4MAPPED,
-} from "node:dns";
+} from 'node:dns';
 
 lookup("nodejs.org", (err, address, family) => {
     const _err: NodeJS.ErrnoException | null = err;
@@ -41,13 +41,13 @@ lookup(
     {
         family: 4,
         hints: ADDRCONFIG | V4MAPPED | ALL,
-        all: false,
+        all: false
     },
     (err, address, family) => {
         const _err: NodeJS.ErrnoException | null = err;
         const _address: string = address;
         const _family: number = family;
-    },
+    }
 );
 lookup("nodejs.org", { all: true }, (err, addresses) => {
     const _err: NodeJS.ErrnoException | null = err;
@@ -137,11 +137,11 @@ resolve6("nodejs.org", { ttl: true }, (err, addresses) => {
     resolver = new promises.Resolver({ timeout: 1500 });
 }
 
-setDefaultResultOrder("ipv4first");
-setDefaultResultOrder("verbatim");
+setDefaultResultOrder('ipv4first');
+setDefaultResultOrder('verbatim');
 // @ts-expect-error
-setDefaultResultOrder("wrong");
-promises.setDefaultResultOrder("ipv4first");
-promises.setDefaultResultOrder("verbatim");
+setDefaultResultOrder('wrong');
+promises.setDefaultResultOrder('ipv4first');
+promises.setDefaultResultOrder('verbatim');
 // @ts-expect-error
-promises.setDefaultResultOrder("wrong");
+promises.setDefaultResultOrder('wrong');

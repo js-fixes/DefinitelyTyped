@@ -1,2 +1,2 @@
-import { type } from "../index.js";
+import { type } from '../index';
 export default type;

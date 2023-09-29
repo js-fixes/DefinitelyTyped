@@ -1,4 +1,4 @@
-import { Duplex, Transform, Writable } from "stream";
+import { Writable, Duplex, Transform } from 'stream';
 
 export = emit;
 

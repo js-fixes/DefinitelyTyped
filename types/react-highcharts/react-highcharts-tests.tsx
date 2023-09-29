@@ -1,5 +1,5 @@
-import * as Highcharts from "highcharts";
 import * as React from "react";
+import * as Highcharts from "highcharts";
 import ReactHighcharts from "react-highcharts";
 
 const config: Highcharts.Options = {};

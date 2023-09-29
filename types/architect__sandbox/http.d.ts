@@ -1,4 +1,4 @@
-import { Callback, StartOptions } from "./shared";
+import { StartOptions, Callback } from "./shared";
 
 export namespace http {
     /**

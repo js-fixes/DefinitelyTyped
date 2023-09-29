@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { ElementType, HTMLAttributes, ReactElement } from "react";
+import { HTMLAttributes, ReactElement, ElementType } from "react";
 
 export interface HTMLTransitionGroupProps<T> extends HTMLAttributes<T> {
     component?: ElementType | undefined;
@@ -12,9 +12,18 @@ export interface HTMLTransitionGroupProps<T> extends HTMLAttributes<T> {
 }
 
 import TransitionGroup = require("./TransitionGroup");
-export { TransitionGroupChildLifecycle, TransitionGroupProps } from "./TransitionGroup";
+export {
+    TransitionGroupProps,
+    TransitionGroupChildLifecycle
+} from "./TransitionGroup";
 
 import CSSTransitionGroup = require("./CSSTransitionGroup");
-export { CSSTransitionGroupProps, CSSTransitionGroupTransitionName } from "./CSSTransitionGroup";
+export {
+    CSSTransitionGroupProps,
+    CSSTransitionGroupTransitionName
+} from "./CSSTransitionGroup";
 
-export { CSSTransitionGroup, TransitionGroup };
+export {
+    TransitionGroup,
+    CSSTransitionGroup
+};

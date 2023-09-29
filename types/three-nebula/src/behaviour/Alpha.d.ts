@@ -1,11 +1,12 @@
-import Particle from "../core/Particle";
-import { Easing, EasingFunction } from "../ease";
-import { JSONObject } from "../initializer/Rate";
-import { Span } from "../math";
-import Behaviour from "./Behaviour";
+import Particle from '../core/Particle';
+import { Easing, EasingFunction } from '../ease';
+import { JSONObject } from '../initializer/Rate';
+import { Span } from '../math';
+import Behaviour from './Behaviour';
 
 /**
  * Behaviour that applies an alpha transition effect to particles.
+ *
  */
 export default class Alpha extends Behaviour {
     /**
@@ -24,6 +25,7 @@ export default class Alpha extends Behaviour {
 
     /**
      * Gets the _same property which determines if the alpha are the same.
+     *
      */
     get same(): boolean;
 
@@ -40,16 +42,19 @@ export default class Alpha extends Behaviour {
 
     /**
      * Initializes the behaviour on a particle.
+     *
      */
     initialize(particle: Particle): void;
 
     /**
      * Mutates the target's alpha/opacity property.
+     *
      */
     mutate(particle: Particle, time: number, index: number): void;
 
     /**
      * Creates a Body initializer from JSON.
+     *
      */
     static fromJSON(json: JSONObject): Alpha;
 }

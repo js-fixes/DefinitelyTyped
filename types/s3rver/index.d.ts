@@ -8,9 +8,9 @@
 
 /// <reference types="node" />
 
-import { IncomingMessage, ServerResponse } from "http";
-import { Http2ServerRequest, Http2ServerResponse } from "http2";
-import { AddressInfo } from "net";
+import { AddressInfo } from 'net';
+import { IncomingMessage, ServerResponse } from 'http';
+import { Http2ServerRequest, Http2ServerResponse } from 'http2';
 
 declare class S3rver {
     constructor(options: S3rverOptions);

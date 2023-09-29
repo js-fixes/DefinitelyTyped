@@ -6,6 +6,7 @@
 
 /// <reference types="node" />
 
+
 declare namespace revReplace {
     interface Options {
         canonicalUris?: boolean | undefined;

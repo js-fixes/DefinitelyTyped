@@ -5,7 +5,7 @@
 // TypeScript Version: 2.8
 
 import { Component, ReactNode } from "react";
-import { ImageStyle, StyleProp, TextStyle, ViewStyle } from "react-native";
+import { TextStyle, StyleProp, ImageStyle, ViewStyle } from "react-native";
 
 interface SettingsListProps {
     /**

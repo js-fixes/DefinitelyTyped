@@ -7,9 +7,7 @@ const reducer: Reducer<any> = (state: any, action: any) => ({ state, action });
 
 const config: EncryptorConfig = {
     secretKey: "foo",
-    onError: (err: Error) => {
-        err.message;
-    },
+    onError: (err: Error) => { err.message; }
 };
 const encryptor: Transform<any, any> = createEncryptor(config);
 
@@ -21,4 +19,4 @@ const asyncEncryptor: Transform<any, any> = createAsyncEncryptor(asyncConfig);
 
 const store: Store<any> = createStore(reducer);
 
-createPersistor(store, { transforms: [encryptor, encryptorNoError, asyncEncryptor] });
+createPersistor(store, { transforms : [encryptor, encryptorNoError, asyncEncryptor] });

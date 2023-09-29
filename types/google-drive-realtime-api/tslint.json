@@ -15,6 +15,7 @@
         "npm-naming": false,
         "object-literal-shorthand": false,
         "only-arrow-functions": false,
-        "prefer-const": false
+        "prefer-const": false,
+        "strict-export-declare-modifiers": false
     }
 }

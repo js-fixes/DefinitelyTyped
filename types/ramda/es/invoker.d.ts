@@ -1,2 +1,2 @@
-import { invoker } from "../index.js";
+import { invoker } from '../index';
 export default invoker;

@@ -7,14 +7,15 @@
 declare var eqjs: eq.EqjsStatic;
 
 // Support AMD require
-declare module "eq.js" {
+declare module 'eq.js' {
     export = eqjs;
 }
 
 declare namespace eq {
-    type AvailableElementType = HTMLElement | HTMLCollectionOf<Element> | HTMLElement[] | NodeList | JQuery;
+    type AvailableElementType = HTMLElement|HTMLCollectionOf<Element>|HTMLElement[]|NodeList|JQuery;
 
     interface EqjsStatic {
+
         /**
          * List of all nodes.
          */
@@ -60,7 +61,8 @@ declare namespace eq {
     interface EqjsNodesTable {
         [index: number]: HTMLElement;
     }
+
 }
 
 // Support jQuery selectors.
-interface JQuery {}
+interface JQuery { }

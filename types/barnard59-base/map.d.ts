@@ -1,5 +1,5 @@
-import { Context } from "barnard59-core";
-import * as stream from "stream";
+import * as stream from 'stream';
+import { Context } from 'barnard59-core';
 
 export interface Callback<From, To> {
     (this: Context, chunk: From, encoding: string): Promise<To> | To;

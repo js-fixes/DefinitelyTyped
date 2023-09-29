@@ -60,12 +60,10 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface LabelSelector
-            extends
-                Base.Selector<LabelIterator>,
+            extends Base.Selector<LabelIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

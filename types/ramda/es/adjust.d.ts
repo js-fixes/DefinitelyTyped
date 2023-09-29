@@ -1,2 +1,2 @@
-import { adjust } from "../index.js";
+import { adjust } from '../index';
 export default adjust;

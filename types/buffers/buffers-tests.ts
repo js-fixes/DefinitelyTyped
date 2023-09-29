@@ -1,4 +1,5 @@
-import Buffers = require("buffers");
+
+import Buffers = require('buffers');
 
 var any: any;
 var num: number;

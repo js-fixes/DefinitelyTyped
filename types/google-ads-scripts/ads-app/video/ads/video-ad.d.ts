@@ -165,14 +165,12 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface VideoAdSelector
-            extends
-                Base.Selector<VideoAdIterator>,
+            extends Base.Selector<VideoAdIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
 
         /**
          * Provides access to ad URLs.

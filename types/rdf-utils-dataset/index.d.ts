@@ -3,7 +3,10 @@
 // Definitions by: Chris Wilkinson <https://github.com/thewilkybarkid>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import resource from "./resource";
-import resourcesToGraph from "./resourcesToGraph";
+import resource from './resource';
+import resourcesToGraph from './resourcesToGraph';
 
-export { resource, resourcesToGraph };
+export {
+    resource,
+    resourcesToGraph
+};

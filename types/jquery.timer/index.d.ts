@@ -24,6 +24,7 @@ interface JQueryTimer {
     isActive: Boolean;
     remaining: Number;
     // #endregion
+
 }
 
 interface JQuery {

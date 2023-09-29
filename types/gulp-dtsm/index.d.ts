@@ -5,8 +5,9 @@
 
 /// <reference types="node" />
 
+
 declare function dtsm(): NodeJS.WritableStream;
 
-declare namespace dtsm {}
+declare namespace dtsm { }
 
 export = dtsm;

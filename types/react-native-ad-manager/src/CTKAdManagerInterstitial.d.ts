@@ -1,4 +1,4 @@
-import { AdFailedToLoadEvent, InterstialEventType, Targeting } from "../helper-types";
+import { AdFailedToLoadEvent, InterstialEventType, Targeting } from '../helper-types';
 
 declare function setAdUnitID(adUnitID: string): void;
 declare function setTestDevices(testDevices: string[]): void;
@@ -15,14 +15,14 @@ declare function removeAllListeners(): void;
 declare const simulatorId: string;
 
 export {
-    addEventListener,
-    isReady,
-    removeAllListeners,
-    removeEventListener,
-    requestAd,
     setAdUnitID,
-    setTargeting,
     setTestDevices,
+    setTargeting,
+    requestAd,
     showAd,
+    isReady,
+    addEventListener,
+    removeEventListener,
+    removeAllListeners,
     simulatorId,
 };

@@ -27,6 +27,7 @@ declare namespace compiler {
         /**
          * If false and there is no postprocessors, compiler returns the AST synchronously
          * Otherwise, a promise is returned
+         *
          */
         async?: boolean | undefined;
 
@@ -45,11 +46,12 @@ declare namespace compiler {
  * If postProcessors are provided or options.async is set to true:
  *      compiler returns a promise
  * Otherwise, compile returns the AST synchronously
+ *
  */
 declare function compiler(
     input: string,
     options?: compiler.Options,
-    callback?: () => void,
+    callback?: () => void
 ): Promise<compiler.AST> | compiler.AST;
 
 export = compiler;

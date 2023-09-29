@@ -1,67 +1,65 @@
 import MapboxDraw, {
-    constants,
     DrawCustomMode,
     DrawFeature,
     DrawMode,
     DrawUpdateEvent,
     Lib,
-    lib,
     MapboxDrawOptions,
-} from "@mapbox/mapbox-gl-draw";
+    constants,
+    lib,
+} from '@mapbox/mapbox-gl-draw';
 
 const draw = new MapboxDraw({});
 
 // @ts-expect-error
-const drawFeature: DrawFeature = {};
-// @ts-expect-error
-const feature: Feature = {};
+const feature: DrawFeature = {};
 
 // $ExpectType string[]
 draw.add({
-    type: "FeatureCollection",
+    type: 'FeatureCollection',
     features: [],
 });
 
 // accepts string
 // $ExpectType MapboxDraw
-draw.delete("1");
+draw.delete('1');
 
 // accepts string[]
 // $ExpectType MapboxDraw
-draw.delete(["1", "2"]);
+draw.delete(['1', '2']);
 
 // $ExpectType string[]
 draw.getSelectedIds();
 
 // $ExpectType MapboxDraw
-draw.changeMode("direct_select", { featureId: "1" });
+draw.changeMode('direct_select', { featureId: '1' });
 
 // @ts-expect-error
-draw.changeMode("direct_select");
+draw.changeMode('direct_select');
 
 // $ExpectType MapboxDraw
-draw.changeMode("simple_select");
+draw.changeMode('simple_select');
 
-const drawLineSelect: DrawMode = "draw_line_string";
+const drawLineSelect: DrawMode = 'draw_line_string';
 // $ExpectType MapboxDraw
-draw.changeMode(drawLineSelect, { featureId: "1", from: [1] });
+draw.changeMode(drawLineSelect, { featureId: '1', from: [1] });
 
 // $ExpectType MapboxDraw
-draw.changeMode("draw_point");
+draw.changeMode('draw_point');
 
 // @ts-expect-error
-draw.changeMode("draw_point", {});
+draw.changeMode('draw_point', {});
 
 // $ExpectType MapboxDraw
-draw.changeMode("custom_mode");
+draw.changeMode('custom_mode');
 
 // $ExpectType MapboxDraw
-draw.changeMode("custom_mode", {});
+draw.changeMode('custom_mode', {});
 
-if (draw.getMode() === "draw_line_string") {
+if (draw.getMode() === 'draw_line_string') {
 }
 
-if (draw.getMode() === "some_custom_mode") {
+if (draw.getMode() === 'some_custom_mode') {
 }
 
 // $ExpectType "direct_select"
@@ -97,17 +95,17 @@ const customMode: CustomMode = {
 
         this.setSelectedCoordinates([
             {
-                coord_path: "0",
-                feature_id: "1",
+                coord_path: '0',
+                feature_id: '1',
             },
         ]);
 
         this.setSelected();
-        this.setSelected("1");
-        this.setSelected(["1", "2"]);
+        this.setSelected('1');
+        this.setSelected(['1', '2']);
 
         // $ExpectType DrawFeature
-        this.getFeature("1");
+        this.getFeature('1');
 
         // $ExpectType number
         this.customMethod();
@@ -119,22 +117,22 @@ const customMode: CustomMode = {
         this.changeMode(constants.modes.SIMPLE_SELECT);
 
         // $ExpectType (e: MapMouseEvent | MapTouchEvent) => boolean
-        lib.CommonSelectors.isOfMetaType("feature");
+        lib.CommonSelectors.isOfMetaType('feature');
 
         // $ExpectType boolean
         lib.CommonSelectors.isVertex(e);
 
         // $ExpectType number
-        lib.constrainFeatureMovement([drawFeature], { lng: e.lngLat.lng, lat: e.lngLat.lat });
+        lib.constrainFeatureMovement([feature], { lng: e.lngLat.lng, lat: e.lngLat.lat });
 
-        // $ExpectType Feature<Point, GeoJsonProperties> | null
-        lib.createMidPoint("1", feature, feature);
+        // $ExpectType GeoJSON
+        lib.createMidPoint('1', feature, feature);
 
-        // $ExpectType Feature<Point, GeoJsonProperties>[]
+        // $ExpectType GeoJSON[]
         lib.createSupplementaryPoints(feature, { midpoints: false });
 
-        // $ExpectType Feature<Point, GeoJsonProperties>
-        lib.createVertex("1", [e.lngLat.lng, e.lngLat.lat], "0", true);
+        // $ExpectType GeoJSON
+        lib.createVertex('1', [e.lngLat.lng, e.lngLat.lat], '0', true);
 
         // $ExpectType number
         lib.euclideanDistance({ x: 10, y: 20 }, { x: 100, y: 200 });
@@ -158,35 +156,35 @@ const customMode: CustomMode = {
         // TODO: add tests to ModeHandler
 
         // $ExpectType void
-        lib.moveFeatures([drawFeature], { lng: 12, lat: 13 });
+        lib.moveFeatures([feature], { lng: 12, lat: 13 });
 
         // $ExpectType DrawFeature[]
-        lib.sortFeatures([drawFeature]);
+        lib.sortFeatures([feature]);
 
         // $ExpectType boolean
-        lib.stringSetsAreEqual([{ id: "Feature1" }, { id: "Feature2" }], [{ id: "Feature1" }, { id: "Feature2" }]);
+        lib.stringSetsAreEqual([{ id: 'Feature1' }, { id: 'Feature2' }], [{ id: 'Feature1' }, { id: 'Feature2' }]);
 
         // $ExpectType StringSet
-        lib.StringSet(["1", 2]);
+        lib.StringSet(['1', 2]);
 
-        const FabricDrawingManagerStyles: Lib["theme"] = [
+        const FabricDrawingManagerStyles: Lib['theme'] = [
             {
-                id: "gl-draw-polygon-fill-inactive",
-                type: "fill",
+                id: 'gl-draw-polygon-fill-inactive',
+                type: 'fill',
             },
         ];
 
-        const FabricDrawingManagerStylesError: Lib["theme"] = [
+        const FabricDrawingManagerStylesError: Lib['theme'] = [
             {
                 // @ts-expect-error
-                id: "xxx",
+                id: 'xxx',
                 // @ts-expect-error
-                type: "any-other-type",
+                type: 'any-other-type',
             },
         ];
 
         // $ExpectType any[]
-        lib.toDenseArray(["", undefined, 1]);
+        lib.toDenseArray(['', undefined, 1]);
     },
 
     toDisplayFeatures(state, geojson, display) {},
@@ -209,67 +207,67 @@ const options: MapboxDrawOptions = {
 const drawWithCustomMode = new MapboxDraw(options);
 
 // $ExpectType void
-drawFeature.changed();
+feature.changed();
 
 // $ExpectType boolean
-drawFeature.isValid();
+feature.isValid();
 
 // $ExpectType Position
-drawFeature.getCoordinate("");
+feature.getCoordinate('');
 
 // $ExpectType void
-drawFeature.updateCoordinate("", 0, 0);
+feature.updateCoordinate('', 0, 0);
 
 // $ExpectType void
-drawFeature.setProperty("", 0);
+feature.setProperty('', 0);
 
 // $ExpectType GeoJSON
-drawFeature.toGeoJSON();
+feature.toGeoJSON();
 
-if (drawFeature.type === "Point") {
+if (feature.type === 'Point') {
     // $ExpectType Position
-    drawFeature.coordinates;
+    feature.coordinates;
 
     // $ExpectType Position
-    drawFeature.getCoordinate();
+    feature.getCoordinate();
 
     // $ExpectType void
-    drawFeature.updateCoordinate(0, 0);
+    feature.updateCoordinate(0, 0);
 }
 
-if (drawFeature.type === "LineString") {
+if (feature.type === 'LineString') {
     // $ExpectType Position[]
-    drawFeature.coordinates;
+    feature.coordinates;
 
     // $ExpectType void
-    drawFeature.addCoordinate("", 0, 0);
+    feature.addCoordinate('', 0, 0);
 
     // $ExpectType void
-    drawFeature.removeCoordinate("");
+    feature.removeCoordinate('');
 }
 
-if (drawFeature.type === "Polygon") {
+if (feature.type === 'Polygon') {
     // $ExpectType Position[][]
-    drawFeature.coordinates;
+    feature.coordinates;
 
     // $ExpectType void
-    drawFeature.addCoordinate("", 0, 0);
+    feature.addCoordinate('', 0, 0);
 
     // $ExpectType void
-    drawFeature.removeCoordinate("");
+    feature.removeCoordinate('');
 }
 
-if (drawFeature.type === "MultiPoint") {
+if (feature.type === 'MultiPoint') {
     // $ExpectType DrawPoint[]
-    drawFeature.features;
+    feature.features;
 }
 
-if (drawFeature.type === "MultiLineString") {
+if (feature.type === 'MultiLineString') {
     // $ExpectType DrawLineString[]
-    drawFeature.features;
+    feature.features;
 }
 
-if (drawFeature.type === "MultiPolygon") {
+if (feature.type === 'MultiPolygon') {
     // $ExpectType DrawPolygon[]
-    drawFeature.features;
+    feature.features;
 }

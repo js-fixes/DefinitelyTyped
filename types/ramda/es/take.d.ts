@@ -1,2 +1,2 @@
-import { take } from "../index.js";
+import { take } from '../index';
 export default take;

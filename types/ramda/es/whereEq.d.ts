@@ -1,2 +1,2 @@
-import { whereEq } from "../index.js";
+import { whereEq } from '../index';
 export default whereEq;

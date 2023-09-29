@@ -1,4 +1,3 @@
-// eslint-disable-next-line @definitelytyped/no-self-import
 import Mixin from "@ember/object/mixin";
 import RSVP from "rsvp";
 

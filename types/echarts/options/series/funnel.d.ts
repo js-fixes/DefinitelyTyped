@@ -7,6 +7,7 @@ declare namespace echarts {
          *
          * [see doc](https://echarts.apache.org/en/option.html#series-funnel)
          *
+         *
          * @see https://echarts.apache.org/en/option.html#series-funnel
          */
         interface SeriesFunnel {
@@ -22,6 +23,7 @@ declare namespace echarts {
              * If specified, it can be used to refer the component in option
              * or API.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.id
              */
             id?: string | undefined;
@@ -33,6 +35,7 @@ declare namespace echarts {
              * [legend](https://echarts.apache.org/en/option.html#legend)
              * , or updaing data and configuration with `setOption`.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.name
              */
             name?: string | undefined;
@@ -40,12 +43,14 @@ declare namespace echarts {
             /**
              * The specified minimum value.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.min
              */
             min?: number | undefined;
 
             /**
              * The specified maximum value.
+             *
              *
              * @default
              * 100
@@ -64,6 +69,7 @@ declare namespace echarts {
              * If you don't want the graph of minimum value to be a triangle,
              * you can set up this property larger than 0.
              *
+             *
              * @default
              * '0%'
              * @see https://echarts.apache.org/en/option.html#series-funnel.minSize
@@ -78,6 +84,7 @@ declare namespace echarts {
              * It can be absolute pixel and also the percentage of
              * [layout width](https://echarts.apache.org/en/option.html#series-funnel.width)
              * .
+             *
              *
              * @default
              * '100%'
@@ -99,6 +106,7 @@ declare namespace echarts {
              * `'none'`(in data order) or a function, which is the same as `Array.prototype.sort(function
              * (a, b) { ... })`;
              *
+             *
              * @default
              * "descending"
              * @see https://echarts.apache.org/en/option.html#series-funnel.sort
@@ -107,6 +115,7 @@ declare namespace echarts {
 
             /**
              * Gap between each trapezoid.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.gap
              */
@@ -117,6 +126,7 @@ declare namespace echarts {
              * [legend](https://echarts.apache.org/en/option.html#legend)
              * is being hovered.
              *
+             *
              * @default
              * "true"
              * @see https://echarts.apache.org/en/option.html#series-funnel.legendHoverLink
@@ -126,6 +136,7 @@ declare namespace echarts {
             /**
              * Horizontal align.
              * Defaults to align center. Can be 'left', 'right', 'center'.
+             *
              *
              * @default
              * "center"
@@ -140,6 +151,7 @@ declare namespace echarts {
              * In ECharts 3, to make the configuration structure flatter, `label`is
              * taken to be at the same level with `itemStyle`, and has `emphasis`
              * as `itemStyle` does.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.label
              */
@@ -175,6 +187,7 @@ declare namespace echarts {
                  * + `'inner'` equals to `'inside'`.
                  *
                  * + `'center'` equals to `'inside'`.
+                 *
                  *
                  * @default
                  * "outside"
@@ -221,12 +234,14 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.formatter
                  */
                 formatter?: Function | string | undefined;
 
                 /**
                  * text color.
+                 *
                  *
                  * @default
                  * ""#fff""
@@ -242,6 +257,7 @@ declare namespace echarts {
                  * + `'normal'`
                  * + `'italic'`
                  * + `'oblique'`
+                 *
                  *
                  * @default
                  * "normal"
@@ -260,6 +276,7 @@ declare namespace echarts {
                  * + `'lighter'`
                  * + 100 | 200 | 300 | 400...
                  *
+                 *
                  * @default
                  * "normal"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.fontWeight
@@ -271,6 +288,7 @@ declare namespace echarts {
                  *
                  * Can also be 'serif' , 'monospace', ...
                  *
+                 *
                  * @default
                  * "sans-serif"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.fontFamily
@@ -279,6 +297,7 @@ declare namespace echarts {
 
                 /**
                  * font size
+                 *
                  *
                  * @default
                  * 12
@@ -300,6 +319,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.align
                  */
                 align?: string | undefined;
@@ -318,6 +338,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.verticalAlign
                  */
                 verticalAlign?: string | undefined;
@@ -329,6 +350,7 @@ declare namespace echarts {
                  * level will be used. For example:
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label)
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.lineHeight
                  */
@@ -346,6 +368,7 @@ declare namespace echarts {
                  * `width` or `height` can be specified when using background
                  * image, or auto adapted by default.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.backgroundColor
@@ -354,6 +377,7 @@ declare namespace echarts {
 
                 /**
                  * Border color of the text fregment.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -364,12 +388,14 @@ declare namespace echarts {
                 /**
                  * Border width of the text fregment.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.borderWidth
                  */
                 borderWidth?: number | undefined;
 
                 /**
                  * Border radius of the text fregment.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.borderRadius
                  */
@@ -386,12 +412,14 @@ declare namespace echarts {
                  * Notice, `width` and `height` specifies the width and height
                  * of the content, without `padding`.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.padding
                  */
                 padding?: any[] | number | undefined;
 
                 /**
                  * Shadow color of the text block.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -402,6 +430,7 @@ declare namespace echarts {
                 /**
                  * Show blur of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.shadowBlur
                  */
                 shadowBlur?: number | undefined;
@@ -409,12 +438,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text block.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.shadowOffsetY
                  */
@@ -439,6 +470,7 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.width
                  */
                 width?: number | string | undefined;
@@ -454,12 +486,14 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.height
                  */
                 height?: number | string | undefined;
 
                 /**
                  * Storke color of the text.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -470,12 +504,14 @@ declare namespace echarts {
                 /**
                  * Storke line width of the text.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.textBorderWidth
                  */
                 textBorderWidth?: number | undefined;
 
                 /**
                  * Shadow color of the text itself.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -486,6 +522,7 @@ declare namespace echarts {
                 /**
                  * Shadow blue of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.textShadowBlur
                  */
                 textShadowBlur?: number | undefined;
@@ -493,12 +530,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.textShadowOffsetX
                  */
                 textShadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text itself.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.textShadowOffsetY
                  */
@@ -514,6 +553,7 @@ declare namespace echarts {
                  * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                  * please.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich
                  */
                 rich?: {
@@ -523,6 +563,7 @@ declare namespace echarts {
                     [userStyle: string]: {
                         /**
                          * text color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -538,6 +579,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -556,6 +598,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -567,6 +610,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -575,6 +619,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -596,6 +641,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.align
                          */
                         align?: string | undefined;
@@ -614,6 +660,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -625,6 +672,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.label.rich.%3Cuser%20defined%20style%20name%3E)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                          */
@@ -642,6 +690,7 @@ declare namespace echarts {
                          * `width` or `height` can be specified when using background
                          * image, or auto adapted by default.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -650,6 +699,7 @@ declare namespace echarts {
 
                         /**
                          * Border color of the text fregment.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -660,12 +710,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                          */
@@ -683,12 +735,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -699,6 +753,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -706,12 +761,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                          */
@@ -739,6 +796,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.width
                          */
                         width?: number | string | undefined;
@@ -755,12 +813,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.height
                          */
                         height?: number | string | undefined;
 
                         /**
                          * Storke color of the text.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -771,12 +831,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -787,6 +849,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -794,12 +857,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                          */
@@ -813,11 +878,13 @@ declare namespace echarts {
              * [label position](https://echarts.apache.org/en/option.html#series-funnel.label.position)
              * is set as `'left'`or`'right'`, the visual guide line will show.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine
              */
             labelLine?: {
                 /**
                  * Whether to show visual guide line.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.show
                  */
@@ -825,6 +892,7 @@ declare namespace echarts {
 
                 /**
                  * The length of the first part from visual guide line.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.length
                  */
@@ -847,6 +915,7 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.labelLine.lineStyle)
                      *
+                     *
                      * @default
                      * "#000"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.color
@@ -855,6 +924,7 @@ declare namespace echarts {
 
                     /**
                      * line width.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.width
                      */
@@ -868,6 +938,7 @@ declare namespace echarts {
                      * + `'solid'`
                      * + `'dashed'`
                      * + `'dotted'`
+                     *
                      *
                      * @default
                      * "solid"
@@ -884,12 +955,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.labelLine.lineStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.shadowColor
                      */
@@ -898,12 +971,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.shadowOffsetY
                      */
@@ -914,6 +989,7 @@ declare namespace echarts {
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.lineStyle.opacity
                      */
                     opacity?: number | undefined;
@@ -922,11 +998,13 @@ declare namespace echarts {
                 /**
                  * The style of visual guide line in emphasis status.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis
                  */
                 emphasis?: {
                     /**
                      * Whether to show visual guide line.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.show
                      */
@@ -950,6 +1028,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.labelLine.emphasis.lineStyle)
                          *
+                         *
                          * @default
                          * "#000"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.color
@@ -958,6 +1037,7 @@ declare namespace echarts {
 
                         /**
                          * line width.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.width
                          */
@@ -971,6 +1051,7 @@ declare namespace echarts {
                          * + `'solid'`
                          * + `'dashed'`
                          * + `'dotted'`
+                         *
                          *
                          * @default
                          * "solid"
@@ -987,12 +1068,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.labelLine.emphasis.lineStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.shadowColor
                          */
@@ -1001,12 +1084,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.shadowOffsetY
                          */
@@ -1016,6 +1101,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine.emphasis.lineStyle.opacity
                          */
@@ -1027,6 +1113,7 @@ declare namespace echarts {
             /**
              * Graphic style of , `emphasis` is the style when it is highlighted,
              * like being hovered by mouse, or highlighted via legend connect.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle
              */
@@ -1056,12 +1143,14 @@ declare namespace echarts {
                  * Input parameters are `seriesIndex`, `dataIndex`, `data`,
                  * `value`, and etc. of data item.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.color
                  */
                 color?: EChartOption.Color | Function | undefined;
 
                 /**
                  * border color, whose format is similar to that of `color`.
+                 *
                  *
                  * @default
                  * "#000"
@@ -1072,6 +1161,7 @@ declare namespace echarts {
                 /**
                  * border width. No border when it is set to be 0.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.borderWidth
                  */
                 borderWidth?: number | undefined;
@@ -1079,6 +1169,7 @@ declare namespace echarts {
                 /**
                  * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                  * `'solid'` by default.
+                 *
                  *
                  * @default
                  * "solid"
@@ -1095,12 +1186,14 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.itemStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.shadowBlur
                  */
                 shadowBlur?: number | undefined;
 
                 /**
                  * Shadow color. Support same format as `color`.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.shadowColor
                  */
@@ -1109,12 +1202,14 @@ declare namespace echarts {
                 /**
                  * Offset distance on the horizontal direction of shadow.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Offset distance on the vertical direction of shadow.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.shadowOffsetY
                  */
@@ -1124,6 +1219,7 @@ declare namespace echarts {
                  * Opacity of the component.
                  * Supports value from 0 to 1, and the component will not be
                  * drawn when set to 0.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle.opacity
                  */
@@ -1183,12 +1279,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.formatter
                      */
                     formatter?: Function | string | undefined;
 
                     /**
                      * text color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -1204,6 +1302,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -1222,6 +1321,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.fontWeight
@@ -1233,6 +1333,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.fontFamily
@@ -1241,6 +1342,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -1262,6 +1364,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.align
                      */
                     align?: string | undefined;
@@ -1280,6 +1383,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -1291,6 +1395,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.lineHeight
                      */
@@ -1308,6 +1413,7 @@ declare namespace echarts {
                      * `width` or `height` can be specified when using background
                      * image, or auto adapted by default.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.backgroundColor
@@ -1316,6 +1422,7 @@ declare namespace echarts {
 
                     /**
                      * Border color of the text fregment.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1326,12 +1433,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.borderRadius
                      */
@@ -1348,12 +1457,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1364,6 +1475,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -1371,12 +1483,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.shadowOffsetY
                      */
@@ -1402,6 +1516,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.width
                      */
                     width?: number | string | undefined;
@@ -1417,12 +1532,14 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.height
                      */
                     height?: number | string | undefined;
 
                     /**
                      * Storke color of the text.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1433,12 +1550,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1449,6 +1568,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -1456,12 +1576,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.textShadowOffsetY
                      */
@@ -1477,6 +1599,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich
                      */
                     rich?: {
@@ -1486,6 +1609,7 @@ declare namespace echarts {
                         [userStyle: string]: {
                             /**
                              * text color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -1501,6 +1625,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -1519,6 +1644,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -1530,6 +1656,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -1538,6 +1665,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -1559,6 +1687,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -1577,6 +1706,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -1588,6 +1718,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -1606,6 +1737,7 @@ declare namespace echarts {
                              * `width` or `height` can be specified when using
                              * background image, or auto adapted by default.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -1614,6 +1746,7 @@ declare namespace echarts {
 
                             /**
                              * Border color of the text fregment.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1624,12 +1757,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -1648,12 +1783,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1664,6 +1801,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -1671,12 +1809,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -1704,6 +1844,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -1720,12 +1861,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
 
                             /**
                              * Storke color of the text.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1736,12 +1879,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1752,6 +1897,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -1759,12 +1905,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -1790,12 +1938,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -1806,6 +1956,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -1813,6 +1964,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -1829,12 +1981,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.shadowColor
                      */
@@ -1843,12 +1997,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.shadowOffsetY
                      */
@@ -1858,6 +2014,7 @@ declare namespace echarts {
                      * Opacity of the component.
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.itemStyle.opacity
                      */
@@ -1871,12 +2028,14 @@ declare namespace echarts {
                     /**
                      * Whether to show visual guide line.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.show
                      */
                     show?: boolean | undefined;
 
                     /**
                      * The length of the first part from visual guide line.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.length
                      */
@@ -1900,6 +2059,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.labelLine.lineStyle)
                          *
+                         *
                          * @default
                          * "#000"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.color
@@ -1908,6 +2068,7 @@ declare namespace echarts {
 
                         /**
                          * line width.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.width
                          */
@@ -1921,6 +2082,7 @@ declare namespace echarts {
                          * + `'solid'`
                          * + `'dashed'`
                          * + `'dotted'`
+                         *
                          *
                          * @default
                          * "solid"
@@ -1937,12 +2099,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.labelLine.lineStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.shadowColor
                          */
@@ -1951,12 +2115,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.shadowOffsetY
                          */
@@ -1967,6 +2133,7 @@ declare namespace echarts {
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.lineStyle.opacity
                          */
                         opacity?: number | undefined;
@@ -1975,11 +2142,13 @@ declare namespace echarts {
                     /**
                      * The style of visual guide line in emphasis status.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis
                      */
                     emphasis?: {
                         /**
                          * Whether to show visual guide line.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.show
                          */
@@ -2003,6 +2172,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.labelLine.emphasis.lineStyle)
                              *
+                             *
                              * @default
                              * "#000"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.color
@@ -2011,6 +2181,7 @@ declare namespace echarts {
 
                             /**
                              * line width.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.width
                              */
@@ -2024,6 +2195,7 @@ declare namespace echarts {
                              * + `'solid'`
                              * + `'dashed'`
                              * + `'dotted'`
+                             *
                              *
                              * @default
                              * "solid"
@@ -2040,12 +2212,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.emphasis.labelLine.emphasis.lineStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.shadowColor
                              */
@@ -2055,6 +2229,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -2062,6 +2237,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.shadowOffsetY
                              */
@@ -2071,6 +2247,7 @@ declare namespace echarts {
                              * Opacity of the component.
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis.labelLine.emphasis.lineStyle.opacity
                              */
@@ -2193,6 +2370,7 @@ declare namespace echarts {
              * [example](https://echarts.apache.org/examples/en/editor.html?c=dataset-series-layout-by)
              * .
              *
+             *
              * @default
              * "column"
              * @see https://echarts.apache.org/en/option.html#series-funnel.seriesLayoutBy
@@ -2206,6 +2384,7 @@ declare namespace echarts {
              * [dataset](https://echarts.apache.org/en/option.html#dataset)
              * exists, the series will use `dataset`.
              * `datasetIndex` specifies which dataset will be used.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.datasetIndex
              */
@@ -2243,12 +2422,14 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel)
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.data
              */
             data?: number[] | number[][] | SeriesFunnel.DataObject[] | undefined;
 
             /**
              * Mark point in a chart.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint
              */
@@ -2289,6 +2470,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint)
                  *
+                 *
                  * @default
                  * "pin"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.symbol
@@ -2315,6 +2497,7 @@ declare namespace echarts {
                  * , and the second parameter `params` is the rest parameters
                  * of data item.
                  *
+                 *
                  * @default
                  * 50
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.symbolSize
@@ -2327,12 +2510,14 @@ declare namespace echarts {
                  * `symbolRotate` value will be ignored, and compulsively use
                  * tangent angle.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.symbolRotate
                  */
                 symbolRotate?: number | undefined;
 
                 /**
                  * Whether to keep aspect for symbols in the form of `path://`.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.symbolKeepAspect
                  */
@@ -2354,6 +2539,7 @@ declare namespace echarts {
                  * It can be used to make the arrow in the bottom to be at data
                  * position when symbol is pin.
                  *
+                 *
                  * @default
                  * [0, 0]
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.symbolOffset
@@ -2365,6 +2551,7 @@ declare namespace echarts {
                  * Default value is false, for triggering and responding to
                  * mouse events.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.silent
                  */
                 silent?: boolean | undefined;
@@ -2372,11 +2559,13 @@ declare namespace echarts {
                 /**
                  * Label of mark point.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label
                  */
                 label?: {
                     /**
                      * Whether to show label.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.show
                      */
@@ -2414,6 +2603,7 @@ declare namespace echarts {
                      * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                      * .
                      *
+                     *
                      * @default
                      * "inside"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.position
@@ -2427,6 +2617,7 @@ declare namespace echarts {
                      * See:
                      * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                      * .
+                     *
                      *
                      * @default
                      * 5
@@ -2442,6 +2633,7 @@ declare namespace echarts {
                      * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rotate
                      */
                     rotate?: number | undefined;
@@ -2450,6 +2642,7 @@ declare namespace echarts {
                      * Whether to move text slightly.
                      * For example: `[30, 40]` means move `30` horizontally
                      * and move `40` vertically.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.offset
                      */
@@ -2494,6 +2687,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.formatter
                      */
                     formatter?: Function | string | undefined;
@@ -2503,6 +2697,7 @@ declare namespace echarts {
                      *
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -2518,6 +2713,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -2536,6 +2732,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.fontWeight
@@ -2547,6 +2744,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.fontFamily
@@ -2555,6 +2753,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -2576,6 +2775,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.align
                      */
                     align?: string | undefined;
@@ -2594,6 +2794,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -2605,6 +2806,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.lineHeight
                      */
@@ -2625,6 +2827,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.backgroundColor
@@ -2637,6 +2840,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.borderColor
@@ -2646,12 +2850,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.borderRadius
                      */
@@ -2668,12 +2874,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -2684,6 +2892,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -2691,12 +2900,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.shadowOffsetY
                      */
@@ -2722,6 +2933,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.width
                      */
                     width?: number | string | undefined;
@@ -2737,6 +2949,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.height
                      */
                     height?: number | string | undefined;
@@ -2747,6 +2960,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.textBorderColor
@@ -2756,12 +2970,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -2772,6 +2988,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -2779,12 +2996,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.textShadowOffsetY
                      */
@@ -2800,6 +3019,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich
                      */
                     rich?: {
@@ -2812,6 +3032,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -2827,6 +3048,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -2845,6 +3067,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -2856,6 +3079,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -2864,6 +3088,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -2885,6 +3110,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -2903,6 +3129,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -2914,6 +3141,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -2935,6 +3163,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -2947,6 +3176,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -2956,12 +3186,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -2980,12 +3212,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -2996,6 +3230,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -3003,12 +3238,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -3036,6 +3273,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -3052,6 +3290,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
@@ -3062,6 +3301,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -3071,12 +3311,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -3087,6 +3329,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -3094,12 +3337,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -3113,6 +3358,7 @@ declare namespace echarts {
                     emphasis?: {
                         /**
                          * Whether to show label.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.show
                          */
@@ -3150,6 +3396,7 @@ declare namespace echarts {
                          * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.position
                          */
                         position?: any[] | string | undefined;
@@ -3161,6 +3408,7 @@ declare namespace echarts {
                          * See:
                          * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                          * .
+                         *
                          *
                          * @default
                          * 5
@@ -3176,6 +3424,7 @@ declare namespace echarts {
                          * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rotate
                          */
                         rotate?: number | undefined;
@@ -3184,6 +3433,7 @@ declare namespace echarts {
                          * Whether to move text slightly.
                          * For example: `[30, 40]` means move `30` horizontally
                          * and move `40` vertically.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.offset
                          */
@@ -3230,6 +3480,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.formatter
                          */
                         formatter?: Function | string | undefined;
@@ -3239,6 +3490,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -3254,6 +3506,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -3272,6 +3525,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.fontWeight
@@ -3283,6 +3537,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.fontFamily
@@ -3291,6 +3546,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -3312,6 +3568,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.align
                          */
                         align?: string | undefined;
@@ -3330,6 +3587,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -3341,6 +3599,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.lineHeight
                          */
@@ -3361,6 +3620,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.backgroundColor
@@ -3373,6 +3633,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.borderColor
@@ -3382,12 +3643,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.borderRadius
                          */
@@ -3405,12 +3668,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -3421,6 +3686,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -3428,12 +3694,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.shadowOffsetY
                          */
@@ -3461,6 +3729,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.width
                          */
                         width?: number | string | undefined;
@@ -3477,6 +3746,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.height
                          */
                         height?: number | string | undefined;
@@ -3487,6 +3757,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.textBorderColor
@@ -3496,12 +3767,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -3512,6 +3785,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -3519,12 +3793,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.textShadowOffsetY
                          */
@@ -3540,6 +3816,7 @@ declare namespace echarts {
                          * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                          * please.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich
                          */
                         rich?: {
@@ -3552,6 +3829,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -3567,6 +3845,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -3585,6 +3864,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -3596,6 +3876,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -3604,6 +3885,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -3627,6 +3909,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.align
                                  */
                                 align?: string | undefined;
@@ -3647,6 +3930,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -3659,6 +3943,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                  */
@@ -3681,6 +3966,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -3693,6 +3979,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -3702,12 +3989,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                  */
@@ -3727,12 +4016,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -3743,6 +4034,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -3750,12 +4042,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                  */
@@ -3787,6 +4081,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.width
                                  */
                                 width?: number | string | undefined;
@@ -3804,6 +4099,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.height
                                  */
                                 height?: number | string | undefined;
@@ -3814,6 +4110,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -3823,12 +4120,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -3839,6 +4138,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -3846,12 +4146,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                  */
@@ -3863,6 +4165,7 @@ declare namespace echarts {
 
                 /**
                  * Mark point style.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle
                  */
@@ -3880,12 +4183,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -3896,6 +4201,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -3903,6 +4209,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -3919,12 +4226,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.shadowColor
                      */
@@ -3933,12 +4242,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.shadowOffsetY
                      */
@@ -3948,6 +4259,7 @@ declare namespace echarts {
                      * Opacity of the component.
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.opacity
                      */
@@ -3971,6 +4283,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.itemStyle.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.color
                          */
                         color?: EChartOption.Color | undefined;
@@ -3978,6 +4291,7 @@ declare namespace echarts {
                         /**
                          * border color, whose format is similar to that of
                          * `color`.
+                         *
                          *
                          * @default
                          * "#000"
@@ -3988,6 +4302,7 @@ declare namespace echarts {
                         /**
                          * border width. No border when it is set to be 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.borderWidth
                          */
                         borderWidth?: number | undefined;
@@ -3995,6 +4310,7 @@ declare namespace echarts {
                         /**
                          * Border type, which can be `'solid'`, `'dashed'`,
                          * or `'dotted'`. `'solid'` by default.
+                         *
                          *
                          * @default
                          * "solid"
@@ -4011,12 +4327,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.itemStyle.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.shadowColor
                          */
@@ -4025,12 +4343,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.shadowOffsetY
                          */
@@ -4040,6 +4360,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.itemStyle.emphasis.opacity
                          */
@@ -4064,11 +4385,13 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data
                  */
                 data?: {
                     /**
                      * Mark point name.
+                     *
                      *
                      * @default
                      * ''
@@ -4079,6 +4402,7 @@ declare namespace echarts {
                     /**
                      * X position according to container, in pixel.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.x
                      */
                     x?: number | undefined;
@@ -4086,12 +4410,14 @@ declare namespace echarts {
                     /**
                      * Y position according to container, in pixel.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.y
                      */
                     y?: number | undefined;
 
                     /**
                      * Label value, which can be ignored.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.value
                      */
@@ -4133,6 +4459,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.symbol
                      */
                     symbol?: string | undefined;
@@ -4144,6 +4471,7 @@ declare namespace echarts {
                      * For example, `[20, 10]` means symbol width is `20`, and
                      * height is`10`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.symbolSize
                      */
                     symbolSize?: any[] | number | undefined;
@@ -4154,12 +4482,14 @@ declare namespace echarts {
                      * `symbolRotate` value will be ignored, and compulsively
                      * use tangent angle.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.symbolRotate
                      */
                     symbolRotate?: number | undefined;
 
                     /**
                      * Whether to keep aspect for symbols in the form of `path://`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.symbolKeepAspect
                      */
@@ -4181,6 +4511,7 @@ declare namespace echarts {
                      * It can be used to make the arrow in the bottom to be
                      * at data position when symbol is pin.
                      *
+                     *
                      * @default
                      * [0, 0]
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.symbolOffset
@@ -4189,6 +4520,7 @@ declare namespace echarts {
 
                     /**
                      * Mark point style.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle
                      */
@@ -4207,6 +4539,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.color
                          */
                         color?: EChartOption.Color | undefined;
@@ -4214,6 +4547,7 @@ declare namespace echarts {
                         /**
                          * border color, whose format is similar to that of
                          * `color`.
+                         *
                          *
                          * @default
                          * "#000"
@@ -4224,6 +4558,7 @@ declare namespace echarts {
                         /**
                          * border width. No border when it is set to be 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.borderWidth
                          */
                         borderWidth?: number | undefined;
@@ -4231,6 +4566,7 @@ declare namespace echarts {
                         /**
                          * Border type, which can be `'solid'`, `'dashed'`,
                          * or `'dotted'`. `'solid'` by default.
+                         *
                          *
                          * @default
                          * "solid"
@@ -4247,12 +4583,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.shadowColor
                          */
@@ -4261,12 +4599,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.shadowOffsetY
                          */
@@ -4276,6 +4616,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.opacity
                          */
@@ -4299,6 +4640,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.itemStyle.emphasis)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.color
                              */
                             color?: EChartOption.Color | undefined;
@@ -4306,6 +4648,7 @@ declare namespace echarts {
                             /**
                              * border color, whose format is similar to that
                              * of `color`.
+                             *
                              *
                              * @default
                              * "#000"
@@ -4317,6 +4660,7 @@ declare namespace echarts {
                              * border width.
                              * No border when it is set to be 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.borderWidth
                              */
                             borderWidth?: number | undefined;
@@ -4324,6 +4668,7 @@ declare namespace echarts {
                             /**
                              * Border type, which can be `'solid'`, `'dashed'`,
                              * or `'dotted'`. `'solid'` by default.
+                             *
                              *
                              * @default
                              * "solid"
@@ -4340,12 +4685,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.itemStyle.emphasis)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.shadowColor
                              */
@@ -4355,6 +4702,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -4362,6 +4710,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.shadowOffsetY
                              */
@@ -4371,6 +4720,7 @@ declare namespace echarts {
                              * Opacity of the component.
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.itemStyle.emphasis.opacity
                              */
@@ -4384,6 +4734,7 @@ declare namespace echarts {
                     label?: {
                         /**
                          * Whether to show label.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.show
                          */
@@ -4421,6 +4772,7 @@ declare namespace echarts {
                          * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.position
                          */
                         position?: any[] | string | undefined;
@@ -4432,6 +4784,7 @@ declare namespace echarts {
                          * See:
                          * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                          * .
+                         *
                          *
                          * @default
                          * 5
@@ -4447,6 +4800,7 @@ declare namespace echarts {
                          * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rotate
                          */
                         rotate?: number | undefined;
@@ -4455,6 +4809,7 @@ declare namespace echarts {
                          * Whether to move text slightly.
                          * For example: `[30, 40]` means move `30` horizontally
                          * and move `40` vertically.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.offset
                          */
@@ -4465,6 +4820,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -4480,6 +4836,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -4498,6 +4855,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.fontWeight
@@ -4509,6 +4867,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.fontFamily
@@ -4517,6 +4876,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -4538,6 +4898,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.align
                          */
                         align?: string | undefined;
@@ -4556,6 +4917,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -4567,6 +4929,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.lineHeight
                          */
@@ -4587,6 +4950,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.backgroundColor
@@ -4599,6 +4963,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.borderColor
@@ -4608,12 +4973,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.borderRadius
                          */
@@ -4631,12 +4998,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -4647,6 +5016,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -4654,12 +5024,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.shadowOffsetY
                          */
@@ -4687,6 +5059,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.width
                          */
                         width?: number | string | undefined;
@@ -4703,6 +5076,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.height
                          */
                         height?: number | string | undefined;
@@ -4713,6 +5087,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.textBorderColor
@@ -4722,12 +5097,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -4738,6 +5115,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -4745,12 +5123,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.textShadowOffsetY
                          */
@@ -4766,6 +5146,7 @@ declare namespace echarts {
                          * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                          * please.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich
                          */
                         rich?: {
@@ -4778,6 +5159,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -4793,6 +5175,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -4811,6 +5194,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -4822,6 +5206,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -4830,6 +5215,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -4853,6 +5239,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.align
                                  */
                                 align?: string | undefined;
@@ -4873,6 +5260,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -4885,6 +5273,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                  */
@@ -4907,6 +5296,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -4919,6 +5309,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -4928,12 +5319,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                  */
@@ -4953,12 +5346,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -4969,6 +5364,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -4976,12 +5372,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                  */
@@ -5013,6 +5411,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.width
                                  */
                                 width?: number | string | undefined;
@@ -5030,6 +5429,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.height
                                  */
                                 height?: number | string | undefined;
@@ -5040,6 +5440,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -5049,12 +5450,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -5065,6 +5468,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -5072,12 +5476,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                  */
@@ -5091,6 +5497,7 @@ declare namespace echarts {
                         emphasis?: {
                             /**
                              * Whether to show label.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.show
                              */
@@ -5128,6 +5535,7 @@ declare namespace echarts {
                              * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.position
                              */
                             position?: any[] | string | undefined;
@@ -5139,6 +5547,7 @@ declare namespace echarts {
                              * See:
                              * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                              * .
+                             *
                              *
                              * @default
                              * 5
@@ -5154,6 +5563,7 @@ declare namespace echarts {
                              * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rotate
                              */
                             rotate?: number | undefined;
@@ -5162,6 +5572,7 @@ declare namespace echarts {
                              * Whether to move text slightly.
                              * For example: `[30, 40]` means move `30` horizontally
                              * and move `40` vertically.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.offset
                              */
@@ -5172,6 +5583,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -5187,6 +5599,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -5205,6 +5618,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.fontWeight
@@ -5216,6 +5630,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.fontFamily
@@ -5224,6 +5639,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -5245,6 +5661,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.align
                              */
                             align?: string | undefined;
@@ -5263,6 +5680,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -5274,6 +5692,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.lineHeight
                              */
@@ -5295,6 +5714,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.backgroundColor
@@ -5307,6 +5727,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.borderColor
@@ -5316,12 +5737,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.borderRadius
                              */
@@ -5340,12 +5763,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -5356,6 +5781,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -5363,12 +5789,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.shadowOffsetY
                              */
@@ -5396,6 +5824,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.width
                              */
                             width?: number | string | undefined;
@@ -5412,6 +5841,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.height
                              */
                             height?: number | string | undefined;
@@ -5422,6 +5852,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.textBorderColor
@@ -5431,12 +5862,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -5447,6 +5880,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -5454,12 +5888,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.textShadowOffsetY
                              */
@@ -5475,6 +5911,7 @@ declare namespace echarts {
                              * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                              * please.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich
                              */
                             rich?: {
@@ -5487,6 +5924,7 @@ declare namespace echarts {
                                      *
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
+                                     *
                                      *
                                      * @default
                                      * ""#fff""
@@ -5502,6 +5940,7 @@ declare namespace echarts {
                                      * + `'normal'`
                                      * + `'italic'`
                                      * + `'oblique'`
+                                     *
                                      *
                                      * @default
                                      * "normal"
@@ -5520,6 +5959,7 @@ declare namespace echarts {
                                      * + `'lighter'`
                                      * + 100 | 200 | 300 | 400...
                                      *
+                                     *
                                      * @default
                                      * "normal"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -5532,6 +5972,7 @@ declare namespace echarts {
                                      * Can also be 'serif' , 'monospace',
                                      * ...
                                      *
+                                     *
                                      * @default
                                      * "sans-serif"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -5540,6 +5981,7 @@ declare namespace echarts {
 
                                     /**
                                      * font size
+                                     *
                                      *
                                      * @default
                                      * 12
@@ -5563,6 +6005,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.align
                                      */
                                     align?: string | undefined;
@@ -5583,6 +6026,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                      */
                                     verticalAlign?: string | undefined;
@@ -5595,6 +6039,7 @@ declare namespace echarts {
                                      * used. For example:
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                      */
@@ -5617,6 +6062,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -5629,6 +6075,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -5638,12 +6085,14 @@ declare namespace echarts {
                                     /**
                                      * Border width of the text fregment.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                      */
                                     borderWidth?: number | undefined;
 
                                     /**
                                      * Border radius of the text fregment.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                      */
@@ -5663,12 +6112,14 @@ declare namespace echarts {
                                      * the width and height of the content,
                                      * without `padding`.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.padding
                                      */
                                     padding?: any[] | number | undefined;
 
                                     /**
                                      * Shadow color of the text block.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -5679,6 +6130,7 @@ declare namespace echarts {
                                     /**
                                      * Show blur of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                      */
                                     shadowBlur?: number | undefined;
@@ -5686,12 +6138,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                      */
                                     shadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text block.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                      */
@@ -5723,6 +6177,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.width
                                      */
                                     width?: number | string | undefined;
@@ -5740,6 +6195,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.height
                                      */
                                     height?: number | string | undefined;
@@ -5750,6 +6206,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -5759,12 +6216,14 @@ declare namespace echarts {
                                     /**
                                      * Storke line width of the text.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                      */
                                     textBorderWidth?: number | undefined;
 
                                     /**
                                      * Shadow color of the text itself.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -5775,6 +6234,7 @@ declare namespace echarts {
                                     /**
                                      * Shadow blue of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                      */
                                     textShadowBlur?: number | undefined;
@@ -5782,12 +6242,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                      */
                                     textShadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text itself.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.data.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                      */
@@ -5801,6 +6263,7 @@ declare namespace echarts {
                 /**
                  * Whether to enable animation.
                  *
+                 *
                  * @default
                  * "true"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.animation
@@ -5811,6 +6274,7 @@ declare namespace echarts {
                  * Whether to set graphic number threshold to animation.
                  * Animation will be disabled when graphic number is larger
                  * than threshold.
+                 *
                  *
                  * @default
                  * 2000
@@ -5824,6 +6288,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint)
                  *
+                 *
                  * @default
                  * 1000
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.animationDuration
@@ -5835,6 +6300,7 @@ declare namespace echarts {
                  * Varied easing effects can be found at
                  * [easing effect example](https://echarts.apache.org/examples/en/editor.html?c=line-easing)
                  * .
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -5855,6 +6321,7 @@ declare namespace echarts {
                  * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
                  * for more information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.animationDelay
                  */
                 animationDelay?: Function | number | undefined;
@@ -5865,6 +6332,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markPoint)
                  *
+                 *
                  * @default
                  * 300
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.animationDurationUpdate
@@ -5873,6 +6341,7 @@ declare namespace echarts {
 
                 /**
                  * Easing method used for animation.
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -5894,6 +6363,7 @@ declare namespace echarts {
                  *
                  * prefix
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint.animationDelayUpdate
                  */
                 animationDelayUpdate?: Function | number | undefined;
@@ -5902,6 +6372,7 @@ declare namespace echarts {
             /**
              * Use a line in the chart to illustrate.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine
              */
             markLine?: {
@@ -5909,6 +6380,7 @@ declare namespace echarts {
                  * Whether to ignore mouse events.
                  * Default value is false, for triggering and responding to
                  * mouse events.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.silent
                  */
@@ -5921,6 +6393,7 @@ declare namespace echarts {
                  * [data.symbol](https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbol)
                  * for more format information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.symbol
                  */
                 symbol?: any[] | string | undefined;
@@ -5932,6 +6405,7 @@ declare namespace echarts {
                  * **Attention:** You cannot assgin width and height seperately
                  * as normal `symbolSize`.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.symbolSize
                  */
                 symbolSize?: any[] | number | undefined;
@@ -5939,6 +6413,7 @@ declare namespace echarts {
                 /**
                  * Precison of marking line value, which is useful when displaying
                  * average value mark line.
+                 *
                  *
                  * @default
                  * 2
@@ -5949,11 +6424,13 @@ declare namespace echarts {
                 /**
                  * Mark line text.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.label
                  */
                 label?: {
                     /**
                      * Whether show label or not.
+                     *
                      *
                      * @default
                      * "true"
@@ -5967,6 +6444,7 @@ declare namespace echarts {
                      * + `'start'` starting point of the line.
                      * + `'middle'` middle point of the line.
                      * + `'end'` ending point of the line.
+                     *
                      *
                      * @default
                      * "end"
@@ -6014,6 +6492,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.label.formatter
                      */
                     formatter?: Function | string | undefined;
@@ -6024,6 +6503,7 @@ declare namespace echarts {
                     emphasis?: {
                         /**
                          * Whether show label or not.
+                         *
                          *
                          * @default
                          * "true"
@@ -6037,6 +6517,7 @@ declare namespace echarts {
                          * + `'start'` starting point of the line.
                          * + `'middle'` middle point of the line.
                          * + `'end'` ending point of the line.
+                         *
                          *
                          * @default
                          * "end"
@@ -6086,6 +6567,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.label.emphasis.formatter
                          */
                         formatter?: Function | string | undefined;
@@ -6094,6 +6576,7 @@ declare namespace echarts {
 
                 /**
                  * Mark line style.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle
                  */
@@ -6111,6 +6594,7 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.lineStyle)
                      *
+                     *
                      * @default
                      * "#000"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.color
@@ -6119,6 +6603,7 @@ declare namespace echarts {
 
                     /**
                      * line width.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.width
                      */
@@ -6132,6 +6617,7 @@ declare namespace echarts {
                      * + `'solid'`
                      * + `'dashed'`
                      * + `'dotted'`
+                     *
                      *
                      * @default
                      * "solid"
@@ -6148,12 +6634,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.lineStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.shadowColor
                      */
@@ -6162,12 +6650,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.shadowOffsetY
                      */
@@ -6178,6 +6668,7 @@ declare namespace echarts {
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.opacity
                      */
                     opacity?: number | undefined;
@@ -6185,6 +6676,7 @@ declare namespace echarts {
                     /**
                      * Edge curvature, which supports value from 0 to 1.
                      * The larger the value, the greater the curvature.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.curveness
                      */
@@ -6208,6 +6700,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.lineStyle.emphasis)
                          *
+                         *
                          * @default
                          * "#000"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.color
@@ -6216,6 +6709,7 @@ declare namespace echarts {
 
                         /**
                          * line width.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.width
                          */
@@ -6229,6 +6723,7 @@ declare namespace echarts {
                          * + `'solid'`
                          * + `'dashed'`
                          * + `'dotted'`
+                         *
                          *
                          * @default
                          * "solid"
@@ -6245,12 +6740,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.lineStyle.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.shadowColor
                          */
@@ -6259,12 +6756,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.shadowOffsetY
                          */
@@ -6274,6 +6773,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.lineStyle.emphasis.opacity
                          */
@@ -6300,17 +6800,20 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data
                  */
                 data?: {
                     /**
                      * Data of the starting point.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0
                      */
                     0?: {
                         /**
                          * Name of the marker, which will display as a label.
+                         *
                          *
                          * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-funnel.markLine.data.0.name
                          */
@@ -6319,6 +6822,7 @@ declare namespace echarts {
                         /**
                          * X position according to container, in pixel.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.x
                          */
                         x?: number | undefined;
@@ -6326,12 +6830,14 @@ declare namespace echarts {
                         /**
                          * Y position according to container, in pixel.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.y
                          */
                         y?: number | undefined;
 
                         /**
                          * Label value, which can be ignored.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.value
                          */
@@ -6375,6 +6881,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbol
                          */
                         symbol?: string | undefined;
@@ -6386,6 +6893,7 @@ declare namespace echarts {
                          * For example, `[20, 10]` means symbol width is `20`,
                          * and height is`10`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbolSize
                          */
                         symbolSize?: any[] | number | undefined;
@@ -6396,6 +6904,7 @@ declare namespace echarts {
                          * `markLine`, `symbolRotate` value will be ignored,
                          * and compulsively use tangent angle.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbolRotate
                          */
                         symbolRotate?: number | undefined;
@@ -6403,6 +6912,7 @@ declare namespace echarts {
                         /**
                          * Whether to keep aspect for symbols in the form of
                          * `path://`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbolKeepAspect
                          */
@@ -6425,6 +6935,7 @@ declare namespace echarts {
                          * It can be used to make the arrow in the bottom to
                          * be at data position when symbol is pin.
                          *
+                         *
                          * @default
                          * [0, 0]
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.symbolOffset
@@ -6434,6 +6945,7 @@ declare namespace echarts {
                         /**
                          * Line style of this data item, which will be merged
                          * with `lineStyle` of starting point and ending point.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle
                          */
@@ -6452,6 +6964,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.lineStyle)
                              *
+                             *
                              * @default
                              * "#000"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.color
@@ -6460,6 +6973,7 @@ declare namespace echarts {
 
                             /**
                              * line width.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.width
                              */
@@ -6473,6 +6987,7 @@ declare namespace echarts {
                              * + `'solid'`
                              * + `'dashed'`
                              * + `'dotted'`
+                             *
                              *
                              * @default
                              * "solid"
@@ -6489,12 +7004,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.lineStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.shadowColor
                              */
@@ -6504,6 +7021,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -6511,6 +7029,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.shadowOffsetY
                              */
@@ -6521,6 +7040,7 @@ declare namespace echarts {
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.opacity
                              */
                             opacity?: number | undefined;
@@ -6529,6 +7049,7 @@ declare namespace echarts {
                              * Edge curvature, which supports value from 0 to
                              * 1.
                              * The larger the value, the greater the curvature.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.curveness
                              */
@@ -6552,6 +7073,7 @@ declare namespace echarts {
                                  * >
                                  * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.lineStyle.emphasis)
                                  *
+                                 *
                                  * @default
                                  * "#000"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.color
@@ -6560,6 +7082,7 @@ declare namespace echarts {
 
                                 /**
                                  * line width.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.width
                                  */
@@ -6573,6 +7096,7 @@ declare namespace echarts {
                                  * + `'solid'`
                                  * + `'dashed'`
                                  * + `'dotted'`
+                                 *
                                  *
                                  * @default
                                  * "solid"
@@ -6590,6 +7114,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.lineStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -6597,6 +7122,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow color.
                                  * Support same format as `color`.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.shadowColor
                                  */
@@ -6606,6 +7132,7 @@ declare namespace echarts {
                                  * Offset distance on the horizontal direction
                                  * of shadow.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
@@ -6613,6 +7140,7 @@ declare namespace echarts {
                                 /**
                                  * Offset distance on the vertical direction
                                  * of shadow.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.shadowOffsetY
                                  */
@@ -6623,6 +7151,7 @@ declare namespace echarts {
                                  * Supports value from 0 to 1, and the component
                                  * will not be drawn when set to 0.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.opacity
                                  */
                                 opacity?: number | undefined;
@@ -6631,6 +7160,7 @@ declare namespace echarts {
                                  * Edge curvature, which supports value from
                                  * 0 to 1.
                                  * The larger the value, the greater the curvature.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.lineStyle.emphasis.curveness
                                  */
@@ -6642,11 +7172,13 @@ declare namespace echarts {
                          * Label of this data item, which will be merged with
                          * `label` of starting point and ending point.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.label
                          */
                         label?: {
                             /**
                              * Whether show label or not.
+                             *
                              *
                              * @default
                              * "true"
@@ -6660,6 +7192,7 @@ declare namespace echarts {
                              * + `'start'` starting point of the line.
                              * + `'middle'` middle point of the line.
                              * + `'end'` ending point of the line.
+                             *
                              *
                              * @default
                              * "end"
@@ -6709,6 +7242,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.label.formatter
                              */
                             formatter?: Function | string | undefined;
@@ -6719,6 +7253,7 @@ declare namespace echarts {
                             emphasis?: {
                                 /**
                                  * Whether show label or not.
+                                 *
                                  *
                                  * @default
                                  * "true"
@@ -6732,6 +7267,7 @@ declare namespace echarts {
                                  * + `'start'` starting point of the line.
                                  * + `'middle'` middle point of the line.
                                  * + `'end'` ending point of the line.
+                                 *
                                  *
                                  * @default
                                  * "end"
@@ -6781,6 +7317,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.0.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.0.label.emphasis.formatter
                                  */
                                 formatter?: Function | string | undefined;
@@ -6791,11 +7328,13 @@ declare namespace echarts {
                     /**
                      * Data of the ending point.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1
                      */
                     1?: {
                         /**
                          * Name of the marker, which will display as a label.
+                         *
                          *
                          * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-funnel.markLine.data.1.name
                          */
@@ -6804,6 +7343,7 @@ declare namespace echarts {
                         /**
                          * X position according to container, in pixel.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.x
                          */
                         x?: number | undefined;
@@ -6811,12 +7351,14 @@ declare namespace echarts {
                         /**
                          * Y position according to container, in pixel.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.y
                          */
                         y?: number | undefined;
 
                         /**
                          * Label value, which can be ignored.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.value
                          */
@@ -6860,6 +7402,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.symbol
                          */
                         symbol?: string | undefined;
@@ -6871,6 +7414,7 @@ declare namespace echarts {
                          * For example, `[20, 10]` means symbol width is `20`,
                          * and height is`10`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.symbolSize
                          */
                         symbolSize?: any[] | number | undefined;
@@ -6881,6 +7425,7 @@ declare namespace echarts {
                          * `markLine`, `symbolRotate` value will be ignored,
                          * and compulsively use tangent angle.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.symbolRotate
                          */
                         symbolRotate?: number | undefined;
@@ -6888,6 +7433,7 @@ declare namespace echarts {
                         /**
                          * Whether to keep aspect for symbols in the form of
                          * `path://`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.symbolKeepAspect
                          */
@@ -6910,6 +7456,7 @@ declare namespace echarts {
                          * It can be used to make the arrow in the bottom to
                          * be at data position when symbol is pin.
                          *
+                         *
                          * @default
                          * [0, 0]
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.symbolOffset
@@ -6919,6 +7466,7 @@ declare namespace echarts {
                         /**
                          * Line style of this data item, which will be merged
                          * with `lineStyle` of starting point and ending point.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle
                          */
@@ -6937,6 +7485,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.lineStyle)
                              *
+                             *
                              * @default
                              * "#000"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.color
@@ -6945,6 +7494,7 @@ declare namespace echarts {
 
                             /**
                              * line width.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.width
                              */
@@ -6958,6 +7508,7 @@ declare namespace echarts {
                              * + `'solid'`
                              * + `'dashed'`
                              * + `'dotted'`
+                             *
                              *
                              * @default
                              * "solid"
@@ -6974,12 +7525,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.lineStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.shadowColor
                              */
@@ -6989,6 +7542,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -6996,6 +7550,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.shadowOffsetY
                              */
@@ -7006,6 +7561,7 @@ declare namespace echarts {
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.opacity
                              */
                             opacity?: number | undefined;
@@ -7014,6 +7570,7 @@ declare namespace echarts {
                              * Edge curvature, which supports value from 0 to
                              * 1.
                              * The larger the value, the greater the curvature.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.curveness
                              */
@@ -7037,6 +7594,7 @@ declare namespace echarts {
                                  * >
                                  * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.lineStyle.emphasis)
                                  *
+                                 *
                                  * @default
                                  * "#000"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.color
@@ -7045,6 +7603,7 @@ declare namespace echarts {
 
                                 /**
                                  * line width.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.width
                                  */
@@ -7058,6 +7617,7 @@ declare namespace echarts {
                                  * + `'solid'`
                                  * + `'dashed'`
                                  * + `'dotted'`
+                                 *
                                  *
                                  * @default
                                  * "solid"
@@ -7075,6 +7635,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.lineStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -7082,6 +7643,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow color.
                                  * Support same format as `color`.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.shadowColor
                                  */
@@ -7091,6 +7653,7 @@ declare namespace echarts {
                                  * Offset distance on the horizontal direction
                                  * of shadow.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
@@ -7098,6 +7661,7 @@ declare namespace echarts {
                                 /**
                                  * Offset distance on the vertical direction
                                  * of shadow.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.shadowOffsetY
                                  */
@@ -7108,6 +7672,7 @@ declare namespace echarts {
                                  * Supports value from 0 to 1, and the component
                                  * will not be drawn when set to 0.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.opacity
                                  */
                                 opacity?: number | undefined;
@@ -7116,6 +7681,7 @@ declare namespace echarts {
                                  * Edge curvature, which supports value from
                                  * 0 to 1.
                                  * The larger the value, the greater the curvature.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.lineStyle.emphasis.curveness
                                  */
@@ -7127,11 +7693,13 @@ declare namespace echarts {
                          * Label of this data item, which will be merged with
                          * `label` of starting point and ending point.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.label
                          */
                         label?: {
                             /**
                              * Whether show label or not.
+                             *
                              *
                              * @default
                              * "true"
@@ -7145,6 +7713,7 @@ declare namespace echarts {
                              * + `'start'` starting point of the line.
                              * + `'middle'` middle point of the line.
                              * + `'end'` ending point of the line.
+                             *
                              *
                              * @default
                              * "end"
@@ -7194,6 +7763,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.label.formatter
                              */
                             formatter?: Function | string | undefined;
@@ -7204,6 +7774,7 @@ declare namespace echarts {
                             emphasis?: {
                                 /**
                                  * Whether show label or not.
+                                 *
                                  *
                                  * @default
                                  * "true"
@@ -7217,6 +7788,7 @@ declare namespace echarts {
                                  * + `'start'` starting point of the line.
                                  * + `'middle'` middle point of the line.
                                  * + `'end'` ending point of the line.
+                                 *
                                  *
                                  * @default
                                  * "end"
@@ -7266,6 +7838,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine.data.1.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.data.1.label.emphasis.formatter
                                  */
                                 formatter?: Function | string | undefined;
@@ -7277,6 +7850,7 @@ declare namespace echarts {
                 /**
                  * Whether to enable animation.
                  *
+                 *
                  * @default
                  * "true"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.animation
@@ -7287,6 +7861,7 @@ declare namespace echarts {
                  * Whether to set graphic number threshold to animation.
                  * Animation will be disabled when graphic number is larger
                  * than threshold.
+                 *
                  *
                  * @default
                  * 2000
@@ -7300,6 +7875,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine)
                  *
+                 *
                  * @default
                  * 1000
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.animationDuration
@@ -7311,6 +7887,7 @@ declare namespace echarts {
                  * Varied easing effects can be found at
                  * [easing effect example](https://echarts.apache.org/examples/en/editor.html?c=line-easing)
                  * .
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -7331,6 +7908,7 @@ declare namespace echarts {
                  * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
                  * for more information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.animationDelay
                  */
                 animationDelay?: Function | number | undefined;
@@ -7341,6 +7919,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markLine)
                  *
+                 *
                  * @default
                  * 300
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.animationDurationUpdate
@@ -7349,6 +7928,7 @@ declare namespace echarts {
 
                 /**
                  * Easing method used for animation.
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -7368,6 +7948,7 @@ declare namespace echarts {
                  * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
                  * for more information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markLine.animationDelayUpdate
                  */
                 animationDelayUpdate?: Function | number | undefined;
@@ -7377,6 +7958,7 @@ declare namespace echarts {
              * Used to mark an area in chart.
              * For example, mark a time interval.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea
              */
             markArea?: {
@@ -7385,6 +7967,7 @@ declare namespace echarts {
                  * Default value is false, for triggering and responding to
                  * mouse events.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.silent
                  */
                 silent?: boolean | undefined;
@@ -7392,11 +7975,13 @@ declare namespace echarts {
                 /**
                  * Label in mark area.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label
                  */
                 label?: {
                     /**
                      * Whether to show label.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.show
                      */
@@ -7434,6 +8019,7 @@ declare namespace echarts {
                      * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.position
                      */
                     position?: any[] | string | undefined;
@@ -7445,6 +8031,7 @@ declare namespace echarts {
                      * See:
                      * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                      * .
+                     *
                      *
                      * @default
                      * 5
@@ -7460,6 +8047,7 @@ declare namespace echarts {
                      * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rotate
                      */
                     rotate?: number | undefined;
@@ -7468,6 +8056,7 @@ declare namespace echarts {
                      * Whether to move text slightly.
                      * For example: `[30, 40]` means move `30` horizontally
                      * and move `40` vertically.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.offset
                      */
@@ -7478,6 +8067,7 @@ declare namespace echarts {
                      *
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -7493,6 +8083,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -7511,6 +8102,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.fontWeight
@@ -7522,6 +8114,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.fontFamily
@@ -7530,6 +8123,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -7551,6 +8145,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.align
                      */
                     align?: string | undefined;
@@ -7569,6 +8164,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -7580,6 +8176,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.lineHeight
                      */
@@ -7600,6 +8197,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.backgroundColor
@@ -7612,6 +8210,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.borderColor
@@ -7621,12 +8220,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.borderRadius
                      */
@@ -7643,12 +8244,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -7659,6 +8262,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -7666,12 +8270,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.shadowOffsetY
                      */
@@ -7697,6 +8303,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.width
                      */
                     width?: number | string | undefined;
@@ -7712,6 +8319,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.height
                      */
                     height?: number | string | undefined;
@@ -7722,6 +8330,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.textBorderColor
@@ -7731,12 +8340,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -7747,6 +8358,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -7754,12 +8366,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.textShadowOffsetY
                      */
@@ -7775,6 +8389,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich
                      */
                     rich?: {
@@ -7787,6 +8402,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -7802,6 +8418,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -7820,6 +8437,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -7831,6 +8449,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -7839,6 +8458,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -7860,6 +8480,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -7878,6 +8499,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -7889,6 +8511,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -7910,6 +8533,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -7922,6 +8546,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -7931,12 +8556,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -7955,12 +8582,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -7971,6 +8600,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -7978,12 +8608,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -8011,6 +8643,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -8027,6 +8660,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
@@ -8037,6 +8671,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -8046,12 +8681,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -8062,6 +8699,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -8069,12 +8707,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -8088,6 +8728,7 @@ declare namespace echarts {
                     emphasis?: {
                         /**
                          * Whether to show label.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.show
                          */
@@ -8125,6 +8766,7 @@ declare namespace echarts {
                          * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.position
                          */
                         position?: any[] | string | undefined;
@@ -8136,6 +8778,7 @@ declare namespace echarts {
                          * See:
                          * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                          * .
+                         *
                          *
                          * @default
                          * 5
@@ -8151,6 +8794,7 @@ declare namespace echarts {
                          * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                          * .
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rotate
                          */
                         rotate?: number | undefined;
@@ -8159,6 +8803,7 @@ declare namespace echarts {
                          * Whether to move text slightly.
                          * For example: `[30, 40]` means move `30` horizontally
                          * and move `40` vertically.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.offset
                          */
@@ -8169,6 +8814,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -8184,6 +8830,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -8202,6 +8849,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.fontWeight
@@ -8213,6 +8861,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.fontFamily
@@ -8221,6 +8870,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -8242,6 +8892,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.align
                          */
                         align?: string | undefined;
@@ -8260,6 +8911,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -8271,6 +8923,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.lineHeight
                          */
@@ -8291,6 +8944,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.backgroundColor
@@ -8303,6 +8957,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.borderColor
@@ -8312,12 +8967,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.borderRadius
                          */
@@ -8335,12 +8992,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -8351,6 +9010,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -8358,12 +9018,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.shadowOffsetY
                          */
@@ -8391,6 +9053,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.width
                          */
                         width?: number | string | undefined;
@@ -8407,6 +9070,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.height
                          */
                         height?: number | string | undefined;
@@ -8417,6 +9081,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.textBorderColor
@@ -8426,12 +9091,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -8442,6 +9109,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -8449,12 +9117,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.textShadowOffsetY
                          */
@@ -8470,6 +9140,7 @@ declare namespace echarts {
                          * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                          * please.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich
                          */
                         rich?: {
@@ -8482,6 +9153,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -8497,6 +9169,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -8515,6 +9188,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -8526,6 +9200,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -8534,6 +9209,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -8557,6 +9233,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.align
                                  */
                                 align?: string | undefined;
@@ -8577,6 +9254,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -8589,6 +9267,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                  */
@@ -8611,6 +9290,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -8623,6 +9303,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -8632,12 +9313,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                  */
@@ -8657,12 +9340,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -8673,6 +9358,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -8680,12 +9366,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                  */
@@ -8717,6 +9405,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.width
                                  */
                                 width?: number | string | undefined;
@@ -8734,6 +9423,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.height
                                  */
                                 height?: number | string | undefined;
@@ -8744,6 +9434,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -8753,12 +9444,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -8769,6 +9462,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -8776,12 +9470,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                  */
@@ -8793,6 +9489,7 @@ declare namespace echarts {
 
                 /**
                  * Style of the mark area.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle
                  */
@@ -8810,12 +9507,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -8826,6 +9525,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -8833,6 +9533,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -8849,12 +9550,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.shadowColor
                      */
@@ -8863,12 +9566,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.shadowOffsetY
                      */
@@ -8878,6 +9583,7 @@ declare namespace echarts {
                      * Opacity of the component.
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.opacity
                      */
@@ -8901,6 +9607,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.itemStyle.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.color
                          */
                         color?: EChartOption.Color | undefined;
@@ -8908,6 +9615,7 @@ declare namespace echarts {
                         /**
                          * border color, whose format is similar to that of
                          * `color`.
+                         *
                          *
                          * @default
                          * "#000"
@@ -8918,6 +9626,7 @@ declare namespace echarts {
                         /**
                          * border width. No border when it is set to be 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.borderWidth
                          */
                         borderWidth?: number | undefined;
@@ -8925,6 +9634,7 @@ declare namespace echarts {
                         /**
                          * Border type, which can be `'solid'`, `'dashed'`,
                          * or `'dotted'`. `'solid'` by default.
+                         *
                          *
                          * @default
                          * "solid"
@@ -8941,12 +9651,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.itemStyle.emphasis)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.shadowColor
                          */
@@ -8955,12 +9667,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.shadowOffsetY
                          */
@@ -8970,6 +9684,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.itemStyle.emphasis.opacity
                          */
@@ -8997,17 +9712,20 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data
                  */
                 data?: {
                     /**
                      * Specify the left-top point.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0
                      */
                     0?: {
                         /**
                          * Name of the marker, which will display as a label.
+                         *
                          *
                          * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-funnel.markArea.data.0.name
                          */
@@ -9017,6 +9735,7 @@ declare namespace echarts {
                          * x value on screen coordinate system, can be pixel
                          * number (like `5`), or percent value (like `'20%'`).
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.x
                          */
                         x?: number | undefined;
@@ -9025,12 +9744,14 @@ declare namespace echarts {
                          * y value on screen coordinate system, can be pixel
                          * number (like `5`), or percent value (like `'20%'`).
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.y
                          */
                         y?: number | undefined;
 
                         /**
                          * value of the item, not necessary.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.value
                          */
@@ -9040,6 +9761,7 @@ declare namespace echarts {
                          * Style of the item.
                          * `itemStyle` of start point and end point will be
                          * merged together.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle
                          */
@@ -9058,6 +9780,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.itemStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.color
                              */
                             color?: EChartOption.Color | undefined;
@@ -9065,6 +9788,7 @@ declare namespace echarts {
                             /**
                              * border color, whose format is similar to that
                              * of `color`.
+                             *
                              *
                              * @default
                              * "#000"
@@ -9076,6 +9800,7 @@ declare namespace echarts {
                              * border width.
                              * No border when it is set to be 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.borderWidth
                              */
                             borderWidth?: number | undefined;
@@ -9083,6 +9808,7 @@ declare namespace echarts {
                             /**
                              * Border type, which can be `'solid'`, `'dashed'`,
                              * or `'dotted'`. `'solid'` by default.
+                             *
                              *
                              * @default
                              * "solid"
@@ -9099,12 +9825,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.itemStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.shadowColor
                              */
@@ -9114,6 +9842,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -9121,6 +9850,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.shadowOffsetY
                              */
@@ -9130,6 +9860,7 @@ declare namespace echarts {
                              * Opacity of the component.
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.opacity
                              */
@@ -9153,6 +9884,7 @@ declare namespace echarts {
                                  * >
                                  * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.itemStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.color
                                  */
                                 color?: EChartOption.Color | undefined;
@@ -9160,6 +9892,7 @@ declare namespace echarts {
                                 /**
                                  * border color, whose format is similar to
                                  * that of `color`.
+                                 *
                                  *
                                  * @default
                                  * "#000"
@@ -9171,6 +9904,7 @@ declare namespace echarts {
                                  * border width.
                                  * No border when it is set to be 0.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.borderWidth
                                  */
                                 borderWidth?: number | undefined;
@@ -9178,6 +9912,7 @@ declare namespace echarts {
                                 /**
                                  * Border type, which can be `'solid'`, `'dashed'`,
                                  * or `'dotted'`. `'solid'` by default.
+                                 *
                                  *
                                  * @default
                                  * "solid"
@@ -9195,6 +9930,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.itemStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -9202,6 +9938,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow color.
                                  * Support same format as `color`.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.shadowColor
                                  */
@@ -9211,6 +9948,7 @@ declare namespace echarts {
                                  * Offset distance on the horizontal direction
                                  * of shadow.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
@@ -9218,6 +9956,7 @@ declare namespace echarts {
                                 /**
                                  * Offset distance on the vertical direction
                                  * of shadow.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.shadowOffsetY
                                  */
@@ -9227,6 +9966,7 @@ declare namespace echarts {
                                  * Opacity of the component.
                                  * Supports value from 0 to 1, and the component
                                  * will not be drawn when set to 0.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.itemStyle.emphasis.opacity
                                  */
@@ -9239,11 +9979,13 @@ declare namespace echarts {
                          * Label style of start point and end point will be
                          * merged together.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label
                          */
                         label?: {
                             /**
                              * Whether to show label.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.show
                              */
@@ -9281,6 +10023,7 @@ declare namespace echarts {
                              * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.position
                              */
                             position?: any[] | string | undefined;
@@ -9292,6 +10035,7 @@ declare namespace echarts {
                              * See:
                              * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                              * .
+                             *
                              *
                              * @default
                              * 5
@@ -9307,6 +10051,7 @@ declare namespace echarts {
                              * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rotate
                              */
                             rotate?: number | undefined;
@@ -9315,6 +10060,7 @@ declare namespace echarts {
                              * Whether to move text slightly.
                              * For example: `[30, 40]` means move `30` horizontally
                              * and move `40` vertically.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.offset
                              */
@@ -9325,6 +10071,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -9340,6 +10087,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -9358,6 +10106,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.fontWeight
@@ -9369,6 +10118,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.fontFamily
@@ -9377,6 +10127,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -9398,6 +10149,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.align
                              */
                             align?: string | undefined;
@@ -9416,6 +10168,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -9427,6 +10180,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.lineHeight
                              */
@@ -9448,6 +10202,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.backgroundColor
@@ -9460,6 +10215,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.borderColor
@@ -9469,12 +10225,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.borderRadius
                              */
@@ -9493,12 +10251,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -9509,6 +10269,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -9516,12 +10277,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.shadowOffsetY
                              */
@@ -9549,6 +10312,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.width
                              */
                             width?: number | string | undefined;
@@ -9565,6 +10329,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.height
                              */
                             height?: number | string | undefined;
@@ -9575,6 +10340,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.textBorderColor
@@ -9584,12 +10350,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -9600,6 +10368,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -9607,12 +10376,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.textShadowOffsetY
                              */
@@ -9628,6 +10399,7 @@ declare namespace echarts {
                              * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                              * please.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich
                              */
                             rich?: {
@@ -9640,6 +10412,7 @@ declare namespace echarts {
                                      *
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
+                                     *
                                      *
                                      * @default
                                      * ""#fff""
@@ -9655,6 +10428,7 @@ declare namespace echarts {
                                      * + `'normal'`
                                      * + `'italic'`
                                      * + `'oblique'`
+                                     *
                                      *
                                      * @default
                                      * "normal"
@@ -9673,6 +10447,7 @@ declare namespace echarts {
                                      * + `'lighter'`
                                      * + 100 | 200 | 300 | 400...
                                      *
+                                     *
                                      * @default
                                      * "normal"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -9685,6 +10460,7 @@ declare namespace echarts {
                                      * Can also be 'serif' , 'monospace',
                                      * ...
                                      *
+                                     *
                                      * @default
                                      * "sans-serif"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -9693,6 +10469,7 @@ declare namespace echarts {
 
                                     /**
                                      * font size
+                                     *
                                      *
                                      * @default
                                      * 12
@@ -9716,6 +10493,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.align
                                      */
                                     align?: string | undefined;
@@ -9736,6 +10514,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                      */
                                     verticalAlign?: string | undefined;
@@ -9748,6 +10527,7 @@ declare namespace echarts {
                                      * used. For example:
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E)
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                      */
@@ -9770,6 +10550,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -9782,6 +10563,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -9791,12 +10573,14 @@ declare namespace echarts {
                                     /**
                                      * Border width of the text fregment.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                      */
                                     borderWidth?: number | undefined;
 
                                     /**
                                      * Border radius of the text fregment.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                      */
@@ -9816,12 +10600,14 @@ declare namespace echarts {
                                      * the width and height of the content,
                                      * without `padding`.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                                      */
                                     padding?: any[] | number | undefined;
 
                                     /**
                                      * Shadow color of the text block.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -9832,6 +10618,7 @@ declare namespace echarts {
                                     /**
                                      * Show blur of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                      */
                                     shadowBlur?: number | undefined;
@@ -9839,12 +10626,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                      */
                                     shadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text block.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                      */
@@ -9876,6 +10665,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.width
                                      */
                                     width?: number | string | undefined;
@@ -9893,6 +10683,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.height
                                      */
                                     height?: number | string | undefined;
@@ -9903,6 +10694,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -9912,12 +10704,14 @@ declare namespace echarts {
                                     /**
                                      * Storke line width of the text.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                      */
                                     textBorderWidth?: number | undefined;
 
                                     /**
                                      * Shadow color of the text itself.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -9928,6 +10722,7 @@ declare namespace echarts {
                                     /**
                                      * Shadow blue of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                      */
                                     textShadowBlur?: number | undefined;
@@ -9935,12 +10730,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                      */
                                     textShadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text itself.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                      */
@@ -9954,6 +10751,7 @@ declare namespace echarts {
                             emphasis?: {
                                 /**
                                  * Whether to show label.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.show
                                  */
@@ -9992,6 +10790,7 @@ declare namespace echarts {
                                  * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                                  * .
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.position
                                  */
                                 position?: any[] | string | undefined;
@@ -10004,6 +10803,7 @@ declare namespace echarts {
                                  * See:
                                  * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                                  * .
+                                 *
                                  *
                                  * @default
                                  * 5
@@ -10019,6 +10819,7 @@ declare namespace echarts {
                                  * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                                  * .
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rotate
                                  */
                                 rotate?: number | undefined;
@@ -10027,6 +10828,7 @@ declare namespace echarts {
                                  * Whether to move text slightly.
                                  * For example: `[30, 40]` means move `30` horizontally
                                  * and move `40` vertically.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.offset
                                  */
@@ -10037,6 +10839,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -10052,6 +10855,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -10070,6 +10874,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.fontWeight
@@ -10081,6 +10886,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.fontFamily
@@ -10089,6 +10895,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -10112,6 +10919,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.align
                                  */
                                 align?: string | undefined;
@@ -10132,6 +10940,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -10144,6 +10953,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.lineHeight
                                  */
@@ -10166,6 +10976,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.backgroundColor
@@ -10178,6 +10989,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.borderColor
@@ -10187,12 +10999,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.borderRadius
                                  */
@@ -10212,12 +11026,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -10228,6 +11044,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -10235,12 +11052,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.shadowOffsetY
                                  */
@@ -10272,6 +11091,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.width
                                  */
                                 width?: number | string | undefined;
@@ -10289,6 +11109,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.height
                                  */
                                 height?: number | string | undefined;
@@ -10299,6 +11120,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.textBorderColor
@@ -10308,12 +11130,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -10324,6 +11148,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -10331,12 +11156,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.textShadowOffsetY
                                  */
@@ -10352,6 +11179,7 @@ declare namespace echarts {
                                  * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                                  * please.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich
                                  */
                                 rich?: {
@@ -10365,6 +11193,7 @@ declare namespace echarts {
                                          * If set as `'auto'`, the color will
                                          * assigned as visual color, such as
                                          * series color.
+                                         *
                                          *
                                          * @default
                                          * ""#fff""
@@ -10380,6 +11209,7 @@ declare namespace echarts {
                                          * + `'normal'`
                                          * + `'italic'`
                                          * + `'oblique'`
+                                         *
                                          *
                                          * @default
                                          * "normal"
@@ -10398,6 +11228,7 @@ declare namespace echarts {
                                          * + `'lighter'`
                                          * + 100 | 200 | 300 | 400...
                                          *
+                                         *
                                          * @default
                                          * "normal"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -10410,6 +11241,7 @@ declare namespace echarts {
                                          * Can also be 'serif' , 'monospace',
                                          * ...
                                          *
+                                         *
                                          * @default
                                          * "sans-serif"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -10418,6 +11250,7 @@ declare namespace echarts {
 
                                         /**
                                          * font size
+                                         *
                                          *
                                          * @default
                                          * 12
@@ -10441,6 +11274,7 @@ declare namespace echarts {
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.align
                                          */
                                         align?: string | undefined;
@@ -10461,6 +11295,7 @@ declare namespace echarts {
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                          */
                                         verticalAlign?: string | undefined;
@@ -10473,6 +11308,7 @@ declare namespace echarts {
                                          * be used. For example:
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                          */
@@ -10496,6 +11332,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -10509,6 +11346,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -10518,12 +11356,14 @@ declare namespace echarts {
                                         /**
                                          * Border width of the text fregment.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                          */
                                         borderWidth?: number | undefined;
 
                                         /**
                                          * Border radius of the text fregment.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                          */
@@ -10545,12 +11385,14 @@ declare namespace echarts {
                                          * the width and height of the content,
                                          * without `padding`.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.padding
                                          */
                                         padding?: any[] | number | undefined;
 
                                         /**
                                          * Shadow color of the text block.
+                                         *
                                          *
                                          * @default
                                          * "transparent"
@@ -10561,6 +11403,7 @@ declare namespace echarts {
                                         /**
                                          * Show blur of the text block.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                          */
                                         shadowBlur?: number | undefined;
@@ -10568,12 +11411,14 @@ declare namespace echarts {
                                         /**
                                          * Shadow X offset of the text block.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                          */
                                         shadowOffsetX?: number | undefined;
 
                                         /**
                                          * Shadow Y offset of the text block.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                          */
@@ -10606,6 +11451,7 @@ declare namespace echarts {
                                          * Notice, `width` and `height` only
                                          * work when `rich` specified.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.width
                                          */
                                         width?: number | string | undefined;
@@ -10624,6 +11470,7 @@ declare namespace echarts {
                                          * Notice, `width` and `height` only
                                          * work when `rich` specified.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.height
                                          */
                                         height?: number | string | undefined;
@@ -10635,6 +11482,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -10644,12 +11492,14 @@ declare namespace echarts {
                                         /**
                                          * Storke line width of the text.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                          */
                                         textBorderWidth?: number | undefined;
 
                                         /**
                                          * Shadow color of the text itself.
+                                         *
                                          *
                                          * @default
                                          * "transparent"
@@ -10660,6 +11510,7 @@ declare namespace echarts {
                                         /**
                                          * Shadow blue of the text itself.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                          */
                                         textShadowBlur?: number | undefined;
@@ -10667,12 +11518,14 @@ declare namespace echarts {
                                         /**
                                          * Shadow X offset of the text itself.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                          */
                                         textShadowOffsetX?: number | undefined;
 
                                         /**
                                          * Shadow Y offset of the text itself.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.0.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                          */
@@ -10686,11 +11539,13 @@ declare namespace echarts {
                     /**
                      * Specify the right-bottom point.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1
                      */
                     1?: {
                         /**
                          * Name of the marker, which will display as a label.
+                         *
                          *
                          * @see https://ecomfe.github.io/echarts-doc/public/en/option.html#series-funnel.markArea.data.1.name
                          */
@@ -10700,6 +11555,7 @@ declare namespace echarts {
                          * x value on screen coordinate system, can be pixel
                          * number (like `5`), or percent value (like `'20%'`).
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.x
                          */
                         x?: number | undefined;
@@ -10708,12 +11564,14 @@ declare namespace echarts {
                          * y value on screen coordinate system, can be pixel
                          * number (like `5`), or percent value (like `'20%'`).
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.y
                          */
                         y?: number | undefined;
 
                         /**
                          * value of the item, not necessary.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.value
                          */
@@ -10723,6 +11581,7 @@ declare namespace echarts {
                          * Style of the item.
                          * `itemStyle` of start point and end point will be
                          * merged together.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle
                          */
@@ -10741,6 +11600,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.itemStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.color
                              */
                             color?: EChartOption.Color | undefined;
@@ -10748,6 +11608,7 @@ declare namespace echarts {
                             /**
                              * border color, whose format is similar to that
                              * of `color`.
+                             *
                              *
                              * @default
                              * "#000"
@@ -10759,6 +11620,7 @@ declare namespace echarts {
                              * border width.
                              * No border when it is set to be 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.borderWidth
                              */
                             borderWidth?: number | undefined;
@@ -10766,6 +11628,7 @@ declare namespace echarts {
                             /**
                              * Border type, which can be `'solid'`, `'dashed'`,
                              * or `'dotted'`. `'solid'` by default.
+                             *
                              *
                              * @default
                              * "solid"
@@ -10782,12 +11645,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.itemStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.shadowColor
                              */
@@ -10797,6 +11662,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -10804,6 +11670,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.shadowOffsetY
                              */
@@ -10813,6 +11680,7 @@ declare namespace echarts {
                              * Opacity of the component.
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.opacity
                              */
@@ -10836,6 +11704,7 @@ declare namespace echarts {
                                  * >
                                  * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.itemStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.color
                                  */
                                 color?: EChartOption.Color | undefined;
@@ -10843,6 +11712,7 @@ declare namespace echarts {
                                 /**
                                  * border color, whose format is similar to
                                  * that of `color`.
+                                 *
                                  *
                                  * @default
                                  * "#000"
@@ -10854,6 +11724,7 @@ declare namespace echarts {
                                  * border width.
                                  * No border when it is set to be 0.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.borderWidth
                                  */
                                 borderWidth?: number | undefined;
@@ -10861,6 +11732,7 @@ declare namespace echarts {
                                 /**
                                  * Border type, which can be `'solid'`, `'dashed'`,
                                  * or `'dotted'`. `'solid'` by default.
+                                 *
                                  *
                                  * @default
                                  * "solid"
@@ -10878,6 +11750,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.itemStyle.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -10885,6 +11758,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow color.
                                  * Support same format as `color`.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.shadowColor
                                  */
@@ -10894,6 +11768,7 @@ declare namespace echarts {
                                  * Offset distance on the horizontal direction
                                  * of shadow.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
@@ -10901,6 +11776,7 @@ declare namespace echarts {
                                 /**
                                  * Offset distance on the vertical direction
                                  * of shadow.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.shadowOffsetY
                                  */
@@ -10910,6 +11786,7 @@ declare namespace echarts {
                                  * Opacity of the component.
                                  * Supports value from 0 to 1, and the component
                                  * will not be drawn when set to 0.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.itemStyle.emphasis.opacity
                                  */
@@ -10922,11 +11799,13 @@ declare namespace echarts {
                          * Label style of start point and end point will be
                          * merged together.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label
                          */
                         label?: {
                             /**
                              * Whether to show label.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.show
                              */
@@ -10964,6 +11843,7 @@ declare namespace echarts {
                              * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.position
                              */
                             position?: any[] | string | undefined;
@@ -10975,6 +11855,7 @@ declare namespace echarts {
                              * See:
                              * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                              * .
+                             *
                              *
                              * @default
                              * 5
@@ -10990,6 +11871,7 @@ declare namespace echarts {
                              * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                              * .
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rotate
                              */
                             rotate?: number | undefined;
@@ -10998,6 +11880,7 @@ declare namespace echarts {
                              * Whether to move text slightly.
                              * For example: `[30, 40]` means move `30` horizontally
                              * and move `40` vertically.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.offset
                              */
@@ -11008,6 +11891,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -11023,6 +11907,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -11041,6 +11926,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.fontWeight
@@ -11052,6 +11938,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.fontFamily
@@ -11060,6 +11947,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -11081,6 +11969,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.align
                              */
                             align?: string | undefined;
@@ -11099,6 +11988,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -11110,6 +12000,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.lineHeight
                              */
@@ -11131,6 +12022,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.backgroundColor
@@ -11143,6 +12035,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.borderColor
@@ -11152,12 +12045,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.borderRadius
                              */
@@ -11176,12 +12071,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -11192,6 +12089,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -11199,12 +12097,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.shadowOffsetY
                              */
@@ -11232,6 +12132,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.width
                              */
                             width?: number | string | undefined;
@@ -11248,6 +12149,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.height
                              */
                             height?: number | string | undefined;
@@ -11258,6 +12160,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.textBorderColor
@@ -11267,12 +12170,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -11283,6 +12188,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -11290,12 +12196,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.textShadowOffsetY
                              */
@@ -11311,6 +12219,7 @@ declare namespace echarts {
                              * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                              * please.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich
                              */
                             rich?: {
@@ -11323,6 +12232,7 @@ declare namespace echarts {
                                      *
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
+                                     *
                                      *
                                      * @default
                                      * ""#fff""
@@ -11338,6 +12248,7 @@ declare namespace echarts {
                                      * + `'normal'`
                                      * + `'italic'`
                                      * + `'oblique'`
+                                     *
                                      *
                                      * @default
                                      * "normal"
@@ -11356,6 +12267,7 @@ declare namespace echarts {
                                      * + `'lighter'`
                                      * + 100 | 200 | 300 | 400...
                                      *
+                                     *
                                      * @default
                                      * "normal"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -11368,6 +12280,7 @@ declare namespace echarts {
                                      * Can also be 'serif' , 'monospace',
                                      * ...
                                      *
+                                     *
                                      * @default
                                      * "sans-serif"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -11376,6 +12289,7 @@ declare namespace echarts {
 
                                     /**
                                      * font size
+                                     *
                                      *
                                      * @default
                                      * 12
@@ -11399,6 +12313,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.align
                                      */
                                     align?: string | undefined;
@@ -11419,6 +12334,7 @@ declare namespace echarts {
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E)
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                      */
                                     verticalAlign?: string | undefined;
@@ -11431,6 +12347,7 @@ declare namespace echarts {
                                      * used. For example:
                                      *
                                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E)
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                      */
@@ -11453,6 +12370,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -11465,6 +12383,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -11474,12 +12393,14 @@ declare namespace echarts {
                                     /**
                                      * Border width of the text fregment.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                      */
                                     borderWidth?: number | undefined;
 
                                     /**
                                      * Border radius of the text fregment.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                      */
@@ -11499,12 +12420,14 @@ declare namespace echarts {
                                      * the width and height of the content,
                                      * without `padding`.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                                      */
                                     padding?: any[] | number | undefined;
 
                                     /**
                                      * Shadow color of the text block.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -11515,6 +12438,7 @@ declare namespace echarts {
                                     /**
                                      * Show blur of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                      */
                                     shadowBlur?: number | undefined;
@@ -11522,12 +12446,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text block.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                      */
                                     shadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text block.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                      */
@@ -11559,6 +12485,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.width
                                      */
                                     width?: number | string | undefined;
@@ -11576,6 +12503,7 @@ declare namespace echarts {
                                      * Notice, `width` and `height` only work
                                      * when `rich` specified.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.height
                                      */
                                     height?: number | string | undefined;
@@ -11586,6 +12514,7 @@ declare namespace echarts {
                                      * If set as `'auto'`, the color will assigned
                                      * as visual color, such as series color.
                                      *
+                                     *
                                      * @default
                                      * "transparent"
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -11595,12 +12524,14 @@ declare namespace echarts {
                                     /**
                                      * Storke line width of the text.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                      */
                                     textBorderWidth?: number | undefined;
 
                                     /**
                                      * Shadow color of the text itself.
+                                     *
                                      *
                                      * @default
                                      * "transparent"
@@ -11611,6 +12542,7 @@ declare namespace echarts {
                                     /**
                                      * Shadow blue of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                      */
                                     textShadowBlur?: number | undefined;
@@ -11618,12 +12550,14 @@ declare namespace echarts {
                                     /**
                                      * Shadow X offset of the text itself.
                                      *
+                                     *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                      */
                                     textShadowOffsetX?: number | undefined;
 
                                     /**
                                      * Shadow Y offset of the text itself.
+                                     *
                                      *
                                      * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                      */
@@ -11637,6 +12571,7 @@ declare namespace echarts {
                             emphasis?: {
                                 /**
                                  * Whether to show label.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.show
                                  */
@@ -11675,6 +12610,7 @@ declare namespace echarts {
                                  * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                                  * .
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.position
                                  */
                                 position?: any[] | string | undefined;
@@ -11687,6 +12623,7 @@ declare namespace echarts {
                                  * See:
                                  * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                                  * .
+                                 *
                                  *
                                  * @default
                                  * 5
@@ -11702,6 +12639,7 @@ declare namespace echarts {
                                  * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                                  * .
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rotate
                                  */
                                 rotate?: number | undefined;
@@ -11710,6 +12648,7 @@ declare namespace echarts {
                                  * Whether to move text slightly.
                                  * For example: `[30, 40]` means move `30` horizontally
                                  * and move `40` vertically.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.offset
                                  */
@@ -11720,6 +12659,7 @@ declare namespace echarts {
                                  *
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -11735,6 +12675,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -11753,6 +12694,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.fontWeight
@@ -11764,6 +12706,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.fontFamily
@@ -11772,6 +12715,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -11795,6 +12739,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.align
                                  */
                                 align?: string | undefined;
@@ -11815,6 +12760,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -11827,6 +12773,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.lineHeight
                                  */
@@ -11849,6 +12796,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.backgroundColor
@@ -11861,6 +12809,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.borderColor
@@ -11870,12 +12819,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.borderRadius
                                  */
@@ -11895,12 +12846,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -11911,6 +12864,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -11918,12 +12872,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.shadowOffsetY
                                  */
@@ -11955,6 +12911,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.width
                                  */
                                 width?: number | string | undefined;
@@ -11972,6 +12929,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.height
                                  */
                                 height?: number | string | undefined;
@@ -11982,6 +12940,7 @@ declare namespace echarts {
                                  * If set as `'auto'`, the color will assigned
                                  * as visual color, such as series color.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.textBorderColor
@@ -11991,12 +12950,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -12007,6 +12968,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -12014,12 +12976,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.textShadowOffsetY
                                  */
@@ -12035,6 +12999,7 @@ declare namespace echarts {
                                  * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                                  * please.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich
                                  */
                                 rich?: {
@@ -12048,6 +13013,7 @@ declare namespace echarts {
                                          * If set as `'auto'`, the color will
                                          * assigned as visual color, such as
                                          * series color.
+                                         *
                                          *
                                          * @default
                                          * ""#fff""
@@ -12063,6 +13029,7 @@ declare namespace echarts {
                                          * + `'normal'`
                                          * + `'italic'`
                                          * + `'oblique'`
+                                         *
                                          *
                                          * @default
                                          * "normal"
@@ -12081,6 +13048,7 @@ declare namespace echarts {
                                          * + `'lighter'`
                                          * + 100 | 200 | 300 | 400...
                                          *
+                                         *
                                          * @default
                                          * "normal"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -12093,6 +13061,7 @@ declare namespace echarts {
                                          * Can also be 'serif' , 'monospace',
                                          * ...
                                          *
+                                         *
                                          * @default
                                          * "sans-serif"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -12101,6 +13070,7 @@ declare namespace echarts {
 
                                         /**
                                          * font size
+                                         *
                                          *
                                          * @default
                                          * 12
@@ -12124,6 +13094,7 @@ declare namespace echarts {
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.align
                                          */
                                         align?: string | undefined;
@@ -12144,6 +13115,7 @@ declare namespace echarts {
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                          */
                                         verticalAlign?: string | undefined;
@@ -12156,6 +13128,7 @@ declare namespace echarts {
                                          * be used. For example:
                                          *
                                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E)
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                          */
@@ -12179,6 +13152,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -12192,6 +13166,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -12201,12 +13176,14 @@ declare namespace echarts {
                                         /**
                                          * Border width of the text fregment.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                          */
                                         borderWidth?: number | undefined;
 
                                         /**
                                          * Border radius of the text fregment.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                          */
@@ -12228,12 +13205,14 @@ declare namespace echarts {
                                          * the width and height of the content,
                                          * without `padding`.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.padding
                                          */
                                         padding?: any[] | number | undefined;
 
                                         /**
                                          * Shadow color of the text block.
+                                         *
                                          *
                                          * @default
                                          * "transparent"
@@ -12244,6 +13223,7 @@ declare namespace echarts {
                                         /**
                                          * Show blur of the text block.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                          */
                                         shadowBlur?: number | undefined;
@@ -12251,12 +13231,14 @@ declare namespace echarts {
                                         /**
                                          * Shadow X offset of the text block.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                          */
                                         shadowOffsetX?: number | undefined;
 
                                         /**
                                          * Shadow Y offset of the text block.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                          */
@@ -12289,6 +13271,7 @@ declare namespace echarts {
                                          * Notice, `width` and `height` only
                                          * work when `rich` specified.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.width
                                          */
                                         width?: number | string | undefined;
@@ -12307,6 +13290,7 @@ declare namespace echarts {
                                          * Notice, `width` and `height` only
                                          * work when `rich` specified.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.height
                                          */
                                         height?: number | string | undefined;
@@ -12318,6 +13302,7 @@ declare namespace echarts {
                                          * assigned as visual color, such as
                                          * series color.
                                          *
+                                         *
                                          * @default
                                          * "transparent"
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -12327,12 +13312,14 @@ declare namespace echarts {
                                         /**
                                          * Storke line width of the text.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                          */
                                         textBorderWidth?: number | undefined;
 
                                         /**
                                          * Shadow color of the text itself.
+                                         *
                                          *
                                          * @default
                                          * "transparent"
@@ -12343,6 +13330,7 @@ declare namespace echarts {
                                         /**
                                          * Shadow blue of the text itself.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                          */
                                         textShadowBlur?: number | undefined;
@@ -12350,12 +13338,14 @@ declare namespace echarts {
                                         /**
                                          * Shadow X offset of the text itself.
                                          *
+                                         *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                          */
                                         textShadowOffsetX?: number | undefined;
 
                                         /**
                                          * Shadow Y offset of the text itself.
+                                         *
                                          *
                                          * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.data.1.label.emphasis.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                          */
@@ -12370,6 +13360,7 @@ declare namespace echarts {
                 /**
                  * Whether to enable animation.
                  *
+                 *
                  * @default
                  * "true"
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.animation
@@ -12380,6 +13371,7 @@ declare namespace echarts {
                  * Whether to set graphic number threshold to animation.
                  * Animation will be disabled when graphic number is larger
                  * than threshold.
+                 *
                  *
                  * @default
                  * 2000
@@ -12393,6 +13385,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea)
                  *
+                 *
                  * @default
                  * 1000
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.animationDuration
@@ -12404,6 +13397,7 @@ declare namespace echarts {
                  * Varied easing effects can be found at
                  * [easing effect example](https://echarts.apache.org/examples/en/editor.html?c=line-easing)
                  * .
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -12424,6 +13418,7 @@ declare namespace echarts {
                  * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
                  * for more information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.animationDelay
                  */
                 animationDelay?: Function | number | undefined;
@@ -12434,6 +13429,7 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.markArea)
                  *
+                 *
                  * @default
                  * 300
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.animationDurationUpdate
@@ -12442,6 +13438,7 @@ declare namespace echarts {
 
                 /**
                  * Easing method used for animation.
+                 *
                  *
                  * @default
                  * "cubicOut"
@@ -12461,6 +13458,7 @@ declare namespace echarts {
                  * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
                  * for more information.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.markArea.animationDelayUpdate
                  */
                 animationDelayUpdate?: Function | number | undefined;
@@ -12468,6 +13466,7 @@ declare namespace echarts {
 
             /**
              * Whether to enable animation.
+             *
              *
              * @default
              * "true"
@@ -12479,6 +13478,7 @@ declare namespace echarts {
              * Whether to set graphic number threshold to animation.
              * Animation will be disabled when graphic number is larger than
              * threshold.
+             *
              *
              * @default
              * 2000
@@ -12492,6 +13492,7 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel)
              *
+             *
              * @default
              * 1000
              * @see https://echarts.apache.org/en/option.html#series-funnel.animationDuration
@@ -12503,6 +13504,7 @@ declare namespace echarts {
              * Varied easing effects can be found at
              * [easing effect example](https://echarts.apache.org/examples/en/editor.html?c=line-easing)
              * .
+             *
              *
              * @default
              * "cubicOut"
@@ -12522,6 +13524,7 @@ declare namespace echarts {
              * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
              * for more information.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.animationDelay
              */
             animationDelay?: Function | number | undefined;
@@ -12532,6 +13535,7 @@ declare namespace echarts {
              *
              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel)
              *
+             *
              * @default
              * 300
              * @see https://echarts.apache.org/en/option.html#series-funnel.animationDurationUpdate
@@ -12540,6 +13544,7 @@ declare namespace echarts {
 
             /**
              * Easing method used for animation.
+             *
              *
              * @default
              * "cubicOut"
@@ -12559,12 +13564,14 @@ declare namespace echarts {
              * [this example](https://echarts.apache.org/examples/en/editor.html?c=bar-animation-delay)
              * for more information.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-funnel.animationDelayUpdate
              */
             animationDelayUpdate?: Function | number | undefined;
 
             /**
              * tooltip settings in this series.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-funnel.tooltip
              */
@@ -12576,12 +13583,14 @@ declare namespace echarts {
                 /**
                  * the name of data item.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.name
                  */
                 name?: string | undefined;
 
                 /**
                  * data value.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.value
                  */
@@ -12590,6 +13599,7 @@ declare namespace echarts {
                 /**
                  * Graphic style of , `emphasis` is the style when it is highlighted,
                  * like being hovered by mouse, or highlighted via legend connect.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle
                  */
@@ -12607,12 +13617,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -12623,6 +13635,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -12630,6 +13643,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -12646,12 +13660,14 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.shadowBlur
                      */
                     shadowBlur?: number | undefined;
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.shadowColor
                      */
@@ -12660,12 +13676,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.shadowOffsetY
                      */
@@ -12676,6 +13694,7 @@ declare namespace echarts {
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.itemStyle.opacity
                      */
                     opacity?: number | undefined;
@@ -12683,6 +13702,7 @@ declare namespace echarts {
 
                 /**
                  * The label configuration of a single data item.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.label
                  */
@@ -12719,6 +13739,7 @@ declare namespace echarts {
                      *
                      * + `'center'` equals to `'inside'`.
                      *
+                     *
                      * @default
                      * "outside"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.position
@@ -12727,6 +13748,7 @@ declare namespace echarts {
 
                     /**
                      * text color.
+                     *
                      *
                      * @default
                      * ""#fff""
@@ -12742,6 +13764,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -12760,6 +13783,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.fontWeight
@@ -12771,6 +13795,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.fontFamily
@@ -12779,6 +13804,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 12
@@ -12800,6 +13826,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.align
                      */
                     align?: string | undefined;
@@ -12818,6 +13845,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.verticalAlign
                      */
                     verticalAlign?: string | undefined;
@@ -12829,6 +13857,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.lineHeight
                      */
@@ -12846,6 +13875,7 @@ declare namespace echarts {
                      * `width` or `height` can be specified when using background
                      * image, or auto adapted by default.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.backgroundColor
@@ -12854,6 +13884,7 @@ declare namespace echarts {
 
                     /**
                      * Border color of the text fregment.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -12864,12 +13895,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.borderRadius
                      */
@@ -12886,12 +13919,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -12902,6 +13937,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -12909,12 +13945,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.shadowOffsetY
                      */
@@ -12940,6 +13978,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.width
                      */
                     width?: number | string | undefined;
@@ -12955,12 +13994,14 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.height
                      */
                     height?: number | string | undefined;
 
                     /**
                      * Storke color of the text.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -12971,12 +14012,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -12987,6 +14030,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -12994,12 +14038,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.textShadowOffsetY
                      */
@@ -13015,6 +14061,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich
                      */
                     rich?: {
@@ -13024,6 +14071,7 @@ declare namespace echarts {
                         [userStyle: string]: {
                             /**
                              * text color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -13039,6 +14087,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -13057,6 +14106,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -13068,6 +14118,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -13076,6 +14127,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -13097,6 +14149,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -13115,6 +14168,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -13126,6 +14180,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -13144,6 +14199,7 @@ declare namespace echarts {
                              * `width` or `height` can be specified when using
                              * background image, or auto adapted by default.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -13152,6 +14208,7 @@ declare namespace echarts {
 
                             /**
                              * Border color of the text fregment.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -13162,12 +14219,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -13186,12 +14245,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -13202,6 +14263,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -13209,12 +14271,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -13242,6 +14306,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -13258,12 +14323,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
 
                             /**
                              * Storke color of the text.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -13274,12 +14341,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -13290,6 +14359,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -13297,12 +14367,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -13318,12 +14390,14 @@ declare namespace echarts {
                     /**
                      * Whether to show visual guide line.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.show
                      */
                     show?: boolean | undefined;
 
                     /**
                      * The length of the first part from visual guide line.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.length
                      */
@@ -13347,6 +14421,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.labelLine.lineStyle)
                          *
+                         *
                          * @default
                          * "#000"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.color
@@ -13355,6 +14430,7 @@ declare namespace echarts {
 
                         /**
                          * line width.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.width
                          */
@@ -13368,6 +14444,7 @@ declare namespace echarts {
                          * + `'solid'`
                          * + `'dashed'`
                          * + `'dotted'`
+                         *
                          *
                          * @default
                          * "solid"
@@ -13384,12 +14461,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.labelLine.lineStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.shadowColor
                          */
@@ -13398,12 +14477,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.shadowOffsetY
                          */
@@ -13414,6 +14495,7 @@ declare namespace echarts {
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.lineStyle.opacity
                          */
                         opacity?: number | undefined;
@@ -13422,11 +14504,13 @@ declare namespace echarts {
                     /**
                      * The style of visual guide line in emphasis status.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis
                      */
                     emphasis?: {
                         /**
                          * Whether to show visual guide line.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.show
                          */
@@ -13450,6 +14534,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.labelLine.emphasis.lineStyle)
                              *
+                             *
                              * @default
                              * "#000"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.color
@@ -13458,6 +14543,7 @@ declare namespace echarts {
 
                             /**
                              * line width.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.width
                              */
@@ -13471,6 +14557,7 @@ declare namespace echarts {
                              * + `'solid'`
                              * + `'dashed'`
                              * + `'dotted'`
+                             *
                              *
                              * @default
                              * "solid"
@@ -13487,12 +14574,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.labelLine.emphasis.lineStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.shadowColor
                              */
@@ -13502,6 +14591,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -13509,6 +14599,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.shadowOffsetY
                              */
@@ -13518,6 +14609,7 @@ declare namespace echarts {
                              * Opacity of the component.
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.labelLine.emphasis.lineStyle.opacity
                              */
@@ -13548,6 +14640,7 @@ declare namespace echarts {
                          * >
                          * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.color
                          */
                         color?: EChartOption.Color | undefined;
@@ -13555,6 +14648,7 @@ declare namespace echarts {
                         /**
                          * border color, whose format is similar to that of
                          * `color`.
+                         *
                          *
                          * @default
                          * "#000"
@@ -13565,6 +14659,7 @@ declare namespace echarts {
                         /**
                          * border width. No border when it is set to be 0.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.borderWidth
                          */
                         borderWidth?: number | undefined;
@@ -13572,6 +14667,7 @@ declare namespace echarts {
                         /**
                          * Border type, which can be `'solid'`, `'dashed'`,
                          * or `'dotted'`. `'solid'` by default.
+                         *
                          *
                          * @default
                          * "solid"
@@ -13588,12 +14684,14 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.itemStyle)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.shadowBlur
                          */
                         shadowBlur?: number | undefined;
 
                         /**
                          * Shadow color. Support same format as `color`.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.shadowColor
                          */
@@ -13602,12 +14700,14 @@ declare namespace echarts {
                         /**
                          * Offset distance on the horizontal direction of shadow.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Offset distance on the vertical direction of shadow.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.shadowOffsetY
                          */
@@ -13617,6 +14717,7 @@ declare namespace echarts {
                          * Opacity of the component.
                          * Supports value from 0 to 1, and the component will
                          * not be drawn when set to 0.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.itemStyle.opacity
                          */
@@ -13635,6 +14736,7 @@ declare namespace echarts {
                         /**
                          * text color.
                          *
+                         *
                          * @default
                          * ""#fff""
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.color
@@ -13649,6 +14751,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -13667,6 +14770,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.fontWeight
@@ -13678,6 +14782,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.fontFamily
@@ -13686,6 +14791,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -13707,6 +14813,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.align
                          */
                         align?: string | undefined;
@@ -13725,6 +14832,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -13736,6 +14844,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.lineHeight
                          */
@@ -13753,6 +14862,7 @@ declare namespace echarts {
                          * `width` or `height` can be specified when using background
                          * image, or auto adapted by default.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.backgroundColor
@@ -13761,6 +14871,7 @@ declare namespace echarts {
 
                         /**
                          * Border color of the text fregment.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -13771,12 +14882,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.borderRadius
                          */
@@ -13794,12 +14907,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -13810,6 +14925,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -13817,12 +14933,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.shadowOffsetY
                          */
@@ -13850,6 +14968,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.width
                          */
                         width?: number | string | undefined;
@@ -13866,12 +14985,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.height
                          */
                         height?: number | string | undefined;
 
                         /**
                          * Storke color of the text.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -13882,12 +15003,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -13898,6 +15021,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -13905,12 +15029,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.textShadowOffsetY
                          */
@@ -13926,6 +15052,7 @@ declare namespace echarts {
                          * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                          * please.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich
                          */
                         rich?: {
@@ -13935,6 +15062,7 @@ declare namespace echarts {
                             [userStyle: string]: {
                                 /**
                                  * text color.
+                                 *
                                  *
                                  * @default
                                  * ""#fff""
@@ -13950,6 +15078,7 @@ declare namespace echarts {
                                  * + `'normal'`
                                  * + `'italic'`
                                  * + `'oblique'`
+                                 *
                                  *
                                  * @default
                                  * "normal"
@@ -13968,6 +15097,7 @@ declare namespace echarts {
                                  * + `'lighter'`
                                  * + 100 | 200 | 300 | 400...
                                  *
+                                 *
                                  * @default
                                  * "normal"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -13979,6 +15109,7 @@ declare namespace echarts {
                                  *
                                  * Can also be 'serif' , 'monospace', ...
                                  *
+                                 *
                                  * @default
                                  * "sans-serif"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -13987,6 +15118,7 @@ declare namespace echarts {
 
                                 /**
                                  * font size
+                                 *
                                  *
                                  * @default
                                  * 12
@@ -14010,6 +15142,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.align
                                  */
                                 align?: string | undefined;
@@ -14030,6 +15163,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                                  */
                                 verticalAlign?: string | undefined;
@@ -14042,6 +15176,7 @@ declare namespace echarts {
                                  * For example:
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                                  */
@@ -14061,6 +15196,7 @@ declare namespace echarts {
                                  * using background image, or auto adapted by
                                  * default.
                                  *
+                                 *
                                  * @default
                                  * "transparent"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -14069,6 +15205,7 @@ declare namespace echarts {
 
                                 /**
                                  * Border color of the text fregment.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -14079,12 +15216,14 @@ declare namespace echarts {
                                 /**
                                  * Border width of the text fregment.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                                  */
                                 borderWidth?: number | undefined;
 
                                 /**
                                  * Border radius of the text fregment.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                                  */
@@ -14104,12 +15243,14 @@ declare namespace echarts {
                                  * width and height of the content, without
                                  * `padding`.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                                  */
                                 padding?: any[] | number | undefined;
 
                                 /**
                                  * Shadow color of the text block.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -14120,6 +15261,7 @@ declare namespace echarts {
                                 /**
                                  * Show blur of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -14127,12 +15269,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text block.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text block.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                                  */
@@ -14164,6 +15308,7 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.width
                                  */
                                 width?: number | string | undefined;
@@ -14181,12 +15326,14 @@ declare namespace echarts {
                                  * Notice, `width` and `height` only work when
                                  * `rich` specified.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.height
                                  */
                                 height?: number | string | undefined;
 
                                 /**
                                  * Storke color of the text.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -14197,12 +15344,14 @@ declare namespace echarts {
                                 /**
                                  * Storke line width of the text.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                                  */
                                 textBorderWidth?: number | undefined;
 
                                 /**
                                  * Shadow color of the text itself.
+                                 *
                                  *
                                  * @default
                                  * "transparent"
@@ -14213,6 +15362,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow blue of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                                  */
                                 textShadowBlur?: number | undefined;
@@ -14220,12 +15370,14 @@ declare namespace echarts {
                                 /**
                                  * Shadow X offset of the text itself.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                                  */
                                 textShadowOffsetX?: number | undefined;
 
                                 /**
                                  * Shadow Y offset of the text itself.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                                  */
@@ -14241,12 +15393,14 @@ declare namespace echarts {
                         /**
                          * Whether to show visual guide line.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.show
                          */
                         show?: boolean | undefined;
 
                         /**
                          * The length of the first part from visual guide line.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.length
                          */
@@ -14270,6 +15424,7 @@ declare namespace echarts {
                              * >
                              * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.labelLine.lineStyle)
                              *
+                             *
                              * @default
                              * "#000"
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.color
@@ -14278,6 +15433,7 @@ declare namespace echarts {
 
                             /**
                              * line width.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.width
                              */
@@ -14291,6 +15447,7 @@ declare namespace echarts {
                              * + `'solid'`
                              * + `'dashed'`
                              * + `'dotted'`
+                             *
                              *
                              * @default
                              * "solid"
@@ -14307,12 +15464,14 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.labelLine.lineStyle)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.shadowBlur
                              */
                             shadowBlur?: number | undefined;
 
                             /**
                              * Shadow color. Support same format as `color`.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.shadowColor
                              */
@@ -14322,6 +15481,7 @@ declare namespace echarts {
                              * Offset distance on the horizontal direction of
                              * shadow.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
@@ -14329,6 +15489,7 @@ declare namespace echarts {
                             /**
                              * Offset distance on the vertical direction of
                              * shadow.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.shadowOffsetY
                              */
@@ -14339,6 +15500,7 @@ declare namespace echarts {
                              * Supports value from 0 to 1, and the component
                              * will not be drawn when set to 0.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.lineStyle.opacity
                              */
                             opacity?: number | undefined;
@@ -14347,11 +15509,13 @@ declare namespace echarts {
                         /**
                          * The style of visual guide line in emphasis status.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis
                          */
                         emphasis?: {
                             /**
                              * Whether to show visual guide line.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.show
                              */
@@ -14375,6 +15539,7 @@ declare namespace echarts {
                                  * >
                                  * > [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.labelLine.emphasis.lineStyle)
                                  *
+                                 *
                                  * @default
                                  * "#000"
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.color
@@ -14383,6 +15548,7 @@ declare namespace echarts {
 
                                 /**
                                  * line width.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.width
                                  */
@@ -14396,6 +15562,7 @@ declare namespace echarts {
                                  * + `'solid'`
                                  * + `'dashed'`
                                  * + `'dotted'`
+                                 *
                                  *
                                  * @default
                                  * "solid"
@@ -14413,6 +15580,7 @@ declare namespace echarts {
                                  *
                                  * [see doc](https://echarts.apache.org/en/option.html#series-funnel.funnel.data.emphasis.labelLine.emphasis.lineStyle)
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.shadowBlur
                                  */
                                 shadowBlur?: number | undefined;
@@ -14420,6 +15588,7 @@ declare namespace echarts {
                                 /**
                                  * Shadow color.
                                  * Support same format as `color`.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.shadowColor
                                  */
@@ -14429,6 +15598,7 @@ declare namespace echarts {
                                  * Offset distance on the horizontal direction
                                  * of shadow.
                                  *
+                                 *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.shadowOffsetX
                                  */
                                 shadowOffsetX?: number | undefined;
@@ -14436,6 +15606,7 @@ declare namespace echarts {
                                 /**
                                  * Offset distance on the vertical direction
                                  * of shadow.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.shadowOffsetY
                                  */
@@ -14445,6 +15616,7 @@ declare namespace echarts {
                                  * Opacity of the component.
                                  * Supports value from 0 to 1, and the component
                                  * will not be drawn when set to 0.
+                                 *
                                  *
                                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.emphasis.labelLine.emphasis.lineStyle.opacity
                                  */
@@ -14456,6 +15628,7 @@ declare namespace echarts {
 
                 /**
                  * tooltip settings in this series data.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-funnel.data.tooltip
                  */

@@ -6,16 +6,14 @@ declare namespace _default {
         layer: /* TiledGeometryLayer */ any,
         coord: Coordinates,
         method?: READ_Z_METHOD,
-        tileHint?: /* TileMesh */ any[],
-    ): number;
+        tileHint?: /* TileMesh */ any[]): number;
 
     function getTerrainObjectAt(
         layer: /* TiledGeometryLayer */ any,
         coord: Coordinates,
         method?: READ_Z_METHOD,
         tileHint?: /* TileMesh */ any[],
-        cache?: object,
-    ): {
+        cache?: object): {
         /**
          * - Pick coordinate with the elevation in coord.z.
          */
@@ -43,8 +41,7 @@ declare namespace _default {
             method?: READ_Z_METHOD;
             modifyGeometry: boolean;
         },
-        tileHint?: /* TileMesh */ any[],
-    ): boolean;
+        tileHint?: /* TileMesh */ any[]): boolean;
 }
 
 export default _default;
@@ -53,5 +50,4 @@ export function readTextureValueWithBilinearFiltering(
     metadata: any,
     texture: any,
     vertexU: any,
-    vertexV: any,
-): any;
+    vertexV: any): any;

@@ -1,2 +1,2 @@
-import { findLastIndex } from "../index.js";
+import { findLastIndex } from '../index';
 export default findLastIndex;

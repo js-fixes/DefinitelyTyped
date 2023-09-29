@@ -15,11 +15,12 @@ gulp.task("less", () => {
         .pipe(gulp.dest("public/css"));
 });
 
+
 // With some options
 gulp.task("less", () => {
     gulp.src("less/**/*.less")
         .pipe(less({
-            paths: ["less/includes"],
+            paths: ["less/includes"]
         }))
         .pipe(gulp.dest("public/css"));
 });

@@ -1,2 +1,2 @@
-import { partialRight } from "../index.js";
+import { partialRight } from '../index';
 export default partialRight;

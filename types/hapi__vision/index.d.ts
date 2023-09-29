@@ -4,9 +4,13 @@
 //                 Alexander James Phillips <https://github.com/AJamesPhillips>
 //                 Silas Rech <https://github.com/lenovouser>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// Minimum TypeScript Version: 4.9
+// TypeScript Version: 2.8
 
-import { Plugin, Request, ResponseObject } from "@hapi/hapi";
+import {
+    Plugin,
+    Request,
+    ResponseObject,
+} from '@hapi/hapi';
 
 declare namespace vision {
     interface EnginesConfiguration {
@@ -14,7 +18,7 @@ declare namespace vision {
          * Required object where each key is a file extension (e.g. 'html', 'hbr'), mapped to the npm module used for rendering the templates.
          * Alternatively, the extension can be mapped to an object
          */
-        engines: { [fileExtension: string]: NpmModule } | ServerViewsEnginesOptions;
+        engines: {[fileExtension: string]: NpmModule} | ServerViewsEnginesOptions;
         /** defines the default filename extension to append to template names when multiple engines are configured and no explicit extension is provided for a given template. No default value. */
         defaultExtension?: string | undefined;
     }
@@ -50,6 +54,7 @@ declare namespace vision {
     }
 
     /**
+     *
      * @see {@link https://github.com/hapijs/vision/blob/master/API.md#the-view-handler} > options for the list of attributes it can not have (isCached, partialsPath, helpersPath)
      */
     interface ViewHandlerOrReplyOptions {
@@ -85,7 +90,7 @@ declare namespace vision {
         /** the content type of the engine results. Defaults to 'text/html'. */
         contentType?: string | undefined;
         /** specify whether the engine compile() method is 'sync' or 'async'. Defaults to 'sync'. */
-        compileMode?: "sync" | "async" | undefined;
+        compileMode?: 'sync' | 'async' | undefined;
         /**
          * A global context used with all templates.
          * The global context option can be either an object or a function that takes the request as its only argument and returns a context object.
@@ -121,15 +126,12 @@ declare namespace vision {
      * compiled is a function with signature function(context, options, callback) (the compiled async template)
      * and callback has the signature function(err, rendered).
      */
-    type ServerViewCompileSync = (template: string, options: any) => (context: any, options: any) => void;
+    type ServerViewCompileSync  = (template: string, options: any) => (context: any, options: any) => void;
     type ServerViewCompileAsync = (template: string, options: any, next: ServerViewCompileNext) => void;
 
     type ServerViewCompile = ServerViewCompileSync | ServerViewCompileAsync;
 
-    type ServerViewCompileNext = (
-        err: Error | null,
-        compiled: (context: any, options: any, callback: (err: null | Error, rendered: string | null) => void) => void,
-    ) => void;
+    type ServerViewCompileNext = (err: Error | null, compiled: (context: any, options: any, callback: (err: null | Error, rendered: string | null) => void) => void) => void;
 
     /**
      * The npm module used for rendering the templates. The module object must contain the compile() function
@@ -193,7 +195,7 @@ declare const vision: Plugin<vision.ServerViewsConfiguration>;
 
 export = vision;
 
-declare module "@hapi/hapi" {
+declare module '@hapi/hapi' {
     interface Server {
         /**
          * Initializes the server views manager
@@ -214,7 +216,7 @@ declare module "@hapi/hapi" {
     }
 }
 
-declare module "@hapi/hapi" {
+declare module '@hapi/hapi' {
     interface Request {
         /**
          * request.render() works the same way as server.render() but is for use inside of request handlers.
@@ -235,7 +237,7 @@ declare module "@hapi/hapi" {
     }
 }
 
-declare module "@hapi/hapi" {
+declare module '@hapi/hapi' {
     interface ResponseToolkit {
         /**
          * Concludes the handler activity by returning control over to the router with a templatized view response
@@ -257,7 +259,7 @@ declare module "@hapi/hapi" {
     }
 }
 
-declare module "@hapi/hapi" {
+declare module '@hapi/hapi' {
     interface HandlerDecorations {
         /**
          * The view handler can be used with routes registered in the same realm as the view manager.

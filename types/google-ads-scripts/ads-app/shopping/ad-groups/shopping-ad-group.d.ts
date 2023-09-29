@@ -132,14 +132,12 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface ShoppingAdGroupSelector
-            extends
-                Base.Selector<ShoppingAdGroupIterator>,
+            extends Base.Selector<ShoppingAdGroupIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
 
         /**
          * Access to ad group-level targeting criteria.

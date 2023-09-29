@@ -15,11 +15,7 @@ gulp.task("inject:relative", () => {
 
 gulp.task("inject:starttag", () => {
     gulp.src(["src/index.html"])
-        .pipe(
-            inject(gulp.src(["src/**/*.js", "src/**/*.css"], { read: false }), {
-                starttag: "<!-- inject:head:{{ext}} -->",
-            }),
-        )
+        .pipe(inject(gulp.src(["src/**/*.js", "src/**/*.css"], { read: false }), { starttag: "<!-- inject:head:{{ext}} -->" }))
         .pipe(gulp.dest("build"));
 });
 
@@ -36,7 +32,7 @@ gulp.task("inject:transform", () => {
             endtag: "]",
             transform: (filepath, file, i, length) => {
                 return "  \"" + filepath + "\"" + (i + 1 < length ? "," : "");
-            },
+            }
         }))
         .pipe(gulp.dest("build"));
 });
@@ -46,16 +42,16 @@ gulp.task("inject:transform", () => {
         .pipe(inject(gulp.src(["src/**/*.js", "src/**/*.css", "src/**/*.html"], { read: false }), {
             starttag: "\"{{ext}}\": [",
             endtag: "]",
-            quiet: true,
+	    quiet: true,
             transform: (filepath, file, i, length) => {
                 return "  \"" + filepath + "\"" + (i + 1 < length ? "," : "");
-            },
+            }
         }))
         .pipe(gulp.dest("build"));
 });
 
 function createOptions(starttag: inject.ITagFunction): inject.IOptions {
     return {
-        starttag: starttag,
+        starttag: starttag
     };
 }

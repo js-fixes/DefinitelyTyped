@@ -8,7 +8,7 @@
 
 /// <reference types="node" />
 
-import { EventEmitter } from "events";
+import { EventEmitter } from 'events';
 
 export = Nedb;
 export as namespace Nedb;
@@ -131,12 +131,7 @@ declare class Nedb<G = any> extends EventEmitter {
      *
      * @api private Use Datastore.update which has the same signature
      */
-    update(
-        query: any,
-        updateQuery: any,
-        options?: Nedb.UpdateOptions,
-        cb?: (err: Error | null, numberOfUpdated: number, upsert: boolean) => void,
-    ): void;
+    update(query: any, updateQuery: any, options?: Nedb.UpdateOptions, cb?: (err: Error | null, numberOfUpdated: number, upsert: boolean) => void): void;
 
     /**
      * Update all docs matching query v1.8 signature.
@@ -151,12 +146,7 @@ declare class Nedb<G = any> extends EventEmitter {
      *
      * @api private Use Datastore.update which has the same signature
      */
-    update<T extends G>(
-        query: any,
-        updateQuery: any,
-        options?: Nedb.UpdateOptions,
-        cb?: (err: Error | null, numberOfUpdated: number, affectedDocuments: any, upsert: boolean) => void,
-    ): void;
+    update<T extends G>(query: any, updateQuery: any, options?: Nedb.UpdateOptions, cb?: (err: Error | null, numberOfUpdated: number, affectedDocuments: any, upsert: boolean) => void): void;
 
     /**
      * Remove all docs matching the query
@@ -170,16 +160,16 @@ declare class Nedb<G = any> extends EventEmitter {
     remove(query: any, options: Nedb.RemoveOptions, cb?: (err: Error | null, n: number) => void): void;
     remove(query: any, cb?: (err: Error | null, n: number) => void): void;
 
-    addListener(event: "compaction.done", listener: () => void): this;
-    on(event: "compaction.done", listener: () => void): this;
-    once(event: "compaction.done", listener: () => void): this;
-    prependListener(event: "compaction.done", listener: () => void): this;
-    prependOnceListener(event: "compaction.done", listener: () => void): this;
-    removeListener(event: "compaction.done", listener: () => void): this;
-    off(event: "compaction.done", listener: () => void): this;
-    listeners(event: "compaction.done"): Array<() => void>;
-    rawListeners(event: "compaction.done"): Array<() => void>;
-    listenerCount(type: "compaction.done"): number;
+    addListener(event: 'compaction.done', listener: () => void): this;
+    on(event: 'compaction.done', listener: () => void): this;
+    once(event: 'compaction.done', listener: () => void): this;
+    prependListener(event: 'compaction.done', listener: () => void): this;
+    prependOnceListener(event: 'compaction.done', listener: () => void): this;
+    removeListener(event: 'compaction.done', listener: () => void): this;
+    off(event: 'compaction.done', listener: () => void): this;
+    listeners(event: 'compaction.done'): Array<() => void>;
+    rawListeners(event: 'compaction.done'): Array<() => void>;
+    listenerCount(type: 'compaction.done'): number;
 }
 
 declare namespace Nedb {

@@ -7,22 +7,22 @@
 export as namespace skate;
 
 // Public API: mixins
-export { withChildren, withComponent, withContext, withLifecycle, withRenderer, withUpdate } from "./api";
+export { withComponent, withLifecycle, withContext, withChildren, withUpdate, withRenderer } from './api';
 
 // Public API: utils
-export { define, emit, link, name, prop, props, shadow } from "./api";
+export { prop, props, link, define, emit, shadow, name } from './api';
 
 // Public types ( Unfortunately TS doesn't have Opaque Types like Flow )
 export {
-    ComponentProps,
-    Constructor,
-    CustomElement,
-    PropOptions,
-    Renderer,
-    WithChildren,
-    WithComponent,
-    WithContext,
-    WithLifecycle,
-    WithRenderer,
-    WithUpdate,
-} from "./types";
+  Constructor,
+  CustomElement,
+  ComponentProps,
+  PropOptions,
+  Renderer,
+  WithComponent,
+  WithLifecycle,
+  WithContext,
+  WithChildren,
+  WithUpdate,
+  WithRenderer
+} from './types';

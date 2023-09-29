@@ -1,5 +1,5 @@
-import { Dashicon } from "@wordpress/components";
-import { ComponentType, MouseEventHandler } from "react";
+import { ComponentType, MouseEventHandler } from 'react';
+import { Dashicon } from '@wordpress/components';
 
 declare namespace PluginBlockSettingsMenuItem {
     interface Props {

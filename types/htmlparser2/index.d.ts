@@ -7,16 +7,17 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.2
 
-/// <reference types="node"/>
-/// <reference types="domhandler"/>
-/// <reference types="domutils"/>
+///<reference types="node"/>
+///<reference types="domhandler"/>
+///<reference types="domutils"/>
 
-import { DomHandler } from "domhandler";
-import * as DomUtils from "domutils";
-import { Writable } from "stream";
-export { DomElement, DomHandler, DomHandlerOptions, Element, Node } from "domhandler";
+import { Writable } from 'stream'
+import { DomHandler } from 'domhandler';
+import * as DomUtils from 'domutils';
+export { DomElement, DomHandlerOptions, DomHandler, Element, Node } from 'domhandler';
 
 export interface ParserOptions {
+
     /***
      * Indicates whether special tags (<script> and <style>) should get special treatment
      * and if "empty" tags (eg. <br>) can have children.  If false, the content of special tags
@@ -52,10 +53,10 @@ export interface ParserOptions {
      */
     recognizeSelfClosing?: boolean | undefined;
 }
-/**
+/** 
  * @deprecated
  */
-export type Options = ParserOptions;
+export type Options = ParserOptions
 
 export declare class WritableStream extends Writable {
     constructor(handler: DomHandler, options?: ParserOptions);
@@ -126,4 +127,4 @@ export declare class Parser {
     onend(): void;
 }
 
-export { DomUtils };
+export { DomUtils }

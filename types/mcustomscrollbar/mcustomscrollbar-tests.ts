@@ -11,8 +11,8 @@ class SimpleTest {
         this.element.mCustomScrollbar({
             scrollButtons: {
                 enable: true,
-                scrollAmount: 2,
-            },
+                scrollAmount: 2
+            }
         });
     }
 }
@@ -35,17 +35,18 @@ class SimpleTestAllParams {
             autoHideScrollbar: false,
             autoExpandScrollbar: false,
             alwaysShowScrollbar: 0,
-            snapAmount: [3, 3],
+            snapAmount: [3,3],
             snapOffset: 3,
             mouseWheel: {
                 enable: true,
                 scrollAmount: 1,
-                axis: "x",
+                axis:"x",
                 preventDefault: false,
-                deltaFactor: 12,
-                normalizeDelta: true,
+                deltaFactor:12,
+                normalizeDelta:true,
                 invert: false,
-                disableOver: ["select", "option"],
+                disableOver: ["select","option"]
+
             },
             scrollButtons: {
                 enable: false,
@@ -53,10 +54,10 @@ class SimpleTestAllParams {
                 scrollAmount: 40,
                 tabindex: 33,
             },
-            keyboard: {
+            keyboard:{
                 enable: true,
-                scrollAmount: 5,
-                scrollType: "stepless",
+                scrollAmount:5,
+                scrollType:"stepless"
             },
             advanced: {
                 updateOnBrowserResize: true,
@@ -65,7 +66,7 @@ class SimpleTestAllParams {
                 updateOnSelectorChange: "ul li",
                 extraDraggableSelectors: ".myClass",
                 releaseDraggableSelectors: ".myClass",
-                autoUpdateTimeout: 60,
+                autoUpdateTimeout:60,
                 autoExpandHorizontalScroll: false,
                 autoScrollOnFocus: "input",
             },
@@ -73,18 +74,18 @@ class SimpleTestAllParams {
             documentTouchScroll: false,
 
             callbacks: {
-                onCreate: () => {},
-                onInit: () => {},
-                onScrollStart: () => {},
-                onScroll: () => {},
-                onTotalScroll: () => {},
-                onTotalScrollBack: () => {},
+                onCreate: () => { },
+                onInit: () => { },
+                onScrollStart: () => { },
+                onScroll: () => { },
+                onTotalScroll: () => { },
+                onTotalScrollBack: () => { },
                 onTotalScrollOffset: 0,
                 onTotalScrollBackOffset: 0,
-                whileScrolling: () => {},
+                whileScrolling: () => { },
                 alwaysTriggerOffsets: false,
-                onOverflowY: () => {},
-                onOverflowX: () => {},
+                onOverflowY: () => { },
+                onOverflowX: () => { },
                 onOverflowYNone: () => {},
                 onOverflowXNone: () => {},
                 onBeforeUpdate: () => {},
@@ -94,7 +95,7 @@ class SimpleTestAllParams {
             },
             theme: "light",
             live: true,
-            liveSelector: ".myClass",
+            liveSelector: ".myClass"
         });
     }
 }
@@ -107,7 +108,7 @@ class CallbacksTest {
 
         this.element.mCustomScrollbar({
             scrollButtons: {
-                enable: true,
+                enable: true
             },
             callbacks: {
                 onScrollStart: () => {
@@ -126,8 +127,8 @@ class CallbacksTest {
                 onTotalScrollBackOffset: 20,
                 whileScrolling: () => {
                     this.WhileScrolling();
-                },
-            },
+                }
+            }
         });
     }
 
@@ -160,8 +161,8 @@ class DisableDestroyTest {
 
         this.element.mCustomScrollbar({
             scrollButtons: {
-                enable: true,
-            },
+                enable: true
+            }
         });
 
         $("#disable-scrollbar").click((e) => {
@@ -183,8 +184,8 @@ class DisableDestroyTest {
         $("#rebuild-scrollbar").click((e) => {
             this.element.mCustomScrollbar({
                 scrollButtons: {
-                    enable: true,
-                },
+                    enable: true
+                }
             });
         });
     }

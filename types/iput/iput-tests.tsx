@@ -1,4 +1,6 @@
-import Iput from "iput";
-import * as React from "react";
+import * as React from 'react';
+import Iput from 'iput';
 
-const IputTest = () => <Iput />;
+const IputTest = () => (
+    <Iput />
+);

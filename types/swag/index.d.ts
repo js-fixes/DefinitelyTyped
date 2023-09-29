@@ -14,3 +14,4 @@ declare var Swag: SwagStatic;
 
 export = Swag;
 export as namespace Swag;
+

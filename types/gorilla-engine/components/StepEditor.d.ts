@@ -13,9 +13,7 @@ declare namespace GorillaEngine.UI {
             width: number;
             height: number;
             cornerRadius: number;
-            borderSizeX: number;
-            borderSizeY: number;
-            activeColor: string;
+            border: number;
             markDefault: boolean;
             incrementHeight: number;
             backgroundColor: string;

@@ -1,4 +1,4 @@
-import { cli, helpers, main, run } from "envinfo";
+import { main, run, cli, helpers } from "envinfo";
 
 run(
     {

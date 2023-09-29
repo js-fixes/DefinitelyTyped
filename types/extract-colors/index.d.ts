@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /**
+ *
  * @param src String for a path of image, Image or ImageData.
  * @param options Optional parameters.
  */

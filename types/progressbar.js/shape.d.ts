@@ -1,4 +1,4 @@
-import { AnimationSupport, PathDrawingOptions } from "./";
+import { PathDrawingOptions, AnimationSupport } from './';
 
 declare class Shape {
     /**

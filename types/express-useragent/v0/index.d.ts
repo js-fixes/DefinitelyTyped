@@ -68,7 +68,6 @@ declare namespace ExpressUseragent {
     function express(): (req: express.Request, res: express.Response, next?: Function) => void;
 }
 
-// eslint-disable-next-line @definitelytyped/no-declare-current-package
 declare module "express-useragent" {
     export = ExpressUseragent;
 }

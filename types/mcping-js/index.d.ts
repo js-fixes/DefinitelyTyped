@@ -13,12 +13,10 @@ export interface PingResponse {
     players: {
         max: number;
         online: number;
-        sample?:
-            | Array<{
-                name: string;
-                id: string;
-            }>
-            | undefined;
+        sample?: Array<{
+            name: string;
+            id: string;
+        }> | undefined;
     };
 
     description: {

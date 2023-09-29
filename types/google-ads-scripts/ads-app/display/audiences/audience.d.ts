@@ -86,14 +86,12 @@ declare namespace GoogleAdsScripts {
          *  }
          */
         interface AudienceSelector
-            extends
-                Base.Selector<AudienceIterator>,
+            extends Base.Selector<AudienceIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
 
         const AudienceType: {
             UserInterest: "USER_INTEREST";

@@ -1,3 +1,5 @@
+
+
 powerAssertFormatter();
 
-powerAssertFormatter({ lineSeparator: "\n" });
+powerAssertFormatter({lineSeparator: '\n'});

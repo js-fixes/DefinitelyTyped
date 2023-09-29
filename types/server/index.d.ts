@@ -6,11 +6,11 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { Context, Middlewares } from "./typings/common";
+import { Middlewares, Context } from "./typings/common";
 import { Options } from "./typings/options";
 
-import { Reply } from "./reply";
 import { Router } from "./router";
+import { Reply } from "./reply";
 
 export = server;
 

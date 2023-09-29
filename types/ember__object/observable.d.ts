@@ -1,13 +1,5 @@
-// eslint-disable-next-line @definitelytyped/no-self-import
-import {
-    ObserverMethod,
-    UnwrapComputedPropertyGetter,
-    UnwrapComputedPropertyGetters,
-    UnwrapComputedPropertySetters,
-} from "@ember/object/-private/types";
-// eslint-disable-next-line @definitelytyped/no-self-import
+import { UnwrapComputedPropertyGetter, UnwrapComputedPropertyGetters, UnwrapComputedPropertySetters, ObserverMethod } from "@ember/object/-private/types";
 import Mixin from "@ember/object/mixin";
-// eslint-disable-next-line @definitelytyped/no-self-import
 import CoreObject from "@ember/object/core";
 
 /**
@@ -23,7 +15,7 @@ interface Observable {
      * with a list of strings or an array:
      */
     getProperties<K extends keyof this>(
-        list: K[],
+        list: K[]
     ): Pick<UnwrapComputedPropertyGetters<this>, K>;
     getProperties<K extends keyof this>(
         ...list: K[]
@@ -39,11 +31,11 @@ interface Observable {
      * observers will be buffered.
      */
     setProperties<K extends keyof this>(
-        hash: Pick<this, K>,
+        hash: Pick<this, K>
     ): Pick<UnwrapComputedPropertySetters<this>, K>;
     setProperties<K extends keyof this>(
         // tslint:disable-next-line:unified-signatures
-        hash: { [KK in K]: any },
+        hash: { [KK in K]: any }
     ): Pick<UnwrapComputedPropertySetters<this>, K>;
     /**
      * Notify the observer system that a property has just changed.
@@ -60,7 +52,7 @@ interface Observable {
     addObserver<Target>(
         key: keyof this,
         target: Target,
-        method: ObserverMethod<Target, this>,
+        method: ObserverMethod<Target, this>
     ): this;
     addObserver(key: keyof this, method: ObserverMethod<this, this>): this;
     /**
@@ -71,7 +63,7 @@ interface Observable {
     removeObserver<Target>(
         key: keyof this,
         target: Target,
-        method: ObserverMethod<Target, this>,
+        method: ObserverMethod<Target, this>
     ): this;
     removeObserver(key: keyof this, method: ObserverMethod<this, this>): this;
     /**
@@ -94,7 +86,7 @@ interface Observable {
      * generated lazily.
      */
     cacheFor<K extends keyof this>(
-        key: K,
+        key: K
     ): UnwrapComputedPropertyGetter<this[K]> | undefined;
 }
 declare const Observable: Mixin<Observable, CoreObject>;

@@ -1,14 +1,15 @@
-import { DEFAULT_PARENT, DEFAULT_USE_ALPHA, DEFAULT_USE_COLOR } from "./constants";
+import { DEFAULT_PARENT, DEFAULT_USE_ALPHA, DEFAULT_USE_COLOR } from './constants';
 
-import Behaviour from "../behaviour/Behaviour";
-import { EasingFunction } from "../ease";
-import { Emitter } from "../emitter";
-import { Vector3D } from "../math";
-import { CORE_TYPE_PARTICLE } from "./types";
+import Behaviour from '../behaviour/Behaviour';
+import { EasingFunction } from '../ease';
+import { Emitter } from '../emitter';
+import { Vector3D } from '../math';
+import { CORE_TYPE_PARTICLE } from './types';
 
 export default class Particle {
     /**
      * Constructs a Particle instance.
+     *
      */
     constructor(properties: Properties);
     id: string;
@@ -53,6 +54,7 @@ export default class Particle {
 
 /**
  * Constructs a Particle instance.
+ *
  */
 export interface Properties {
     life: number;

@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /// <reference types="node" />
-import { OutputBundle, Plugin } from "rollup";
+import { Plugin, OutputBundle } from 'rollup';
 
 declare namespace css {
     interface Options {

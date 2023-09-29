@@ -26,8 +26,11 @@ declare module "moment" {
         (settings?: DurationFormatSettings): string;
     }
 
-    type UnitOfTrimV1 = "left" | "right";
-    type UnitOfTrim = "large" | "small" | "both" | "mid" | "all" | "final";
+    type UnitOfTrimV1 = 'left' | 'right';
+    type UnitOfTrim = (
+        'large' | 'small' | 'both' |
+        'mid' | 'all' | 'final'
+    );
 
     interface DurationFormatSettings {
         trim?: false | UnitOfTrimV1 | UnitOfTrim | string | Array<UnitOfTrim | string> | undefined;
@@ -57,34 +60,19 @@ declare module "moment" {
 
     type DurationLabelType = "long" | "standard" | "short";
     type DurationTemplate = "HMS" | "HM" | "MS";
-    type DurationToken =
-        | "S"
-        | "SS"
-        | "SSS"
-        | "s"
-        | "ss"
-        | "sss"
-        | "m"
-        | "mm"
-        | "mmm"
-        | "h"
-        | "hh"
-        | "hhh"
-        | "d"
-        | "dd"
-        | "ddd"
-        | "w"
-        | "ww"
-        | "www"
-        | "M"
-        | "MM"
-        | "MMM"
-        | "y"
-        | "yy"
-        | "yyy";
+    type DurationToken = (
+        "S" | "SS" | "SSS" |
+        "s" | "ss" | "sss" |
+        "m" | "mm" | "mmm" |
+        "h" | "hh" | "hhh" |
+        "d" | "dd" | "ddd" |
+        "w" | "ww" | "www" |
+        "M" | "MM" | "MMM" |
+        "y" | "yy" | "yyy"
+    );
 
-    type DurationLabelDef = { [duration in DurationToken]: string };
-    type DurationTimeDef = { [template in DurationTemplate]: string };
+    type DurationLabelDef = {[duration in DurationToken]: string};
+    type DurationTimeDef = {[template in DurationTemplate]: string};
 
     interface DurationLabelTypeDef {
         type: DurationLabelType;
@@ -100,7 +88,7 @@ declare module "moment" {
         durationPluralKey?: ((token: string, integerValue: number, decimalValue: number) => string) | undefined;
     }
 
-    type TemplateFunction = (this: DurationFormatSettings) => string;
+    type TemplateFunction = ((this: DurationFormatSettings) => string);
 }
 
 declare function momentDurationFormatSetup(_moment: typeof moment): void;

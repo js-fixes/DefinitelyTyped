@@ -1,5 +1,5 @@
-import { Link } from "@nulogy/components";
 import * as React from "react";
+import { Link } from "@nulogy/components";
 
 const LinkTest = () => <Link />;
 

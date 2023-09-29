@@ -1,100 +1,99 @@
-import aabUtilsMethods, { ApkCreationOptions } from "./aab-utils";
-import methods, { LogcatOpts, ResolveActivityOptions, ScreenrecordOptions, SetPropOptions } from "./adb-commands";
-import emuMethods, { EmuInfo, EmuVersionInfo, ExecTelnetOptions } from "./adb-emu-commands";
-import manifestMethods, { APKInfo } from "./android-manifest";
-import apkSigningMethods, { CertCheckOptions, KeystoreHash } from "./apk-signing";
+import methods, { LogcatOpts, SetPropOptions, ScreenrecordOptions, ResolveActivityOptions } from './adb-commands';
+import manifestMethods, { APKInfo } from './android-manifest';
+import systemCallMethods, {
+    ConnectedDevicesOptions,
+    Device,
+    VerboseDevice,
+    AdbExecOptions,
+    ExecResult,
+    ShellExecOptions,
+    AvdLaunchOptions,
+    BinaryVersion,
+    BridgeVersion,
+    Version,
+    RootResult,
+    BinaryName,
+} from './system-calls';
+import apkSigningMethods, { CertCheckOptions, KeystoreHash } from './apk-signing';
 import apkUtilsMethods, {
-    AppInfo,
+    StartAppOptions,
+    StartUriOptions,
+    PackageActivityInfo,
+    UninstallOptions,
     CachingOptions,
     InstallOptions,
     InstallOrUpgradeOptions,
     InstallOrUpgradeResult,
-    PackageActivityInfo,
-    StartAppOptions,
-    StartUriOptions,
-    UninstallOptions,
-} from "./apk-utils";
-import apksUtilsMethods, { InstallApksOptions } from "./apks-utils";
-import keyboardCommands, { KeyboardState } from "./keyboard-commands";
-import lockManagementCommands from "./lockmgmt";
+    AppInfo,
+} from './apk-utils';
+import apksUtilsMethods, { InstallApksOptions } from './apks-utils';
+import aabUtilsMethods, { ApkCreationOptions } from './aab-utils';
+import emuMethods, { EmuInfo, ExecTelnetOptions, EmuVersionInfo } from './adb-emu-commands';
 import settingsClientCommands, {
-    Location,
     SettingsAppStartupOptions,
-    SmsItem,
+    Location,
     SmsListOptions,
     StatusBarNotification,
-} from "./settings-client-commands";
-import systemCallMethods, {
-    AdbExecOptions,
-    AvdLaunchOptions,
-    BinaryName,
-    BinaryVersion,
-    BridgeVersion,
-    ConnectedDevicesOptions,
-    Device,
-    ExecResult,
-    RootResult,
-    ShellExecOptions,
-    VerboseDevice,
-    Version,
-} from "./system-calls";
+    SmsItem,
+} from './settings-client-commands';
+import lockManagementCommands from './lockmgmt';
+import keyboardCommands, { KeyboardState } from './keyboard-commands';
 
-export type AdbMethods =
-    & typeof methods
-    & typeof manifestMethods
-    & typeof systemCallMethods
-    & typeof apkSigningMethods
-    & typeof apkUtilsMethods
-    & typeof apksUtilsMethods
-    & typeof aabUtilsMethods
-    & typeof emuMethods
-    & typeof settingsClientCommands
-    & typeof lockManagementCommands
-    & typeof keyboardCommands;
+export type AdbMethods = typeof methods &
+    typeof manifestMethods &
+    typeof systemCallMethods &
+    typeof apkSigningMethods &
+    typeof apkUtilsMethods &
+    typeof apksUtilsMethods &
+    typeof aabUtilsMethods &
+    typeof emuMethods &
+    typeof settingsClientCommands &
+    typeof lockManagementCommands &
+    typeof keyboardCommands;
 
 declare const adbMethods: AdbMethods;
 export default adbMethods;
 
-export { getAndroidBinaryPath } from "./system-calls";
+export { getAndroidBinaryPath } from './system-calls';
 
 export {
-    AdbExecOptions,
-    ApkCreationOptions,
+    LogcatOpts,
+    SetPropOptions,
+    ScreenrecordOptions,
+    ResolveActivityOptions,
     APKInfo,
-    AppInfo,
-    AvdLaunchOptions,
-    BinaryName,
-    BinaryVersion,
-    BridgeVersion,
-    CachingOptions,
     CertCheckOptions,
+    KeystoreHash,
     ConnectedDevicesOptions,
     Device,
-    EmuInfo,
-    EmuVersionInfo,
+    VerboseDevice,
+    AdbExecOptions,
     ExecResult,
-    ExecTelnetOptions,
-    InstallApksOptions,
+    ShellExecOptions,
+    AvdLaunchOptions,
+    BinaryVersion,
+    BridgeVersion,
+    Version,
+    RootResult,
+    BinaryName,
+    StartAppOptions,
+    StartUriOptions,
+    PackageActivityInfo,
+    UninstallOptions,
+    CachingOptions,
     InstallOptions,
     InstallOrUpgradeOptions,
     InstallOrUpgradeResult,
-    KeyboardState,
-    KeystoreHash,
-    Location,
-    LogcatOpts,
-    PackageActivityInfo,
-    ResolveActivityOptions,
-    RootResult,
-    ScreenrecordOptions,
-    SetPropOptions,
+    AppInfo,
+    InstallApksOptions,
+    ApkCreationOptions,
+    EmuInfo,
+    ExecTelnetOptions,
+    EmuVersionInfo,
     SettingsAppStartupOptions,
-    ShellExecOptions,
-    SmsItem,
+    Location,
     SmsListOptions,
-    StartAppOptions,
-    StartUriOptions,
     StatusBarNotification,
-    UninstallOptions,
-    VerboseDevice,
-    Version,
+    SmsItem,
+    KeyboardState,
 };

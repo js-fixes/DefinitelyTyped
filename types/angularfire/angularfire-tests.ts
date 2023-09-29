@@ -6,17 +6,8 @@ interface AngularFireScope extends ng.IScope {
 
 var url = "https://myapp.firebaseio.com";
 
-myapp.controller("MyController", [
-    "$scope",
-    "$firebase",
-    "$FirebaseObject",
-    "$FirebaseArray",
-    function(
-        $scope: AngularFireScope,
-        $firebase: AngularFireService,
-        $FirebaseObject: AngularFireObjectService,
-        $FirebaseArray: AngularFireArrayService,
-    ) {
+myapp.controller("MyController", ["$scope", "$firebase", '$FirebaseObject', '$FirebaseArray',
+    function ($scope: AngularFireScope, $firebase: AngularFireService, $FirebaseObject: AngularFireObjectService, $FirebaseArray: AngularFireArrayService) {
         var ref = new Firebase(url);
         var sync = $firebase(ref);
 
@@ -33,22 +24,23 @@ myapp.controller("MyController", [
             sync.$update("foo", { bar: 1 });
 
             // Increment the message count by 1
-            sync.$transaction("count", function(currentCount) {
-                if (!currentCount) return 1; // Initial value for counter.
-                if (currentCount < 0) return; // Return undefined to abort transaction.
-                return currentCount + 1; // Increment the count by 1.
-            }).then(function(snapshot) {
-                if (!snapshot) {
-                    // Handle aborted transaction.
-                } else {
-                    // Do something.
-                    console.log(snapshot.val());
-                }
-            }, function(err) {
-                // Handle the error condition.
-                console.log(err.stack);
-            });
+            sync.$transaction('count', function (currentCount) {
+                if (!currentCount) return 1;   // Initial value for counter.
+                if (currentCount < 0) return;  // Return undefined to abort transaction.
+                return currentCount + 1;       // Increment the count by 1.
+            }).then(function (snapshot) {
+                    if (!snapshot) {
+                        // Handle aborted transaction.
+                    } else {
+                        // Do something.
+                        console.log(snapshot.val());
+                    }
+                }, function (err) {
+                    // Handle the error condition.
+                    console.log(err.stack);
+                });
         }
+
 
         // AngularFireObject
         {
@@ -72,14 +64,14 @@ myapp.controller("MyController", [
             if (obj.$ref() !== ref) throw "error";
 
             // $bindTo()
-            obj.$bindTo($scope, "data").then(function() {
+            obj.$bindTo($scope, "data").then(function () {
                 console.log($scope.data);
-                $scope.data.foo = "baz"; // will be saved to Firebase
-                sync.$set({ foo: "baz" }); // this would update Firebase and $scope.data
+                $scope.data.foo = "baz";  // will be saved to Firebase
+                sync.$set({ foo: "baz" });   // this would update Firebase and $scope.data
             });
 
             // $watch()
-            var unwatch = obj.$watch(function() {
+            var unwatch = obj.$watch(function () {
                 console.log("data changed!");
             });
             unwatch();
@@ -89,9 +81,9 @@ myapp.controller("MyController", [
 
             // $extend()
             var NewFactory = $FirebaseObject.$extend({
-                getMyFavoriteColor: function() {
+                getMyFavoriteColor: function () {
                     return this.favoriteColor + ", no green!"; // obscure Monty Python reference
-                },
+                }
             });
             var customObj = $firebase(ref, { objectFactory: NewFactory }).$asObject();
         }
@@ -153,49 +145,47 @@ myapp.controller("MyController", [
 
             // $extend()
             var ArrayWithSum = $FirebaseArray.$extend({
-                sum: function() {
+                sum: function () {
                     var total = 0;
-                    angular.forEach(this.$list, function(rec) {
+                    angular.forEach(this.$list, function (rec) {
                         total += rec.x;
                     });
                     return total;
-                },
+                }
             });
             var list = $firebase(ref, { arrayFactory: ArrayWithSum }).$asArray();
-            list.$loaded().then(function() {
-                console.log("List has " + (<any> list).sum() + " items");
+            list.$loaded().then(function () {
+                console.log("List has " + (<any>list).sum() + " items");
             });
         }
-    },
+    }
 ]);
 
 interface AngularFireAuthScope extends ng.IScope {
     loginObj: AngularFireAuth;
 }
 
-myapp.controller("MyAuthController", [
-    "$scope",
-    "$firebaseAuth",
+myapp.controller("MyAuthController", ["$scope", "$firebaseAuth",
     function($scope: AngularFireAuthScope, $firebaseAuth: AngularFireAuthService) {
         var dataRef = new Firebase(url);
         $scope.loginObj = $firebaseAuth(dataRef);
         $scope.loginObj.$getAuth();
         var credentials = {
-            email: "my@email.com",
-            password: "mypassword",
+            email: 'my@email.com',
+            password: 'mypassword'
         };
         var resetPasswordCredentials = {
-            email: "my@email.com",
+            email: 'my@email.com'
         };
         var changePasswordCredentials = {
-            email: "my@email.com",
-            oldPassword: "mypassword",
-            newPassword: "mypassword",
+            email: 'my@email.com',
+            oldPassword: 'mypassword',
+            newPassword: 'mypassword'
         };
         var changeUserCredentials = {
-            oldEmail: "my@email.com",
-            newEmail: "my@email.com",
-            password: "mypassword",
+            oldEmail: 'my@email.com',
+            newEmail: 'my@email.com',
+            password: 'mypassword'
         };
         $scope.loginObj.$authWithCustomToken("token").then(_ => {});
         $scope.loginObj.$authAnonymously().then(_ => {});
@@ -213,5 +203,5 @@ myapp.controller("MyAuthController", [
         $scope.loginObj.$changeEmail(changeUserCredentials).then(_ => {});
         $scope.loginObj.$changePassword(changePasswordCredentials).then(_ => {});
         $scope.loginObj.$resetPassword(resetPasswordCredentials).then(_ => {});
-    },
+    }
 ]);

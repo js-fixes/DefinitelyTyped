@@ -1,2 +1,2 @@
-import { slice } from "../index.js";
+import { slice } from '../index';
 export default slice;

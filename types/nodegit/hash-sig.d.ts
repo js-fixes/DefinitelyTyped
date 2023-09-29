@@ -12,4 +12,6 @@ export class Hashsig {
     static createFromFile(path: string, opts: number): Promise<Hashsig>;
 
     compare(b: Hashsig): number;
+
+    free(): void;
 }

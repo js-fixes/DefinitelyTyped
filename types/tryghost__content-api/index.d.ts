@@ -66,18 +66,14 @@ export interface Settings extends Metadata, CodeInjection, SocialMedia {
     timezone?: string | undefined;
     ghost_head?: Nullable<string> | undefined;
     ghost_foot?: Nullable<string> | undefined;
-    navigation?:
-        | Array<{
-            label: string;
-            url: string;
-        }>
-        | undefined;
-    secondary_navigation?:
-        | Array<{
-            label: string;
-            url: string;
-        }>
-        | undefined;
+    navigation?: Array<{
+        label: string;
+        url: string;
+    }> | undefined;
+    secondary_navigation?: Array<{
+        label: string;
+        url: string;
+    }> | undefined;
     url?: string | undefined;
 }
 
@@ -96,7 +92,7 @@ export interface Author extends Identification, Metadata {
     } | undefined;
 }
 
-export type TagVisibility = "public" | "internal";
+export type TagVisibility = 'public' | 'internal';
 
 export interface Tag extends Identification, Metadata, SocialMedia {
     name?: string | undefined;
@@ -155,11 +151,11 @@ export interface PostOrPage extends Identification, Excerpt, CodeInjection, Meta
 
 export type GhostData = PostOrPage | Author | Tag | Settings;
 
-export type IncludeParam = "authors" | "tags" | "count.posts";
+export type IncludeParam = 'authors' | 'tags' | 'count.posts';
 
 export type FieldParam = string;
 
-export type FormatParam = "html" | "plaintext";
+export type FormatParam = 'html' | 'plaintext';
 
 export type FilterParam = string;
 
@@ -184,11 +180,7 @@ export interface BrowseFunction<T> {
 }
 
 export interface ReadFunction<T> {
-    (
-        data: { id: Nullable<string> } | { slug: Nullable<string> },
-        options?: Params,
-        memberToken?: Nullable<string>,
-    ): Promise<T>;
+    (data: { id: Nullable<string> } | { slug: Nullable<string> }, options?: Params, memberToken?: Nullable<string>): Promise<T>;
 }
 
 interface BrowseResults<T> extends Array<T> {
@@ -222,7 +214,7 @@ export interface GhostContentAPIOptions {
      *
      * Supported Versions: 'v2', 'v3', 'v4', 'v5.0', 'canary'
      */
-    version: "v2" | "v3" | "v4" | "v5.0" | "canary";
+    version: 'v2' | 'v3' | 'v4' | 'v5.0' | 'canary';
     key: string;
     /** @deprecated since version v2 */
     host?: string | undefined;

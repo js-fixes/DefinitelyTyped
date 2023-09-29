@@ -1,8 +1,8 @@
-import { core } from "./core";
+import { core } from './core';
 
 // for docs
 // noinspection ES6UnusedImports
-import * as el from "../";
+import * as el from '../';
 
 // ============================================================================
 // Native
@@ -27,9 +27,12 @@ import * as el from "../";
  * @see core.Child
  * @see core.Node
  */
-declare const identity: core.NodeFactory<"in", core.KeyProps, [
-    operand: core.Child,
-]>;
+declare const identity:
+    core.NodeFactory<'in',
+        core.KeyProps,
+        [
+            operand: core.Child
+        ]>;
 
 /**
  * Used for accepting an input signal from the audio driver,
@@ -47,7 +50,10 @@ declare const identity: core.NodeFactory<"in", core.KeyProps, [
  * @see core.Child
  * @see core.Node
  */
-declare const input: core.NodeFactory<"in", core.InProps, []>;
+declare const input:
+    core.NodeFactory<'in',
+        core.InProps,
+        []>;
 
 /**
  * Either the identity or the input function.

@@ -1,4 +1,4 @@
-import { PureComponent, Requireable, Validator } from "react";
+import { PureComponent, Validator, Requireable } from 'react';
 
 export type OnScrollParams = {
     clientHeight: number;

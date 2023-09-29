@@ -4,9 +4,11 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare module "js-search" {
+
     class Search {
+
         constructor(
-            uidFieldName: string | Array<string>,
+            uidFieldName: string | Array<string>
         );
 
         public indexStrategy: IIndexStrategy;
@@ -20,6 +22,7 @@ declare module "js-search" {
         public addIndex(field: string | Array<string>): void;
 
         public search(query: string): Array<Object>;
+
     }
 
     interface IIndexStrategy {
@@ -54,12 +57,12 @@ declare module "js-search" {
         indexDocument(
             token: string,
             uid: string,
-            document: Object,
+            document: Object
         ): void;
 
         search(
             tokens: Array<string>,
-            corpus: Array<Object>,
+            corpus: Array<Object>
         ): Array<Object>;
     }
 
@@ -111,7 +114,7 @@ declare module "js-search" {
     class StemmingTokenizer implements ITokenizer {
         constructor(
             stemmingFunction: StemmingFunction,
-            decoratedTokenizer: ITokenizer,
+            decoratedTokenizer: ITokenizer
         );
 
         tokenize(text: string): Array<string>;
@@ -126,12 +129,15 @@ declare module "js-search" {
     var StopWordsMap: any;
 
     class TokenHighlighter {
+
         constructor(
             opt_indexStrategy: IIndexStrategy,
             opt_sanitizer: ISanitizer,
-            opt_wrapperTagName: string,
+            opt_wrapperTagName: string
         );
 
         public highlight(text: string, tokens: Array<string>): string;
+
     }
+
 }

@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 export declare class EventSubscription {
+
     listener: Function;
     context: any;
 
@@ -11,9 +12,11 @@ export declare class EventSubscription {
      * Removes this subscription from the subscriber that controls it.
      */
     remove(): void;
+
 }
 
 export declare class EventEmitter {
+
     constructor();
 
     /**
@@ -56,4 +59,5 @@ export declare class EventEmitter {
      * particular type will be notified.
      */
     emit(eventType: string, ...data: any[]): void;
+
 }

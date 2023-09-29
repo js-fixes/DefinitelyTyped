@@ -1,2 +1,2 @@
-import { equals } from "../index.js";
+import { equals } from '../index';
 export default equals;

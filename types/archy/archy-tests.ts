@@ -1,28 +1,30 @@
+
 import archy = require("archy");
 
-var opts: archy.Options = {};
+var opts: archy.Options = {
+};
 
 var data: archy.Data = {
-    label: "beep",
+    label: 'beep',
     nodes: [
-        "ity",
+        'ity',
         {
-            label: "boop",
+            label: 'boop',
             nodes: [
                 {
-                    label: "o_O",
+                    label: 'o_O',
                     nodes: [
                         {
-                            label: "oh",
-                            nodes: ["hello", "puny"],
+                            label: 'oh',
+                            nodes: ['hello', 'puny']
                         },
-                        "human",
-                    ],
+                        'human'
+                    ]
                 },
-                "party\ntime!",
-            ],
-        },
-    ],
+                'party\ntime!'
+            ]
+        }
+    ]
 };
 
 var str = archy(data);

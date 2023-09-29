@@ -27,10 +27,7 @@ declare var CSSVariableReferenceValue: {
 
 interface CSSUnparsedValue extends CSSStyleValue {
     readonly length: number;
-    forEach(
-        callbackfn: (value: CSSUnparsedSegment, key: number, parent: CSSUnparsedValue) => void,
-        thisArg?: any,
-    ): void;
+    forEach(callbackfn: (value: CSSUnparsedSegment, key: number, parent: CSSUnparsedValue) => void, thisArg?: any): void;
 }
 
 declare var CSSUnparsedValue: {
@@ -177,10 +174,7 @@ interface CSSTransformValue extends CSSStyleValue {
     readonly is2D: boolean;
     readonly length: number;
     toMatrix(): DOMMatrix;
-    forEach(
-        callbackfn: (value: CSSTransformComponent, key: number, parent: CSSTransformValue) => void,
-        thisArg?: any,
-    ): void;
+    forEach(callbackfn: (value: CSSTransformComponent, key: number, parent: CSSTransformValue) => void, thisArg?: any): void;
 }
 
 declare var CSSTransformValue: {
@@ -300,10 +294,7 @@ interface StylePropertyMapReadOnly {
     get(property: string): undefined | CSSStyleValue;
     getAll(property: string): CSSStyleValue[];
     has(property: string): boolean;
-    forEach(
-        callbackfn: (value: CSSStyleValue[], key: string, parent: StylePropertyMapReadOnly) => void,
-        thisArg?: any,
-    ): void;
+    forEach(callbackfn: (value: CSSStyleValue[], key: string, parent: StylePropertyMapReadOnly) => void, thisArg?: any): void;
 }
 
 declare var StylePropertyMapReadOnly: {

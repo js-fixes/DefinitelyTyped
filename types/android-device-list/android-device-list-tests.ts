@@ -1,6 +1,6 @@
 import {
-    brandList,
     deviceList,
+    brandList,
     getDevicesByBrand,
     getDevicesByDeviceId,
     getDevicesByModel,

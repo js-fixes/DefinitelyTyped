@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { ComponentClass, FocusEventHandler, FunctionComponent, HTMLAttributes, ReactNode } from "react";
+import { ComponentClass, FunctionComponent, ReactNode, FocusEventHandler, HTMLAttributes } from "react";
 
 export as namespace DatePicker;
 

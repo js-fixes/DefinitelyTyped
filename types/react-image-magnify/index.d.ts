@@ -4,14 +4,12 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import * as React from "react";
+import * as React from 'react';
 
 /**
  * React Image Magnify
  */
-export default function ReactImageMagnify(
-    props: ReactImageMagnifyProps & Readonly<{ children?: React.ReactNode | undefined }>,
-): React.ReactElement;
+export default function ReactImageMagnify(props: ReactImageMagnifyProps & Readonly<{ children?: React.ReactNode | undefined }>): React.ReactElement;
 
 export interface CommonImageType {
     src: string;

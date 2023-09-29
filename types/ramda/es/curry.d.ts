@@ -1,2 +1,2 @@
-import { curry } from "../index.js";
+import { curry } from '../index';
 export default curry;

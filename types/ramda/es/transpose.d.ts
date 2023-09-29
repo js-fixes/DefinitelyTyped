@@ -1,2 +1,2 @@
-import { transpose } from "../index.js";
+import { transpose } from '../index';
 export default transpose;

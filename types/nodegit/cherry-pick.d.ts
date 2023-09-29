@@ -1,7 +1,7 @@
-import { CherrypickOptions } from "./cherry-pick-options";
-import { Commit } from "./commit";
-import { MergeOptions } from "./merge-options";
-import { Repository } from "./repository";
+import { Repository } from './repository';
+import { Commit } from './commit';
+import { MergeOptions } from './merge-options';
+import { CherrypickOptions } from './cherry-pick-options';
 
 export class Cherrypick {
     /**

@@ -1,2 +1,2 @@
-import { divide } from "../index.js";
+import { divide } from '../index';
 export default divide;

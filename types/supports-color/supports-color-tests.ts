@@ -1,6 +1,6 @@
 /// <reference types="node" />
 
-import { stderr, stdout, supportsColor } from "supports-color";
+import { stdout, stderr, supportsColor } from "supports-color";
 
 if (stdout) {
     // Terminal standard output supports color

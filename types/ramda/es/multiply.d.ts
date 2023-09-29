@@ -1,2 +1,2 @@
-import { multiply } from "../index.js";
+import { multiply } from '../index';
 export default multiply;

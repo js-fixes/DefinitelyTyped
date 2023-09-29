@@ -1,5 +1,5 @@
-import Extent from "../Core/Geographic/Extent";
 import Source from "./Source";
+import Extent from "../Core/Geographic/Extent";
 
 declare class OrientedImageSource extends Source {
     constructor(source: {

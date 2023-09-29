@@ -3,7 +3,7 @@
 // Definitions by: tpluscode <https://github.com/tpluscode>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import type { Request, RequestHandler, Response } from "express";
+import type { RequestHandler, Request, Response } from 'express';
 
 declare namespace preconditions {
     interface ResourceState {

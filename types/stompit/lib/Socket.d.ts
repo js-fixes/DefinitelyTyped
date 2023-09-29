@@ -1,5 +1,5 @@
 import { EventEmitter } from "events";
-import { Duplex, Writable, WritableOptions } from "stream";
+import { Duplex, WritableOptions, Writable } from "stream";
 
 import OutgoingFrameStream = require("./OutgoingFrameStream");
 

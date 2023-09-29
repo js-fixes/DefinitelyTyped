@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// <reference types="node" />
 
+
 interface Options {
     production?: boolean | undefined;
     ignoreScripts?: boolean | undefined;

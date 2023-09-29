@@ -21,6 +21,7 @@ declare namespace GoogleAdsScripts {
          *
          * Typical usage:
          *
+         *
          *      while (accountLabelIterator.hasNext()) {
          *        var accountLabel = accountLabelIterator.next();
          *      }
@@ -32,6 +33,7 @@ declare namespace GoogleAdsScripts {
          *
          * Typical usage:
          *
+         *
          *      var accountLabelSelector = AdsManagerApp.accountLabels()
          *          .withCondition("Name CONTAINS 'priority'");
          *
@@ -41,7 +43,8 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface AccountLabelSelector
-            extends Base.Selector<AccountLabelIterator>, Base.SelectorWithCondition, Base.SelectorWithIds
-        {}
+            extends Base.Selector<AccountLabelIterator>,
+                Base.SelectorWithCondition,
+                Base.SelectorWithIds {}
     }
 }

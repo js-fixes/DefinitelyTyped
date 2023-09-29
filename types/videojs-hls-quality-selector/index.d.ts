@@ -3,8 +3,7 @@
 // Definitions by: Piotr Błażejewicz <https://github.com/peterblazejewicz>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-// eslint-disable-next-line @definitelytyped/no-import-default-of-export-equals
-import ConcreteMenuItem from "./src/ConcreteMenuItem";
+import ConcreteMenuItem from './src/ConcreteMenuItem';
 
 /**
  * Adds a quality selector menu for HLS sources played in videojs.
@@ -68,7 +67,7 @@ declare namespace hlsQualitySelector {
 
 export = hlsQualitySelector;
 
-declare module "video.js" {
+declare module 'video.js' {
     interface VideoJsPlayer {
         hlsQualitySelector: typeof hlsQualitySelector;
     }

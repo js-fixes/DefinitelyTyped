@@ -4,6 +4,7 @@
         "interface-over-type-literal": false,
         "no-misused-new": false,
         "only-arrow-functions": false,
+        "strict-export-declare-modifiers": false,
         "unified-signatures": false
     }
 }

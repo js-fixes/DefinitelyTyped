@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { Action, Dispatch, Store } from "redux";
+import { Store, Dispatch, Action } from "redux";
 
 type MapStateToProps = (state: any) => any;
 type mapDispatchToProps = (dispatch: Dispatch) => any;

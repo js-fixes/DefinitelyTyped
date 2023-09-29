@@ -3,11 +3,7 @@
 // Definitions by: JohnDoeAntler <https://github.com/JohnDoeAntler>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare function vad(
-    audioContext: AudioContext,
-    stream: MediaStream,
-    options?: vad.VoiceActivityDetectionOptions,
-): { connect: () => void; disconnect: () => void; destroy: () => void };
+declare function vad(audioContext: AudioContext, stream: MediaStream, options?: vad.VoiceActivityDetectionOptions): { connect: () => void; disconnect: () => void; destroy: () => void };
 
 declare namespace vad {
     interface VoiceActivityDetectionOptions {

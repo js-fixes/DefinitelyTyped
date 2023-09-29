@@ -1,2 +1,2 @@
-import { subtract } from "../index.js";
+import { subtract } from '../index';
 export default subtract;

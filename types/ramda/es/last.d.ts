@@ -1,2 +1,2 @@
-import { last } from "../index.js";
+import { last } from '../index';
 export default last;

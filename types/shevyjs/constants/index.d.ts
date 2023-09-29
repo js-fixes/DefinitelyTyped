@@ -1,4 +1,4 @@
-import { FontScalePresets, Heading, Options } from "../types";
+import { FontScalePresets, Options, Heading } from '../types';
 
 export const fontScalePresets: FontScalePresets;
 

@@ -43,11 +43,9 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface SharedNegativeKeywordSelector
-            extends
-                Base.Selector<SharedNegativeKeywordIterator>,
+            extends Base.Selector<SharedNegativeKeywordIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

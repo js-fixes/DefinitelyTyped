@@ -1,2 +1,2 @@
-import { prepend } from "../index.js";
+import { prepend } from '../index';
 export default prepend;

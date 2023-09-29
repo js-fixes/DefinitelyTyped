@@ -11,12 +11,10 @@ declare namespace GoogleAdsScripts {
         interface AdGroupPhoneNumberIterator extends Base.Iterator<AdGroupPhoneNumber> {}
 
         interface AdGroupPhoneNumberSelector
-            extends
-                Base.Selector<AdGroupPhoneNumberIterator>,
+            extends Base.Selector<AdGroupPhoneNumberIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

@@ -52,7 +52,11 @@ export interface SkewAnimation {
     skewY(ay: number): Animation;
 }
 
-export interface Animation extends RotateAnimation, ScaleAnimation, SkewAnimation, TranslateAnimation {
+export interface Animation
+    extends RotateAnimation,
+        ScaleAnimation,
+        SkewAnimation,
+        TranslateAnimation {
     opacity(x: number): Animation;
     backgroundColor(x: string): Animation;
     width(x: number): Animation;
@@ -73,7 +77,7 @@ export type CallbackFunction<T> = (
         success: (res: T) => void;
         fail: () => void;
         complete: () => void;
-    },
+    }
 ) => void;
 
 export interface MapContext {
@@ -121,8 +125,7 @@ export interface RequestParam extends UrlParam {
         | "PUT"
         | "DELETE"
         | "TRACE"
-        | "CONNECT"
-        | undefined;
+        | "CONNECT" | undefined;
     dataType?: "json" | "text" | undefined;
     responseType?: "text" | "arraybuffer" | undefined;
 }
@@ -147,7 +150,7 @@ export interface WxEnhances {
             width: number;
             height: number;
         },
-        context: any,
+        context: any
     ): Promise<{
         width: number;
         height: number;
@@ -163,7 +166,7 @@ export interface WxEnhances {
             height?: number | undefined;
             wdith: number;
         },
-        context: any,
+        context: any
     ): Promise<void>;
 
     canvasToTempFilePath(
@@ -176,7 +179,7 @@ export interface WxEnhances {
             destHeight: number;
             canvasId: string;
         },
-        context: any,
+        context: any
     ): Promise<{ tempFilePath: string }>;
 
     checkIsSoterEnrolledInDevice(params: {
@@ -253,7 +256,7 @@ export interface WxEnhances {
     getNetworkType(): Promise<{ networkType: string }>;
 
     getSavedFileInfo(
-        params: FilePathParam,
+        params: FilePathParam
     ): Promise<{
         errMsg: string;
         size: number;

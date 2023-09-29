@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import * as express from "express";
-import * as passport from "passport";
+import * as passport from 'passport';
+import * as express from 'express';
 
 declare namespace PassportFacebookToken {
     interface StrategyStatic {
@@ -53,20 +53,9 @@ declare namespace PassportFacebookToken {
         passReqToCallback: true;
     }
 
-    type VerifyFunction = (
-        accessToken: string,
-        refreshToken: string,
-        profile: Profile,
-        done: (error: any, user?: any, info?: any) => void,
-    ) => void;
+    type VerifyFunction = (accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
 
-    type VerifyFunctionWithRequest = (
-        req: express.Request,
-        accessToken: string,
-        refreshToken: string,
-        profile: Profile,
-        done: (error: any, user?: any, info?: any) => void,
-    ) => void;
+    type VerifyFunctionWithRequest = (req: express.Request, accessToken: string, refreshToken: string, profile: Profile, done: (error: any, user?: any, info?: any) => void) => void;
 }
 
 declare const PassportFacebookToken: PassportFacebookToken.StrategyStatic;

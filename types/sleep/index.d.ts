@@ -26,6 +26,7 @@ declare namespace __node_sleep {
     function usleep(n: number): void;
 }
 
-declare module "sleep" {
+declare module "sleep"
+{
     export = __node_sleep;
 }

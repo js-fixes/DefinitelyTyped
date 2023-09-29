@@ -1,7 +1,6 @@
-interface Point {
-    x: number;
-    y: number;
-}
+
+
+interface Point { x: number; y: number; }
 let a: any;
 let s: string;
 let b: boolean;
@@ -23,7 +22,7 @@ map = new Map<string, Point>();
 map = new Map(arrayOfStringPoint);
 map.clear();
 b = map.delete(s);
-map.forEach((value: Point, key: string, map: Map<string, Point>) => {}, a);
+map.forEach((value: Point, key: string, map: Map<string, Point>) => { }, a);
 pt = map.get(s);
 b = map.has(s);
 map = map.set(s, pt);
@@ -36,7 +35,7 @@ set = new Set<Point>();
 set = new Set(arrayOfPoint);
 set.clear();
 b = set.delete(pt);
-set.forEach((value: Point, key: Point, set: Set<Point>) => {}, a);
+set.forEach((value: Point, key: Point, set: Set<Point>) => { }, a);
 b = set.has(pt);
 set = set.add(pt);
 iteratorOfPointPoint = set.entries();

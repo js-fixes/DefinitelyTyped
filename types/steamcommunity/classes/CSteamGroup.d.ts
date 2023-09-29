@@ -1,14 +1,5 @@
-import {
-    Announcement,
-    appid,
-    Callback,
-    CallbackError,
-    cid,
-    GroupComment,
-    GroupEventType,
-    GroupHistory,
-} from "../index";
-import SteamID = require("steamid");
+import { Announcement, appid, Callback, CallbackError, cid, GroupComment, GroupEventType, GroupHistory } from '../index';
+import SteamID = require('steamid');
 
 export = CSteamGroup;
 
@@ -48,7 +39,7 @@ declare class CSteamGroup {
      * @param protocol The protocol to use. Possible values for protocol are http://, https://, or // (protocol aware). Default http://.
      * @returns string
      */
-    getAvatarURL(size: string, protocol: "http://" | "https://" | string): string;
+    getAvatarURL(size: string, protocol: 'http://' | 'https://' | string): string;
 
     /**
      * Retrieves a list of all users in this group. For large groups this could take around 30 seconds, possibly longer.
@@ -56,13 +47,10 @@ declare class CSteamGroup {
      * @param addresses Optional. An array of IP addresses (in x.x.x.x format) that will be rotated between when paging through the results. See below for details.
      * @param callback Called when the member list is available.
      */
-    getMembers(
-        addresses: string[],
-        callback: (
-            err: CallbackError,
-            memebers: SteamID[],
-        ) => any,
-    ): void;
+    getMembers(addresses: string[], callback: (
+        err: CallbackError,
+        memebers: SteamID[],
+    ) => any): void;
 
     /**
      * Joins a group. If the group is restricted, requests to join.
@@ -84,14 +72,11 @@ declare class CSteamGroup {
      * @param time Optional. A Date object. If specified, only announcements posted after this time are returned.
      * @param callback Called when requested data is available.
      */
-    getAllAnnouncements(
-        time: Date | null,
-        callback: (
-            err: CallbackError,
-            /** An array of announcement objects. */
-            announcements: Announcement[],
-        ) => any,
-    ): void;
+    getAllAnnouncements(time: Date | null, callback: (
+        err: CallbackError,
+        /** An array of announcement objects. */
+        announcements: Announcement[],
+    ) => any): void;
 
     /**
      * Posts an announcement to a group, provided you have permission to do so.
@@ -132,14 +117,7 @@ declare class CSteamGroup {
      * If not a game event, this should be null or undefined.
      * @param callback Called when the request completes.
      */
-    scheduleEvent(
-        name: string,
-        type: GroupEventType | appid,
-        description: string,
-        time: null | Date,
-        server: string | object,
-        callback: Callback,
-    ): void;
+    scheduleEvent(name: string, type: GroupEventType | appid, description: string, time: null | Date, server: string | object, callback: Callback): void;
 
     /**
      * Edits an existing Steam group event. Parameters are identical to those in scheduleEvent.
@@ -153,15 +131,7 @@ declare class CSteamGroup {
      * If not a game event, this should be null or undefined.
      * @param callback Called when the request completes
      */
-    editEvent(
-        id: string,
-        name: string,
-        type: GroupEventType | string,
-        description: string,
-        time: null | Date,
-        server: string | object,
-        callback: Callback,
-    ): void;
+    editEvent(id: string, name: string, type: GroupEventType | string, description: string, time: null | Date, server: string | object, callback: Callback): void;
 
     /**
      * Deletes an existing Steam group event.
@@ -177,17 +147,14 @@ declare class CSteamGroup {
      * @param steamID A `SteamID` object representing the group's new Player of the Week.
      * @param callback Called when the request completes.
      */
-    setPlayerOfTheWeek(
-        steamID: SteamID,
-        callback: (
-            /** null on success, an Error object on failure. */
-            err: CallbackError,
-            /** A SteamID representing the former Player of the Week. */
-            oldPOTW: SteamID,
-            /** A SteamID representing the new Player of the Week. */
-            newPOTW: SteamID,
-        ) => any,
-    ): void;
+    setPlayerOfTheWeek(steamID: SteamID, callback: (
+        /** null on success, an Error object on failure. */
+        err: CallbackError,
+        /** A SteamID representing the former Player of the Week. */
+        oldPOTW: SteamID,
+        /** A SteamID representing the new Player of the Week. */
+        newPOTW: SteamID,
+    ) => any): void;
 
     /**
      * Kicks a player from the group.
@@ -203,13 +170,10 @@ declare class CSteamGroup {
      * @param page The page of history that you're requesting, starting at 1.
      * @param callback
      */
-    getHistory(
-        page: any,
-        callback: (
-            err: CallbackError,
-            history: GroupHistory,
-        ) => any,
-    ): void;
+    getHistory(page: any, callback: (
+        err: CallbackError,
+        history: GroupHistory,
+    ) => any): void;
 
     /**
      * Gets a listing of comments in a Steam group.
@@ -218,15 +182,11 @@ declare class CSteamGroup {
      * @param count The number of comments you want to retrieve.
      * @param callback Called when the request completes.
      */
-    getAllComments(
-        from: number,
-        count: number,
-        callback: (
-            err: CallbackError,
-            /** An array of comments. */
-            comments: GroupComment[],
-        ) => any,
-    ): void;
+    getAllComments(from: number, count: number, callback: (
+        err: CallbackError,
+        /** An array of comments. */
+        comments: GroupComment[],
+    ) => any): void;
 
     /**
      * Deletes a comment in a Steam group, provided you have permission to do so (i.e. are the author or a group moderator/admin with the appropriate permission).
@@ -256,11 +216,7 @@ declare class CSteamGroup {
      * @param approve - True to put them in the group, false to deny their membership
      * @param callback - Takes only an Error object/null as the first argument
      */
-    respondToJoinRequests(
-        steamIDs: SteamID | string | SteamID[] | string[],
-        approve: boolean,
-        callback: Callback,
-    ): void;
+    respondToJoinRequests(steamIDs: SteamID | string | SteamID[] | string[], approve: boolean, callback: Callback): void;
 
     /**
      * Respond to *ALL* pending group-join requests for this group.

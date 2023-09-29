@@ -1,2 +1,2 @@
-import { keysIn } from "../index.js";
+import { keysIn } from '../index';
 export default keysIn;

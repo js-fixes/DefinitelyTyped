@@ -1,4 +1,5 @@
-import precond = require("precond");
+
+import precond = require('precond');
 
 precond.checkArgument(true);
 precond.checkArgument(true, "msg");

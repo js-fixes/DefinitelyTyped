@@ -1,2 +1,2 @@
-import { pipe } from "../index.js";
+import { pipe } from '../index';
 export default pipe;

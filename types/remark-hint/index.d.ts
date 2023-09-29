@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 4.5
 
-import { Root } from "mdast";
-import { Plugin } from "unified";
+import { Plugin } from 'unified';
+import { Root } from 'mdast';
 
 declare const remarkHint: Plugin<[], Root, Root>;
 export = remarkHint;

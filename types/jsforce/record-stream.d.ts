@@ -1,4 +1,4 @@
-import { Readable, Transform } from "stream";
+import { Transform, Readable } from "stream";
 
 import { Record } from "./record";
 

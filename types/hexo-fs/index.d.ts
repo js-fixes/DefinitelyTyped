@@ -4,69 +4,69 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // Minimum TypeScript Version: 3.9
 
-import Promise = require("bluebird");
+import Promise = require('bluebird');
 import {
+    PathLike,
+    Stats,
+    ReadStream,
+    WriteStream,
     // chmod,
     chmodSync,
+    // fchmod,
+    fchmodSync,
+    // lchmod,
+    lchmodSync,
     // chown,
     chownSync,
+    // fchown,
+    fchownSync,
+    // lchown,
+    lchownSync,
     // close,
     closeSync,
     createReadStream,
     createWriteStream,
-    // fchmod,
-    fchmodSync,
-    // fchown,
-    fchownSync,
-    // fstat,
-    fstatSync,
     // fsync,
     fsyncSync,
-    // ftruncate,
-    ftruncateSync,
-    // futimes,
-    futimesSync,
-    // lchmod,
-    lchmodSync,
-    // lchown,
-    lchownSync,
     // link,
     linkSync,
-    // lstat,
-    lstatSync,
     // mkdir,
     mkdirSync,
     // open,
     openSync,
-    PathLike,
+    // symlink,
+    symlinkSync,
+    // read,
+    readSync,
     // readdir,
     readdirSync,
     // readlink,
     readlinkSync,
-    ReadStream,
-    // read,
-    readSync,
     // realpath,
     realpathSync,
     // rename,
     renameSync,
-    Stats,
     // stat,
     statSync,
-    // symlink,
-    symlinkSync,
+    // fstat,
+    fstatSync,
+    // lstat,
+    lstatSync,
     // truncate,
     truncateSync,
+    // ftruncate,
+    ftruncateSync,
     // unlink,
     unlinkSync,
-    unwatchFile,
     // utimes,
     utimesSync,
+    // futimes,
+    futimesSync,
     watchFile,
-    WriteStream,
+    unwatchFile,
     // write,
-    writeSync,
-} from "graceful-fs";
+    writeSync
+} from 'graceful-fs';
 
 export interface DirectoryOptions {
     ignoreHidden?: boolean | undefined;
@@ -96,12 +96,7 @@ export function appendFile(path: string, data: any, callback?: (err: any) => voi
 /**
  * Appends data to a file.
  */
-export function appendFile(
-    path: string,
-    data: any,
-    options: string | AppendFileOptions,
-    callback?: (err: any) => void,
-): Promise<void>;
+export function appendFile(path: string, data: any, options: string | AppendFileOptions, callback?: (err: any) => void): Promise<void>;
 /**
  * Synchronous version of fs.appendFile.
  */
@@ -131,12 +126,7 @@ export function copyDir(src: string, dest: string, callback?: (err: any, value?:
 /**
  * Copies a directory from src to dest. It returns an array of copied files.
  */
-export function copyDir(
-    src: string,
-    dest: string,
-    options?: DirectoryOptions,
-    callback?: (err: any, value?: string[]) => void,
-): Promise<string[]>;
+export function copyDir(src: string, dest: string, options?: DirectoryOptions, callback?: (err: any, value?: string[]) => void): Promise<string[]>;
 /**
  * Copies a file from src to dest.
  */
@@ -149,20 +139,13 @@ export { createReadStream, createWriteStream };
 /**
  * Deletes all files in a directory. It returns an array of deleted files.
  */
-export function emptyDir(
-    path: string,
-    callback?: (err: any, value?: string | string[]) => void,
-): Promise<string | string[]>;
+export function emptyDir(path: string, callback?: (err: any, value?: string | string[]) => void): Promise<string | string[]>;
 export function emptyDir(
     path: string,
     options?: DirectoryOptions & { exclude?: string[] | undefined },
-    callback?: (err: any, value?: string | string[]) => void,
+    callback?: (err: any, value?: string | string[]) => void
 ): Promise<string | string[]>;
-export function emptyDirSync(
-    path: string,
-    options?: DirectoryOptions & { exclude?: string[] | undefined },
-    parent?: string,
-): string | string[];
+export function emptyDirSync(path: string, options?: DirectoryOptions & { exclude?: string[] | undefined }, parent?: string): string | string[];
 
 // ensurePath
 /**
@@ -178,10 +161,7 @@ export function ensurePathSync(path: string): string;
 /**
  * Creates the parent directories if they does not exist and returns a writable stream.
  */
-export function ensureWriteStream(
-    path: string,
-    callback?: (err: any, value?: WriteStream) => void,
-): Promise<WriteStream>;
+export function ensureWriteStream(path: string, callback?: (err: any, value?: WriteStream) => void): Promise<WriteStream>;
 /**
  * Creates the parent directories if they does not exist and returns a writable stream.
  */
@@ -195,22 +175,19 @@ export function ensureWriteStream(
         autoClose?: boolean | undefined;
         start?: number | undefined;
     },
-    callback?: (err: any, value?: WriteStream) => void,
+    callback?: (err: any, value?: WriteStream) => void
 ): Promise<WriteStream>;
 /**
  * Synchronous version of fs.ensureWriteStream.
  */
-export function ensureWriteStreamSync(
-    path: string,
-    options?: string | {
-        flags?: string | undefined;
-        defaultEncoding?: string | undefined;
-        fd?: number | undefined;
-        mode?: number | undefined;
-        autoClose?: boolean | undefined;
-        start?: number | undefined;
-    },
-): WriteStream;
+export function ensureWriteStreamSync(path: string, options?: string | {
+    flags?: string | undefined;
+    defaultEncoding?: string | undefined;
+    fd?: number | undefined;
+    mode?: number | undefined;
+    autoClose?: boolean | undefined;
+    start?: number | undefined;
+}): WriteStream;
 
 // exists
 /**
@@ -239,11 +216,7 @@ export function listDir(path: string, callback?: (err: any, value?: string[]) =>
 /**
  * Lists files in a directory.
  */
-export function listDir(
-    path: string,
-    options?: DirectoryOptions,
-    callback?: (err: any, value?: string[]) => void,
-): Promise<string[]>;
+export function listDir(path: string, options?: DirectoryOptions, callback?: (err: any, value?: string[]) => void): Promise<string[]>;
 /**
  * Synchronous version of `fs.listDir`.
  */
@@ -277,20 +250,14 @@ export function read<TBuffer extends Buffer | Uint8Array>(
     buffer: TBuffer,
     offset: number,
     length: number,
-    position: number | null,
-): Promise<{ bytesRead: number; buffer: TBuffer }>; // promisify
+    position: number | null
+): Promise<{ bytesRead: number, buffer: TBuffer }>; // promisify
 export { readSync };
 
 // readdir
-export function readdir(
-    path: PathLike,
-    options?: { encoding: BufferEncoding | null } | BufferEncoding | null,
-): Promise<string[]>; // promisify
+export function readdir(path: PathLike, options?: { encoding: BufferEncoding | null } | BufferEncoding | null): Promise<string[]>; // promisify
 export function readdir(path: PathLike, options: "buffer" | { encoding: "buffer" }): Promise<Buffer[]>; // promisify
-export function readdir(
-    path: PathLike,
-    options?: { encoding?: string | null | undefined } | string | null,
-): Promise<Array<string | Buffer>>; // promisify
+export function readdir(path: PathLike, options?: { encoding?: string | null | undefined } | string | null): Promise<Array<string | Buffer>>; // promisify
 export { readdirSync };
 
 // readFile
@@ -303,39 +270,24 @@ export function readFile(path: PathLike | number, callback?: (err: any, value?: 
  */
 export function readFile(
     path: PathLike | number,
-    options?: { encoding?: string | undefined; flag?: string | undefined; escape?: boolean | undefined },
-    callback?: (err: any, value?: string) => void,
+    options?: { encoding?: string | undefined; flag?: string | undefined; escape?: boolean | undefined; },
+    callback?: (err: any, value?: string) => void
 ): Promise<string>;
 /**
  * Synchronous version of `fs.readFile`.
  */
-export function readFileSync(
-    path: PathLike | number,
-    options?: { encoding?: string | undefined; flag?: string | undefined; escape?: boolean | undefined },
-): string;
+export function readFileSync(path: PathLike | number, options?: { encoding?: string | undefined; flag?: string | undefined; escape?: boolean | undefined; }): string;
 
 // readlink
-export function readlink(
-    path: PathLike,
-    options?: { encoding?: BufferEncoding | null | undefined } | BufferEncoding | null,
-): Promise<string>; // promisify
-export function readlink(path: PathLike, options: { encoding: "buffer" } | "buffer"): Promise<Buffer>; // promisify
-export function readlink(
-    path: PathLike,
-    options?: { encoding?: string | null | undefined } | string | null,
-): Promise<string | Buffer>; // promisify
+export function readlink(path: PathLike, options?: { encoding?: BufferEncoding | null | undefined } | BufferEncoding | null): Promise<string>; // promisify
+export function readlink(path: PathLike, options: { encoding: 'buffer' } | 'buffer'): Promise<Buffer>; // promisify
+export function readlink(path: PathLike, options?: { encoding?: string | null | undefined } | string | null): Promise<string | Buffer>; // promisify
 export { readlinkSync };
 
 // realpath
-export function realpath(
-    path: PathLike,
-    options?: { encoding?: BufferEncoding | null | undefined } | BufferEncoding | null,
-): Promise<string>; // promisify
-export function realpath(path: PathLike, options: { encoding: "buffer" } | "buffer"): Promise<Buffer>; // promisify
-export function realpath(
-    path: PathLike,
-    options?: { encoding?: string | null | undefined } | string | null,
-): Promise<string | Buffer>; // promisify
+export function realpath(path: PathLike, options?: { encoding?: BufferEncoding | null | undefined } | BufferEncoding | null): Promise<string>; // promisify
+export function realpath(path: PathLike, options: { encoding: 'buffer' } | 'buffer'): Promise<Buffer>; // promisify
+export function realpath(path: PathLike, options?: { encoding?: string | null | undefined } | string | null): Promise<string | Buffer>; // promisify
 export { realpathSync };
 
 // rename
@@ -350,12 +302,12 @@ export function rmdirSync(path: string): void;
 export function stat(path: PathLike): Promise<Stats>; // promisify
 export function fstat(fd: number): Promise<Stats>; // promisify
 export function lstat(path: PathLike): Promise<Stats>; // promisify
-export { fstatSync, lstatSync, statSync };
+export { statSync, fstatSync, lstatSync };
 
 // truncate
 export function truncate(path: PathLike, len?: number | null): Promise<void>; // promisify
 export function ftruncate(fd: number, len?: number | null): Promise<void>; // promisify
-export { ftruncateSync, truncateSync };
+export { truncateSync, ftruncateSync };
 
 // unlink
 export function unlink(path: PathLike): Promise<void>; // promisify
@@ -364,21 +316,17 @@ export { unlinkSync };
 // utimes
 export function utimes(path: PathLike, atime: string | number | Date, mtime: string | number | Date): Promise<void>; // promisify
 export function futimes(fd: number, atime: string | number | Date, mtime: string | number | Date): Promise<void>; // promisify
-export { futimesSync, utimesSync };
+export { utimesSync, futimesSync };
 
 // watch
-import { FSWatcher, WatchOptions } from "chokidar";
+import { FSWatcher, WatchOptions } from 'chokidar';
 /**
  * Watches changes of a file or a directory.
  *
  * See Chokidar API for more info.
  */
-export function watch(
-    path: string | string[],
-    options?: WatchOptions,
-    callback?: (err: any, value?: FSWatcher) => void,
-): Promise<FSWatcher>;
-export { unwatchFile, watchFile };
+export function watch(path: string | string[], options?: WatchOptions, callback?: (err: any, value?: FSWatcher) => void): Promise<FSWatcher>;
+export { watchFile, unwatchFile };
 
 // write
 export function write<TBuffer extends Buffer | Uint8Array>(
@@ -386,14 +334,14 @@ export function write<TBuffer extends Buffer | Uint8Array>(
     buffer?: TBuffer,
     offset?: number,
     length?: number,
-    position?: number | null,
-): Promise<{ bytesWritten: number; buffer: TBuffer }>; // promisify
+    position?: number | null
+): Promise<{ bytesWritten: number, buffer: TBuffer }>; // promisify
 export function write(
     fd: number,
     string: any,
     position?: number | null,
-    encoding?: string | null,
-): Promise<{ bytesWritten: number; buffer: string }>; // promisify
+    encoding?: string | null
+): Promise<{ bytesWritten: number, buffer: string }>; // promisify
 export { writeSync };
 
 // writeFile
@@ -407,28 +355,16 @@ export function writeFile(path: string, data: any, callback?: (err: any) => void
 export function writeFile(
     path: string,
     data: any,
-    options?: string | {
-        encoding?: string | null | undefined;
-        mode?: string | number | undefined;
-        flag?: string | undefined;
-    },
-    callback?: (err: any) => void,
+    options?: string | { encoding?: string | null | undefined; mode?: string | number | undefined; flag?: string | undefined },
+    callback?: (err: any) => void
 ): Promise<void>;
 /**
  * Synchronous version of `fs.writeFile`.
  */
-export function writeFileSync(
-    path: string,
-    data: any,
-    options?: string | {
-        encoding?: string | null | undefined;
-        mode?: string | number | undefined;
-        flag?: string | undefined;
-    },
-): void;
+export function writeFileSync(path: string, data: any, options?: string | { encoding?: string | null | undefined; mode?: string | number | undefined; flag?: string | undefined }): void;
 
 // Static classes
-export { ReadStream, Stats, WriteStream } from "graceful-fs";
+export { Stats, ReadStream, WriteStream } from 'graceful-fs';
 
 // util
 export function escapeEOL(str: string): string;

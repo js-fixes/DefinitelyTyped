@@ -1,2 +1,2 @@
-import { assoc } from "../index.js";
+import { assoc } from '../index';
 export default assoc;

@@ -55,13 +55,11 @@ export interface HelmetProps {
 /**
  * Used by Helmet.peek()
  */
-export type HelmetPropsToState =
-    & HelmetTags
-    & Pick<
+export type HelmetPropsToState = HelmetTags &
+    Pick<
         HelmetProps,
         "bodyAttributes" | "defer" | "htmlAttributes" | "onChangeClientState" | "title" | "titleAttributes"
-    >
-    & {
+    > & {
         encode: Required<HelmetProps["encodeSpecialCharacters"]>;
     };
 

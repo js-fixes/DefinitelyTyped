@@ -1,2 +1,2 @@
-import { compose } from "../index.js";
+import { compose } from '../index';
 export default compose;

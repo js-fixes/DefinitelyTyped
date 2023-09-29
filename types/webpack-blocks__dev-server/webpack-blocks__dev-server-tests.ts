@@ -1,12 +1,12 @@
-import devServer from "@webpack-blocks/dev-server";
-import { createConfig, env } from "@webpack-blocks/webpack";
+import { createConfig, env } from '@webpack-blocks/webpack';
+import devServer from '@webpack-blocks/dev-server';
 
 createConfig([
-    env("development", [
+    env('development', [
         devServer({
             overlay: true,
             proxy: {
-                "/api": { target: "http://localhost:3000" },
+                '/api': { target: 'http://localhost:3000' },
             },
         }),
     ]),

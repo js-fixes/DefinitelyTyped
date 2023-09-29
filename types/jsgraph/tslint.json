@@ -5,6 +5,7 @@
         "interface-over-type-literal": false,
         "no-duplicate-imports": false,
         "no-inferrable-types": false,
-        "no-misused-new": false
+        "no-misused-new": false,
+        "strict-export-declare-modifiers": false
     }
 }

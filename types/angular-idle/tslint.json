@@ -3,6 +3,7 @@
     "rules": {
         "interface-name": false,
         "no-reference-import": false,
-        "npm-naming": false
+        "npm-naming": false,
+        "strict-export-declare-modifiers": false
     }
 }

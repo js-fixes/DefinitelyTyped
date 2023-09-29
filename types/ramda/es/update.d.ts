@@ -1,2 +1,2 @@
-import { update } from "../index.js";
+import { update } from '../index';
 export default update;

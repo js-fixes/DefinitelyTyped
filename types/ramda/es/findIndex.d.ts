@@ -1,2 +1,2 @@
-import { findIndex } from "../index.js";
+import { findIndex } from '../index';
 export default findIndex;

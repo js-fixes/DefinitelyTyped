@@ -3,6 +3,7 @@
  *
  *   > camelize('background-color')
  *   < "backgroundColor"
+ *
  */
 declare function camelize(string: string): string;
 

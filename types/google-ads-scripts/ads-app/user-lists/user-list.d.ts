@@ -79,12 +79,10 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface UserListSelector
-            extends
-                Base.Selector<UserListIterator>,
+            extends Base.Selector<UserListIterator>,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

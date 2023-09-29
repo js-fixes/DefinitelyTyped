@@ -1,2 +1,2 @@
-import { toString } from "../index.js";
+import { toString } from '../index';
 export default toString;

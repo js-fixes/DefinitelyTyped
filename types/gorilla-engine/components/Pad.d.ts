@@ -1,5 +1,5 @@
 declare namespace GorillaEngine.UI {
-    interface PadProps extends Common, Bounds, Background, KeyboardFocus, Clickable, Skinnable, Font {
+    interface PadProps extends Common, Bounds, Background, KeyboardFocus {
         midiNote: number;
         velocity: number;
         padState: boolean;

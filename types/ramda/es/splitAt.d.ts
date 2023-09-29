@@ -1,2 +1,2 @@
-import { splitAt } from "../index.js";
+import { splitAt } from '../index';
 export default splitAt;

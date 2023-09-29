@@ -1,2 +1,2 @@
-import { ascend } from "../index.js";
+import { ascend } from '../index';
 export default ascend;

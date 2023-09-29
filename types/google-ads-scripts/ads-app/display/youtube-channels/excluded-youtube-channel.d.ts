@@ -48,13 +48,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface ExcludedYouTubeChannelSelector
-            extends
-                Base.Selector<ExcludedYouTubeChannelIterator>,
+            extends Base.Selector<ExcludedYouTubeChannelIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

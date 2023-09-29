@@ -3,6 +3,7 @@
     "rules": {
         "array-type": false,
         "ban-types": false,
-        "no-duplicate-imports": false
+        "no-duplicate-imports": false,
+        "no-single-declare-module": false
     }
 }

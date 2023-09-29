@@ -4,7 +4,9 @@ import { DateOptions } from "./DateOptions";
 /**
  * Provides settings for the date-range control.
  */
-export interface UIDateRangeOptions extends JQueryUI.DatepickerOptions, DateOptions {
+export interface UIDateRangeOptions extends
+    JQueryUI.DatepickerOptions,
+    DateOptions {
     /**
      * The label of the "from"-input.
      */

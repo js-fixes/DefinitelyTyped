@@ -21,6 +21,7 @@
  *   "version": "1.0.0-beta"
  * }
  * ```
+ *
  */
 /**
  * This represents a placeholder object that represents a
@@ -39,7 +40,7 @@ export class ServerSecrets {
     /**
      * A list of available, configured server secrets.
      */
-    readonly "names": string[];
+    readonly 'names': string[];
     /**
      * @remarks
      * Returns a SecretString that is a placeholder for a secret
@@ -59,7 +60,7 @@ export class ServerVariables {
     /**
      * A list of available, configured server variables.
      */
-    readonly "names": string[];
+    readonly 'names': string[];
     /**
      * @remarks
      * Returns the value of variable that has been configured in a

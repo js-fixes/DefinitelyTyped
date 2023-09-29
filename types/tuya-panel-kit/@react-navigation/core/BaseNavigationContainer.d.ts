@@ -1,5 +1,5 @@
-import * as React from "react";
-import type { NavigationContainerProps, NavigationContainerRef } from "./types";
+import * as React from 'react';
+import type { NavigationContainerRef, NavigationContainerProps } from './types';
 /**
  * Container component which holds the navigation state.
  * This should be rendered at the root wrapping the whole app.
@@ -9,7 +9,5 @@ import type { NavigationContainerProps, NavigationContainerRef } from "./types";
  * @param props.children Child elements to render the content.
  * @param props.ref Ref object which refers to the navigation object containing helper methods.
  */
-declare const BaseNavigationContainer: React.ForwardRefExoticComponent<
-    NavigationContainerProps & React.RefAttributes<NavigationContainerRef>
->;
+declare const BaseNavigationContainer: React.ForwardRefExoticComponent<NavigationContainerProps & React.RefAttributes<NavigationContainerRef>>;
 export default BaseNavigationContainer;

@@ -1,2 +1,2 @@
-import { propOr } from "../index.js";
+import { propOr } from '../index';
 export default propOr;

@@ -1,5 +1,5 @@
-import { CheckoutOptions } from "./checkout-options";
-import { MergeOptions } from "./merge-options";
+import { MergeOptions } from './merge-options';
+import { CheckoutOptions } from './checkout-options';
 
 export interface CherrypickOptions {
     version?: number | undefined;

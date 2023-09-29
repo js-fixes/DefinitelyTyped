@@ -6,6 +6,7 @@
 
 /// <reference types="node" />
 
+
 interface Options {
     searchPath?: string | string[] | undefined;
     base?: string | undefined;

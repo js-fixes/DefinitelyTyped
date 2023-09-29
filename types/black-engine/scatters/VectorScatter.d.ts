@@ -8,5 +8,5 @@ export class VectorScatter extends VectorScatterBase {
     ease: (arg0: Vector) => Vector;
     getValueAt(t: number): Vector;
 }
-import { Vector } from "../geom/Vector";
-import { VectorScatterBase } from "./VectorScatterBase";
+import { VectorScatterBase } from './VectorScatterBase';
+import { Vector } from '../geom/Vector';

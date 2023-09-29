@@ -1,2 +1,2 @@
-import { head } from "../index.js";
+import { head } from '../index';
 export default head;

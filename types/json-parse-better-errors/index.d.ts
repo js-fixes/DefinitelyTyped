@@ -15,5 +15,4 @@ export = json_parse_better_errors;
 declare function json_parse_better_errors(
     txt: string,
     reviver?: (key: string, value: any) => any,
-    context?: number,
-): any;
+    context?: number): any;

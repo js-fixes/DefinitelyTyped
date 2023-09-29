@@ -1,5 +1,5 @@
-import { Vector3D } from "../math";
-import Zone from "./Zone";
+import { Vector3D } from '../math';
+import Zone from './Zone';
 
 export default class PointZone extends Zone {
     /**
@@ -12,6 +12,7 @@ export default class PointZone extends Zone {
     constructor(a?: NumberOrVector, b?: number, c?: number);
     /**
      * Returns true to indicate this is a PointZone.
+     *
      */
     isPointZone(): boolean;
     getPosition(): Vector3D;

@@ -5,6 +5,7 @@
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
         "npm-naming": false,
-        "object-literal-shorthand": false
+        "object-literal-shorthand": false,
+        "strict-export-declare-modifiers": false
     }
 }

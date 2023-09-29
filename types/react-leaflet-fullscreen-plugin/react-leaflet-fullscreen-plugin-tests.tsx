@@ -1,5 +1,5 @@
-import * as React from "react";
-import Fullscreen from "react-leaflet-fullscreen-plugin";
+import Fullscreen from 'react-leaflet-fullscreen-plugin';
+import * as React from 'react';
 
 /**
  * Main component

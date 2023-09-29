@@ -1,2 +1,2 @@
-import { map } from "../index.js";
+import { map } from '../index';
 export default map;

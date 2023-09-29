@@ -3,10 +3,10 @@
 // Definitions by: Nathan Bierema <https://github.com/Methuselah96>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-// eslint-disable-next-line @definitelytyped/no-single-declare-module
-declare module "styled-components/native" {
-    import * as ReactNative from "react-native";
-    import * as React from "react";
+// tslint:disable-next-line:no-single-declare-module
+declare module 'styled-components/native' {
+    import * as ReactNative from 'react-native';
+    import * as React from 'react';
 
     export {
         css,
@@ -16,9 +16,9 @@ declare module "styled-components/native" {
         ThemeContext,
         ThemeProps,
         ThemeProvider,
-        useTheme,
         withTheme,
-    } from "styled-components";
+        useTheme,
+    } from 'styled-components';
 
     import {
         AnyStyledComponent,
@@ -32,7 +32,7 @@ declare module "styled-components/native" {
         ThemedStyledInterface,
         ThemeProviderComponent,
         WithThemeFnInterface,
-    } from "styled-components";
+    } from 'styled-components';
 
     type AnyIfEmpty<T extends object> = keyof T extends never ? any : T;
 

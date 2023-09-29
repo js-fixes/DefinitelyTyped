@@ -4,11 +4,10 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
+
 /// <reference types="jquery"/>
 
-interface JQueryMobileEvent {
-    (event: Event, ui: any): void;
-}
+interface JQueryMobileEvent { (event: Event, ui: any): void; }
 
 interface DialogOptions {
     closeBtn?: string | undefined;
@@ -214,7 +213,7 @@ interface FilterableOptions {
     defaults?: boolean | undefined;
     disabled?: boolean | undefined;
     enhanced?: boolean | undefined;
-    filterCallback?: { (index: number, searchValue?: string): boolean } | undefined;
+    filterCallback?: {(index: number, searchValue?: string): boolean; } | undefined;
     filterPlaceholder?: string | undefined;
     filterReveal?: boolean | undefined;
     filterTheme?: string | undefined;
@@ -362,6 +361,7 @@ interface ParsedPath {
 }
 
 interface JQueryMobile extends JQueryMobileOptions {
+
     version: string;
 
     changePage(to: any, options?: ChangePageOptions): void;
@@ -406,6 +406,7 @@ interface JQuerySupport {
 }
 
 interface JQuery {
+
     enhanceWithin(): JQuery;
 
     dialog(): JQuery;
@@ -424,11 +425,12 @@ interface JQuery {
     fixedtoolbar(options: FixedToolbarOptions): JQuery;
     fixedtoolbar(events: FixedToolbarEvents): JQuery;
 
+
     button(): JQuery;
     button(command: string): JQuery;
     button(options?: ButtonOptions): JQuery;
     button(events: ButtonEvents): JQuery;
-
+    
     buttonMarkup(options?: ButtonOptions): JQuery;
 
     collapsible(): JQuery;
@@ -484,6 +486,7 @@ interface JQuery {
     controlgroup(command: string): JQuery;
     controlgroup(options: ControlgroupOptions): JQuery;
 }
+
 
 interface JQueryStatic {
     mobile: JQueryMobile;

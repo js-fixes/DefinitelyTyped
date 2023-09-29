@@ -1,20 +1,8 @@
 import * as React from "react";
 import {
     CustomGesture,
-    defineHold,
-    defineSwipe,
-    Draggable,
-    DraggableCallbackArgument,
-    DraggableStyle,
-    Holdable,
-    HoldableConfig,
-    HoldableProps,
-    HoldConfig,
-    moves,
-    Swipeable,
-    SwipeableConfig,
-    SwipeableProps,
-    SwipeConfig,
+    defineHold, defineSwipe, Draggable, DraggableCallbackArgument, DraggableStyle, Holdable, HoldableConfig,
+    HoldableProps, HoldConfig, moves, SwipeConfig, Swipeable, SwipeableConfig, SwipeableProps
 } from "react-touch";
 
 export class HoldableTest extends React.PureComponent {
@@ -25,7 +13,7 @@ export class HoldableTest extends React.PureComponent {
             config,
             onHoldComplete() {
                 return;
-            },
+            }
         };
         return <Holdable {...props} />;
     }
@@ -39,7 +27,7 @@ export class DraggableTest extends React.PureComponent {
 
     private readonly callback = (argument: DraggableCallbackArgument): JSX.Element => {
         return <div />;
-    };
+    }
 }
 
 export class SwipeableTest extends React.PureComponent {
@@ -49,18 +37,16 @@ export class SwipeableTest extends React.PureComponent {
         const props: SwipeableProps = {
             config,
             onSwipeLeft: this.swipeHandler,
-            onSwipeUp: this.swipeHandler,
+            onSwipeUp: this.swipeHandler
         };
-        return (
-            <Swipeable {...props}>
-                <div />
-            </Swipeable>
-        );
+        return <Swipeable {...props}>
+            <div />
+        </Swipeable>;
     }
 
     private readonly swipeHandler = () => {
         return;
-    };
+    }
 }
 
 export class CustomGestureTest extends React.PureComponent {
@@ -72,5 +58,5 @@ export class CustomGestureTest extends React.PureComponent {
 
     private readonly handler = () => {
         return;
-    };
+    }
 }

@@ -1,2 +1,2 @@
-import { join } from "../index.js";
+import { join } from '../index';
 export default join;

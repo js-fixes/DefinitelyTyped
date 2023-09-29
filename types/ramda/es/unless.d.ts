@@ -1,2 +1,2 @@
-import { unless } from "../index.js";
+import { unless } from '../index';
 export default unless;

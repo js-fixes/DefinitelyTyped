@@ -1,16 +1,16 @@
-import { createHistory } from "history";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { createHistory } from 'history';
 import {
-    go,
-    goBack,
-    goForward,
+    syncHistoryWithStore,
+    routerReducer,
+    routerMiddleware,
     push,
     replace,
-    routerActions,
-    routerMiddleware,
-    routerReducer,
-    syncHistoryWithStore,
-} from "react-router-redux";
-import { applyMiddleware, combineReducers, createStore } from "redux";
+    go,
+    goForward,
+    goBack,
+    routerActions
+} from 'react-router-redux';
 
 const reducer = combineReducers({ routing: routerReducer });
 
@@ -19,7 +19,7 @@ const browserHistory = createHistory();
 const middleware = routerMiddleware(browserHistory);
 const store = createStore(
     reducer,
-    applyMiddleware(middleware),
+    applyMiddleware(middleware)
 );
 
 // Create an enhanced history that syncs navigation events with the store
@@ -28,13 +28,13 @@ history.listen(location => console.log(location));
 history.unsubscribe();
 
 // Dispatch from anywhere like normal.
-store.dispatch(push("/foo"));
-store.dispatch(replace("/foo"));
+store.dispatch(push('/foo'));
+store.dispatch(replace('/foo'));
 store.dispatch(go(1));
 store.dispatch(goForward());
 store.dispatch(goBack());
-store.dispatch(routerActions.push("/foo"));
-store.dispatch(routerActions.replace("/foo"));
+store.dispatch(routerActions.push('/foo'));
+store.dispatch(routerActions.replace('/foo'));
 store.dispatch(routerActions.go(1));
 store.dispatch(routerActions.goForward());
 store.dispatch(routerActions.goBack());

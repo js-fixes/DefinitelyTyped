@@ -1,2 +1,2 @@
-import { move } from "../index.js";
+import { move } from '../index';
 export default move;

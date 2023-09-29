@@ -1,6 +1,6 @@
-import { StreamOptions } from "@json2csv/plainjs";
-import { Stream, TransformOptions } from "node:stream";
-import JSON2CSVNodeTransform from "./Transform";
+import { Stream, TransformOptions } from 'node:stream';
+import JSON2CSVNodeTransform from './Transform';
+import { StreamOptions } from '@json2csv/plainjs';
 
 export { StreamOptions, TransformOptions };
 

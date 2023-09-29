@@ -1,2 +1,2 @@
-import { flip } from "../index.js";
+import { flip } from '../index';
 export default flip;

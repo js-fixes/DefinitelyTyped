@@ -61,13 +61,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface BudgetSelector
-            extends
-                Base.Selector<BudgetIterator>,
+            extends Base.Selector<BudgetIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

@@ -4,6 +4,7 @@ declare namespace jsrsasign.KJUR.asn1.ocsp {
      * @description
      * This class provides utility static methods for OCSP.
      * - `KJUR.asn1.ocsp.OCSPUtil.getRequestHex` - generates hexadecimal string of OCSP request
+     *
      */
     namespace OCSPUtil {
         interface ResponseInfo {

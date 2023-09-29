@@ -3,7 +3,9 @@
 // Definitions by: Marcin Porebski <https://github.com/marcinporebski>, Robin Labat <https://github.com/roblabat>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "js-schema" {
+
+declare module 'js-schema'
+{
     function schema(definition: any): schema.Schema;
 
     namespace schema {

@@ -1,4 +1,4 @@
-import { IPublisher, ISubscriber, ISubscription } from "rsocket-types";
+import { IPublisher, ISubscription, ISubscriber } from 'rsocket-types';
 export default class FlowableProcessor<T, R> implements IPublisher<R>, ISubscriber<T>, ISubscription {
     constructor(source: IPublisher<T>, fn?: (a: T) => R);
     onSubscribe(subscription: ISubscription): void;

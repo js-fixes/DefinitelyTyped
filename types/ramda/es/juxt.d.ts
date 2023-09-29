@@ -1,2 +1,2 @@
-import { juxt } from "../index.js";
+import { juxt } from '../index';
 export default juxt;

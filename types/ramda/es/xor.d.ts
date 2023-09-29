@@ -1,2 +1,2 @@
-import { xor } from "../index.js";
+import { xor } from '../index';
 export default xor;

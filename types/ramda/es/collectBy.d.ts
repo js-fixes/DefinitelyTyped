@@ -1,2 +1,2 @@
-import { collectBy } from "../index.js";
+import { collectBy } from '../index';
 export default collectBy;

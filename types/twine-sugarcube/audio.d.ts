@@ -178,6 +178,7 @@ export interface AudioTrack {
      * @param state The mute state.
      * @returns a reference to the current AudioTrack instance for chaining.
      * @since 2.28.0
+     *
      */
     mute(state: boolean): this;
 
@@ -208,12 +209,7 @@ export interface AudioTrack {
      * @param handler
      * @since 2.28.0
      */
-    on(
-        events: string | object | JQuery.Event,
-        selector?: string,
-        data?: any,
-        handler?: (event: JQuery.Event) => void,
-    ): AudioTrack;
+    on(events: string | object | JQuery.Event, selector?: string, data?: any, handler?: (event: JQuery.Event) => void): AudioTrack;
 
     /**
      * Attaches single-use event handlers to the track. Returns a reference to the current AudioTrack
@@ -224,12 +220,7 @@ export interface AudioTrack {
      * @param handler
      * @since 2.28.0
      */
-    one(
-        events: string | object | JQuery.Event,
-        selector?: string,
-        data?: any,
-        handler?: (event: JQuery.Event) => void,
-    ): AudioTrack;
+    one(events: string | object | JQuery.Event, selector?: string, data?: any, handler?: (event: JQuery.Event) => void): AudioTrack;
 
     /**
      * Pauses playback of the track.
@@ -417,12 +408,7 @@ export interface AudioRunner {
      * @param handler
      * @since 2.28.0
      */
-    on(
-        events: string | object | JQuery.Event,
-        selector?: string,
-        data?: any,
-        handler?: (event: JQuery.Event) => void,
-    ): this;
+    on(events: string | object | JQuery.Event, selector?: string, data?: any, handler?: (event: JQuery.Event) => void): this;
 
     /**
      * Attaches single-use event handlers to the selected tracks. Returns a reference to the current AudioRunner
@@ -433,12 +419,7 @@ export interface AudioRunner {
      * @param handler
      * @since 2.28.0
      */
-    one(
-        events: string | object | JQuery.Event,
-        selector?: string,
-        data?: any,
-        handler?: (event: JQuery.Event) => void,
-    ): this;
+    one(events: string | object | JQuery.Event, selector?: string, data?: any, handler?: (event: JQuery.Event) => void): this;
 
     /**
      * Pauses playback of the selected tracks.
@@ -591,6 +572,7 @@ export interface AudioList {
      * WARNING: This should not be done lightly if your audio sources are on the network, as it forces players to begin
      * downloading them.
      * @since 2.28.0
+     *
      */
     load(): void;
 
@@ -1007,17 +989,7 @@ export interface SimpleAudioAPI {
          *         }
          * );
          */
-        add(
-            listId: string,
-            ...sources: ReadonlyArray<
-                string | {
-                    id?: string | undefined;
-                    sources?: string[] | undefined;
-                    own?: boolean | undefined;
-                    volume?: number | undefined;
-                }
-            >
-        ): void;
+        add(listId: string, ...sources: ReadonlyArray<string | {id?: string | undefined, sources?: string[] | undefined, own?: boolean | undefined, volume?: number | undefined}>): void;
 
         /**
          * Deletes all playlists.

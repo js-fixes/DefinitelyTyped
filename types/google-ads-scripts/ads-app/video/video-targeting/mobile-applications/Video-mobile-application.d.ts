@@ -74,13 +74,11 @@ declare namespace GoogleAdsScripts {
          *      }
          */
         interface VideoMobileApplicationSelector
-            extends
-                Base.Selector<VideoMobileApplicationIterator>,
+            extends Base.Selector<VideoMobileApplicationIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

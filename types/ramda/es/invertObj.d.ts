@@ -1,2 +1,2 @@
-import { invertObj } from "../index.js";
+import { invertObj } from '../index';
 export default invertObj;

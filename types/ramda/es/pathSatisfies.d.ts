@@ -1,2 +1,2 @@
-import { pathSatisfies } from "../index.js";
+import { pathSatisfies } from '../index';
 export default pathSatisfies;

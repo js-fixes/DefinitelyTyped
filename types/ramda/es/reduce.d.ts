@@ -1,2 +1,2 @@
-import { reduce } from "../index.js";
+import { reduce } from '../index';
 export default reduce;

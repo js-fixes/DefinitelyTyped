@@ -1,7 +1,7 @@
-import type PlanarControls from "../../Controls/PlanarControls";
-import Layer from "../../Layer/Layer";
 import Extent from "../Geographic/Extent";
+import Layer from "../../Layer/Layer";
 import View from "../View";
+import type PlanarControls from "../../Controls/PlanarControls";
 // import PlanarLayer from "./Planar/PlanarLayer";
 
 // TODO
@@ -11,8 +11,7 @@ export default class PlanarView extends View {
     constructor(
         viewerDiv: HTMLDivElement,
         extent: Extent,
-        options?: PlanerViewOptions,
-    );
+        options?: PlanerViewOptions);
 
     readonly isPlanarView: boolean;
     controls?: PlanarControls;

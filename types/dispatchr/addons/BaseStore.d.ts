@@ -1,7 +1,7 @@
 /// <reference types="node" />
 
-import { EventEmitter } from "events";
-import { Dispatcher, DispatcherContext, DispatcherInterface, Store } from "../index";
+import { Dispatcher, DispatcherInterface, DispatcherContext, Store } from '../index';
+import { EventEmitter } from 'events';
 
 declare class BaseStore<S = {}> extends EventEmitter implements Store<S> {
     constructor(dispatcher: DispatcherInterface);

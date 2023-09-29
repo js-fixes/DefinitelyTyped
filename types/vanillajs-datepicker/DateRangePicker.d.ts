@@ -1,10 +1,11 @@
-import Datepicker from "./Datepicker";
+import Datepicker from './Datepicker';
 
 export interface DateRangePickerOptions {
-    allowOneSidedRange?: boolean;
     inputs?: HTMLElement[];
+    allowOneSidedRange?: boolean;
+    language?: string;
+    format?: string;
 }
-
 export default class DateRangePicker {
     constructor(element: HTMLElement, options?: DateRangePickerOptions);
     allowOneSidedRange: boolean;
@@ -21,4 +22,5 @@ export default class DateRangePicker {
     getDates(format?: string): [Date | undefined, Date | undefined];
 
     setDates(rangeStart: Date | number | string | object, rangeEnd: Date | number | string | object): void;
+    _updating: boolean;
 }

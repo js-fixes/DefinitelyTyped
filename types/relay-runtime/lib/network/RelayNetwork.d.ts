@@ -1,4 +1,4 @@
-import { FetchFunction, Network, SubscribeFunction } from "./RelayNetworkTypes";
+import { FetchFunction, SubscribeFunction, Network } from './RelayNetworkTypes';
 
 export const RelayNetwork: {
     create(fetchFn: FetchFunction, subscribeFn?: SubscribeFunction): Network;

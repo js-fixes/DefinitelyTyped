@@ -5,8 +5,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
-import { LocationDescriptor } from "history";
 import * as React from "react";
+import { LocationDescriptor } from "history";
 
 declare module "react-breadcrumbs" {
     interface Crumbs {}

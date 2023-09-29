@@ -5,9 +5,10 @@
 
 /// <reference types="rsmq"/>
 
-import redis = require("redis");
-import events = require("events");
-import * as RedisSMQ from "rsmq";
+
+import redis = require('redis');
+import events = require('events');
+import * as RedisSMQ from 'rsmq';
 
 declare namespace RSMQWorker {
     export interface Client extends events.EventEmitter {
@@ -46,7 +47,7 @@ declare namespace RSMQWorker {
 }
 
 interface RSMQWorkerStatic {
-    new(queuename: string, options?: RSMQWorker.Options): RSMQWorker.Client;
+    new (queuename: string, options?: RSMQWorker.Options): RSMQWorker.Client;
 }
 
 declare var RSMQWorker: RSMQWorkerStatic;

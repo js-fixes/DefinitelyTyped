@@ -3,22 +3,19 @@
 // Definitions by: Charlie Arnold <https://github.com/cwalv>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "gregorian-calendar" {
+
+declare module 'gregorian-calendar' {
+
     class GregorianCalendar {
+
         constructor(locale?: Object);
 
         /**
          * same as call setYear, setMonth, setDayOfMonth ....
          */
-        set(
-            year: Number,
-            month: Number,
-            dayOfMonth: Number,
-            hourOfDay: Number,
-            minutes: Number,
-            seconds: Number,
-            milliseconds: Number,
-        ): void;
+        set(year: Number, month: Number, dayOfMonth: Number,
+            hourOfDay: Number, minutes: Number, seconds: Number,
+            milliseconds: Number): void;
 
         /**
          * set absolute time for current instance
@@ -33,7 +30,7 @@ declare module "gregorian-calendar" {
         /**
          * set current date instance's timezone offset (in minutes)
          */
-        setTimezoneOffset(timezoneOffset: Number): void;
+        setTimezoneOffset(timezoneOffset: Number): void
 
         /**
          * current date instance's timezone offset (in minutes)
@@ -77,6 +74,7 @@ declare module "gregorian-calendar" {
          */
         getDayOfMonth(): Number;
 
+
         /**
          * set the hour of day for the given calendar field.
          */
@@ -85,7 +83,7 @@ declare module "gregorian-calendar" {
         /**
          * Returns the hour of day for the given calendar field.
          */
-        getHourOfDay(): Number;
+        getHourOfDay(): Number
 
         /**
          * set the minute of the given calendar field.
@@ -218,10 +216,11 @@ declare module "gregorian-calendar" {
     export = GregorianCalendar;
 }
 
-declare module "gregorian-calendar-format" {
-    import GregorianCalendar = require("gregorian-calendar");
+declare module 'gregorian-calendar-format' {
 
-    enum DateTimeStyle {
+    import GregorianCalendar = require('gregorian-calendar');
+
+    enum DateTimeStyle  {
         /**
          * full style
          */
@@ -241,6 +240,7 @@ declare module "gregorian-calendar-format" {
     }
 
     class DateTimeFormat {
+
         public Style: DateTimeStyle;
 
         /**
@@ -261,7 +261,7 @@ declare module "gregorian-calendar-format" {
          * parse a dateString to an instance of GregorianCalendar according to pattern, it's better to specify calendarLocale, such as
          *  `df.parse('2013-11-12', {locale: require('gregorian-calendar/lib/locale/zh_CN'}));`
          */
-        parse(dateString: String, { locale }: { locale: Object }): GregorianCalendar;
+        parse(dateString: String, {locale}: { locale: Object }): GregorianCalendar;
 
         /**
          * get a predefine GregorianCalendarFormat instance
@@ -271,3 +271,4 @@ declare module "gregorian-calendar-format" {
 
     export = DateTimeFormat;
 }
+

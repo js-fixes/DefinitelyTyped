@@ -10,6 +10,7 @@
         "no-unnecessary-class": false,
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
+        "strict-export-declare-modifiers": false,
         "unified-signatures": false
     }
 }

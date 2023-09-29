@@ -1,5 +1,5 @@
 import { Component, ComponentType } from "react";
-import { Formatter, Parser, Validator, WrappedFieldProps } from "../index";
+import { Formatter, Parser, WrappedFieldProps, Validator } from "../index";
 
 export type FieldsWarnerOrValidator =
     | Validator

@@ -1,2 +1,2 @@
-import { union } from "../index.js";
+import { union } from '../index';
 export default union;

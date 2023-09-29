@@ -1,2 +1,2 @@
-import { view } from "../index.js";
+import { view } from '../index';
 export default view;

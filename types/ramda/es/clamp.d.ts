@@ -1,2 +1,2 @@
-import { clamp } from "../index.js";
+import { clamp } from '../index';
 export default clamp;

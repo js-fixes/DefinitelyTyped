@@ -18,8 +18,7 @@ declare class OrientedImageCamera extends THREE.PerspectiveCamera {
         near?: number,
         far?: number,
         skew?: number,
-        aspect?: number,
-    );
+        aspect?: number);
 
     size: THREE.Vector2;
     focal: THREE.Vector2;

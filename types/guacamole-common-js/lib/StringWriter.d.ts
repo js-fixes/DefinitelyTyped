@@ -1,5 +1,5 @@
-import { OutputStream } from "./OutputStream";
-import { Status } from "./Status";
+import { Status } from './Status';
+import { OutputStream } from './OutputStream';
 
 /**
  * A writer which automatically writes to the given output stream with text

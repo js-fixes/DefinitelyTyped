@@ -1,40 +1,40 @@
 export default {
-    name: "Base",
-    uri: "http://base",
-    prefix: "b",
-    types: [
+  name: 'Base',
+  uri: 'http://base',
+  prefix: 'b',
+  types: [
+    {
+      name: 'Root',
+      properties: [
         {
-            name: "Root",
-            properties: [
-                {
-                    name: "own",
-                    type: "Own",
-                },
-                {
-                    name: "ownAttr",
-                    type: "String",
-                    isAttr: true,
-                },
-                {
-                    name: "generic",
-                    type: "Element",
-                },
-                {
-                    name: "genericCollection",
-                    type: "Element",
-                    isMany: true,
-                },
-            ],
+          name: 'own',
+          type: 'Own',
         },
         {
-            name: "Own",
-            properties: [
-                {
-                    name: "count",
-                    type: "Integer",
-                    isAttr: true,
-                },
-            ],
+          name: 'ownAttr',
+          type: 'String',
+          isAttr: true,
         },
-    ],
+        {
+          name: 'generic',
+          type: 'Element',
+        },
+        {
+          name: 'genericCollection',
+          type: 'Element',
+          isMany: true,
+        },
+      ],
+    },
+    {
+      name: 'Own',
+      properties: [
+        {
+          name: 'count',
+          type: 'Integer',
+          isAttr: true,
+        },
+      ],
+    },
+  ],
 };

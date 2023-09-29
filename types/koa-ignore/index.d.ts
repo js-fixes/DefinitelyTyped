@@ -3,7 +3,7 @@
 // Definitions by: fer22f <https://github.com/fer22f>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Context, Middleware } from "koa";
+import { Middleware, Context } from 'koa';
 
 declare function koaIgnore(
     ...middleware: Middleware[]

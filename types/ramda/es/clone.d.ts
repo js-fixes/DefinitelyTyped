@@ -1,2 +1,2 @@
-import { clone } from "../index.js";
+import { clone } from '../index';
 export default clone;

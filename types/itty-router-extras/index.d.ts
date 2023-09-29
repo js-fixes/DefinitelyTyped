@@ -3,7 +3,7 @@
 // Definitions by: David Roizenman <https://github.com/hmnd>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import { Request as IttyRequest, Router } from "itty-router";
+import { Router, Request as IttyRequest } from 'itty-router';
 export { Router as ThrowableRouter };
 
 /**

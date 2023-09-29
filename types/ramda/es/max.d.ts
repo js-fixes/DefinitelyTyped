@@ -1,2 +1,2 @@
-import { max } from "../index.js";
+import { max } from '../index';
 export default max;

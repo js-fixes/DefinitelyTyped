@@ -3,10 +3,7 @@
 // Definitions by: Dan Marshall <https://github.com/danmarshall>
 //                 Edgar Simson <https://github.com/edzis>
 //                 Piotr Błażejewicz <https://github.com/peterblazejewicz>
-//                 Alec Mev <https://github.com/alecmev>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-
-/// <reference lib="dom" />
 
 export as namespace opentype;
 

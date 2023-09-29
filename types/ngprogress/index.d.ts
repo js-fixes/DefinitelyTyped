@@ -4,6 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace NgProgress {
+
     export interface INgProgress {
         start(): void;
         height(height: string): void;
@@ -18,4 +19,6 @@ declare namespace NgProgress {
     export interface INgProgressFactory {
         createInstance(): INgProgress;
     }
+
 }
+

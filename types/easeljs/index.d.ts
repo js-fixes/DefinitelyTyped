@@ -17,6 +17,7 @@
 
 // rename the native MouseEvent, to avoid conflict with createjs's MouseEvent
 interface NativeMouseEvent extends MouseEvent {
+
 }
 
 declare namespace createjs {
@@ -39,6 +40,7 @@ declare namespace createjs {
         // methods
         clone(): AlphaMaskFilter;
     }
+
 
     export class Bitmap extends DisplayObject {
         constructor(imageOrUrl: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Object | string);
@@ -68,10 +70,7 @@ declare namespace createjs {
     }
 
     export class ScaleBitmap extends DisplayObject {
-        constructor(
-            imageOrUrl: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Object | string,
-            scale9Grid: Rectangle,
-        );
+        constructor(imageOrUrl: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | Object | string, scale9Grid: Rectangle);
 
         // properties
         image: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement;
@@ -82,12 +81,12 @@ declare namespace createjs {
         snapToPixel: boolean;
 
         // methods
-        setDrawSize(newWidth: number, newHeight: number): void;
+        setDrawSize (newWidth: number, newHeight: number): void;
         clone(): ScaleBitmap;
     }
 
     export class BitmapText extends DisplayObject {
-        constructor(text?: string, spriteSheet?: SpriteSheet);
+        constructor(text?:string, spriteSheet?:SpriteSheet);
 
         static maxPoolSize: number;
 
@@ -112,24 +111,8 @@ declare namespace createjs {
     }
 
     export class ButtonHelper {
-        constructor(
-            target: Sprite,
-            outLabel?: string,
-            overLabel?: string,
-            downLabel?: string,
-            play?: boolean,
-            hitArea?: DisplayObject,
-            hitLabel?: string,
-        );
-        constructor(
-            target: MovieClip,
-            outLabel?: string,
-            overLabel?: string,
-            downLabel?: string,
-            play?: boolean,
-            hitArea?: DisplayObject,
-            hitLabel?: string,
-        );
+        constructor(target: Sprite, outLabel?: string, overLabel?: string, downLabel?: string, play?: boolean, hitArea?: DisplayObject, hitLabel?: string);
+        constructor(target: MovieClip, outLabel?: string, overLabel?: string, downLabel?: string, play?: boolean, hitArea?: DisplayObject, hitLabel?: string);
 
         // properties
         downLabel: string | number;
@@ -152,16 +135,7 @@ declare namespace createjs {
     }
 
     export class ColorFilter extends Filter {
-        constructor(
-            redMultiplier?: number,
-            greenMultiplier?: number,
-            blueMultiplier?: number,
-            alphaMultiplier?: number,
-            redOffset?: number,
-            greenOffset?: number,
-            blueOffset?: number,
-            alphaOffset?: number,
-        );
+        constructor(redMultiplier?: number, greenMultiplier?: number, blueMultiplier?: number, alphaMultiplier?: number, redOffset?: number, greenOffset?: number, blueOffset?: number, alphaOffset?: number);
 
         // properties
         alphaMultiplier: number;
@@ -192,7 +166,7 @@ declare namespace createjs {
         copy(...matrix: number[]): ColorMatrix;
         copy(matrix: ColorMatrix): ColorMatrix;
         reset(): ColorMatrix;
-        setColor(brightness: number, contrast: number, saturation: number, hue: number): ColorMatrix;
+        setColor( brightness: number, contrast: number, saturation: number, hue: number ): ColorMatrix;
         toArray(): number[];
         toString(): string;
     }
@@ -207,6 +181,7 @@ declare namespace createjs {
         clone(): ColorMatrixFilter;
     }
 
+
     export class Container extends DisplayObject {
         constructor();
 
@@ -220,22 +195,12 @@ declare namespace createjs {
         addChild<T extends DisplayObject>(child: T): T;
         addChild<T extends DisplayObject>(child0: DisplayObject, lastChild: T): T;
         addChild<T extends DisplayObject>(child0: DisplayObject, child1: DisplayObject, lastChild: T): T;
-        addChild<T extends DisplayObject>(
-            child0: DisplayObject,
-            child1: DisplayObject,
-            child2: DisplayObject,
-            lastChild: T,
-        ): T;
+        addChild<T extends DisplayObject>(child0: DisplayObject, child1: DisplayObject, child2: DisplayObject, lastChild: T): T;
         addChild(...children: DisplayObject[]): DisplayObject;
         addChildAt<T extends DisplayObject>(child: T, index: number): T;
         addChildAt<T extends DisplayObject>(child0: DisplayObject, lastChild: T, index: number): T;
-        addChildAt<T extends DisplayObject>(
-            child0: DisplayObject,
-            child1: DisplayObject,
-            lastChild: T,
-            index: number,
-        ): T;
-        addChildAt(...childOrIndex: (DisplayObject | number)[]): DisplayObject; // actually (...child: DisplayObject[], index: number)
+        addChildAt<T extends DisplayObject>(child0: DisplayObject, child1: DisplayObject, lastChild: T, index: number): T;
+        addChildAt(...childOrIndex: (DisplayObject|number)[]): DisplayObject; // actually (...child: DisplayObject[], index: number)
 
         clone(recursive?: boolean): Container;
         contains(child: DisplayObject): boolean;
@@ -312,17 +277,7 @@ declare namespace createjs {
         localToLocal(x: number, y: number, target: DisplayObject, pt?: Point | Object): Point;
         set(props: Object): DisplayObject;
         setBounds(x: number, y: number, width: number, height: number): void;
-        setTransform(
-            x?: number,
-            y?: number,
-            scaleX?: number,
-            scaleY?: number,
-            rotation?: number,
-            skewX?: number,
-            skewY?: number,
-            regX?: number,
-            regY?: number,
-        ): DisplayObject;
+        setTransform(x?: number, y?: number, scaleX?: number, scaleY?: number, rotation?: number, skewX?: number, skewY?: number, regX?: number, regY?: number): DisplayObject;
         uncache(): void;
         updateCache(compositeOperation?: string): void;
         updateContext(ctx: CanvasRenderingContext2D): void;
@@ -339,30 +294,13 @@ declare namespace createjs {
         visible: boolean;
 
         // methods
-        append(
-            visible: boolean,
-            alpha: number,
-            shadow: Shadow,
-            compositeOperation: string,
-            matrix?: Matrix2D,
-        ): DisplayProps;
+        append(visible: boolean, alpha: number, shadow: Shadow, compositeOperation: string, matrix?: Matrix2D): DisplayProps;
         clone(): DisplayProps;
         identity(): DisplayProps;
-        prepend(
-            visible: boolean,
-            alpha: number,
-            shadow: Shadow,
-            compositeOperation: string,
-            matrix?: Matrix2D,
-        ): DisplayProps;
-        setValues(
-            visible?: boolean,
-            alpha?: number,
-            shadow?: number,
-            compositeOperation?: number,
-            matrix?: number,
-        ): DisplayProps;
+        prepend(visible: boolean, alpha: number, shadow: Shadow, compositeOperation: string, matrix?: Matrix2D): DisplayProps;
+        setValues(visible?: boolean, alpha?: number, shadow?: number, compositeOperation?: number, matrix?: number): DisplayProps;
     }
+
 
     export class DOMElement extends DisplayObject {
         constructor(htmlElement: HTMLElement);
@@ -373,18 +311,9 @@ declare namespace createjs {
         // methods
         clone(): DisplayObject; // throw error
         set(props: Object): DOMElement;
-        setTransform(
-            x?: number,
-            y?: number,
-            scaleX?: number,
-            scaleY?: number,
-            rotation?: number,
-            skewX?: number,
-            skewY?: number,
-            regX?: number,
-            regY?: number,
-        ): DOMElement;
+        setTransform(x?: number, y?: number, scaleX?: number, scaleY?: number, rotation?: number, skewX?: number, skewY?: number, regX?: number, regY?: number): DOMElement;
     }
+
 
     export class EaselJS {
         // properties
@@ -396,16 +325,7 @@ declare namespace createjs {
         constructor();
 
         // methods
-        applyFilter(
-            ctx: CanvasRenderingContext2D,
-            x: number,
-            y: number,
-            width: number,
-            height: number,
-            targetCtx?: CanvasRenderingContext2D,
-            targetX?: number,
-            targetY?: number,
-        ): boolean;
+        applyFilter(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, targetCtx?: CanvasRenderingContext2D, targetX?: number, targetY?: number): boolean;
         clone(): Filter;
         getBounds(): Rectangle;
         toString(): string;
@@ -424,54 +344,15 @@ declare namespace createjs {
 
         // methods
         append(command: Object, clean?: boolean): Graphics;
-        arc(
-            x: number,
-            y: number,
-            radius: number,
-            startAngle: number,
-            endAngle: number,
-            anticlockwise: boolean,
-        ): Graphics;
+        arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise: boolean): Graphics;
         arcTo(x1: number, y1: number, x2: number, y2: number, radius: number): Graphics;
         beginBitmapFill(image: Object, repetition?: string, matrix?: Matrix2D): Graphics;
         beginBitmapStroke(image: Object, repetition?: string): Graphics;
         beginFill(color: string): Graphics;
-        beginLinearGradientFill(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            x1: number,
-            y1: number,
-        ): Graphics;
-        beginLinearGradientStroke(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            x1: number,
-            y1: number,
-        ): Graphics;
-        beginRadialGradientFill(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            r0: number,
-            x1: number,
-            y1: number,
-            r1: number,
-        ): Graphics;
-        beginRadialGradientStroke(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            r0: number,
-            x1: number,
-            y1: number,
-            r1: number,
-        ): Graphics;
+        beginLinearGradientFill(colors: string[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Graphics;
+        beginLinearGradientStroke(colors: string[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Graphics;
+        beginRadialGradientFill(colors: string[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Graphics;
+        beginRadialGradientStroke(colors: string[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Graphics;
         beginStroke(color: string): Graphics;
         bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): Graphics;
         clear(): Graphics;
@@ -486,16 +367,7 @@ declare namespace createjs {
         drawPolyStar(x: number, y: number, radius: number, sides: number, pointSize: number, angle: number): Graphics;
         drawRect(x: number, y: number, w: number, h: number): Graphics;
         drawRoundRect(x: number, y: number, w: number, h: number, radius: number): Graphics;
-        drawRoundRectComplex(
-            x: number,
-            y: number,
-            w: number,
-            h: number,
-            radiusTL: number,
-            radiusTR: number,
-            radiusBR: number,
-            radisBL: number,
-        ): Graphics;
+        drawRoundRectComplex(x: number, y: number, w: number, h: number, radiusTL: number, radiusTR: number, radiusBR: number, radisBL: number): Graphics;
         endFill(): Graphics;
         endStroke(): Graphics;
         static getHSL(hue: number, saturation: number, lightness: number, alpha?: number): string;
@@ -504,23 +376,18 @@ declare namespace createjs {
          */
         getInstructions(): Object[];
         static getRGB(r: number, g: number, b: number, alpha?: number): string;
-        inject(callback: (data: any) => any, data: any): Graphics; // deprecated
+        inject(callback: (data: any) => any,  data: any): Graphics; // deprecated
         isEmpty(): boolean;
         lineTo(x: number, y: number): Graphics;
         moveTo(x: number, y: number): Graphics;
         quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): Graphics;
         rect(x: number, y: number, w: number, h: number): Graphics;
-        setStrokeStyle(
-            thickness: number,
-            caps?: string | number,
-            joints?: string | number,
-            miterLimit?: number,
-            ignoreScale?: boolean,
-        ): Graphics;
+        setStrokeStyle(thickness: number, caps?: string | number, joints?: string | number, miterLimit?: number, ignoreScale?: boolean): Graphics;
         setStrokeDash(segments?: number[], offset?: number): Graphics;
         store(): Graphics;
         toString(): string;
         unstore(): Graphics;
+
 
         // tiny API - short forms of methods above
         a(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise: boolean): Graphics;
@@ -530,26 +397,8 @@ declare namespace createjs {
         f(color: string): Graphics;
         lf(colors: string[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Graphics;
         ls(colors: string[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Graphics;
-        rf(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            r0: number,
-            x1: number,
-            y1: number,
-            r1: number,
-        ): Graphics;
-        rs(
-            colors: string[],
-            ratios: number[],
-            x0: number,
-            y0: number,
-            r0: number,
-            x1: number,
-            y1: number,
-            r1: number,
-        ): Graphics;
+        rf(colors: string[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Graphics;
+        rs(colors: string[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Graphics;
         s(color: string): Graphics;
         bt(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number): Graphics;
         c(): Graphics;
@@ -560,42 +409,23 @@ declare namespace createjs {
         dp(x: number, y: number, radius: number, sides: number, pointSize: number, angle: number): Graphics;
         dr(x: number, y: number, w: number, h: number): Graphics;
         rr(x: number, y: number, w: number, h: number, radius: number): Graphics;
-        rc(
-            x: number,
-            y: number,
-            w: number,
-            h: number,
-            radiusTL: number,
-            radiusTR: number,
-            radiusBR: number,
-            radisBL: number,
-        ): Graphics;
+        rc(x: number, y: number, w: number, h: number, radiusTL: number, radiusTR: number, radiusBR: number, radisBL: number): Graphics;
         ef(): Graphics;
         es(): Graphics;
         lt(x: number, y: number): Graphics;
         mt(x: number, y: number): Graphics;
         qt(cpx: number, cpy: number, x: number, y: number): Graphics;
         r(x: number, y: number, w: number, h: number): Graphics;
-        ss(
-            thickness: number,
-            caps?: string | number,
-            joints?: string | number,
-            miterLimit?: number,
-            ignoreScale?: boolean,
-        ): Graphics;
+        ss(thickness: number, caps?: string | number, joints?: string | number, miterLimit?: number, ignoreScale?: boolean): Graphics;
         sd(segments?: number[], offset?: number): Graphics;
     }
 
-    namespace Graphics {
-        export class Arc {
-            constructor(
-                x: number,
-                y: number,
-                radius: number,
-                startAngle: number,
-                endAngle: number,
-                anticlockwise: number,
-            );
+
+    namespace Graphics
+        {
+        export class Arc
+            {
+            constructor(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise: number);
 
             // properties
             anticlockwise: number;
@@ -604,9 +434,10 @@ declare namespace createjs {
             startAngle: number;
             x: number;
             y: number;
-        }
+            }
 
-        export class ArcTo {
+        export class ArcTo
+            {
             constructor(x1: number, y1: number, x2: number, y2: number, radius: number);
 
             // properties
@@ -615,12 +446,15 @@ declare namespace createjs {
             x2: number;
             y2: number;
             radius: number;
-        }
+            }
 
-        export class BeginPath {
-        }
+        export class BeginPath
+            {
 
-        export class BezierCurveTo {
+            }
+
+        export class BezierCurveTo
+            {
             constructor(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number, y: number);
 
             // properties
@@ -630,21 +464,25 @@ declare namespace createjs {
             cp2y: number;
             x: number;
             y: number;
-        }
+            }
 
-        export class Circle {
+        export class Circle
+            {
             constructor(x: number, y: number, radius: number);
 
             // properties
             x: number;
             y: number;
             radius: number;
-        }
+            }
 
-        export class ClosePath {
-        }
+        export class ClosePath
+            {
 
-        export class Fill {
+            }
+
+        export class Fill
+            {
             constructor(style: Object, matrix?: Matrix2D);
 
             // properties
@@ -654,34 +492,28 @@ declare namespace createjs {
             // methods
             bitmap(image: HTMLImageElement, repetition?: string): Fill;
             linearGradient(colors: number[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Fill;
-            radialGradient(
-                colors: number[],
-                ratios: number[],
-                x0: number,
-                y0: number,
-                r0: number,
-                x1: number,
-                y1: number,
-                r1: number,
-            ): Fill;
-        }
+            radialGradient(colors: number[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Fill;
+            }
 
-        export class LineTo {
+        export class LineTo
+            {
             constructor(x: number, y: number);
 
             // properties
             x: number;
             y: number;
-        }
+            }
 
-        export class MoveTo {
+        export class MoveTo
+            {
             constructor(x: number, y: number);
 
             x: number;
             y: number;
-        }
+            }
 
-        export class PolyStar {
+        export class PolyStar
+            {
             constructor(x: number, y: number, radius: number, sides: number, pointSize: number, angle: number);
 
             // properties
@@ -691,9 +523,10 @@ declare namespace createjs {
             sides: number;
             x: number;
             y: number;
-        }
+            }
 
-        export class QuadraticCurveTo {
+        export class QuadraticCurveTo
+            {
             constructor(cpx: number, cpy: number, x: number, y: number);
 
             // properties
@@ -701,9 +534,10 @@ declare namespace createjs {
             cpy: number;
             x: number;
             y: number;
-        }
+            }
 
-        export class Rect {
+        export class Rect
+            {
             constructor(x: number, y: number, w: number, h: number);
 
             // properties
@@ -711,19 +545,11 @@ declare namespace createjs {
             y: number;
             w: number;
             h: number;
-        }
+            }
 
-        export class RoundRect {
-            constructor(
-                x: number,
-                y: number,
-                w: number,
-                h: number,
-                radiusTL: number,
-                radiusTR: number,
-                radiusBR: number,
-                radiusBL: number,
-            );
+        export class RoundRect
+            {
+            constructor(x: number, y: number, w: number, h: number, radiusTL: number, radiusTR: number, radiusBR: number, radiusBL: number);
 
             // properties
             x: number;
@@ -734,9 +560,10 @@ declare namespace createjs {
             radiusTR: number;
             radiusBR: number;
             radiusBL: number;
-        }
+            }
 
-        export class Stroke {
+        export class Stroke
+            {
             constructor(style: Object, ignoreScale: boolean);
 
             // properties
@@ -746,19 +573,11 @@ declare namespace createjs {
             // methods
             bitmap(image: HTMLImageElement, repetition?: string): Stroke;
             linearGradient(colors: number[], ratios: number[], x0: number, y0: number, x1: number, y1: number): Stroke;
-            radialGradient(
-                colors: number[],
-                ratios: number[],
-                x0: number,
-                y0: number,
-                r0: number,
-                x1: number,
-                y1: number,
-                r1: number,
-            ): Stroke;
-        }
+            radialGradient(colors: number[], ratios: number[], x0: number, y0: number, r0: number, x1: number, y1: number, r1: number): Stroke;
+            }
 
-        export class StrokeStyle {
+        export class StrokeStyle
+            {
             constructor(width: number, caps: string, joints: number, miterLimit: number);
 
             // properties
@@ -766,8 +585,10 @@ declare namespace createjs {
             joints: string;
             miterLimit: number;
             width: number;
+            }
         }
-    }
+
+
 
     export class Matrix2D {
         constructor(a?: number, b?: number, c?: number, d?: number, tx?: number, ty?: number);
@@ -785,28 +606,10 @@ declare namespace createjs {
         // methods
         append(a: number, b: number, c: number, d: number, tx: number, ty: number): Matrix2D;
         appendMatrix(matrix: Matrix2D): Matrix2D;
-        appendTransform(
-            x: number,
-            y: number,
-            scaleX: number,
-            scaleY: number,
-            rotation: number,
-            skewX: number,
-            skewY: number,
-            regX?: number,
-            regY?: number,
-        ): Matrix2D;
+        appendTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, regX?: number, regY?: number): Matrix2D;
         clone(): Matrix2D;
         copy(matrix: Matrix2D): Matrix2D;
-        decompose(): {
-            x: number;
-            y: number;
-            scaleX: number;
-            scaleY: number;
-            rotation: number;
-            skewX: number;
-            skewY: number;
-        };
+        decompose(): {x: number; y: number; scaleX: number; scaleY: number; rotation: number; skewX: number; skewY: number};
         decompose(target: Object): Matrix2D;
         equals(matrix: Matrix2D): boolean;
         identity(): Matrix2D;
@@ -814,17 +617,7 @@ declare namespace createjs {
         isIdentity(): boolean;
         prepend(a: number, b: number, c: number, d: number, tx: number, ty: number): Matrix2D;
         prependMatrix(matrix: Matrix2D): Matrix2D;
-        prependTransform(
-            x: number,
-            y: number,
-            scaleX: number,
-            scaleY: number,
-            rotation: number,
-            skewX: number,
-            skewY: number,
-            regX?: number,
-            regY?: number,
-        ): Matrix2D;
+        prependTransform(x: number, y: number, scaleX: number, scaleY: number, rotation: number, skewX: number, skewY: number, regX?: number, regY?: number): Matrix2D;
         rotate(angle: number): Matrix2D;
         scale(x: number, y: number): Matrix2D;
         setValues(a?: number, b?: number, c?: number, d?: number, tx?: number, ty?: number): Matrix2D;
@@ -834,19 +627,9 @@ declare namespace createjs {
         translate(x: number, y: number): Matrix2D;
     }
 
+
     export class MouseEvent extends Event {
-        constructor(
-            type: string,
-            bubbles: boolean,
-            cancelable: boolean,
-            stageX: number,
-            stageY: number,
-            nativeEvent: NativeMouseEvent,
-            pointerID: number,
-            primary: boolean,
-            rawX: number,
-            rawY: number,
-        );
+        constructor(type: string, bubbles: boolean, cancelable: boolean, stageX: number, stageY: number, nativeEvent: NativeMouseEvent, pointerID: number, primary: boolean, rawX: number, rawY: number);
 
         // properties
         isTouch: boolean;
@@ -868,72 +651,29 @@ declare namespace createjs {
         // EventDispatcher mixins
         addEventListener(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): Function;
         addEventListener(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): Function;
-        addEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            useCapture?: boolean,
-        ): Object;
-        addEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            useCapture?: boolean,
-        ): Object;
+        addEventListener(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): Object;
+        addEventListener(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): Object;
         dispatchEvent(eventObj: Object | string | Event, target?: Object): boolean;
         hasEventListener(type: string): boolean;
         off(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): void;
         off(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): void;
-        off(type: string, listener: { handleEvent: (eventObj: Object) => boolean }, useCapture?: boolean): void;
-        off(type: string, listener: { handleEvent: (eventObj: Object) => void }, useCapture?: boolean): void;
+        off(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): void;
+        off(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): void;
         off(type: string, listener: Function, useCapture?: boolean): void; // It is necessary for "arguments.callee"
-        on(
-            type: string,
-            listener: (eventObj: Object) => boolean,
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Function;
-        on(
-            type: string,
-            listener: (eventObj: Object) => void,
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Function;
-        on(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Object;
-        on(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Object;
+        on(type: string, listener: (eventObj: Object) => boolean, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Function;
+        on(type: string, listener: (eventObj: Object) => void, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Function;
+        on(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Object;
+        on(type: string, listener: { handleEvent: (eventObj: Object) => void; }, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Object;
         removeAllEventListeners(type?: string): void;
         removeEventListener(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): void;
         removeEventListener(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): void;
-        removeEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            useCapture?: boolean,
-        ): void;
-        removeEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            useCapture?: boolean,
-        ): void;
+        removeEventListener(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): void;
+        removeEventListener(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): void;
         removeEventListener(type: string, listener: Function, useCapture?: boolean): void; // It is necessary for "arguments.callee"
         toString(): string;
         willTrigger(type: string): boolean;
     }
+
 
     export class MovieClip extends Container {
         constructor(mode?: string, startPosition?: number, loop?: boolean, labels?: Object);
@@ -965,7 +705,7 @@ declare namespace createjs {
         /**
          * @deprecated - use 'currentLabel' property instead
          */
-        getCurrentLabel(): string; // deprecated
+        getCurrentLabel(): string;  // deprecated
         /**
          * @deprecated - use 'labels' property instead
          */
@@ -978,16 +718,7 @@ declare namespace createjs {
 
     export class MovieClipPlugin {
         // methods
-        tween(
-            tween: Tween,
-            prop: string,
-            value: string | number | boolean,
-            startValues: any[],
-            endValues: any[],
-            ratio: number,
-            wait: Object,
-            end: Object,
-        ): void;
+        tween(tween: Tween, prop: string, value: string | number | boolean, startValues: any[], endValues: any[], ratio: number, wait: Object, end: Object): void;
     }
 
     export class Point {
@@ -1027,6 +758,7 @@ declare namespace createjs {
         union(rect: Rectangle): Rectangle;
     }
 
+
     export class Shadow {
         constructor(color: string, offsetX: number, offsetY: number, blur: number);
 
@@ -1042,6 +774,7 @@ declare namespace createjs {
         toString(): string;
     }
 
+
     export class Shape extends DisplayObject {
         constructor(graphics?: Graphics);
 
@@ -1051,18 +784,9 @@ declare namespace createjs {
         // methods
         clone(recursive?: boolean): Shape;
         set(props: Object): Shape;
-        setTransform(
-            x?: number,
-            y?: number,
-            scaleX?: number,
-            scaleY?: number,
-            rotation?: number,
-            skewX?: number,
-            skewY?: number,
-            regX?: number,
-            regY?: number,
-        ): Shape;
+        setTransform(x?: number, y?: number, scaleX?: number, scaleY?: number, rotation?: number, skewX?: number, skewY?: number, regX?: number, regY?: number): Shape;
     }
+
 
     export class Sprite extends DisplayObject {
         constructor(spriteSheet: SpriteSheet, frameOrAnimation?: string | number);
@@ -1087,25 +811,17 @@ declare namespace createjs {
         gotoAndStop(frameOrAnimation: string | number): void;
         play(): void;
         set(props: Object): Sprite;
-        setTransform(
-            x?: number,
-            y?: number,
-            scaleX?: number,
-            scaleY?: number,
-            rotation?: number,
-            skewX?: number,
-            skewY?: number,
-            regX?: number,
-            regY?: number,
-        ): Sprite;
+        setTransform(x?: number, y?: number, scaleX?: number, scaleY?: number, rotation?: number, skewX?: number, skewY?: number, regX?: number, regY?: number): Sprite;
         stop(): void;
+
     }
 
-    export class SpriteContainer extends Container {
+    export class SpriteContainer extends Container
+        {
         constructor(spriteSheet?: SpriteSheet);
 
         spriteSheet: SpriteSheet;
-    }
+        }
 
     // what is returned from SpriteSheet.getAnimation(string)
     interface SpriteSheetAnimation {
@@ -1141,6 +857,7 @@ declare namespace createjs {
         getNumFrames(animation: string): number;
     }
 
+
     export class SpriteSheetBuilder extends EventDispatcher {
         constructor();
 
@@ -1154,22 +871,9 @@ declare namespace createjs {
         timeSlice: number;
 
         // methods
-        addAnimation(name: string, frames: number[], next?: string | boolean, frequency?: number): void;
-        addFrame(
-            source: DisplayObject,
-            sourceRect?: Rectangle,
-            scale?: number,
-            setupFunction?: () => any,
-            setupData?: Object,
-        ): number;
-        addMovieClip(
-            source: MovieClip,
-            sourceRect?: Rectangle,
-            scale?: number,
-            setupFunction?: () => any,
-            setupData?: Object,
-            labelFunction?: () => any,
-        ): void;
+        addAnimation(name: string, frames: number[], next?: string|boolean, frequency?: number): void;
+        addFrame(source: DisplayObject, sourceRect?: Rectangle, scale?: number, setupFunction?: () => any, setupData?: Object): number;
+        addMovieClip(source: MovieClip, sourceRect?: Rectangle, scale?: number, setupFunction?: () => any, setupData?: Object, labelFunction?: () => any): void;
         build(): SpriteSheet;
         buildAsync(timeSlice?: number): void;
         clone(): void; // throw error
@@ -1180,24 +884,16 @@ declare namespace createjs {
         /**
          * @deprecated
          */
-        static addFlippedFrames(
-            spriteSheet: SpriteSheet,
-            horizontal?: boolean,
-            vertical?: boolean,
-            both?: boolean,
-        ): void; // deprecated
+        static addFlippedFrames(spriteSheet: SpriteSheet, horizontal?: boolean, vertical?: boolean, both?: boolean): void; // deprecated
         static extractFrame(spriteSheet: SpriteSheet, frameOrAnimation: number | string): HTMLImageElement;
         /**
          * @deprecated
          */
-        static mergeAlpha(
-            rgbImage: HTMLImageElement,
-            alphaImage: HTMLImageElement,
-            canvas?: HTMLCanvasElement,
-        ): HTMLCanvasElement; // deprecated
+        static mergeAlpha(rgbImage: HTMLImageElement, alphaImage: HTMLImageElement, canvas?: HTMLCanvasElement): HTMLCanvasElement; // deprecated
     }
 
-    export class SpriteStage extends Stage {
+    export class SpriteStage extends Stage
+        {
         constructor(canvas: HTMLCanvasElement | string, preserveDrawingBuffer?: boolean, antialias?: boolean);
 
         // properties
@@ -1212,7 +908,7 @@ declare namespace createjs {
         // methods
         clearImageTexture(image: Object): void;
         updateViewport(width: number, height: number): void;
-    }
+        }
 
     export class Stage extends Container {
         constructor(canvas: HTMLCanvasElement | string | Object);
@@ -1231,7 +927,7 @@ declare namespace createjs {
          * @deprecated
          */
         preventSelection: boolean;
-        snapToPixelEnabled: boolean; // deprecated
+        snapToPixelEnabled: boolean;  // deprecated
         tickOnUpdate: boolean;
 
         // methods
@@ -1242,6 +938,7 @@ declare namespace createjs {
         tick(props?: Object): void;
         toDataURL(backgroundColor: string, mimeType: string): string;
         update(...arg: any[]): void;
+
     }
 
     interface IStageGLOptions {
@@ -1288,8 +985,8 @@ declare namespace createjs {
         cacheDraw(target: DisplayObject, filters: Filter[], manager: BitmapCache): boolean;
         getBaseTexture(w?: number, h?: number): WebGLTexture | null;
         getFilterShader(filter: Filter | Object): WebGLProgram;
-        getRenderBufferTexture(w: number, h: number): WebGLTexture;
-        getTargetRenderTexture(target: DisplayObject, w: number, h: number): Object;
+        getRenderBufferTexture (w: number, h: number): WebGLTexture;
+        getTargetRenderTexture (target: DisplayObject, w: number, h: number): Object;
         protectTextureSlot(id: number, lock?: boolean): void;
         purgeTextures(count?: number): void;
         releaseTexture(item: DisplayObject | WebGLTexture | HTMLImageElement | HTMLCanvasElement): void;
@@ -1297,6 +994,7 @@ declare namespace createjs {
         updateSimultaneousTextureCount(count?: number): void;
         updateViewport(width: number, height: number): void;
     }
+
 
     export class Text extends DisplayObject {
         constructor(text?: string, font?: string, color?: string);
@@ -1319,17 +1017,7 @@ declare namespace createjs {
         getMeasuredWidth(): number;
         getMetrics(): Object;
         set(props: Object): Text;
-        setTransform(
-            x?: number,
-            y?: number,
-            scaleX?: number,
-            scaleY?: number,
-            rotation?: number,
-            skewX?: number,
-            skewY?: number,
-            regX?: number,
-            regY?: number,
-        ): Text;
+        setTransform(x?: number, y?: number, scaleX?: number, scaleY?: number, rotation?: number, skewX?: number, skewY?: number, regX?: number, regY?: number): Text;
     }
 
     export class Ticker {
@@ -1384,68 +1072,24 @@ declare namespace createjs {
         static addEventListener(type: string, listener: Stage, useCapture?: boolean): Stage;
         static addEventListener(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): Function;
         static addEventListener(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): Function;
-        static addEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            useCapture?: boolean,
-        ): Object;
-        static addEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            useCapture?: boolean,
-        ): Object;
+        static addEventListener(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): Object;
+        static addEventListener(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): Object;
         static dispatchEvent(eventObj: Object | string | Event, target?: Object): boolean;
         static hasEventListener(type: string): boolean;
         static off(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): void;
         static off(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): void;
-        static off(type: string, listener: { handleEvent: (eventObj: Object) => boolean }, useCapture?: boolean): void;
-        static off(type: string, listener: { handleEvent: (eventObj: Object) => void }, useCapture?: boolean): void;
+        static off(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): void;
+        static off(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): void;
         static off(type: string, listener: Function, useCapture?: boolean): void; // It is necessary for "arguments.callee"
-        static on(
-            type: string,
-            listener: (eventObj: Object) => boolean,
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Function;
-        static on(
-            type: string,
-            listener: (eventObj: Object) => void,
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Function;
-        static on(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Object;
-        static on(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            scope?: Object,
-            once?: boolean,
-            data?: any,
-            useCapture?: boolean,
-        ): Object;
+        static on(type: string, listener: (eventObj: Object) => boolean, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Function;
+        static on(type: string, listener: (eventObj: Object) => void, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Function;
+        static on(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Object;
+        static on(type: string, listener: { handleEvent: (eventObj: Object) => void; }, scope?: Object, once?: boolean, data?: any, useCapture?: boolean): Object;
         static removeAllEventListeners(type?: string): void;
         static removeEventListener(type: string, listener: (eventObj: Object) => boolean, useCapture?: boolean): void;
         static removeEventListener(type: string, listener: (eventObj: Object) => void, useCapture?: boolean): void;
-        static removeEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => boolean },
-            useCapture?: boolean,
-        ): void;
-        static removeEventListener(
-            type: string,
-            listener: { handleEvent: (eventObj: Object) => void },
-            useCapture?: boolean,
-        ): void;
+        static removeEventListener(type: string, listener: { handleEvent: (eventObj: Object) => boolean; }, useCapture?: boolean): void;
+        static removeEventListener(type: string, listener: { handleEvent: (eventObj: Object) => void; }, useCapture?: boolean): void;
         static removeEventListener(type: string, listener: Function, useCapture?: boolean): void; // It is necessary for "arguments.callee"
         static toString(): string;
         static willTrigger(type: string): boolean;

@@ -1,2 +1,2 @@
-import { tail } from "../index.js";
+import { tail } from '../index';
 export default tail;

@@ -1,2 +1,2 @@
-import { insertAll } from "../index.js";
+import { insertAll } from '../index';
 export default insertAll;

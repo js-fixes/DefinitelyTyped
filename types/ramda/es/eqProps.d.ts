@@ -1,2 +1,2 @@
-import { eqProps } from "../index.js";
+import { eqProps } from '../index';
 export default eqProps;

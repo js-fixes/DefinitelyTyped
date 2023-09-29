@@ -19,6 +19,7 @@ declare namespace echarts {
          * What's more, the time attribute of the orinigal dataset would map
          * to a single time axis.
          *
+         *
          * @see https://echarts.apache.org/en/option.html#series-themeRiver
          */
         interface SeriesThemeRiver {
@@ -34,6 +35,7 @@ declare namespace echarts {
              * If specified, it can be used to refer the component in option
              * or API.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.id
              */
             id?: string | undefined;
@@ -41,6 +43,7 @@ declare namespace echarts {
             /**
              * Series name used for displaying in
              * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.name
              */
@@ -60,6 +63,7 @@ declare namespace echarts {
              * Canvases with bigger `zlevel` will be placed on Canvases with
              * smaller `zlevel`.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.zlevel
              */
             zlevel?: number | undefined;
@@ -72,6 +76,7 @@ declare namespace echarts {
              *
              * `z` has a lower priority to `zlevel`, and will not create new
              * Canvas.
+             *
              *
              * @default
              * 2
@@ -90,6 +95,7 @@ declare namespace echarts {
              * If the `left` value is set to be `'left'`, `'center'`, or `'right'`,
              * then the component will be aligned automatically based on position.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.left
@@ -107,6 +113,7 @@ declare namespace echarts {
              * If the `left` value is set to be `'top'`, `'middle'`, or `'bottom'`,
              * then the component will be aligned automatically based on position.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.top
@@ -119,6 +126,7 @@ declare namespace echarts {
              *
              * `right` value can be instant pixel value like `20`; it can also
              * be percentage value relative to container width like `'20%'`.
+             *
              *
              * @default
              * 5%
@@ -133,6 +141,7 @@ declare namespace echarts {
              * `bottom` value can be instant pixel value like `20`; it can also
              * be percentage value relative to container width like `'20%'`.
              *
+             *
              * @default
              * 5%
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.bottom
@@ -141,6 +150,7 @@ declare namespace echarts {
 
             /**
              * Width of thmemRiver component.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.width
              */
@@ -153,12 +163,14 @@ declare namespace echarts {
              * view reuses the positional information of a single time axis,
              * which are left, top, right and bottom.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.height
              */
             height?: number | string | undefined;
 
             /**
              * coordinate. The theme river adopts sinle time axis.
+             *
              *
              * @default
              * ""single""
@@ -172,6 +184,7 @@ declare namespace echarts {
              * keeping it on the screen center instead of the upside or downside
              * of the screen.
              *
+             *
              * @default
              * ["10%", "10%"]
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.boundaryGap
@@ -182,6 +195,7 @@ declare namespace echarts {
              * The index of single time axis, which defaults to be 0 because
              * it contains only one axis.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.singleAxisIndex
              */
             singleAxisIndex?: number | undefined;
@@ -190,11 +204,13 @@ declare namespace echarts {
              * `label` describes style of text labels with which each ribbon-shape
              * river branch corresponds in theme river.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.label
              */
             label?: {
                 /**
                  * Whether to show label.
+                 *
                  *
                  * @default
                  * "true"
@@ -234,6 +250,7 @@ declare namespace echarts {
                  * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                  * .
                  *
+                 *
                  * @default
                  * "left"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.position
@@ -247,6 +264,7 @@ declare namespace echarts {
                  * See:
                  * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                  * .
+                 *
                  *
                  * @default
                  * 5
@@ -262,6 +280,7 @@ declare namespace echarts {
                  * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                  * .
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rotate
                  */
                 rotate?: number | undefined;
@@ -270,6 +289,7 @@ declare namespace echarts {
                  * Whether to move text slightly.
                  * For example: `[30, 40]` means move `30` horizontally and
                  * move `40` vertically.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.offset
                  */
@@ -280,6 +300,7 @@ declare namespace echarts {
                  *
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
+                 *
                  *
                  * @default
                  * '#000'
@@ -295,6 +316,7 @@ declare namespace echarts {
                  * + `'normal'`
                  * + `'italic'`
                  * + `'oblique'`
+                 *
                  *
                  * @default
                  * "normal"
@@ -313,6 +335,7 @@ declare namespace echarts {
                  * + `'lighter'`
                  * + 100 | 200 | 300 | 400...
                  *
+                 *
                  * @default
                  * "normal"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.fontWeight
@@ -324,6 +347,7 @@ declare namespace echarts {
                  *
                  * Can also be 'serif' , 'monospace', ...
                  *
+                 *
                  * @default
                  * "sans-serif"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.fontFamily
@@ -332,6 +356,7 @@ declare namespace echarts {
 
                 /**
                  * font size
+                 *
                  *
                  * @default
                  * 11
@@ -346,6 +371,7 @@ declare namespace echarts {
                  * level will be used. For example:
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.label)
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.lineHeight
                  */
@@ -366,6 +392,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.backgroundColor
@@ -378,6 +405,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.borderColor
@@ -387,12 +415,14 @@ declare namespace echarts {
                 /**
                  * Border width of the text fregment.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.borderWidth
                  */
                 borderWidth?: number | undefined;
 
                 /**
                  * Border radius of the text fregment.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.borderRadius
                  */
@@ -409,12 +439,14 @@ declare namespace echarts {
                  * Notice, `width` and `height` specifies the width and height
                  * of the content, without `padding`.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.padding
                  */
                 padding?: any[] | number | undefined;
 
                 /**
                  * Shadow color of the text block.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -425,6 +457,7 @@ declare namespace echarts {
                 /**
                  * Show blur of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.shadowBlur
                  */
                 shadowBlur?: number | undefined;
@@ -432,12 +465,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text block.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text block.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.shadowOffsetY
                  */
@@ -462,6 +497,7 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.width
                  */
                 width?: number | string | undefined;
@@ -477,6 +513,7 @@ declare namespace echarts {
                  *
                  * Notice, `width` and `height` only work when `rich` specified.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.height
                  */
                 height?: number | string | undefined;
@@ -487,6 +524,7 @@ declare namespace echarts {
                  * If set as `'auto'`, the color will assigned as visual color,
                  * such as series color.
                  *
+                 *
                  * @default
                  * "transparent"
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.textBorderColor
@@ -496,12 +534,14 @@ declare namespace echarts {
                 /**
                  * Storke line width of the text.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.textBorderWidth
                  */
                 textBorderWidth?: number | undefined;
 
                 /**
                  * Shadow color of the text itself.
+                 *
                  *
                  * @default
                  * "transparent"
@@ -512,6 +552,7 @@ declare namespace echarts {
                 /**
                  * Shadow blue of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.textShadowBlur
                  */
                 textShadowBlur?: number | undefined;
@@ -519,12 +560,14 @@ declare namespace echarts {
                 /**
                  * Shadow X offset of the text itself.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.textShadowOffsetX
                  */
                 textShadowOffsetX?: number | undefined;
 
                 /**
                  * Shadow Y offset of the text itself.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.textShadowOffsetY
                  */
@@ -540,6 +583,7 @@ declare namespace echarts {
                  * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                  * please.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich
                  */
                 rich?: {
@@ -552,6 +596,7 @@ declare namespace echarts {
                          *
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
+                         *
                          *
                          * @default
                          * ""#fff""
@@ -567,6 +612,7 @@ declare namespace echarts {
                          * + `'normal'`
                          * + `'italic'`
                          * + `'oblique'`
+                         *
                          *
                          * @default
                          * "normal"
@@ -585,6 +631,7 @@ declare namespace echarts {
                          * + `'lighter'`
                          * + 100 | 200 | 300 | 400...
                          *
+                         *
                          * @default
                          * "normal"
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -596,6 +643,7 @@ declare namespace echarts {
                          *
                          * Can also be 'serif' , 'monospace', ...
                          *
+                         *
                          * @default
                          * "sans-serif"
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -604,6 +652,7 @@ declare namespace echarts {
 
                         /**
                          * font size
+                         *
                          *
                          * @default
                          * 12
@@ -625,6 +674,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.align
                          */
                         align?: string | undefined;
@@ -643,6 +693,7 @@ declare namespace echarts {
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E)
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                          */
                         verticalAlign?: string | undefined;
@@ -654,6 +705,7 @@ declare namespace echarts {
                          * in parent level will be used. For example:
                          *
                          * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E)
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                          */
@@ -674,6 +726,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -686,6 +739,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -695,12 +749,14 @@ declare namespace echarts {
                         /**
                          * Border width of the text fregment.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                          */
                         borderWidth?: number | undefined;
 
                         /**
                          * Border radius of the text fregment.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                          */
@@ -718,12 +774,14 @@ declare namespace echarts {
                          * Notice, `width` and `height` specifies the width
                          * and height of the content, without `padding`.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                          */
                         padding?: any[] | number | undefined;
 
                         /**
                          * Shadow color of the text block.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -734,6 +792,7 @@ declare namespace echarts {
                         /**
                          * Show blur of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                          */
                         shadowBlur?: number | undefined;
@@ -741,12 +800,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text block.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                          */
                         shadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text block.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                          */
@@ -774,6 +835,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.width
                          */
                         width?: number | string | undefined;
@@ -790,6 +852,7 @@ declare namespace echarts {
                          * Notice, `width` and `height` only work when `rich`
                          * specified.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.height
                          */
                         height?: number | string | undefined;
@@ -800,6 +863,7 @@ declare namespace echarts {
                          * If set as `'auto'`, the color will assigned as visual
                          * color, such as series color.
                          *
+                         *
                          * @default
                          * "transparent"
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -809,12 +873,14 @@ declare namespace echarts {
                         /**
                          * Storke line width of the text.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                          */
                         textBorderWidth?: number | undefined;
 
                         /**
                          * Shadow color of the text itself.
+                         *
                          *
                          * @default
                          * "transparent"
@@ -825,6 +891,7 @@ declare namespace echarts {
                         /**
                          * Shadow blue of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                          */
                         textShadowBlur?: number | undefined;
@@ -832,12 +899,14 @@ declare namespace echarts {
                         /**
                          * Shadow X offset of the text itself.
                          *
+                         *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                          */
                         textShadowOffsetX?: number | undefined;
 
                         /**
                          * Shadow Y offset of the text itself.
+                         *
                          *
                          * @see https://echarts.apache.org/en/option.html#series-themeRiver.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                          */
@@ -848,6 +917,7 @@ declare namespace echarts {
 
             /**
              * style of each ribbon-shape river branch in theme river.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle
              */
@@ -865,12 +935,14 @@ declare namespace echarts {
                  * >
                  * > [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.itemStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.color
                  */
                 color?: EChartOption.Color | undefined;
 
                 /**
                  * border color, whose format is similar to that of `color`.
+                 *
                  *
                  * @default
                  * "#000"
@@ -881,6 +953,7 @@ declare namespace echarts {
                 /**
                  * border width. No border when it is set to be 0.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.borderWidth
                  */
                 borderWidth?: number | undefined;
@@ -888,6 +961,7 @@ declare namespace echarts {
                 /**
                  * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                  * `'solid'` by default.
+                 *
                  *
                  * @default
                  * "solid"
@@ -904,12 +978,14 @@ declare namespace echarts {
                  *
                  * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.itemStyle)
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.shadowBlur
                  */
                 shadowBlur?: number | undefined;
 
                 /**
                  * Shadow color. Support same format as `color`.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.shadowColor
                  */
@@ -918,12 +994,14 @@ declare namespace echarts {
                 /**
                  * Offset distance on the horizontal direction of shadow.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.shadowOffsetX
                  */
                 shadowOffsetX?: number | undefined;
 
                 /**
                  * Offset distance on the vertical direction of shadow.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.shadowOffsetY
                  */
@@ -933,6 +1011,7 @@ declare namespace echarts {
                  * Opacity of the component.
                  * Supports value from 0 to 1, and the component will not be
                  * drawn when set to 0.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.itemStyle.opacity
                  */
@@ -949,6 +1028,7 @@ declare namespace echarts {
                 label?: {
                     /**
                      * Whether to show label.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.show
                      */
@@ -986,6 +1066,7 @@ declare namespace echarts {
                      * [label position](https://echarts.apache.org/examples/en/view.html?c=doc-example/label-position)
                      * .
                      *
+                     *
                      * @default
                      * "left"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.position
@@ -999,6 +1080,7 @@ declare namespace echarts {
                      * See:
                      * [label position](https://echarts.apache.org/examples/en/editor.html?c=doc-example/label-position)
                      * .
+                     *
                      *
                      * @default
                      * 5
@@ -1014,6 +1096,7 @@ declare namespace echarts {
                      * [label rotation](https://echarts.apache.org/examples/en/editor.html?c=bar-label-rotation)
                      * .
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rotate
                      */
                     rotate?: number | undefined;
@@ -1022,6 +1105,7 @@ declare namespace echarts {
                      * Whether to move text slightly.
                      * For example: `[30, 40]` means move `30` horizontally
                      * and move `40` vertically.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.offset
                      */
@@ -1032,6 +1116,7 @@ declare namespace echarts {
                      *
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
+                     *
                      *
                      * @default
                      * '#000'
@@ -1047,6 +1132,7 @@ declare namespace echarts {
                      * + `'normal'`
                      * + `'italic'`
                      * + `'oblique'`
+                     *
                      *
                      * @default
                      * "normal"
@@ -1065,6 +1151,7 @@ declare namespace echarts {
                      * + `'lighter'`
                      * + 100 | 200 | 300 | 400...
                      *
+                     *
                      * @default
                      * "normal"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.fontWeight
@@ -1076,6 +1163,7 @@ declare namespace echarts {
                      *
                      * Can also be 'serif' , 'monospace', ...
                      *
+                     *
                      * @default
                      * "sans-serif"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.fontFamily
@@ -1084,6 +1172,7 @@ declare namespace echarts {
 
                     /**
                      * font size
+                     *
                      *
                      * @default
                      * 11
@@ -1098,6 +1187,7 @@ declare namespace echarts {
                      * parent level will be used. For example:
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.label)
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.lineHeight
                      */
@@ -1118,6 +1208,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.backgroundColor
@@ -1130,6 +1221,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.borderColor
@@ -1139,12 +1231,14 @@ declare namespace echarts {
                     /**
                      * Border width of the text fregment.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.borderWidth
                      */
                     borderWidth?: number | undefined;
 
                     /**
                      * Border radius of the text fregment.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.borderRadius
                      */
@@ -1161,12 +1255,14 @@ declare namespace echarts {
                      * Notice, `width` and `height` specifies the width and
                      * height of the content, without `padding`.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.padding
                      */
                     padding?: any[] | number | undefined;
 
                     /**
                      * Shadow color of the text block.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1177,6 +1273,7 @@ declare namespace echarts {
                     /**
                      * Show blur of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.shadowBlur
                      */
                     shadowBlur?: number | undefined;
@@ -1184,12 +1281,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text block.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text block.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.shadowOffsetY
                      */
@@ -1215,6 +1314,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.width
                      */
                     width?: number | string | undefined;
@@ -1230,6 +1330,7 @@ declare namespace echarts {
                      *
                      * Notice, `width` and `height` only work when `rich` specified.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.height
                      */
                     height?: number | string | undefined;
@@ -1240,6 +1341,7 @@ declare namespace echarts {
                      * If set as `'auto'`, the color will assigned as visual
                      * color, such as series color.
                      *
+                     *
                      * @default
                      * "transparent"
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.textBorderColor
@@ -1249,12 +1351,14 @@ declare namespace echarts {
                     /**
                      * Storke line width of the text.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.textBorderWidth
                      */
                     textBorderWidth?: number | undefined;
 
                     /**
                      * Shadow color of the text itself.
+                     *
                      *
                      * @default
                      * "transparent"
@@ -1265,6 +1369,7 @@ declare namespace echarts {
                     /**
                      * Shadow blue of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.textShadowBlur
                      */
                     textShadowBlur?: number | undefined;
@@ -1272,12 +1377,14 @@ declare namespace echarts {
                     /**
                      * Shadow X offset of the text itself.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.textShadowOffsetX
                      */
                     textShadowOffsetX?: number | undefined;
 
                     /**
                      * Shadow Y offset of the text itself.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.textShadowOffsetY
                      */
@@ -1293,6 +1400,7 @@ declare namespace echarts {
                      * [Rich Text](https://echarts.apache.org/en/option.htmltutorial.html#Rich%20Text)
                      * please.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich
                      */
                     rich?: {
@@ -1305,6 +1413,7 @@ declare namespace echarts {
                              *
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
+                             *
                              *
                              * @default
                              * ""#fff""
@@ -1320,6 +1429,7 @@ declare namespace echarts {
                              * + `'normal'`
                              * + `'italic'`
                              * + `'oblique'`
+                             *
                              *
                              * @default
                              * "normal"
@@ -1338,6 +1448,7 @@ declare namespace echarts {
                              * + `'lighter'`
                              * + 100 | 200 | 300 | 400...
                              *
+                             *
                              * @default
                              * "normal"
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontWeight
@@ -1349,6 +1460,7 @@ declare namespace echarts {
                              *
                              * Can also be 'serif' , 'monospace', ...
                              *
+                             *
                              * @default
                              * "sans-serif"
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.fontFamily
@@ -1357,6 +1469,7 @@ declare namespace echarts {
 
                             /**
                              * font size
+                             *
                              *
                              * @default
                              * 12
@@ -1378,6 +1491,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.align
                              */
                             align?: string | undefined;
@@ -1396,6 +1510,7 @@ declare namespace echarts {
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.verticalAlign
                              */
                             verticalAlign?: string | undefined;
@@ -1407,6 +1522,7 @@ declare namespace echarts {
                              * in parent level will be used. For example:
                              *
                              * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E)
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.lineHeight
                              */
@@ -1428,6 +1544,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.backgroundColor
@@ -1440,6 +1557,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderColor
@@ -1449,12 +1567,14 @@ declare namespace echarts {
                             /**
                              * Border width of the text fregment.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderWidth
                              */
                             borderWidth?: number | undefined;
 
                             /**
                              * Border radius of the text fregment.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.borderRadius
                              */
@@ -1473,12 +1593,14 @@ declare namespace echarts {
                              * Notice, `width` and `height` specifies the width
                              * and height of the content, without `padding`.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.padding
                              */
                             padding?: any[] | number | undefined;
 
                             /**
                              * Shadow color of the text block.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1489,6 +1611,7 @@ declare namespace echarts {
                             /**
                              * Show blur of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowBlur
                              */
                             shadowBlur?: number | undefined;
@@ -1496,12 +1619,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text block.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetX
                              */
                             shadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text block.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.shadowOffsetY
                              */
@@ -1529,6 +1654,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.width
                              */
                             width?: number | string | undefined;
@@ -1545,6 +1671,7 @@ declare namespace echarts {
                              * Notice, `width` and `height` only work when `rich`
                              * specified.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.height
                              */
                             height?: number | string | undefined;
@@ -1555,6 +1682,7 @@ declare namespace echarts {
                              * If set as `'auto'`, the color will assigned as
                              * visual color, such as series color.
                              *
+                             *
                              * @default
                              * "transparent"
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderColor
@@ -1564,12 +1692,14 @@ declare namespace echarts {
                             /**
                              * Storke line width of the text.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textBorderWidth
                              */
                             textBorderWidth?: number | undefined;
 
                             /**
                              * Shadow color of the text itself.
+                             *
                              *
                              * @default
                              * "transparent"
@@ -1580,6 +1710,7 @@ declare namespace echarts {
                             /**
                              * Shadow blue of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowBlur
                              */
                             textShadowBlur?: number | undefined;
@@ -1587,12 +1718,14 @@ declare namespace echarts {
                             /**
                              * Shadow X offset of the text itself.
                              *
+                             *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetX
                              */
                             textShadowOffsetX?: number | undefined;
 
                             /**
                              * Shadow Y offset of the text itself.
+                             *
                              *
                              * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.label.rich.%3Cuser%20defined%20style%20name%3E.textShadowOffsetY
                              */
@@ -1618,12 +1751,14 @@ declare namespace echarts {
                      * >
                      * > [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.itemStyle)
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.color
                      */
                     color?: EChartOption.Color | undefined;
 
                     /**
                      * border color, whose format is similar to that of `color`.
+                     *
                      *
                      * @default
                      * "#000"
@@ -1634,6 +1769,7 @@ declare namespace echarts {
                     /**
                      * border width. No border when it is set to be 0.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.borderWidth
                      */
                     borderWidth?: number | undefined;
@@ -1641,6 +1777,7 @@ declare namespace echarts {
                     /**
                      * Border type, which can be `'solid'`, `'dashed'`, or `'dotted'`.
                      * `'solid'` by default.
+                     *
                      *
                      * @default
                      * "solid"
@@ -1657,6 +1794,7 @@ declare namespace echarts {
                      *
                      * [see doc](https://echarts.apache.org/en/option.html#series-themeRiver.themeRiver.emphasis.itemStyle)
                      *
+                     *
                      * @default
                      * 20
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.shadowBlur
@@ -1665,6 +1803,7 @@ declare namespace echarts {
 
                     /**
                      * Shadow color. Support same format as `color`.
+                     *
                      *
                      * @default
                      * "rgba(0,0,0,0.8)"
@@ -1675,12 +1814,14 @@ declare namespace echarts {
                     /**
                      * Offset distance on the horizontal direction of shadow.
                      *
+                     *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.shadowOffsetX
                      */
                     shadowOffsetX?: number | undefined;
 
                     /**
                      * Offset distance on the vertical direction of shadow.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.shadowOffsetY
                      */
@@ -1690,6 +1831,7 @@ declare namespace echarts {
                      * Opacity of the component.
                      * Supports value from 0 to 1, and the component will not
                      * be drawn when set to 0.
+                     *
                      *
                      * @see https://echarts.apache.org/en/option.html#series-themeRiver.emphasis.itemStyle.opacity
                      */
@@ -1826,15 +1968,16 @@ declare namespace echarts {
              * For example, line chart can break when encounter an empty value,
              * and scatter chart do not display graphic elements for empty values.
              *
+             *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.data
              */
             data?:
                 | (void | number | string | SeriesThemeRiver.DataObject)[]
-                | (void | number | string | SeriesThemeRiver.DataObject)[][]
-                | undefined;
+                | (void | number | string | SeriesThemeRiver.DataObject)[][] | undefined;
 
             /**
              * tooltip settings in this series.
+             *
              *
              * @see https://echarts.apache.org/en/option.html#series-themeRiver.tooltip
              */
@@ -1846,12 +1989,14 @@ declare namespace echarts {
                 /**
                  * the time attribute of time and theme.
                  *
+                 *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.data.date
                  */
                 date?: string | undefined;
 
                 /**
                  * the value of an event or theme at a time point.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.data.value
                  */
@@ -1884,6 +2029,7 @@ declare namespace echarts {
                  * ［"2015/11/13",0,"DQ"］, making it align with the main river.
                  * From what is mentioned, we could set default value on any
                  * position of a complete time period.
+                 *
                  *
                  * @see https://echarts.apache.org/en/option.html#series-themeRiver.data.name
                  */

@@ -7,6 +7,7 @@
         "no-duplicate-variable": false,
         "no-empty-interface": false,
         "no-mergeable-namespace": false,
+        "no-single-declare-module": false,
         "no-unnecessary-class": false,
         "no-unnecessary-qualifier": false,
         "no-var-keyword": false,
@@ -15,6 +16,7 @@
         "one-variable-per-declaration": false,
         "only-arrow-functions": false,
         "prefer-const": false,
+        "strict-export-declare-modifiers": false,
         "triple-equals": false,
         "unified-signatures": false
     }

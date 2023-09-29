@@ -42,7 +42,9 @@ export interface Camera {
      * @param element Specify an HTML element to put the video stream in.
      * @param resolution Specify the initial resolution.
      */
-    play(element?: HTMLElement, resolution?: Resolution): Promise<Resolution>;
+    play(element?: HTMLElement,
+        resolution?: Resolution
+    ): Promise<Resolution>;
     /**
      * Pause the video stream.
      */

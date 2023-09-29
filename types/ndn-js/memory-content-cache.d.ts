@@ -9,14 +9,10 @@ export class MemoryContentCache {
     add(data: Data): void;
     getMinimumCacheLifetime(): number;
     getStorePendingInterest(): OnInterestCallback;
-    registerPrefix(
-        name: Name,
-        onRegisterFailed: (prefix: Name) => any,
-        onRegisterSuccess?: (prefix: Name, registeredPrefixId: number) => any,
-        onDataNotFound?: OnInterestCallback,
-        flags?: ForwardingFlags,
-    ): void;
-    setInterestFilter(filter: InterestFilter | Name, onDataNotFound?: OnInterestCallback): void;
+    registerPrefix(name: Name, onRegisterFailed: (prefix: Name) => any,
+                   onRegisterSuccess?: (prefix: Name, registeredPrefixId: number) => any,
+                   onDataNotFound?: OnInterestCallback, flags?: ForwardingFlags): void;
+    setInterestFilter(filter: InterestFilter|Name, onDataNotFound?: OnInterestCallback): void;
     setMinimumCacheLifetime(minimumCacheLifetime: number): void;
     storePendingInterest(interest: Interest, face: Face): void;
     unregisterAll(): void;

@@ -1,2 +1,2 @@
-import { sort } from "../index.js";
+import { sort } from '../index';
 export default sort;

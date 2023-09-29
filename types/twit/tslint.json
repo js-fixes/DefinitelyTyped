@@ -3,6 +3,8 @@
     "rules": {
         "array-type": false,
         "ban-types": false,
-        "no-unnecessary-qualifier": false
+        "no-single-declare-module": false,
+        "no-unnecessary-qualifier": false,
+        "strict-export-declare-modifiers": false
     }
 }

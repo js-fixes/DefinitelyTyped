@@ -1,2 +1,2 @@
-import { toPairsIn } from "../index.js";
+import { toPairsIn } from '../index';
 export default toPairsIn;

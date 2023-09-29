@@ -1,2 +1,2 @@
-import { forEach } from "../index.js";
+import { forEach } from '../index';
 export default forEach;

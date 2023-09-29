@@ -51,6 +51,7 @@ interface JCanvasTextDef {
 }
 
 interface JQuery {
+
     /**
      * This clearCanvas() clears all or any part of the canvas
      * If nothing is passed, the entire canvas is cleared.

@@ -1,2 +1,2 @@
-import { intersperse } from "../index.js";
+import { intersperse } from '../index';
 export default intersperse;

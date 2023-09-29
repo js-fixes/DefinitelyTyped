@@ -5,6 +5,7 @@
 
 /// <reference types="node" />
 
+
 interface IOptions {
     base?: string | undefined;
     cwd?: string | undefined;

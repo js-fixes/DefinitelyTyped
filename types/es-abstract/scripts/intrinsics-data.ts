@@ -1,15 +1,14 @@
 import {
-    BASE_INTRINSIC_DATA as baseIntrinsicData,
     BASE_INTRINSICS as baseIntrinsics,
+    BASE_INTRINSIC_DATA as baseIntrinsicData,
     Intrinsic,
     Override,
-} from "../../get-intrinsic/scripts/intrinsics-data";
-export * from "../../get-intrinsic/scripts/intrinsics-data";
+} from '../../get-intrinsic/scripts/intrinsics-data';
+export * from '../../get-intrinsic/scripts/intrinsics-data';
 
 // prettier-ignore
-const propertyIsEnumerable: (target: object, property: PropertyKey) => boolean = Function.prototype.call.bind(
-    Object.prototype.propertyIsEnumerable,
-);
+const propertyIsEnumerable: (target: object, property: PropertyKey) => boolean
+    = Function.prototype.call.bind(Object.prototype.propertyIsEnumerable);
 
 function omitFrom<T extends object, P extends PropertyKey>(src: T, props: readonly P[]): Omit<T, P> {
     const dest = Object.create(null);
@@ -33,10 +32,10 @@ function omitFrom<T extends object, P extends PropertyKey>(src: T, props: readon
 
 // prettier-ignore
 export const BASE_INTRINSICS: typeof baseIntrinsics = omitFrom(baseIntrinsics, [
-    "%AggregateError%",
-    "%BigInt%",
-    "%BigInt64Array%",
-    "%BigUint64Array%",
+    '%AggregateError%',
+    '%BigInt%',
+    '%BigInt64Array%',
+    '%BigUint64Array%',
 ]);
 
 export const BASE_INTRINSIC_DATA: { [intrinsic: string]: string | Intrinsic } = {
@@ -67,7 +66,7 @@ export const BASE_INTRINSIC_DATA: { [intrinsic: string]: string | Intrinsic } = 
             ...(baseIntrinsicData.TypedArray as Intrinsic).overrides,
             prototype: {
                 ...((baseIntrinsicData.TypedArray as Intrinsic).overrides?.prototype as Override),
-                getterType: "TypedArray",
+                getterType: 'TypedArray',
             },
         },
     },

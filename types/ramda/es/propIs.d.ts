@@ -1,2 +1,2 @@
-import { propIs } from "../index.js";
+import { propIs } from '../index';
 export default propIs;

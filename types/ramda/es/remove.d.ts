@@ -1,2 +1,2 @@
-import { remove } from "../index.js";
+import { remove } from '../index';
 export default remove;

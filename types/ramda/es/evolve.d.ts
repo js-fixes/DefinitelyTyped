@@ -1,2 +1,2 @@
-import { evolve } from "../index.js";
+import { evolve } from '../index';
 export default evolve;

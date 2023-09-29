@@ -184,17 +184,8 @@ interface appFrameworkStatic {
      * @param {String} [dataType]
      * @title $.post(url,[data],success,[dataType])
      */
-    post(
-        url: string,
-        fn: (data: any, status?: string, xhr?: XMLHttpRequest) => void,
-        dataType?: string,
-    ): XMLHttpRequest;
-    post(
-        url: string,
-        data: any,
-        fn: (data: any, status?: string, xhr?: XMLHttpRequest) => void,
-        dataType?: string,
-    ): XMLHttpRequest;
+    post(url: string, fn: (data: any, status?: string, xhr?: XMLHttpRequest) => void, dataType?: string): XMLHttpRequest;
+    post(url: string, data: any, fn: (data: any, status?: string, xhr?: XMLHttpRequest) => void, dataType?: string): XMLHttpRequest;
 
     /**
      * Shorthand call to an Ajax request that expects a JSON response
@@ -208,7 +199,7 @@ interface appFrameworkStatic {
      * @title $.getJSON(url,data,success)
      */
     getJSON(url: string, fn: (data: any, status?: string, xhr?: XMLHttpRequest) => void): XMLHttpRequest;
-    getJSON(url: string, data: any, fn: (data: any, status: string, xhr: XMLHttpRequest) => void): XMLHttpRequest;
+    getJSON(url: string, data: any, fn: (data: any, status: string, xhr: XMLHttpRequest) => void ): XMLHttpRequest;
 
     /**
      * Converts an object into a key/value par with an optional prefix.  Used for converting objects to a query string
@@ -440,19 +431,11 @@ interface appFrameworkStatic {
         cssPrefix: string;
         cssTransformStart: string;
         cssTransformEnd: string;
-    };
+    }
 }
 
 interface appFrameworkCollection {
-    reduce(
-        callbackfn: (
-            previousValue: appFrameworkCollection,
-            currentValue: appFrameworkCollection,
-            currentIndex: number,
-            array: appFrameworkCollection[],
-        ) => appFrameworkCollection,
-        initialValue?: appFrameworkCollection,
-    ): appFrameworkCollection;
+    reduce(callbackfn: (previousValue: appFrameworkCollection, currentValue: appFrameworkCollection, currentIndex: number, array: appFrameworkCollection[]) => appFrameworkCollection, initialValue?: appFrameworkCollection): appFrameworkCollection;
     push(...items: appFrameworkCollection[]): number;
     indexOf(searchElement: appFrameworkCollection, fromIndex?: number): number;
     concat(...items: appFrameworkCollection[]): appFrameworkCollection[];

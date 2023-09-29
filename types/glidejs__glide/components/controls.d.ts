@@ -19,11 +19,13 @@ export interface Controls {
 
     /**
      * Toggles active class on items inside navigation.
+     *
      */
     addClass(controls: HTMLElement): void;
 
     /**
      * Removes active class from active control.
+     *
      */
     removeClass(controls: HTMLElement): void;
 
@@ -54,11 +56,13 @@ export interface Controls {
 
     /**
      * Binds events to arrows HTML elements.
+     *
      */
     bind(elements: HTMLCollection): void;
 
     /**
      * Unbinds events binded to the arrows HTML elements.
+     *
      */
     unbind(elements: HTMLCollection): void;
 

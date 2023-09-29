@@ -5,10 +5,13 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 4.4
 
-import "./vue";
-import "./lib/validators";
+import './vue'
+import './lib/validators'
 
-import { Vuelidate } from "./vuelidate";
-export default Vuelidate;
+import { Vuelidate } from './vuelidate'
+export default Vuelidate
 
-export { Validation, validationMixin } from "./vuelidate";
+export {
+    validationMixin,
+    Validation
+} from './vuelidate'

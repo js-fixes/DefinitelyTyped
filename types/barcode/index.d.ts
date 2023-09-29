@@ -5,6 +5,8 @@
 
 /// <reference types="node" />
 
+
+
 interface BarcodeOptions {
     data: string | number;
     width: number;

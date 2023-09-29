@@ -3,8 +3,8 @@
 // Definitions by: Qingrong Ke <https://github.com/keqingrong>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-import * as jsonpBody from "jsonp-body";
-import * as Koa from "koa";
+import * as Koa from 'koa';
+import * as jsonpBody from 'jsonp-body';
 
 declare namespace jsonp {
     interface Options extends jsonpBody.Options {

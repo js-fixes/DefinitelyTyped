@@ -1,6 +1,10 @@
+
+
+
 function test_version() {
     var version: string = JsHamcrest.version;
 }
+
 
 //
 // Descriptions
@@ -18,9 +22,9 @@ function test_appendDescriptionOf_acceptsSelfDescribingType() {
 function test_appendDescriptionOf_acceptsObjectWithDescribeToMethod() {
     var obj: any = {
         describeTo(description: JsHamcrest.Description): void {
-            description.append("obj");
-        },
-    };
+            description.append('obj');
+        }
+    }
     new JsHamcrest.Description().appendDescriptionOf(obj);
 }
 
@@ -48,20 +52,22 @@ function test_get() {
     var desc: string = new JsHamcrest.Description().get();
 }
 
+
 //
 // Matcher
 //
 
 function test_SimpleMatcher(actual: any, matcher: JsHamcrest.SimpleMatcher): JsHamcrest.Description {
     var description = new JsHamcrest.Description();
-    description.append("Expected ");
+    description.append('Expected ');
     matcher.describeTo(description);
     if (!matcher.matches(actual)) {
-        description.append(", but was ");
+        description.append(', but was ');
         matcher.describeValueTo(actual, description);
-        description.append(": FAIL");
-    } else {
-        description.append(": PASS");
+        description.append(': FAIL');
+    }
+    else {
+        description.append(': PASS');
     }
     return description;
 }
@@ -69,6 +75,7 @@ function test_SimpleMatcher(actual: any, matcher: JsHamcrest.SimpleMatcher): JsH
 function test_CombinableMatcher(matcher: JsHamcrest.CombinableMatcher): JsHamcrest.CombinableMatcher {
     return matcher.and(not(string())).or(bool());
 }
+
 
 //
 // Helpers
@@ -79,19 +86,20 @@ function test_isMatcher() {
 }
 
 function test_EqualTo() {
-    var hasSecondCharacter = JsHamcrest.EqualTo(function(matcher: JsHamcrest.Matcher) {
+    var hasSecondCharacter = JsHamcrest.EqualTo(function (matcher: JsHamcrest.Matcher) {
         return new JsHamcrest.SimpleMatcher({
-            matches: function(actual: any) {
+            matches: function (actual: any) {
                 return actual && actual.length >= 2 && matcher.matches(actual.charAt(2));
             },
-            describeTo: function(description: JsHamcrest.Description) {
-                description.append("string with second character ").appendDescriptionOf(matcher);
-            },
+            describeTo: function (description: JsHamcrest.Description) {
+                description.append('string with second character ').appendDescriptionOf(matcher);
+            }
         });
     });
-    assertThat("foo", hasSecondCharacter("o"));
-    assertThat("foo", hasSecondCharacter(greaterThan("n")));
+    assertThat('foo', hasSecondCharacter('o'));
+    assertThat('foo', hasSecondCharacter(greaterThan('n')));
 }
+
 
 //
 // Operators
@@ -99,20 +107,16 @@ function test_EqualTo() {
 
 function test_assert() {
     // truthiness
-    JsHamcrest.Operators.assert("foo");
+    JsHamcrest.Operators.assert('foo');
     // basic equality
-    JsHamcrest.Operators.assert("foo", "foo");
+    JsHamcrest.Operators.assert('foo', 'foo');
     // matcher
-    JsHamcrest.Operators.assert("foo", is("foo"));
+    JsHamcrest.Operators.assert('foo', is('foo'));
     // options
-    JsHamcrest.Operators.assert("foo", is("foo"), {
-        message: "Name",
-        pass: function(result) {
-            alert("[PASS] " + result);
-        },
-        fail: function(result) {
-            alert("[FAIL] " + result);
-        },
+    JsHamcrest.Operators.assert('foo', is('foo'), {
+        message: 'Name',
+        pass: function (result) { alert('[PASS] ' + result); },
+        fail: function (result) { alert('[FAIL] ' + result); }
     });
 }
 
@@ -121,10 +125,9 @@ function test_filter() {
 }
 
 function test_callTo() {
-    var thrower = JsHamcrest.Operators.callTo(function(ok) {
-        if (!ok) throw new Error();
-    }, false);
+    var thrower = JsHamcrest.Operators.callTo(function (ok) { if (!ok) { throw new Error(); } }, false);
 }
+
 
 //
 // Collection Matchers
@@ -132,41 +135,41 @@ function test_callTo() {
 
 function test_empty() {
     assertThat([], empty());
-    assertThat("", empty());
+    assertThat('', empty());
 }
 
 function test_everyItem() {
-    assertThat([1, 2, 3], everyItem(greaterThan(0)));
-    assertThat([1, "1"], everyItem(1));
+    assertThat([1,2,3], everyItem(greaterThan(0)));
+    assertThat([1,'1'], everyItem(1));
 }
 
 function test_hasItem() {
-    assertThat([1, 2, 3], hasItem(equalTo(3)));
-    assertThat([1, 2, 3], hasItem(3));
+    assertThat([1,2,3], hasItem(equalTo(3)));
+    assertThat([1,2,3], hasItem(3));
 }
 
 function test_hasItems() {
-    assertThat([1, 2, 3], hasItems(2, 3));
-    assertThat([1, 2, 3], hasItems(greaterThan(2)));
-    assertThat([1, 2, 3], hasItems(1, greaterThan(2)));
+    assertThat([1,2,3], hasItems(2,3));
+    assertThat([1,2,3], hasItems(greaterThan(2)));
+    assertThat([1,2,3], hasItems(1, greaterThan(2)));
 }
 
 function test_hasSize() {
-    assertThat([1, 2, 3], hasSize(3));
-    assertThat([1, 2, 3], hasSize(lessThan(5)));
-    assertThat("string", hasSize(6));
-    assertThat("string", hasSize(greaterThan(3)));
-    assertThat({ a: 1, b: 2 }, hasSize(equalTo(2)));
+    assertThat([1,2,3], hasSize(3));
+    assertThat([1,2,3], hasSize(lessThan(5)));
+    assertThat('string', hasSize(6));
+    assertThat('string', hasSize(greaterThan(3)));
+    assertThat({a:1, b:2}, hasSize(equalTo(2)));
 }
 
 function test_isIn() {
-    assertThat(1, isIn([1, 2, 3]));
-    assertThat(1, isIn(1, 2, 3));
+    assertThat(1, isIn([1,2,3]));
+    assertThat(1, isIn(1,2,3));
 }
 
 function test_oneOf() {
-    assertThat(1, oneOf([1, 2, 3]));
-    assertThat(1, oneOf(1, 2, 3));
+    assertThat(1, oneOf([1,2,3]));
+    assertThat(1, oneOf(1,2,3));
 }
 
 //
@@ -194,12 +197,12 @@ function test_either() {
 }
 
 function test_equalTo() {
-    assertThat("10", equalTo(10));
+    assertThat('10', equalTo(10));
 }
 
 function test_is() {
-    assertThat("10", is(10));
-    assertThat("10", is(equalTo(10)));
+    assertThat('10', is(10));
+    assertThat('10', is(equalTo(10)));
 }
 
 function test_nil() {
@@ -218,13 +221,13 @@ function test_raises() {
         throw new Error();
     };
 
-    assertThat(myFunction, raises("Error"));
+    assertThat(myFunction, raises('Error'));
 }
 
 function test_raisesAnything() {
     var myFunction = function() {
         // Do something dangerous...
-        throw "Some unexpected error";
+        throw 'Some unexpected error';
     };
 
     assertThat(myFunction, raisesAnything());
@@ -239,10 +242,11 @@ function test_truth() {
     assertThat(10, truth());
     assertThat({}, truth());
     assertThat(0, not(truth()));
-    assertThat("", not(truth()));
+    assertThat('', not(truth()));
     assertThat(null, not(truth()));
     assertThat(undefined, not(truth()));
 }
+
 
 //
 // Number Matchers
@@ -289,8 +293,9 @@ function test_notANumber() {
 
 function test_zero() {
     assertThat(0, zero());
-    assertThat("0", not(zero()));
+    assertThat('0', not(zero()));
 }
+
 
 //
 // Object Matchers
@@ -310,25 +315,25 @@ function test_func() {
 function test_hasFunction() {
     var greeter = {
         sayHello: function(name: string) {
-            alert("Hello, " + name);
-        },
+            alert('Hello, ' + name);
+        }
     };
 
-    assertThat(greeter, hasFunction("sayHello"));
+    assertThat(greeter, hasFunction('sayHello'));
 }
 
 function test_hasMember() {
     var greeter = {
-        marco: "polo",
+        marco: 'polo',
         sayHello: function(name: string) {
-            alert("Hello, " + name);
-        },
+            alert('Hello, ' + name);
+        }
     };
 
-    assertThat(greeter, hasMember("marco"));
-    assertThat(greeter, hasMember("sayHello"));
+    assertThat(greeter, hasMember('marco'));
+    assertThat(greeter, hasMember('sayHello'));
 
-    assertThat(greeter, hasMember("marco", equalTo("polo")));
+    assertThat(greeter, hasMember('marco', equalTo('polo')));
 }
 
 function test_instanceOf() {
@@ -337,7 +342,7 @@ function test_instanceOf() {
 
 function test_number() {
     assertThat(10, number());
-    assertThat("10", not(number()));
+    assertThat('10', not(number()));
 }
 
 function test_object() {
@@ -346,44 +351,46 @@ function test_object() {
 }
 
 function test_string() {
-    assertThat("10", string());
+    assertThat('10', string());
     assertThat(10, not(string()));
 }
 
 function test_typeOf() {
-    assertThat(10, typeOf("number"));
-    assertThat({}, typeOf("object"));
-    assertThat("10", typeOf("string"));
-    assertThat(function() {}, typeOf("function"));
+    assertThat(10, typeOf('number'));
+    assertThat({}, typeOf('object'));
+    assertThat('10', typeOf('string'));
+    assertThat(function(){}, typeOf('function'));
 }
+
 
 //
 // Text Matchers
 //
 
 function test_containsString() {
-    assertThat("string", containsString("tri"));
+    assertThat('string', containsString('tri'));
 }
 
 function test_emailAddress() {
-    assertThat("user@domain.com", emailAddress());
+    assertThat('user@domain.com', emailAddress());
 }
 
 function test_endsWith() {
-    assertThat("string", endsWith("ring"));
+    assertThat('string', endsWith('ring'));
 }
 
 function test_equalIgnoringCase() {
-    assertThat("str", equalIgnoringCase("Str"));
+    assertThat('str', equalIgnoringCase('Str'));
 }
 
 function test_matches() {
-    assertThat("0xa4f2c", matches(/\b0[xX][0-9a-fA-F]+\b/));
+    assertThat('0xa4f2c', matches(/\b0[xX][0-9a-fA-F]+\b/));
 }
 
 function test_startsWith() {
-    assertThat("string", startsWith("str"));
+    assertThat('string', startsWith('str'));
 }
+
 
 //
 // Integration
@@ -396,10 +403,11 @@ JsHamcrest.Integration.copyMembers(JsHamcrest.Matchers, window);
 JsHamcrest.Integration.installMatchers({ truthy: JsHamcrest.Matchers.truth });
 
 JsHamcrest.Integration.installOperators({
-    assertNotThat: function(actual: any, matcher: JsHamcrest.Matcher, message?: string): JsHamcrest.Description {
+    assertNotThat: function (actual: any, matcher: JsHamcrest.Matcher, message?: string): JsHamcrest.Description {
         return JsHamcrest.Operators.assert(actual, JsHamcrest.Matchers.not(matcher), { message: message });
-    },
+    }
 });
+
 
 //
 // Testing Frameworks

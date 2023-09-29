@@ -85,13 +85,11 @@ declare namespace GoogleAdsScripts {
         interface PriceOperation extends Base.Operation<Price> {}
 
         interface PriceSelector
-            extends
-                Base.Selector<PriceIterator>,
+            extends Base.Selector<PriceIterator>,
                 Base.SelectorForDateRange,
                 Base.SelectorOrderBy,
                 Base.SelectorWithCondition,
                 Base.SelectorWithIds,
-                Base.SelectorWithLimit
-        {}
+                Base.SelectorWithLimit {}
     }
 }

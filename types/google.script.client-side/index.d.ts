@@ -116,14 +116,7 @@ declare namespace google.script {
         function setWidth(width: number): void;
     }
 
-    type Parameter =
-        | number
-        | boolean
-        | string
-        | { [index: number]: Parameter }
-        | { [key: string]: Parameter }
-        | null
-        | undefined;
+    type Parameter = number | boolean | string | { [index: number]: Parameter } | { [key: string]: Parameter } | null | undefined;
 
     interface RunnerFunctions {
         /**

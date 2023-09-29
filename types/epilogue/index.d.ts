@@ -5,39 +5,39 @@
 // TypeScript Version: 3.2
 
 import {
+    Sequelize,
     AssociationOptions,
     DataTypeAbstract,
-    DataTypeArray,
-    DataTypeBigInt,
-    DataTypeBlob,
-    DataTypeBoolean,
+    DataTypeString,
     DataTypeChar,
+    DataTypeText,
+    DataTypeNumber,
+    DataTypeInteger,
+    DataTypeBigInt,
+    DataTypeFloat,
+    DataTypeTime,
     DataTypeDate,
     DataTypeDateOnly,
-    DataTypeDecimal,
-    DataTypeDouble,
-    DataTypeEnum,
-    DataTypeFloat,
-    DataTypeGeometry,
-    DataTypeHStore,
-    DataTypeInteger,
-    DataTypeJSONB,
-    DataTypeJSONType,
+    DataTypeBoolean,
     DataTypeNow,
-    DataTypeNumber,
-    DataTypeRange,
-    DataTypeReal,
-    DataTypeString,
-    DataTypeText,
-    DataTypeTime,
+    DataTypeBlob,
+    DataTypeDecimal,
     DataTypeUUID,
     DataTypeUUIDv1,
     DataTypeUUIDv4,
+    DataTypeHStore,
+    DataTypeJSONType,
+    DataTypeJSONB,
     DataTypeVirtual,
-    Sequelize,
-} from "sequelize";
+    DataTypeArray,
+    DataTypeEnum,
+    DataTypeRange,
+    DataTypeReal,
+    DataTypeDouble,
+    DataTypeGeometry
+} from 'sequelize';
 
-import { Express, Request, Response } from "express";
+import { Express, Request, Response } from 'express';
 
 export class Endpoint {
     constructor(endpoint: string);
@@ -172,39 +172,12 @@ export class DeleteController extends BaseController {
 
 export class ListController extends BaseController {
     fetch: (req: Request, res: Response, context: Context) => Promise<() => void>;
-    _safeishParse: (
-        value: any,
-        type:
-            | DataTypeAbstract
-            | DataTypeString
-            | DataTypeChar
-            | DataTypeText
-            | DataTypeNumber
-            | DataTypeInteger
-            | DataTypeBigInt
-            | DataTypeFloat
-            | DataTypeTime
-            | DataTypeDate
-            | DataTypeDateOnly
-            | DataTypeBoolean
-            | DataTypeNow
-            | DataTypeBlob
-            | DataTypeDecimal
-            | DataTypeUUID
-            | DataTypeUUIDv1
-            | DataTypeUUIDv4
-            | DataTypeHStore
-            | DataTypeJSONType
-            | DataTypeJSONB
-            | DataTypeVirtual
-            | DataTypeArray
-            | DataTypeEnum
-            | DataTypeRange
-            | DataTypeReal
-            | DataTypeDouble
-            | DataTypeGeometry,
-        sequelize: Sequelize,
-    ) => any;
+    _safeishParse: (value: any, type: DataTypeAbstract | DataTypeString | DataTypeChar | DataTypeText | DataTypeNumber |
+                        DataTypeInteger | DataTypeBigInt | DataTypeFloat | DataTypeTime | DataTypeDate | DataTypeDateOnly |
+                        DataTypeBoolean | DataTypeNow | DataTypeBlob | DataTypeDecimal | DataTypeUUID | DataTypeUUIDv1 |
+                        DataTypeUUIDv4 | DataTypeHStore | DataTypeJSONType | DataTypeJSONB | DataTypeVirtual |
+                        DataTypeArray | DataTypeEnum | DataTypeRange | DataTypeReal | DataTypeDouble | DataTypeGeometry,
+                    sequelize: Sequelize) => any;
 }
 
 export interface ResourceOptions {

@@ -1,2 +1,2 @@
-import { pluck } from "../index.js";
+import { pluck } from '../index';
 export default pluck;

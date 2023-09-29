@@ -197,7 +197,9 @@ export interface MacroAPI {
      *    }
      * });
      */
-    add(name: string | string[], definition: MacroDefinition, deep?: boolean): void;
+    add(name: string | string[],
+        definition: MacroDefinition,
+        deep?: boolean): void;
 
     /**
      * Remove existing macro(s).

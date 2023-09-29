@@ -26,13 +26,5 @@ export interface FilterFunction<TElement = HTMLElement> {
      * @return
      * A value indicating whether the row should be included.
      */
-    (
-        originalContent: string,
-        normalizedText: string,
-        filterInput: string,
-        index: number,
-        row: JQuery,
-        config: TablesorterConfigurationStore<TElement>,
-        data: object,
-    ): boolean;
+    (originalContent: string, normalizedText: string, filterInput: string, index: number, row: JQuery, config: TablesorterConfigurationStore<TElement>, data: object): boolean;
 }

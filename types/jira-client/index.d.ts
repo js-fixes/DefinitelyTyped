@@ -7,8 +7,8 @@
 
 /// <reference types="node" />
 
-import { ReadStream } from "fs";
-import { CoreOptions, RequestResponse } from "request";
+import { CoreOptions, RequestResponse } from 'request';
+import { ReadStream } from 'fs';
 
 declare class JiraApi {
     private protocol: string;
@@ -534,6 +534,7 @@ declare class JiraApi {
      * [Jira Doc](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-rest-api-3-worklog-list-post)
      * @param worklogsIDs - a list of worklog IDs.
      * @param expand - expand to include additional information about worklogs
+     *
      */
     getWorklogs(worklogsIDs: string[], expand: string): Promise<JiraApi.JsonResponse[]>;
 
@@ -741,7 +742,7 @@ declare class JiraApi {
         boardId: string,
         startAt?: number,
         maxResults?: number,
-        done?: "true" | "false",
+        done?: 'true' | 'false',
     ): Promise<JiraApi.JsonResponse>;
 
     /**
@@ -847,7 +848,7 @@ declare class JiraApi {
         boardId: string,
         startAt?: number,
         maxResults?: number,
-        state?: "future" | "active" | "closed",
+        state?: 'future' | 'active' | 'closed',
     ): Promise<JiraApi.JsonResponse>;
 
     /**
@@ -888,7 +889,7 @@ declare class JiraApi {
         boardId: string,
         startAt?: number,
         maxResults?: number,
-        released?: "true" | "false",
+        released?: 'true' | 'false',
     ): Promise<JiraApi.JsonResponse>;
 
     /**
@@ -1075,7 +1076,7 @@ declare namespace JiraApi {
 
     interface BoardObject {
         /** Valid values: scrum, kanban */
-        type: "scrum" | "kanban";
+        type: 'scrum' | 'kanban';
         /** Must be less than 255 characters. */
         name: string;
         /** Id of a filter that the user has permissions to view. */

@@ -6,17 +6,17 @@
 
 import {
     IHelmetConfiguration,
-    IHelmetDnsPrefetchControlConfiguration,
-    IHelmetExpectCtConfiguration,
     IHelmetFrameguardConfiguration,
-    IHelmetHidePoweredByConfiguration,
-    IHelmetHpkpConfiguration,
     IHelmetHstsConfiguration,
-    IHelmetPermittedCrossDomainPoliciesConfiguration,
-    IHelmetReferrerPolicyConfiguration,
     IHelmetXssFilterConfiguration,
-} from "helmet";
-import { Context, Middleware } from "koa";
+    IHelmetDnsPrefetchControlConfiguration,
+    IHelmetHpkpConfiguration,
+    IHelmetReferrerPolicyConfiguration,
+    IHelmetHidePoweredByConfiguration,
+    IHelmetPermittedCrossDomainPoliciesConfiguration,
+    IHelmetExpectCtConfiguration,
+} from 'helmet';
+import { Middleware, Context } from 'koa';
 
 declare namespace koaHelmet {
     type KoaHelmetContentSecurityPolicyDirectiveFunction = (ctx: Context) => string;

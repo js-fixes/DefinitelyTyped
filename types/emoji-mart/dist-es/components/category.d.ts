@@ -1,6 +1,6 @@
-import React = require("react");
+import React = require('react');
 
-import { CategoryName, Emoji, EmojiData, EmojiProps, I18n } from "..";
+import { Emoji, EmojiData, EmojiProps, I18n, CategoryName } from '..';
 
 export interface Props {
     emojis?: Array<string | EmojiData> | undefined;

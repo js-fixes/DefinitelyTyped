@@ -3,6 +3,8 @@
 // Definitions by: Christian Speckner <https://github.com/DirtyHairy>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
+
 export interface ImmediateSuccessCB<T, TP> {
     (value: T): TP;
 }
